@@ -18,3 +18,6 @@ app/data/difficult_words.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Local Netlify folder
+.netlify

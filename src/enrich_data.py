@@ -868,13 +868,18 @@ def build_concordance_index():
     """
     print('\n── Step F: Building concordance index (Mu\'jam) ─────')
 
-    # Load word_defs to know which words to index
-    defs_path = DATA / 'word_defs.json'
-    if not defs_path.exists():
+    # Load word_defs to know which words to index — prefer v2 (broader vocabulary)
+    defs_v2_path = DATA / 'word_defs_v2.json'
+    defs_path    = DATA / 'word_defs.json'
+    if defs_v2_path.exists():
+        known_words = set(read_json(defs_v2_path).keys())
+        print(f'  Indexing {len(known_words):,} known words (word_defs_v2)…')
+    elif defs_path.exists():
+        known_words = set(read_json(defs_path).keys())
+        print(f'  Indexing {len(known_words):,} known words (word_defs)…')
+    else:
         print('  ✗ word_defs.json not found — run --step stemmer first')
         return {}
-    known_words = set(read_json(defs_path).keys())
-    print(f'  Indexing {len(known_words):,} known words…')
 
     # Build inverted index
     concordance: dict[str, list[str]] = defaultdict(list)
