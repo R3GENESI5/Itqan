@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shia Hadith Library — الحديث الشيعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/shia.css?v=1">
+    <script>if(localStorage.getItem('hadith-dark')==='true')document.documentElement.classList.add('dark-mode')</script>
+</head>
+<body class="shia-page">
+
+    <header id="header">
+        <div class="header-brand">
+            <h1 class="logo">الحديث الشيعي</h1>
+            <span class="logo-sub">Shia Hadith Library</span>
+        </div>
+
+        <div class="header-search">
+            <div class="search-wrap">
+                <span class="search-icon">&#9906;</span>
+                <input id="search-input" type="search" placeholder="Search Shia hadiths in English or Arabic…" autocomplete="off" spellcheck="false">
+                <button id="search-clear" class="search-clear" style="display:none">&times;</button>
+            </div>
+            <div id="search-results-panel" class="search-results-panel" style="display:none"></div>
+        </div>
+
+        <div class="header-controls">
+            <a href="index.html" class="sunni-link" title="Sunni Hadith Library">السنة ◎</a>
+            <button id="theme-toggle" class="icon-btn" title="Toggle dark mode">☽</button>
+            <button id="arabic-toggle" class="icon-btn active" title="Toggle Arabic text">ع</button>
+            <button id="chain-toggle" class="icon-btn active" title="Toggle isnad chain">سند</button>
+        </div>
+    </header>
+
+    <div id="app">
+        <!-- Sidebar: Book List -->
+        <nav id="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">الكافي — Al-Kafi (al-Kulayni)</div>
+                <ul id="books-kafi" class="book-list"></ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">الصدوق — Sheikh al-Saduq</div>
+                <ul id="books-saduq" class="book-list"></ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">كتب أخرى — Other Books</div>
+                <ul id="books-other-shia" class="book-list"></ul>
+            </div>
+        </nav>
+
+        <main id="main">
+            <!-- Chapter panel -->
+            <aside id="chapter-panel" class="chapter-panel hidden">
+                <div class="chapter-panel-header">
+                    <h2 id="chapter-book-title"></h2>
+                    <button id="chapter-panel-close" class="icon-btn">&times;</button>
+                </div>
+                <ul id="chapter-list" class="chapter-list"></ul>
+            </aside>
+
+            <!-- Hadith reader -->
+            <section id="reader">
+                <div id="reader-header" class="reader-header" style="display:none">
+                    <div class="reader-book-name">
+                        <span id="rh-book-ar" class="rh-ar"></span>
+                        <span id="rh-book-en" class="rh-en"></span>
+                    </div>
+                    <div class="reader-chapter-nav">
+                        <button id="prev-chapter" class="nav-btn">‹</button>
+                        <select id="chapter-select" class="chapter-select"></select>
+                        <button id="next-chapter" class="nav-btn">›</button>
+                    </div>
+                    <div class="reader-chapter-info">
+                        <span id="rh-chapter-ar" class="rh-ar rh-chapter"></span>
+                        <span id="rh-chapter-en" class="rh-en rh-chapter"></span>
+                    </div>
+                </div>
+
+                <div id="hadith-list"></div>
+
+                <div id="welcome" class="welcome">
+                    <div class="welcome-inner">
+                        <div class="welcome-ar">الحديث الشيعي</div>
+                        <div class="welcome-title">Shia Hadith Library</div>
+                        <div class="welcome-desc">
+                            Al-Kafi, Al-Amali, Al-Khisal and more —<br>
+                            classical Twelver Shia hadith with English translations.
+                        </div>
+                        <div class="welcome-stats">
+                            <div class="stat"><span class="stat-n">18</span><span class="stat-l">Books</span></div>
+                            <div class="stat"><span class="stat-n">16,000+</span><span class="stat-l">Hadiths</span></div>
+                            <div class="stat"><span class="stat-n">8</span><span class="stat-l">Al-Kafi Vols</span></div>
+                        </div>
+                        <div class="welcome-hint">← Select a book to begin, or search above</div>
+                        <a href="index.html" class="welcome-sunni-btn">Explore Sunni Hadith →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Hadith detail panel -->
+    <aside id="detail-panel" class="panel-hidden">
+        <div class="drawer-handle"></div>
+        <div class="panel-header">
+            <div id="dp-ref" class="dp-ref"></div>
+            <button id="close-detail" class="icon-btn">&times;</button>
+        </div>
+        <div class="panel-body">
+            <div id="dp-grade" class="dp-grade"></div>
+            <div id="dp-arabic" class="dp-arabic" dir="rtl"></div>
+            <div id="dp-chain" class="dp-chain"></div>
+            <div id="dp-english" class="dp-english"></div>
+            <div class="dp-actions">
+                <button id="dp-copy" class="dp-action-btn">⧉ Copy</button>
+                <button id="dp-share" class="dp-action-btn">⇗ Share</button>
+            </div>
+        </div>
+    </aside>
+    <div id="panel-backdrop" class="panel-backdrop"></div>
+
+    <div id="loading-overlay">
+        <div class="loader">
+            <div class="loader-arabic">بسم الله الرحمن الرحيم</div>
+            <div class="loader-text">Loading…</div>
+        </div>
+    </div>
+
+    <script src="js/shia.js?v=1"></script>
+</body>
+</html>

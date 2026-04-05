@@ -1,0 +1,66 @@
+/* ── Shia page — purple accent overrides ───────────── */
+.shia-page {
+    --gold:         #7c5c9e;
+    --gold-light:   rgba(124,92,158,0.12);
+    --gold-hover:   rgba(124,92,158,0.08);
+    --grade-sahih:  #7c5c9e;
+}
+
+.dark-mode.shia-page,
+.dark-mode .shia-page {
+    --gold:         #a882cc;
+    --gold-light:   rgba(168,130,204,0.15);
+    --gold-hover:   rgba(168,130,204,0.10);
+}
+
+/* Sunni link (inverse of Shia link on main page) */
+.sunni-link {
+    font-family: var(--font-ar);
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    border-radius: 16px;
+    padding: 3px 10px;
+    transition: background 0.15s;
+    white-space: nowrap;
+}
+.sunni-link:hover { background: var(--gold-light); }
+
+/* Welcome button */
+.welcome-sunni-btn {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    padding: 6px 18px;
+    text-decoration: none;
+    transition: background 0.15s;
+}
+.welcome-sunni-btn:hover { background: var(--gold-light); }
+
+/* Isnad chain display */
+.dp-chain {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 2px solid var(--gold-light);
+    padding-left: 10px;
+    margin: 4px 0;
+}
+.dp-chain:empty { display: none; }
+
+/* Shia hadith card chain */
+.hc-chain {
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.hc-chain.hidden { display: none; }

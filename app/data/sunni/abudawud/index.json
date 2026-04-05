@@ -1,0 +1,260 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "كتاب الطهارة",
+    "name_en": "Purification (Kitab Al-Taharah)",
+    "count": 390
+  },
+  {
+    "file": "2.json",
+    "name_ar": "كتاب الصلاة",
+    "name_en": "Prayer (Kitab Al-Salat)",
+    "count": 771
+  },
+  {
+    "file": "3.json",
+    "name_ar": "كتاب الاستسقاء",
+    "name_en": "The Book Of The Prayer For Rain (Kitab al-Istisqa')",
+    "count": 37
+  },
+  {
+    "file": "4.json",
+    "name_ar": "كتاب صلاة السفر",
+    "name_en": "Prayer (Kitab Al-Salat): Detailed Rules of Law about the Prayer during Journey",
+    "count": 52
+  },
+  {
+    "file": "5.json",
+    "name_ar": "كتاب التطوع",
+    "name_en": "Prayer (Kitab Al-Salat): Voluntary Prayers",
+    "count": 121
+  },
+  {
+    "file": "6.json",
+    "name_ar": "كتاب شهر رمضان",
+    "name_en": "Prayer (Kitab Al-Salat): Detailed Injunctions about Ramadan",
+    "count": 30
+  },
+  {
+    "file": "7.json",
+    "name_ar": "كتاب سجود القرآن",
+    "name_en": "Prayer (Kitab Al-Salat): Prostration while reciting the Qur'an",
+    "count": 15
+  },
+  {
+    "file": "8.json",
+    "name_ar": "كتاب الوتر",
+    "name_en": "Prayer (Kitab Al-Salat): Detailed Injunctions about Witr",
+    "count": 140
+  },
+  {
+    "file": "9.json",
+    "name_ar": "كتاب الزكاة",
+    "name_en": "Zakat (Kitab Al-Zakat)",
+    "count": 145
+  },
+  {
+    "file": "10.json",
+    "name_ar": "كتاب اللقطة",
+    "name_en": "The Book of Lost and Found Items",
+    "count": 20
+  },
+  {
+    "file": "11.json",
+    "name_ar": "كتاب المناسك",
+    "name_en": "The Rites of Hajj (Kitab Al-Manasik Wa'l-Hajj)",
+    "count": 325
+  },
+  {
+    "file": "12.json",
+    "name_ar": "كتاب النكاح",
+    "name_en": "Marriage (Kitab Al-Nikah)",
+    "count": 129
+  },
+  {
+    "file": "13.json",
+    "name_ar": "كتاب الطلاق",
+    "name_en": "Divorce (Kitab Al-Talaq)",
+    "count": 138
+  },
+  {
+    "file": "14.json",
+    "name_ar": "كتاب الصوم",
+    "name_en": "Fasting (Kitab Al-Siyam)",
+    "count": 164
+  },
+  {
+    "file": "15.json",
+    "name_ar": "كتاب الجهاد",
+    "name_en": "Jihad (Kitab Al-Jihad)",
+    "count": 311
+  },
+  {
+    "file": "16.json",
+    "name_ar": "كتاب الضحايا",
+    "name_en": "Sacrifice (Kitab Al-Dahaya)",
+    "count": 56
+  },
+  {
+    "file": "17.json",
+    "name_ar": "كتاب الصيد",
+    "name_en": "Game (Kitab Al-Said)",
+    "count": 18
+  },
+  {
+    "file": "18.json",
+    "name_ar": "كتاب الوصايا",
+    "name_en": "Wills (Kitab Al-Wasaya)",
+    "count": 23
+  },
+  {
+    "file": "19.json",
+    "name_ar": "كتاب الفرائض",
+    "name_en": "Shares of Inheritance (Kitab Al-Fara'id)",
+    "count": 43
+  },
+  {
+    "file": "20.json",
+    "name_ar": "كتاب الخراج والإمارة والفىء",
+    "name_en": "Tribute, Spoils, and Rulership (Kitab Al-Kharaj, Wal-Fai' Wal-Imarah)",
+    "count": 161
+  },
+  {
+    "file": "21.json",
+    "name_ar": "كتاب الجنائز",
+    "name_en": "Funerals (Kitab Al-Jana'iz)",
+    "count": 153
+  },
+  {
+    "file": "22.json",
+    "name_ar": "كتاب الأيمان والنذور",
+    "name_en": "Oaths and Vows (Kitab Al-Aiman Wa Al-Nudhur)",
+    "count": 84
+  },
+  {
+    "file": "23.json",
+    "name_ar": "كتاب البيوع",
+    "name_en": "Commercial Transactions (Kitab Al-Buyu)",
+    "count": 90
+  },
+  {
+    "file": "24.json",
+    "name_ar": "كتاب الإجارة",
+    "name_en": "Wages (Kitab Al-Ijarah)",
+    "count": 155
+  },
+  {
+    "file": "25.json",
+    "name_ar": "كتاب الأقضية",
+    "name_en": "The Office of the Judge (Kitab Al-Aqdiyah)",
+    "count": 70
+  },
+  {
+    "file": "26.json",
+    "name_ar": "كتاب العلم",
+    "name_en": "Knowledge (Kitab Al-Ilm)",
+    "count": 28
+  },
+  {
+    "file": "27.json",
+    "name_ar": "كتاب الأشربة",
+    "name_en": "Drinks (Kitab Al-Ashribah)",
+    "count": 67
+  },
+  {
+    "file": "28.json",
+    "name_ar": "كتاب الأطعمة",
+    "name_en": "Foods (Kitab Al-At'imah)",
+    "count": 119
+  },
+  {
+    "file": "29.json",
+    "name_ar": "كتاب الطب",
+    "name_en": "Medicine (Kitab Al-Tibb)",
+    "count": 49
+  },
+  {
+    "file": "30.json",
+    "name_ar": "كتاب الكهانة و التطير",
+    "name_en": "Divination and Omens (Kitab Al-Kahanah Wa Al-Tatayyur)",
+    "count": 22
+  },
+  {
+    "file": "31.json",
+    "name_ar": "كتاب العتق",
+    "name_en": "The Book of Manumission of Slaves",
+    "count": 43
+  },
+  {
+    "file": "32.json",
+    "name_ar": "كتاب الحروف والقراءات",
+    "name_en": "Dialects and Readings of the Qur'an (Kitab Al-Huruf Wa Al-Qira'at)",
+    "count": 40
+  },
+  {
+    "file": "33.json",
+    "name_ar": "كتاب الحمَّام",
+    "name_en": "Hot Baths (Kitab Al-Hammam)",
+    "count": 11
+  },
+  {
+    "file": "34.json",
+    "name_ar": "كتاب اللباس",
+    "name_en": "Clothing (Kitab Al-Libas)",
+    "count": 139
+  },
+  {
+    "file": "35.json",
+    "name_ar": "كتاب الترجل",
+    "name_en": "Combing the Hair (Kitab Al-Tarajjul)",
+    "count": 55
+  },
+  {
+    "file": "36.json",
+    "name_ar": "كتاب الخاتم",
+    "name_en": "Signet-Rings (Kitab Al-Khatam)",
+    "count": 26
+  },
+  {
+    "file": "37.json",
+    "name_ar": "كتاب الفتن والملاحم",
+    "name_en": "Trials and Fierce Battles (Kitab Al-Fitan Wa Al-Malahim)",
+    "count": 39
+  },
+  {
+    "file": "38.json",
+    "name_ar": "كتاب المهدى",
+    "name_en": "The Promised Deliverer (Kitab Al-Mahdi)",
+    "count": 13
+  },
+  {
+    "file": "39.json",
+    "name_ar": "كتاب الملاحم",
+    "name_en": "Battles (Kitab Al-Malahim)",
+    "count": 60
+  },
+  {
+    "file": "40.json",
+    "name_ar": "كتاب الحدود",
+    "name_en": "Prescribed Punishments (Kitab Al-Hudud)",
+    "count": 143
+  },
+  {
+    "file": "41.json",
+    "name_ar": "كتاب الديات",
+    "name_en": "Types of Blood-Wit (Kitab Al-Diyat)",
+    "count": 102
+  },
+  {
+    "file": "42.json",
+    "name_ar": "كتاب السنة",
+    "name_en": "Model Behavior of the Prophet (Kitab Al-Sunnah)",
+    "count": 177
+  },
+  {
+    "file": "43.json",
+    "name_ar": "كتاب الأدب",
+    "name_en": "General Behavior (Kitab Al-Adab)",
+    "count": 502
+  }
+]

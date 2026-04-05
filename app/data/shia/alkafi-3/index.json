@@ -1,0 +1,32 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "",
+    "name_en": "The Book of Taharat (Cleansing)",
+    "count": 339
+  },
+  {
+    "file": "2.json",
+    "name_ar": "",
+    "name_en": "The Book of Hayd (menses)",
+    "count": 93
+  },
+  {
+    "file": "3.json",
+    "name_ar": "",
+    "name_en": "The Book on Dying People",
+    "count": 543
+  },
+  {
+    "file": "4.json",
+    "name_ar": "",
+    "name_en": "The Book of Prayer",
+    "count": 927
+  },
+  {
+    "file": "5.json",
+    "name_ar": "",
+    "name_en": "The Book of al-Zakat",
+    "count": 276
+  }
+]

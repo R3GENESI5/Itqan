@@ -1,0 +1,584 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "كتاب بدء الوحى",
+    "name_en": "Revelation",
+    "count": 7
+  },
+  {
+    "file": "2.json",
+    "name_ar": "كتاب الإيمان",
+    "name_en": "Belief",
+    "count": 51
+  },
+  {
+    "file": "3.json",
+    "name_ar": "كتاب العلم",
+    "name_en": "Knowledge",
+    "count": 76
+  },
+  {
+    "file": "4.json",
+    "name_ar": "كتاب الوضوء",
+    "name_en": "Ablutions (Wudu')",
+    "count": 113
+  },
+  {
+    "file": "5.json",
+    "name_ar": "كتاب الغسل",
+    "name_en": "Bathing (Ghusl)",
+    "count": 45
+  },
+  {
+    "file": "6.json",
+    "name_ar": "كتاب الحيض",
+    "name_en": "Menstrual Periods",
+    "count": 37
+  },
+  {
+    "file": "7.json",
+    "name_ar": "كتاب التيمم",
+    "name_en": "Rubbing hands and feet with dust (Tayammum)",
+    "count": 15
+  },
+  {
+    "file": "8.json",
+    "name_ar": "كتاب الصلاة",
+    "name_en": "Prayers (Salat)",
+    "count": 167
+  },
+  {
+    "file": "9.json",
+    "name_ar": "كتاب مواقيت الصلاة",
+    "name_en": "Times of the Prayers",
+    "count": 77
+  },
+  {
+    "file": "10.json",
+    "name_ar": "كتاب الأذان",
+    "name_en": "Call to Prayers (Adhaan)",
+    "count": 266
+  },
+  {
+    "file": "11.json",
+    "name_ar": "كتاب الجمعة",
+    "name_en": "Friday Prayer",
+    "count": 65
+  },
+  {
+    "file": "12.json",
+    "name_ar": "كتاب صلاة الخوف",
+    "name_en": "Fear Prayer",
+    "count": 6
+  },
+  {
+    "file": "13.json",
+    "name_ar": "كتاب العيدين",
+    "name_en": "The Two Festivals (Eids)",
+    "count": 37
+  },
+  {
+    "file": "14.json",
+    "name_ar": "كتاب الوتر",
+    "name_en": "Witr Prayer",
+    "count": 15
+  },
+  {
+    "file": "15.json",
+    "name_ar": "كتاب الاستسقاء",
+    "name_en": "Invoking Allah for Rain (Istisqaa)",
+    "count": 34
+  },
+  {
+    "file": "16.json",
+    "name_ar": "كتاب الكسوف",
+    "name_en": "Eclipses",
+    "count": 24
+  },
+  {
+    "file": "17.json",
+    "name_ar": "كتاب سجود القرآن",
+    "name_en": "Prostration During Recital of Qur'an",
+    "count": 13
+  },
+  {
+    "file": "18.json",
+    "name_ar": "كتاب التقصير",
+    "name_en": "Shortening the Prayers (At-Taqseer)",
+    "count": 39
+  },
+  {
+    "file": "19.json",
+    "name_ar": "كتاب التهجد",
+    "name_en": "Prayer at Night (Tahajjud)",
+    "count": 63
+  },
+  {
+    "file": "20.json",
+    "name_ar": "كتاب فضل الصلاة فى مسجد مكة والمدينة",
+    "name_en": "Virtues of Prayer at Masjid Makkah and Madinah",
+    "count": 9
+  },
+  {
+    "file": "21.json",
+    "name_ar": "كتاب العمل فى الصلاة",
+    "name_en": "Actions while Praying",
+    "count": 27
+  },
+  {
+    "file": "22.json",
+    "name_ar": "كتاب السهو",
+    "name_en": "Forgetfulness in Prayer",
+    "count": 14
+  },
+  {
+    "file": "23.json",
+    "name_ar": "كتاب الجنائز",
+    "name_en": "Funerals (Al-Janaa'iz)",
+    "count": 148
+  },
+  {
+    "file": "24.json",
+    "name_ar": "كتاب الزكاة",
+    "name_en": "Obligatory Charity Tax (Zakat)",
+    "count": 112
+  },
+  {
+    "file": "25.json",
+    "name_ar": "كتاب الحج",
+    "name_en": "Hajj (Pilgrimage)",
+    "count": 247
+  },
+  {
+    "file": "26.json",
+    "name_ar": "كتاب العمرة",
+    "name_en": "`Umrah (Minor pilgrimage)",
+    "count": 30
+  },
+  {
+    "file": "27.json",
+    "name_ar": "كتاب المحصر",
+    "name_en": "Pilgrims Prevented from Completing the Pilgrimage",
+    "count": 15
+  },
+  {
+    "file": "28.json",
+    "name_ar": "كتاب جزاء الصيد",
+    "name_en": "Penalty of Hunting while on Pilgrimage",
+    "count": 46
+  },
+  {
+    "file": "29.json",
+    "name_ar": "كتاب فضائل المدينة",
+    "name_en": "Virtues of Madinah",
+    "count": 24
+  },
+  {
+    "file": "30.json",
+    "name_ar": "كتاب الصوم",
+    "name_en": "Fasting",
+    "count": 112
+  },
+  {
+    "file": "31.json",
+    "name_ar": "كتاب صلاة التراويح",
+    "name_en": "Praying at Night in Ramadaan (Taraweeh)",
+    "count": 6
+  },
+  {
+    "file": "32.json",
+    "name_ar": "كتاب فضل ليلة القدر",
+    "name_en": "Virtues of the Night of Qadr",
+    "count": 11
+  },
+  {
+    "file": "33.json",
+    "name_ar": "كتاب الاعتكاف",
+    "name_en": "Retiring to a Mosque for Remembrance of Allah (I'tikaf)",
+    "count": 21
+  },
+  {
+    "file": "34.json",
+    "name_ar": "كتاب البيوع",
+    "name_en": "Sales and Trade",
+    "count": 184
+  },
+  {
+    "file": "35.json",
+    "name_ar": "كتاب السلم",
+    "name_en": "Sales in which a Price is paid for Goods to be Delivered Later (As-Salam)",
+    "count": 16
+  },
+  {
+    "file": "36.json",
+    "name_ar": "كتاب الشفعة",
+    "name_en": "Shuf'a",
+    "count": 3
+  },
+  {
+    "file": "37.json",
+    "name_ar": "كتاب الإجارة",
+    "name_en": "Hiring",
+    "count": 25
+  },
+  {
+    "file": "38.json",
+    "name_ar": "كتاب الحوالات",
+    "name_en": "Transferance of a Debt from One Person to Another (Al-Hawaala)",
+    "count": 3
+  },
+  {
+    "file": "39.json",
+    "name_ar": "كتاب الكفالة",
+    "name_en": "Kafalah",
+    "count": 9
+  },
+  {
+    "file": "40.json",
+    "name_ar": "كتاب الوكالة",
+    "name_en": "Representation, Authorization, Business by Proxy",
+    "count": 18
+  },
+  {
+    "file": "41.json",
+    "name_ar": "كتاب المزارعة",
+    "name_en": "Agriculture",
+    "count": 28
+  },
+  {
+    "file": "42.json",
+    "name_ar": "كتاب المساقاة",
+    "name_en": "Distribution of Water",
+    "count": 31
+  },
+  {
+    "file": "43.json",
+    "name_ar": "كتاب فى الاستقراض",
+    "name_en": "Loans, Payment of Loans, Freezing of Property, Bankruptcy",
+    "count": 24
+  },
+  {
+    "file": "44.json",
+    "name_ar": "كتاب الخصومات",
+    "name_en": "Khusoomaat",
+    "count": 15
+  },
+  {
+    "file": "45.json",
+    "name_ar": "كتاب فى اللقطة",
+    "name_en": "Lost Things Picked up by Someone (Luqatah)",
+    "count": 15
+  },
+  {
+    "file": "46.json",
+    "name_ar": "كتاب المظالم",
+    "name_en": "Oppressions",
+    "count": 43
+  },
+  {
+    "file": "47.json",
+    "name_ar": "كتاب الشركة",
+    "name_en": "Partnership",
+    "count": 22
+  },
+  {
+    "file": "48.json",
+    "name_ar": "كتاب الرهن",
+    "name_en": "Mortgaging",
+    "count": 8
+  },
+  {
+    "file": "49.json",
+    "name_ar": "كتاب العتق",
+    "name_en": "Manumission of Slaves",
+    "count": 41
+  },
+  {
+    "file": "50.json",
+    "name_ar": "كتاب المكاتب",
+    "name_en": "Makaatib",
+    "count": 6
+  },
+  {
+    "file": "51.json",
+    "name_ar": "كتاب الهبة وفضلها والتحريض عليها",
+    "name_en": "Gifts",
+    "count": 68
+  },
+  {
+    "file": "52.json",
+    "name_ar": "كتاب الشهادات",
+    "name_en": "Witnesses",
+    "count": 50
+  },
+  {
+    "file": "53.json",
+    "name_ar": "كتاب الصلح",
+    "name_en": "Peacemaking",
+    "count": 20
+  },
+  {
+    "file": "54.json",
+    "name_ar": "كتاب الشروط",
+    "name_en": "Conditions",
+    "count": 24
+  },
+  {
+    "file": "55.json",
+    "name_ar": "كتاب الوصايا",
+    "name_en": "Wills and Testaments (Wasaayaa)",
+    "count": 44
+  },
+  {
+    "file": "56.json",
+    "name_ar": "كتاب الجهاد والسير",
+    "name_en": "Fighting for the Cause of Allah (Jihaad)",
+    "count": 294
+  },
+  {
+    "file": "57.json",
+    "name_ar": "كتاب فرض الخمس",
+    "name_en": "One-fifth of Booty to the Cause of Allah (Khumus)",
+    "count": 63
+  },
+  {
+    "file": "58.json",
+    "name_ar": "كتاب الجزية والموادعة",
+    "name_en": "Jizyah and Mawaada'ah",
+    "count": 30
+  },
+  {
+    "file": "59.json",
+    "name_ar": "كتاب بدء الخلق",
+    "name_en": "Beginning of Creation",
+    "count": 131
+  },
+  {
+    "file": "60.json",
+    "name_ar": "كتاب أحاديث الأنبياء",
+    "name_en": "Prophets",
+    "count": 154
+  },
+  {
+    "file": "61.json",
+    "name_ar": "كتاب المناقب",
+    "name_en": "Virtues and Merits of the Prophet (pbuh) and his Companions",
+    "count": 151
+  },
+  {
+    "file": "62.json",
+    "name_ar": "كتاب فضائل أصحاب النبى صلى الله عليه وسلم",
+    "name_en": "Companions of the Prophet",
+    "count": 120
+  },
+  {
+    "file": "63.json",
+    "name_ar": "كتاب مناقب الأنصار",
+    "name_en": "Merits of the Helpers in Madinah (Ansaar)",
+    "count": 172
+  },
+  {
+    "file": "64.json",
+    "name_ar": "كتاب المغازى",
+    "name_en": "Military Expeditions led by the Prophet (pbuh) (Al-Maghaazi)",
+    "count": 488
+  },
+  {
+    "file": "65.json",
+    "name_ar": "كتاب التفسير",
+    "name_en": "Prophetic Commentary on the Qur'an (Tafseer of the Prophet (pbuh))",
+    "count": 499
+  },
+  {
+    "file": "66.json",
+    "name_ar": "كتاب فضائل القرآن",
+    "name_en": "Virtues of the Qur'an",
+    "count": 87
+  },
+  {
+    "file": "67.json",
+    "name_ar": "كتاب النكاح",
+    "name_en": "Wedlock, Marriage (Nikaah)",
+    "count": 183
+  },
+  {
+    "file": "68.json",
+    "name_ar": "كتاب الطلاق",
+    "name_en": "Divorce",
+    "count": 95
+  },
+  {
+    "file": "69.json",
+    "name_ar": "كتاب النفقات",
+    "name_en": "Supporting the Family",
+    "count": 22
+  },
+  {
+    "file": "70.json",
+    "name_ar": "كتاب الأطعمة",
+    "name_en": "Food, Meals",
+    "count": 95
+  },
+  {
+    "file": "71.json",
+    "name_ar": "كتاب العقيقة",
+    "name_en": "Sacrifice on Occasion of Birth (`Aqiqa)",
+    "count": 9
+  },
+  {
+    "file": "72.json",
+    "name_ar": "كتاب الذبائح والصيد",
+    "name_en": "Hunting, Slaughtering",
+    "count": 69
+  },
+  {
+    "file": "73.json",
+    "name_ar": "كتاب الأضاحي",
+    "name_en": "Al-Adha Festival Sacrifice (Adaahi)",
+    "count": 30
+  },
+  {
+    "file": "74.json",
+    "name_ar": "كتاب الأشربة",
+    "name_en": "Drinks",
+    "count": 65
+  },
+  {
+    "file": "75.json",
+    "name_ar": "كتاب المرضى",
+    "name_en": "Patients",
+    "count": 37
+  },
+  {
+    "file": "76.json",
+    "name_ar": "كتاب الطب",
+    "name_en": "Medicine",
+    "count": 93
+  },
+  {
+    "file": "77.json",
+    "name_ar": "كتاب اللباس",
+    "name_en": "Dress",
+    "count": 185
+  },
+  {
+    "file": "78.json",
+    "name_ar": "كتاب الأدب",
+    "name_en": "Good Manners and Form (Al-Adab)",
+    "count": 250
+  },
+  {
+    "file": "79.json",
+    "name_ar": "كتاب الاستئذان",
+    "name_en": "Asking Permission",
+    "count": 75
+  },
+  {
+    "file": "80.json",
+    "name_ar": "كتاب الدعوات",
+    "name_en": "Invocations",
+    "count": 106
+  },
+  {
+    "file": "81.json",
+    "name_ar": "كتاب الرقاق",
+    "name_en": "To make the Heart Tender (Ar-Riqaq)",
+    "count": 181
+  },
+  {
+    "file": "82.json",
+    "name_ar": "كتاب القدر",
+    "name_en": "Divine Will (Al-Qadar)",
+    "count": 26
+  },
+  {
+    "file": "83.json",
+    "name_ar": "كتاب الأيمان والنذور",
+    "name_en": "Oaths and Vows",
+    "count": 84
+  },
+  {
+    "file": "84.json",
+    "name_ar": "كتاب كفارات الأيمان",
+    "name_en": "Expiation for Unfulfilled Oaths",
+    "count": 15
+  },
+  {
+    "file": "85.json",
+    "name_ar": "كتاب الفرائض",
+    "name_en": "Laws of Inheritance (Al-Faraa'id)",
+    "count": 47
+  },
+  {
+    "file": "86.json",
+    "name_ar": "كتاب الحدود",
+    "name_en": "Limits and Punishments set by Allah (Hudood)",
+    "count": 81
+  },
+  {
+    "file": "87.json",
+    "name_ar": "كتاب الديات",
+    "name_en": "Blood Money (Ad-Diyat)",
+    "count": 55
+  },
+  {
+    "file": "88.json",
+    "name_ar": "كتاب استتابة المرتدين والمعاندين وقتالهم",
+    "name_en": "Apostates",
+    "count": 21
+  },
+  {
+    "file": "89.json",
+    "name_ar": "كتاب الإكراه",
+    "name_en": "(Statements made under) Coercion",
+    "count": 13
+  },
+  {
+    "file": "90.json",
+    "name_ar": "كتاب الحيل",
+    "name_en": "Tricks",
+    "count": 28
+  },
+  {
+    "file": "91.json",
+    "name_ar": "كتاب التعبير",
+    "name_en": "Interpretation of Dreams",
+    "count": 61
+  },
+  {
+    "file": "92.json",
+    "name_ar": "كتاب الفتن",
+    "name_en": "Afflictions and the End of the World",
+    "count": 83
+  },
+  {
+    "file": "93.json",
+    "name_ar": "كتاب الأحكام",
+    "name_en": "Judgments (Ahkaam)",
+    "count": 84
+  },
+  {
+    "file": "94.json",
+    "name_ar": "كتاب التمنى",
+    "name_en": "Wishes",
+    "count": 20
+  },
+  {
+    "file": "95.json",
+    "name_ar": "كتاب أخبار الآحاد",
+    "name_en": "Accepting Information Given by a Truthful Person",
+    "count": 21
+  },
+  {
+    "file": "96.json",
+    "name_ar": "كتاب الاعتصام بالكتاب والسنة",
+    "name_en": "Holding Fast to the Qur'an and Sunnah",
+    "count": 97
+  },
+  {
+    "file": "97.json",
+    "name_ar": "كتاب التوحيد",
+    "name_en": "Oneness, Uniqueness of Allah (Tawheed)",
+    "count": 188
+  }
+]

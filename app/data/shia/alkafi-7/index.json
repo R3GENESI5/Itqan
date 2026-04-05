@@ -1,0 +1,32 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "",
+    "name_en": "The Book of Wills",
+    "count": 240
+  },
+  {
+    "file": "2.json",
+    "name_ar": "",
+    "name_en": "The Book of Inheritance",
+    "count": 307
+  },
+  {
+    "file": "3.json",
+    "name_ar": "",
+    "name_en": "The Book of Legal Penalties",
+    "count": 123
+  },
+  {
+    "file": "4.json",
+    "name_ar": "",
+    "name_en": "The Book of Compensations",
+    "count": 78
+  },
+  {
+    "file": "5.json",
+    "name_ar": "",
+    "name_en": "The Book of Testimony",
+    "count": 144
+  }
+]

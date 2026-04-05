@@ -1,0 +1,98 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "كتاب الطهارة",
+    "name_en": "The Book of Purification",
+    "count": 179
+  },
+  {
+    "file": "2.json",
+    "name_ar": "كتاب الصلاة",
+    "name_en": "The Book of Prayer",
+    "count": 461
+  },
+  {
+    "file": "3.json",
+    "name_ar": "كتاب الجنائز",
+    "name_en": "Funerals",
+    "count": 66
+  },
+  {
+    "file": "4.json",
+    "name_ar": "كتاب الزكاة",
+    "name_en": "The Book of Zakah",
+    "count": 51
+  },
+  {
+    "file": "5.json",
+    "name_ar": "كتاب الصيام",
+    "name_en": "Fasting",
+    "count": 58
+  },
+  {
+    "file": "6.json",
+    "name_ar": "كتاب الحج",
+    "name_en": "Hajj",
+    "count": 74
+  },
+  {
+    "file": "7.json",
+    "name_ar": "كتاب البيوع",
+    "name_en": "Business Transactions",
+    "count": 233
+  },
+  {
+    "file": "8.json",
+    "name_ar": "كتاب النكاح",
+    "name_en": "Marriage",
+    "count": 222
+  },
+  {
+    "file": "9.json",
+    "name_ar": "كتاب الجنايات",
+    "name_en": "Crimes (Qisas or Retaliation)",
+    "count": 47
+  },
+  {
+    "file": "10.json",
+    "name_ar": "كتاب الحدود",
+    "name_en": "Hudud",
+    "count": 57
+  },
+  {
+    "file": "11.json",
+    "name_ar": "كتاب الجهاد",
+    "name_en": "Jihad",
+    "count": 63
+  },
+  {
+    "file": "12.json",
+    "name_ar": "كتاب الأطعمة",
+    "name_en": "Food",
+    "count": 44
+  },
+  {
+    "file": "13.json",
+    "name_ar": "كتاب الأيمان والنذور",
+    "name_en": "Oaths and Vows",
+    "count": 23
+  },
+  {
+    "file": "14.json",
+    "name_ar": "كتاب القضاء",
+    "name_en": "Judgments",
+    "count": 36
+  },
+  {
+    "file": "15.json",
+    "name_ar": "كتاب العتق",
+    "name_en": "Emancipation",
+    "count": 20
+  },
+  {
+    "file": "16.json",
+    "name_ar": "كتاب الجامع",
+    "name_en": "The Comprehensive Book",
+    "count": 133
+  }
+]

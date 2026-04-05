@@ -1,0 +1,224 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "كتاب الطهارة وسننها",
+    "name_en": "The Book of Purification and its Sunnah",
+    "count": 400
+  },
+  {
+    "file": "2.json",
+    "name_ar": "كتاب الصلاة",
+    "name_en": "The Book of the Prayer",
+    "count": 39
+  },
+  {
+    "file": "3.json",
+    "name_ar": "كتاب الأذان والسنة فيها",
+    "name_en": "The Book of the Adhan and the Sunnah Regarding It",
+    "count": 29
+  },
+  {
+    "file": "4.json",
+    "name_ar": "كتاب المساجد والجماعات",
+    "name_en": "The Book On The Mosques And The Congregations",
+    "count": 68
+  },
+  {
+    "file": "5.json",
+    "name_ar": "كتاب إقامة الصلاة والسنة فيها",
+    "name_en": "Establishing the Prayer and the Sunnah Regarding Them",
+    "count": 630
+  },
+  {
+    "file": "6.json",
+    "name_ar": "كتاب الجنائز",
+    "name_en": "Chapters Regarding Funerals",
+    "count": 205
+  },
+  {
+    "file": "7.json",
+    "name_ar": "كتاب الصيام",
+    "name_en": "Fasting",
+    "count": 145
+  },
+  {
+    "file": "8.json",
+    "name_ar": "كتاب الزكاة",
+    "name_en": "The Chapters Regarding Zakat",
+    "count": 62
+  },
+  {
+    "file": "9.json",
+    "name_ar": "كتاب النكاح",
+    "name_en": "The Chapters on Marriage",
+    "count": 171
+  },
+  {
+    "file": "10.json",
+    "name_ar": "كتاب الطلاق",
+    "name_en": "The Chapters on Divorce",
+    "count": 74
+  },
+  {
+    "file": "11.json",
+    "name_ar": "كتاب الكفارات",
+    "name_en": "The Chapters on Expiation",
+    "count": 47
+  },
+  {
+    "file": "12.json",
+    "name_ar": "كتاب التجارات",
+    "name_en": "The Chapters on Business Transactions",
+    "count": 171
+  },
+  {
+    "file": "13.json",
+    "name_ar": "كتاب الأحكام",
+    "name_en": "The Chapters on Rulings",
+    "count": 67
+  },
+  {
+    "file": "14.json",
+    "name_ar": "كتاب الهبات",
+    "name_en": "The Chapters on Gifts",
+    "count": 15
+  },
+  {
+    "file": "15.json",
+    "name_ar": "كتاب الصدقات",
+    "name_en": "The Chapters on Charity",
+    "count": 46
+  },
+  {
+    "file": "16.json",
+    "name_ar": "كتاب الرهون",
+    "name_en": "The Chapters on Pawning",
+    "count": 57
+  },
+  {
+    "file": "17.json",
+    "name_ar": "كتاب الشفعة",
+    "name_en": "The Chapters on Pre-emption",
+    "count": 11
+  },
+  {
+    "file": "18.json",
+    "name_ar": "كتاب اللقطة",
+    "name_en": "The Chapters on Lost Property",
+    "count": 10
+  },
+  {
+    "file": "19.json",
+    "name_ar": "كتاب العتق",
+    "name_en": "The Chapters on Manumission (of Slaves)",
+    "count": 21
+  },
+  {
+    "file": "20.json",
+    "name_ar": "كتاب الحدود",
+    "name_en": "The Chapters on Legal Punishments",
+    "count": 82
+  },
+  {
+    "file": "21.json",
+    "name_ar": "كتاب الديات",
+    "name_en": "The Chapters on Blood Money",
+    "count": 80
+  },
+  {
+    "file": "22.json",
+    "name_ar": "كتاب الوصايا",
+    "name_en": "The Chapters on Wills",
+    "count": 24
+  },
+  {
+    "file": "23.json",
+    "name_ar": "كتاب الفرائض",
+    "name_en": "Chapters on Shares of Inheritance",
+    "count": 34
+  },
+  {
+    "file": "24.json",
+    "name_ar": "كتاب الجهاد",
+    "name_en": "The Chapters on Jihad",
+    "count": 129
+  },
+  {
+    "file": "25.json",
+    "name_ar": "كتاب المناسك",
+    "name_en": "Chapters on Hajj Rituals",
+    "count": 238
+  },
+  {
+    "file": "26.json",
+    "name_ar": "كتاب الأضاحي",
+    "name_en": "Chapters on Sacrifices",
+    "count": 42
+  },
+  {
+    "file": "27.json",
+    "name_ar": "كتاب الذبائح",
+    "name_en": "Chapters on Slaughtering",
+    "count": 38
+  },
+  {
+    "file": "28.json",
+    "name_ar": "كتاب الصيد",
+    "name_en": "Chapters on Hunting",
+    "count": 51
+  },
+  {
+    "file": "29.json",
+    "name_ar": "كتاب الأطعمة",
+    "name_en": "Chapters on Food",
+    "count": 120
+  },
+  {
+    "file": "30.json",
+    "name_ar": "كتاب الأشربة",
+    "name_en": "Chapters on Drinks",
+    "count": 65
+  },
+  {
+    "file": "31.json",
+    "name_ar": "كتاب الطب",
+    "name_en": "Chapters on Medicine",
+    "count": 114
+  },
+  {
+    "file": "32.json",
+    "name_ar": "كتاب اللباس",
+    "name_en": "Chapters on Dress",
+    "count": 107
+  },
+  {
+    "file": "33.json",
+    "name_ar": "كتاب الأدب",
+    "name_en": "Etiquette",
+    "count": 170
+  },
+  {
+    "file": "34.json",
+    "name_ar": "كتاب الدعاء",
+    "name_en": "Supplication",
+    "count": 66
+  },
+  {
+    "file": "35.json",
+    "name_ar": "كتاب تعبير الرؤيا",
+    "name_en": "Interpretation of Dreams",
+    "count": 34
+  },
+  {
+    "file": "36.json",
+    "name_ar": "كتاب الفتن",
+    "name_en": "Tribulations",
+    "count": 175
+  },
+  {
+    "file": "37.json",
+    "name_ar": "كتاب الزهد",
+    "name_en": "Zuhd",
+    "count": 242
+  }
+]

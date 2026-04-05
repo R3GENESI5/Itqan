@@ -1,0 +1,146 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "كتاب الإيمان",
+    "name_en": "Faith",
+    "count": 188
+  },
+  {
+    "file": "2.json",
+    "name_ar": "كتاب العلم",
+    "name_en": "Knowledge",
+    "count": 75
+  },
+  {
+    "file": "3.json",
+    "name_ar": "كتاب الطهارة",
+    "name_en": "Purification",
+    "count": 258
+  },
+  {
+    "file": "4.json",
+    "name_ar": "كتاب الصلاة",
+    "name_en": "Prayer",
+    "count": 921
+  },
+  {
+    "file": "5.json",
+    "name_ar": "كتاب الجنائز",
+    "name_en": "Funerals",
+    "count": 243
+  },
+  {
+    "file": "6.json",
+    "name_ar": "كتاب الزكاة",
+    "name_en": "Zakat",
+    "count": 180
+  },
+  {
+    "file": "7.json",
+    "name_ar": "كتاب الصوم",
+    "name_en": "Fasting",
+    "count": 148
+  },
+  {
+    "file": "8.json",
+    "name_ar": "كتاب فضائل القرآن",
+    "name_en": "The Excellent Qualities of the Qur'an",
+    "count": 112
+  },
+  {
+    "file": "9.json",
+    "name_ar": "كتاب الدعوات",
+    "name_en": "Supplications",
+    "count": 272
+  },
+  {
+    "file": "10.json",
+    "name_ar": "كتاب المناسك",
+    "name_en": "The Rites of Pilgrimage",
+    "count": 246
+  },
+  {
+    "file": "11.json",
+    "name_ar": "كتاب البيوع",
+    "name_en": "Business Transactions",
+    "count": 274
+  },
+  {
+    "file": "12.json",
+    "name_ar": "كتاب الفرائض والوصايا",
+    "name_en": "Inheritance and Wills",
+    "count": 37
+  },
+  {
+    "file": "13.json",
+    "name_ar": "كتاب النكاح",
+    "name_en": "Marriage",
+    "count": 293
+  },
+  {
+    "file": "14.json",
+    "name_ar": "كتاب العتق",
+    "name_en": "Emancipation",
+    "count": 24
+  },
+  {
+    "file": "15.json",
+    "name_ar": "كتاب الإيمان والنذور",
+    "name_en": "Oaths and Vows",
+    "count": 39
+  },
+  {
+    "file": "16.json",
+    "name_ar": "كتاب القصاص",
+    "name_en": "Retaliation",
+    "count": 100
+  },
+  {
+    "file": "17.json",
+    "name_ar": "كتاب الحدود",
+    "name_en": "Prescribed Punishments",
+    "count": 94
+  },
+  {
+    "file": "18.json",
+    "name_ar": "كتاب الإمارة والقضاء",
+    "name_en": "The Offices of Commander and Qadi",
+    "count": 121
+  },
+  {
+    "file": "19.json",
+    "name_ar": "كتاب الجهاد",
+    "name_en": "Jihad",
+    "count": 273
+  },
+  {
+    "file": "20.json",
+    "name_ar": "كتاب الصيد والذبائح",
+    "name_en": "Game and Animals Which May Be Slaughtered",
+    "count": 93
+  },
+  {
+    "file": "21.json",
+    "name_ar": "كتاب الأطعمة",
+    "name_en": "Foods",
+    "count": 135
+  },
+  {
+    "file": "22.json",
+    "name_ar": "كتاب اللباس",
+    "name_en": "Clothing",
+    "count": 193
+  },
+  {
+    "file": "23.json",
+    "name_ar": "كتاب الطب والرقى",
+    "name_en": "Medicine and Spells",
+    "count": 88
+  },
+  {
+    "file": "24.json",
+    "name_ar": "كتاب الرؤيا",
+    "name_en": "Visions",
+    "count": 20
+  }
+]

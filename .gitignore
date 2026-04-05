@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Large generated files (rebuild with: python src/enrich_data.py)
+app/data/search_index.json
+app/data/shia_search_index.json
+app/data/difficult_words.json
+
+# Playwright MCP logs
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db

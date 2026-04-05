@@ -1,0 +1,47 @@
+{
+  "sunni": {
+    "the_9_books": [
+      { "id": "bukhari",   "name_ar": "صحيح البخاري",         "name_en": "Sahih al-Bukhari",       "author": "Imam al-Bukhari",       "died": 256, "graded": false },
+      { "id": "muslim",    "name_ar": "صحيح مسلم",            "name_en": "Sahih Muslim",            "author": "Imam Muslim",           "died": 261, "graded": false },
+      { "id": "abudawud",  "name_ar": "سنن أبي داود",         "name_en": "Sunan Abu Dawud",         "author": "Imam Abu Dawud",        "died": 275, "graded": true  },
+      { "id": "tirmidhi",  "name_ar": "جامع الترمذي",         "name_en": "Jami' at-Tirmidhi",       "author": "Imam at-Tirmidhi",      "died": 279, "graded": true  },
+      { "id": "nasai",     "name_ar": "سنن النسائي",           "name_en": "Sunan an-Nasa'i",         "author": "Imam an-Nasa'i",        "died": 303, "graded": true  },
+      { "id": "ibnmajah",  "name_ar": "سنن ابن ماجه",         "name_en": "Sunan Ibn Majah",         "author": "Imam Ibn Majah",        "died": 273, "graded": true  },
+      { "id": "ahmed",     "name_ar": "مسند أحمد",            "name_en": "Musnad Ahmad",            "author": "Imam Ahmad ibn Hanbal", "died": 241, "graded": false },
+      { "id": "malik",     "name_ar": "موطأ مالك",            "name_en": "Muwatta Malik",           "author": "Imam Malik",            "died": 179, "graded": false },
+      { "id": "darimi",    "name_ar": "سنن الدارمي",           "name_en": "Sunan ad-Darimi",         "author": "Imam ad-Darimi",        "died": 255, "graded": false }
+    ],
+    "forties": [
+      { "id": "nawawi40",        "name_ar": "الأربعون النووية",     "name_en": "Forty Hadith Nawawi",         "author": "Imam an-Nawawi",        "died": 676, "graded": false },
+      { "id": "qudsi40",         "name_ar": "الأربعون القدسية",     "name_en": "Forty Hadith Qudsi",          "author": "Various",               "died": null, "graded": false },
+      { "id": "shahwaliullah40", "name_ar": "أربعون شاه ولي الله", "name_en": "Forty Hadith Shah Waliullah", "author": "Shah Waliullah Dehlawi", "died": 1176, "graded": false }
+    ],
+    "other_books": [
+      { "id": "riyad_assalihin",    "name_ar": "رياض الصالحين",    "name_en": "Riyad as-Salihin",        "author": "Imam an-Nawawi",    "died": 676, "graded": false },
+      { "id": "aladab_almufrad",    "name_ar": "الأدب المفرد",     "name_en": "Al-Adab Al-Mufrad",       "author": "Imam al-Bukhari",   "died": 256, "graded": false },
+      { "id": "bulugh_almaram",     "name_ar": "بلوغ المرام",      "name_en": "Bulugh al-Maram",         "author": "Ibn Hajar al-Asqalani", "died": 852, "graded": false },
+      { "id": "mishkat_almasabih",  "name_ar": "مشكاة المصابيح",  "name_en": "Mishkat al-Masabih",      "author": "al-Tabrizi",        "died": 741, "graded": false },
+      { "id": "shamail_muhammadiyah","name_ar": "الشمائل المحمدية","name_en": "Shamail Muhammadiyah",   "author": "Imam at-Tirmidhi",  "died": 279, "graded": false }
+    ]
+  },
+  "shia": [
+    { "id": "alkafi-1", "name_ar": "الكافي — الجزء الأول",  "name_en": "Al-Kafi Vol. 1", "author": "al-Kulayni", "died": 329, "volume": 1 },
+    { "id": "alkafi-2", "name_ar": "الكافي — الجزء الثاني", "name_en": "Al-Kafi Vol. 2", "author": "al-Kulayni", "died": 329, "volume": 2 },
+    { "id": "alkafi-3", "name_ar": "الكافي — الجزء الثالث", "name_en": "Al-Kafi Vol. 3", "author": "al-Kulayni", "died": 329, "volume": 3 },
+    { "id": "alkafi-4", "name_ar": "الكافي — الجزء الرابع",  "name_en": "Al-Kafi Vol. 4", "author": "al-Kulayni", "died": 329, "volume": 4 },
+    { "id": "alkafi-5", "name_ar": "الكافي — الجزء الخامس", "name_en": "Al-Kafi Vol. 5", "author": "al-Kulayni", "died": 329, "volume": 5 },
+    { "id": "alkafi-6", "name_ar": "الكافي — الجزء السادس", "name_en": "Al-Kafi Vol. 6", "author": "al-Kulayni", "died": 329, "volume": 6 },
+    { "id": "alkafi-7", "name_ar": "الكافي — الجزء السابع", "name_en": "Al-Kafi Vol. 7", "author": "al-Kulayni", "died": 329, "volume": 7 },
+    { "id": "alkafi-8", "name_ar": "الكافي — الجزء الثامن", "name_en": "Al-Kafi Vol. 8", "author": "al-Kulayni", "died": 329, "volume": 8 },
+    { "id": "al-amali-mufid",    "name_ar": "الأمالي — المفيد",    "name_en": "Al-Amali (al-Mufid)",    "author": "Sheikh al-Mufid",  "died": 413, "volume": null },
+    { "id": "al-amali-saduq",    "name_ar": "الأمالي — الصدوق",   "name_en": "Al-Amali (al-Saduq)",   "author": "Sheikh al-Saduq",  "died": 381, "volume": null },
+    { "id": "al-khisal",         "name_ar": "الخصال",              "name_en": "Al-Khisal",              "author": "Sheikh al-Saduq",  "died": 381, "volume": null },
+    { "id": "al-tawhid",         "name_ar": "التوحيد",             "name_en": "Al-Tawhid",              "author": "Sheikh al-Saduq",  "died": 381, "volume": null },
+    { "id": "maani-al-akhbar",   "name_ar": "معاني الأخبار",       "name_en": "Maani al-Akhbar",        "author": "Sheikh al-Saduq",  "died": 381, "volume": null },
+    { "id": "uyun-rida-1",       "name_ar": "عيون أخبار الرضا ١",  "name_en": "Uyun Akhbar al-Rida V1", "author": "Sheikh al-Saduq",  "died": 381, "volume": 1 },
+    { "id": "uyun-rida-2",       "name_ar": "عيون أخبار الرضا ٢",  "name_en": "Uyun Akhbar al-Rida V2", "author": "Sheikh al-Saduq",  "died": 381, "volume": 2 },
+    { "id": "kamil-al-ziyarat",  "name_ar": "كامل الزيارات",       "name_en": "Kamil al-Ziyarat",       "author": "Ibn Qulawayh",     "died": 368, "volume": null },
+    { "id": "kitab-al-ghayba-numani", "name_ar": "كتاب الغيبة — النعماني", "name_en": "Kitab al-Ghayba (Numani)", "author": "al-Numani", "died": 360, "volume": null },
+    { "id": "kitab-al-ghayba-tusi",   "name_ar": "كتاب الغيبة — الطوسي",   "name_en": "Kitab al-Ghayba (Tusi)",   "author": "Sheikh al-Tusi", "died": 460, "volume": null }
+  ]
+}

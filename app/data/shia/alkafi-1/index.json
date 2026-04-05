@@ -1,0 +1,32 @@
+[
+  {
+    "file": "1.json",
+    "name_ar": "",
+    "name_en": "Introduction",
+    "count": 1
+  },
+  {
+    "file": "2.json",
+    "name_ar": "",
+    "name_en": "The Book of Intelligence and Ignorance",
+    "count": 36
+  },
+  {
+    "file": "3.json",
+    "name_ar": "",
+    "name_en": "The Book on Virtue of Knowledge",
+    "count": 176
+  },
+  {
+    "file": "4.json",
+    "name_ar": "",
+    "name_en": "The Book on Oneness of Allah (God)",
+    "count": 214
+  },
+  {
+    "file": "5.json",
+    "name_ar": "",
+    "name_en": "The Book about people with Divine Authority",
+    "count": 1018
+  }
+]

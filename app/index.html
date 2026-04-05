@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadith — Searchable Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <script>if(localStorage.getItem('hadith-dark')==='true')document.documentElement.classList.add('dark-mode')</script>
+</head>
+<body>
+
+<header id="header">
+    <div class="header-brand">
+        <h1 class="logo">الحديث</h1>
+        <span class="logo-sub">Hadith Library</span>
+    </div>
+
+    <div class="header-search">
+        <div class="search-wrap">
+            <span class="search-icon">⊕</span>
+            <input id="search-input" type="search" placeholder="Search in English or Arabic…" autocomplete="off" spellcheck="false">
+            <button id="search-clear" class="search-clear" style="display:none">&times;</button>
+        </div>
+        <div id="search-results-panel" class="search-results-panel" style="display:none"></div>
+    </div>
+
+    <div class="header-controls">
+        <a href="shia.html" class="shia-link">الشيعة ◎</a>
+        <button id="theme-toggle"    class="icon-btn" title="Dark mode">☽</button>
+        <button id="arabic-toggle"   class="icon-btn active" title="Arabic text">ع</button>
+        <button id="narrator-toggle" class="icon-btn active" title="Narrator">سند</button>
+        <button id="text-scale-btn"  class="icon-btn" title="Text size">أ+</button>
+    </div>
+</header>
+
+<div id="app">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-label">الكتب التسعة — The 9 Books</div>
+            <ul id="books-9" class="book-list"></ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-label">الأربعينيات — Forties</div>
+            <ul id="books-forties" class="book-list"></ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-label">كتب أخرى — Other Books</div>
+            <ul id="books-other" class="book-list"></ul>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <!-- Chapter panel -->
+        <aside id="chapter-panel" class="chapter-panel hidden">
+            <div class="chapter-panel-header">
+                <span id="chapter-book-title" class="chapter-book-title"></span>
+                <button id="chapter-panel-close" class="icon-btn">&times;</button>
+            </div>
+            <ul id="chapter-list" class="chapter-list"></ul>
+        </aside>
+
+        <!-- Reader -->
+        <section id="reader">
+            <div id="reader-header" class="reader-header" style="display:none">
+                <div class="rh-top">
+                    <div class="rh-book">
+                        <span id="rh-book-ar" class="rh-ar"></span>
+                        <span id="rh-book-en" class="rh-en"></span>
+                    </div>
+                    <div class="rh-nav">
+                        <button id="prev-chapter" class="nav-btn" title="Previous chapter">‹</button>
+                        <select id="chapter-select" class="chapter-select"></select>
+                        <button id="next-chapter" class="nav-btn" title="Next chapter">›</button>
+                    </div>
+                </div>
+                <div class="rh-chapter">
+                    <span id="rh-chapter-ar" class="rh-ar"></span>
+                    <span id="rh-chapter-en" class="rh-en"></span>
+                </div>
+            </div>
+
+            <div id="hadith-list"></div>
+
+            <div id="welcome" class="welcome">
+                <div class="welcome-inner">
+                    <div class="welcome-ar">الحديث النبوي الشريف</div>
+                    <div class="welcome-title">Hadith Library</div>
+                    <div class="welcome-desc">50,000+ hadiths · Arabic text with mouseover definitions · English translation · grading · cross-book connections</div>
+                    <div class="welcome-stats">
+                        <div class="stat"><span class="stat-n">17</span><span class="stat-l">Books</span></div>
+                        <div class="stat"><span class="stat-n">49k</span><span class="stat-l">Hadiths</span></div>
+                        <div class="stat"><span class="stat-n">1,651</span><span class="stat-l">Roots</span></div>
+                        <div class="stat"><span class="stat-n">6,740</span><span class="stat-l">Connections</span></div>
+                    </div>
+                    <div class="welcome-hint">← Select a book to begin, or press <kbd>/</kbd> to search</div>
+                    <a href="shia.html" class="welcome-shia-btn">Shia Hadith Library →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Word definition panel (slides in from right) -->
+<aside id="word-panel" class="side-panel">
+    <div class="drawer-handle"></div>
+    <div class="panel-header">
+        <div class="wp-header-word">
+            <span id="wp-word-ar" class="wp-word-ar"></span>
+            <span id="wp-root-chip" class="wp-root-chip"></span>
+        </div>
+        <button id="close-word-panel" class="icon-btn">&times;</button>
+    </div>
+    <div class="panel-body">
+
+        <!-- ① المعنى — Meaning -->
+        <div class="panel-section" id="wp-meaning-section">
+            <div class="section-toggle wp-sec-toggle" id="wp-meaning-toggle">
+                <span class="chevron">▾</span>
+                <span class="wp-sec-ar">المعنى</span>
+                <span class="wp-sec-en">Meaning</span>
+            </div>
+            <div id="wp-gloss" class="wp-gloss"></div>
+            <div id="wp-morph"></div>
+            <div id="wp-definition" class="wp-definition"></div>
+            <div id="wp-freq" class="wp-freq"></div>
+        </div>
+
+        <!-- ② الأسرة — Root Family -->
+        <div class="panel-section" id="wp-family-section">
+            <div class="section-toggle wp-sec-toggle" id="wp-family-toggle">
+                <span class="chevron">▾</span>
+                <span class="wp-sec-ar">الأسرة</span>
+                <span class="wp-sec-en">Root Family</span>
+                <span class="wp-sec-count" id="wp-family-count"></span>
+            </div>
+            <div id="wp-family-list" class="wp-family-list"></div>
+        </div>
+
+        <!-- ③ المصاحبة — Appears With (collapsed, computed lazily) -->
+        <div class="panel-section collapsed" id="wp-cooccur-section">
+            <div class="section-toggle wp-sec-toggle" id="wp-cooccur-toggle">
+                <span class="chevron">▸</span>
+                <span class="wp-sec-ar">المصاحبة</span>
+                <span class="wp-sec-en">Appears With</span>
+            </div>
+            <div id="wp-cooccur-list" class="wp-cooccur-list"></div>
+        </div>
+
+        <!-- ④ الأحاديث — In Corpus -->
+        <div class="panel-section" id="wp-hadiths-section">
+            <div class="section-toggle wp-sec-toggle" id="wp-hadiths-toggle">
+                <span class="chevron">▾</span>
+                <span class="wp-sec-ar">الأحاديث</span>
+                <span class="wp-sec-en">In Corpus</span>
+                <span class="wp-sec-count" id="wp-hadiths-count"></span>
+            </div>
+            <div id="wp-hadiths-list" class="wp-hadiths-list"></div>
+        </div>
+
+    </div>
+</aside>
+
+<!-- Hadith detail panel (slides in from right) -->
+<aside id="hadith-panel" class="side-panel">
+    <div class="drawer-handle"></div>
+    <div class="panel-header">
+        <div id="hp-ref" class="hp-ref"></div>
+        <button id="close-hadith-panel" class="icon-btn">&times;</button>
+    </div>
+    <div class="panel-body">
+        <div id="hp-grade" class="hp-grade"></div>
+        <div id="hp-arabic" class="hp-arabic" dir="rtl"></div>
+        <div id="hp-narrator" class="hp-narrator"></div>
+        <div id="hp-english" class="hp-english"></div>
+
+        <div class="dp-actions">
+            <button id="hp-copy"  class="dp-action-btn">⧉ Copy</button>
+            <button id="hp-share" class="dp-action-btn">⇗ Share</button>
+        </div>
+
+        <div class="panel-section collapsed" id="hp-connections-section" style="display:none">
+            <div class="section-toggle" id="hp-connections-toggle">
+                <span class="chevron">▸</span>
+                <span class="section-title">Connected Hadiths</span>
+                <span class="section-desc">Cross-book matches · shared matn · ruling · topic</span>
+            </div>
+            <div id="hp-connections-list" class="hp-connections-list"></div>
+        </div>
+    </div>
+</aside>
+
+<!-- Rawi (narrator) profile panel -->
+<aside id="rawi-panel" class="side-panel">
+    <div class="drawer-handle"></div>
+    <div class="panel-header">
+        <div id="rp-name" class="rp-name"></div>
+        <button id="close-rawi-panel" class="icon-btn">&times;</button>
+    </div>
+    <div class="panel-body">
+        <div id="rp-stats" class="rp-stats"></div>
+
+        <div class="panel-section" id="rp-topics-section">
+            <div class="section-toggle" id="rp-topics-toggle">
+                <span class="chevron">▾</span>
+                <span class="section-title">Topic Fingerprint</span>
+            </div>
+            <div id="rp-topics" class="rp-topics"></div>
+        </div>
+
+        <div class="panel-section" id="rp-grades-section">
+            <div class="section-toggle" id="rp-grades-toggle">
+                <span class="chevron">▾</span>
+                <span class="section-title">Grade Profile</span>
+            </div>
+            <div id="rp-grades" class="rp-grades"></div>
+        </div>
+
+        <div class="panel-section" id="rp-books-section">
+            <div class="section-toggle" id="rp-books-toggle">
+                <span class="chevron">▾</span>
+                <span class="section-title">Books</span>
+            </div>
+            <div id="rp-books" class="rp-books"></div>
+        </div>
+
+        <div class="panel-section collapsed" id="rp-hadiths-section">
+            <div class="section-toggle" id="rp-hadiths-toggle">
+                <span class="chevron">▸</span>
+                <span class="section-title">All Hadiths</span>
+            </div>
+            <div id="rp-hadiths-list" class="rp-hadiths-list"></div>
+        </div>
+    </div>
+</aside>
+
+<div id="panel-backdrop" class="panel-backdrop"></div>
+
+<div id="loading-overlay">
+    <div class="loader">
+        <div class="loader-arabic">بسم الله الرحمن الرحيم</div>
+        <div class="loader-text">Loading…</div>
+    </div>
+</div>
+
+<script src="js/app.js?v=10"></script>
+</body>
+</html>
