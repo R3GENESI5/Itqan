@@ -195,9 +195,30 @@ function render() {
     const origIdx = topNodes.indexOf(n);
     reIdx[origIdx] = i;
   });
-  const remapped = links
+  const remappedRaw = links
     .filter(l => reIdx[l.source] !== undefined && reIdx[l.target] !== undefined)
     .map(l => ({ source: reIdx[l.source], target: reIdx[l.target], value: l.value }));
+
+  // Remove back-edges that create cycles (D3-sankey requires a DAG)
+  function breakCycles(linkList, nodeCount) {
+    const adj = Array.from({length: nodeCount}, () => []);
+    linkList.forEach((l, i) => adj[l.source].push({to: l.target, idx: i}));
+    const WHITE = 0, GRAY = 1, BLACK = 2;
+    const color = new Array(nodeCount).fill(WHITE);
+    const removed = new Set();
+    function dfs(u) {
+      color[u] = GRAY;
+      for (const {to, idx} of adj[u]) {
+        if (removed.has(idx)) continue;
+        if (color[to] === GRAY) { removed.add(idx); } // back-edge → remove
+        else if (color[to] === WHITE) { dfs(to); }
+      }
+      color[u] = BLACK;
+    }
+    for (let i = 0; i < nodeCount; i++) if (color[i] === WHITE) dfs(i);
+    return linkList.filter((_, i) => !removed.has(i));
+  }
+  const remapped = breakCycles(remappedRaw, nodes.length);
 
   // Stats
   const statsEl = document.getElementById('stats');

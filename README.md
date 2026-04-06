@@ -339,6 +339,17 @@ Five charts:
 
 ---
 
+## The Isnad Visualizer
+
+`app/isnad.html` — D3-sankey isnad chain visualizer. Nodes = narrators, links = transmission connections, flow left-to-right from earliest collectors to the Prophet ﷺ.
+
+![Isnad chain visualizer — Sahih al-Bukhari](docs/screenshots/isnad-bukhari.png)
+*Sahih al-Bukhari: 7,189 chains parsed, 34 nodes shown, colored by narrator grade (green = Reliable/ثقة, grey = Unknown)*
+
+**Known gap:** Narrator grade coloring requires fuzzy Arabic name matching between the isnad parser output and the KASHAF grade database — currently all nodes show as Unknown. Grading is tracked as a future enhancement.
+
+---
+
 ## The AI Layer — Three Integrated Engines
 
 This repo contains the **data layer** that powers Al-Itqan. Three open-source tools form the **AI layer**, running on HuggingFace Spaces as optional APIs on top of the fully-static core.
