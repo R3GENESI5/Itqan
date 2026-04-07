@@ -35,6 +35,7 @@ Thumbs.db
 # Internal / NAS-only files (never push to public repo)
 setup_itqan_cron.sh
 docs/Al-Itqan-README.docx
+docs/Itqan-Blog-Post*.docx
+docs/generate_blog_post.py
 docs/screenshot-node-portal.png
-docs/screenshots/portal-islamic-section.png
 .claude/
