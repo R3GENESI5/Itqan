@@ -16,6 +16,7 @@ const App = {
 
     // Root filter (from ?root= URL param)
     rootFilter:   null,     // {root, ids: {bookId: Set(idInBook)}} or null
+    quranRootsIndex: null,  // root → {b, m, f, v: [ayah refs], fam}
 
     // Settings
     showArabic:   true,
@@ -73,6 +74,11 @@ const App = {
             }
 
             this.$('loading-overlay').classList.add('hidden');
+
+            // Hash change listener for back/forward navigation
+            window.addEventListener('hashchange', () => {
+                if (!this.rootFilter) this.handleHash();
+            });
 
             // Background loads
             this.loadWordDefs();
@@ -843,6 +849,9 @@ const App = {
 
         this.$('hp-ref').textContent = [meta?.name_en, ch?.name_en, `#${h.idInBook}`].filter(Boolean).join(' — ');
 
+        // Update URL for deep linking
+        history.replaceState(null, '', `#${this.currentBookId}/${this.currentChapterIdx}/${h.idInBook}`);
+
         this.$('hp-grade').innerHTML = grade
             ? `<span class="grade-badge ${this.gradeClass(grade)}">${grade}</span>`
             : '';
@@ -1424,10 +1433,10 @@ const App = {
         this.$('hp-share').addEventListener('click', () => {
             const h = this.activeHadith;
             if (!h) return;
-            const url = `${location.origin}${location.pathname.replace(/[^/]*$/, '')}hadith.html?book=${this.currentBookId}&id=${h.idInBook}`;
+            const url = `${location.origin}${location.pathname}#${this.currentBookId}/${this.currentChapterIdx}/${h.idInBook}`;
             navigator.clipboard?.writeText(url);
             this.$('hp-share').textContent = '✓ Copied';
-            setTimeout(() => this.$('hp-share').textContent = '⧉ Copy Link', 1500);
+            setTimeout(() => this.$('hp-share').textContent = '🔗 Share', 1500);
         });
 
         this.$('hp-open').addEventListener('click', () => {
@@ -1534,21 +1543,73 @@ const App = {
         banner.innerHTML = `
             <span class="rfb-root" dir="rtl">${letters}</span>
             <span class="rfb-count">${total.toLocaleString()} connected hadiths</span>
+            <button class="rfb-quran" onclick="App.toggleQuranBridge()">📖 Quran verses</button>
             <button class="rfb-clear" onclick="App.clearRootFilter()">✕ clear filter</button>
         `;
         banner.style.display = 'flex';
+        this.loadQuranBridge(root);
+    },
+
+    async loadQuranBridge(root) {
+        if (!this.quranRootsIndex) {
+            try {
+                this.quranRootsIndex = await fetch('../quran/data/roots_index.json').then(r => r.json());
+            } catch { this.quranRootsIndex = {}; }
+        }
+        const entry = this.quranRootsIndex[root];
+        const panel = this.$('quran-bridge-panel');
+        if (!entry || !entry.v || !entry.v.length) {
+            panel.style.display = 'none';
+            return;
+        }
+        const verses = entry.v;
+        const meaning = entry.m || '';
+        const family = entry.fam || '';
+        panel.innerHTML = `
+            <div class="qbp-header">
+                <span class="qbp-title">آيات القرآن — ${verses.length} Quran verses with this root</span>
+                ${family ? `<span class="qbp-family">${family}</span>` : ''}
+            </div>
+            ${meaning ? `<div class="qbp-meaning">${this.escHtml(meaning)}</div>` : ''}
+            <div class="qbp-verses">${verses.map(v => {
+                const [s, a] = v.split(':');
+                return `<a href="../quran/index.html#${s}" class="qbp-verse" title="Surah ${s}, Ayah ${a}">${v}</a>`;
+            }).join('')}</div>
+        `;
+        panel.style.display = 'none'; // starts collapsed, toggled by button
+    },
+
+    toggleQuranBridge() {
+        const panel = this.$('quran-bridge-panel');
+        const isHidden = panel.style.display === 'none';
+        panel.style.display = isHidden ? 'block' : 'none';
     },
 
     // ── Hash routing ──────────────────────────────────────────────────────────
     handleHash() {
         const hash = location.hash.slice(1);
         if (!hash) return;
-        const [bookId, chIdx] = hash.split('/');
+        const parts = hash.split('/');
+        const [bookId, chIdx, hadithId] = parts;
         if (bookId) {
             this.selectBook(bookId).then(() => {
-                if (chIdx !== undefined) this.loadChapter(parseInt(chIdx));
+                if (chIdx !== undefined) {
+                    this.loadChapter(parseInt(chIdx)).then(() => {
+                        if (hadithId) this.scrollToHadith(hadithId);
+                    });
+                }
             });
         }
+    },
+
+    scrollToHadith(idInBook) {
+        requestAnimationFrame(() => {
+            const card = document.querySelector(`.hadith-card[data-id="${idInBook}"]`);
+            if (!card) return;
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('hadith-highlight');
+            setTimeout(() => card.classList.remove('hadith-highlight'), 3000);
+        });
     },
 
     // ── Utility ───────────────────────────────────────────────────────────────

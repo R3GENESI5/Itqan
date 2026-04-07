@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Itqan — Thematic Families</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0d0d12;
+            color: #e0d8c8;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            background: #131318;
+            border-bottom: 1px solid #222;
+        }
+        .hdr-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            color: #d4a855;
+        }
+        .hdr-sub { font-size: .78rem; color: #8a8070; margin-left: 10px; }
+        .hdr-links { display: flex; gap: 12px; }
+        .hdr-links a {
+            font-size: .8rem;
+            color: #8a8070;
+            text-decoration: none;
+            padding: 4px 10px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            transition: all .15s;
+        }
+        .hdr-links a:hover { color: #d4a855; border-color: #d4a855; }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 20px auto 10px;
+            padding: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px 14px;
+            background: #1a1a22;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #e0d8c8;
+            font-size: .9rem;
+            outline: none;
+        }
+        .search-bar input:focus { border-color: #d4a855; }
+        .search-bar input::placeholder { color: #555; }
+
+        .stats-bar {
+            text-align: center;
+            padding: 8px;
+            font-size: .75rem;
+            color: #666;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 14px;
+            padding: 10px 20px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #151520;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 16px;
+            cursor: pointer;
+            transition: border-color .15s, background .15s;
+        }
+        .card:hover { border-color: #d4a855; background: #1a1a25; }
+        .card.expanded { border-color: rgba(212,168,85,.4); }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+        .card-ar {
+            font-family: 'Amiri', serif;
+            font-size: 1.25rem;
+            color: #d4a855;
+            direction: rtl;
+        }
+        .card-chevron {
+            color: #555;
+            font-size: .8rem;
+            transition: transform .2s;
+        }
+        .card.expanded .card-chevron { transform: rotate(90deg); }
+
+        .card-meaning {
+            font-size: .82rem;
+            color: #999;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 16px;
+            font-size: .72rem;
+            color: #777;
+        }
+        .card-stats span { display: flex; align-items: center; gap: 4px; }
+        .stat-val { color: #d4a855; font-weight: 600; font-size: .8rem; }
+
+        .card-roots {
+            display: none;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #222;
+        }
+        .card.expanded .card-roots { display: flex; }
+
+        .root-chip {
+            font-family: 'Amiri', serif;
+            font-size: .92rem;
+            padding: 3px 10px;
+            background: rgba(212,168,85,.08);
+            border: 1px solid rgba(212,168,85,.2);
+            border-radius: 4px;
+            color: #d4a855;
+            text-decoration: none;
+            transition: background .15s;
+            direction: rtl;
+        }
+        .root-chip:hover { background: rgba(212,168,85,.2); }
+        .root-chip .chip-count {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: .65rem;
+            color: #888;
+            margin-right: 4px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #555;
+            font-size: .9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display:flex;align-items:baseline">
+            <span class="hdr-title">الأسر الدلالية</span>
+            <span class="hdr-sub">Thematic Families</span>
+        </div>
+        <div class="hdr-links">
+            <a href="index.html">Hadith Library</a>
+            <a href="../quran/themes.html">Quran Themes</a>
+            <a href="chord.html">Chord Graphs</a>
+        </div>
+    </header>
+
+    <div class="search-bar">
+        <input id="filter" type="search" placeholder="Filter families… (Arabic or English)" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="stats-bar" id="stats-bar"></div>
+    <div class="grid" id="grid"></div>
+    <div class="no-results" id="no-results" style="display:none">No matching families.</div>
+
+<script>
+(async () => {
+    const [families, rootsIndex] = await Promise.all([
+        fetch('../quran/data/families.json').then(r => r.json()),
+        fetch('../quran/data/roots_index.json').then(r => r.json()),
+    ]);
+
+    // Build family data with computed stats
+    const familyData = Object.entries(families).map(([id, fam]) => {
+        let ayahCount = 0;
+        const rootDetails = [];
+        for (const root of fam.roots) {
+            const ri = rootsIndex[root];
+            if (ri) {
+                ayahCount += (ri.v?.length || 0);
+                rootDetails.push({ root, ayahs: ri.v?.length || 0 });
+            } else {
+                rootDetails.push({ root, ayahs: 0 });
+            }
+        }
+        rootDetails.sort((a, b) => b.ayahs - a.ayahs);
+        return {
+            id,
+            name_ar: fam.name_ar,
+            meaning: fam.meaning,
+            rootCount: fam.roots.length,
+            ayahCount,
+            rootDetails,
+        };
+    });
+
+    // Sort by ayah count descending
+    familyData.sort((a, b) => b.ayahCount - a.ayahCount);
+
+    const grid = document.getElementById('grid');
+    const statsBar = document.getElementById('stats-bar');
+    const noResults = document.getElementById('no-results');
+
+    const totalRoots = familyData.reduce((s, f) => s + f.rootCount, 0);
+    const totalAyahs = familyData.reduce((s, f) => s + f.ayahCount, 0);
+    statsBar.textContent = `${familyData.length} families · ${totalRoots.toLocaleString()} root assignments · ${totalAyahs.toLocaleString()} total ayah links`;
+
+    function render(data) {
+        grid.innerHTML = '';
+        if (!data.length) { noResults.style.display = ''; return; }
+        noResults.style.display = 'none';
+
+        data.forEach(fam => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-top">
+                    <span class="card-ar">${fam.name_ar}</span>
+                    <span class="card-chevron">▸</span>
+                </div>
+                <div class="card-meaning">${fam.meaning}</div>
+                <div class="card-stats">
+                    <span><span class="stat-val">${fam.rootCount}</span> roots</span>
+                    <span><span class="stat-val">${fam.ayahCount.toLocaleString()}</span> ayahs</span>
+                </div>
+                <div class="card-roots">
+                    ${fam.rootDetails.map(r =>
+                        `<a href="index.html?root=${encodeURIComponent(r.root)}" class="root-chip">${r.root}${r.ayahs ? `<span class="chip-count">${r.ayahs}</span>` : ''}</a>`
+                    ).join('')}
+                </div>
+            `;
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.root-chip')) return;
+                card.classList.toggle('expanded');
+            });
+            grid.appendChild(card);
+        });
+    }
+
+    render(familyData);
+
+    // Filter
+    document.getElementById('filter').addEventListener('input', (e) => {
+        const q = e.target.value.trim().toLowerCase();
+        if (!q) { render(familyData); return; }
+        const filtered = familyData.filter(f =>
+            f.name_ar.includes(q) ||
+            f.meaning.toLowerCase().includes(q) ||
+            f.id.includes(q)
+        );
+        render(filtered);
+    });
+})();
+</script>
+</body>
+</html>

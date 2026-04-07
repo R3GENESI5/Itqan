@@ -576,11 +576,11 @@ function insertAr(ch) {
 </div>
 """
 
-with gr.Blocks(title="Al-Itqan — الإتقان", css=_CSS) as demo:
+with gr.Blocks(title="Itqan AI — الإتقان") as demo:
 
     gr.HTML("""
     <div class="itq-header">
-      <div class="itq-header-ar">الإتقان — Al-Itqan</div>
+      <div class="itq-header-ar">الإتقان — Itqan AI</div>
       <div class="itq-header-en">Hadith Search &amp; Q&amp;A</div>
       <div class="itq-header-stats">87,688 hadiths · 17 books · Arabic concordance · semantic search · AI Q&amp;A</div>
     </div>
@@ -600,8 +600,6 @@ with gr.Blocks(title="Al-Itqan — الإتقان", css=_CSS) as demo:
                 )
                 search_btn = gr.Button("Search", variant="primary", scale=1)
 
-            gr.HTML(_AR_KB_HTML)
-
             top_k_sl = gr.Slider(minimum=5, maximum=500, value=10, step=5,
                                   label="Results to show")
             concordance_out = gr.HTML()
@@ -609,7 +607,7 @@ with gr.Blocks(title="Al-Itqan — الإتقان", css=_CSS) as demo:
         # ── Tab 2: RAG Chat ────────────────────────────────────────────────────
         with gr.Tab("RAG Chat  ✦"):
             gr.HTML('<div style="font-size:.8rem;color:#666;margin-bottom:10px">Ask any question · AI reads relevant hadiths · cites sources · first query loads model (~3 min)</div>')
-            chatbot   = gr.Chatbot(height=420, show_label=False, type="messages")
+            chatbot   = gr.Chatbot(height=420, show_label=False)
             with gr.Row():
                 rag_box   = gr.Textbox(placeholder="What does hadith say about…", lines=1,
                                         show_label=False, scale=5)
@@ -641,4 +639,4 @@ with gr.Blocks(title="Al-Itqan — الإتقان", css=_CSS) as demo:
                    outputs=[chatbot, sources, state, rag_box])
     clear_btn.click(lambda: ([], [], ""), outputs=[chatbot, state, sources])
 
-demo.launch()
+demo.launch(css=_CSS)
