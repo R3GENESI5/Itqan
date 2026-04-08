@@ -476,7 +476,7 @@ This repo contains the **data layer** that powers Al-Itqan. Three open-source to
 | BasilSuhail — Semantic Search | [iqrossed/al-itqan-search](https://huggingface.co/spaces/iqrossed/al-itqan-search) | ✅ Deployed |
 | HadithRAG — Conversational Q&A | [iqrossed/al-itqan-rag](https://huggingface.co/spaces/iqrossed/al-itqan-rag) | ✅ Deployed |
 
-The FAISS semantic index (112,221 hadiths, `intfloat/multilingual-e5-small`, 216MB) is hosted at [`iqrossed/al-itqan-index`](https://huggingface.co/datasets/iqrossed/al-itqan-index) and shared by both Spaces.
+The FAISS semantic index (87,056 hadiths — needs rebuild to include Ahmad expansion; `intfloat/multilingual-e5-small`, 216MB) is hosted at [`iqrossed/al-itqan-index`](https://huggingface.co/datasets/iqrossed/al-itqan-index) and shared by both Spaces.
 
 ### KASHAF — Isnad Visualizer
 **Source:** `github.com/OmarShafie/hadith`
@@ -615,7 +615,7 @@ The model, vector store, language support, grounding, and conversation architect
 | Jami' at-Tirmidhi | 4,053 | Graded |
 | Sunan an-Nasa'i | 5,685 | Graded |
 | Sunan Ibn Majah | 4,079 | Graded |
-| Musnad Ahmad | 1,374 | Ungraded |
+| Musnad Ahmad | 26,539 | Arabic only (Arnaut edition via OpenITI) |
 | Muwatta Malik | 1,985 | Ungraded |
 | Sunan ad-Darimi | 2,757 | Ungraded |
 | Riyad as-Salihin | 1,217 | Ungraded |
@@ -745,7 +745,7 @@ python src/audit.py
 
 | Gap | Severity | Detail |
 |-----|----------|--------|
-| **Musnad Ahmad incomplete** | **Critical** | Only 1,374 of ~27,000 hadiths. The 4th most important Sunni collection is 95% missing. Source: Shamela |
+| **Musnad Ahmad English** | Medium | 26,539 Arabic hadiths loaded (Arnaut edition via OpenITI), but English translations available for only ~1,374 (sunnah.com subset) |
 | **Narrator grades** | High | 26-38% of isnad narrators graded per book. Major names colored, but most secondary narrators show as grey/unknown |
 | **~315 zero-hadith roots** | Medium | Mostly hamza-initial roots (أتي, شيأ, رأي, أخذ) where CAMeL Tools normalization doesn't match concordance vocabulary |
 | **Family noise** | Medium | A single shared root is sufficient for a hadith to appear in a family. A hadith mentioning خرج (to leave) appears in end_of_times even if about ordinary travel |
@@ -765,7 +765,7 @@ python src/audit.py
 | 6 | v1.1: Reverse Quran bridge, deep links, families, chord rebuild | ✅ Complete |
 | 7 | v1.2: Bridge fix, guide page, isnad cleanup, explainers | ✅ Complete |
 | 8 | GitHub Pages + Zenodo DOIs (paper + code) | ✅ Complete |
-| 9 | Musnad Ahmad full corpus (~27k hadiths from Shamela) | 🔄 Next |
+| 9 | Musnad Ahmad full corpus (26,539 hadiths from OpenITI Arnaut edition) | ✅ Complete |
 | 10 | Improve narrator grade matching (target: 60%+) | ⬜ Planned |
 | 11 | Per-hadith authentication grades (Sahih/Hasan/Da'if) | ⬜ Planned |
 | 12 | Curated HadithReference tafsir table | ⬜ Planned |
