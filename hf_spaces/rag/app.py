@@ -91,9 +91,9 @@ if USE_LOCAL:
     concordance_path  = CONCORDANCE_PATH
 else:
     print(f"Downloading index files from {HF_REPO}...")
-    index_path       = hf_hub_download(repo_id=HF_REPO, filename="semantic_index.faiss")
-    meta_path        = hf_hub_download(repo_id=HF_REPO, filename="semantic_meta.json")
-    concordance_path = hf_hub_download(repo_id=HF_REPO, filename="concordance.json")
+    index_path       = hf_hub_download(repo_id=HF_REPO, filename="semantic_index.faiss", repo_type="dataset", token=False)
+    meta_path        = hf_hub_download(repo_id=HF_REPO, filename="semantic_meta.json", repo_type="dataset", token=False)
+    concordance_path = hf_hub_download(repo_id=HF_REPO, filename="concordance.json", repo_type="dataset", token=False)
 
 INDEX = faiss.read_index(index_path)
 META  = json.load(open(meta_path, encoding="utf-8"))
@@ -576,7 +576,7 @@ function insertAr(ch) {
 </div>
 """
 
-with gr.Blocks(title="Itqan AI — الإتقان") as demo:
+with gr.Blocks(title="Itqan AI — الإتقان", css=_CSS) as demo:
 
     gr.HTML("""
     <div class="itq-header">
@@ -639,4 +639,4 @@ with gr.Blocks(title="Itqan AI — الإتقان") as demo:
                    outputs=[chatbot, sources, state, rag_box])
     clear_btn.click(lambda: ([], [], ""), outputs=[chatbot, state, sources])
 
-demo.launch(css=_CSS)
+demo.launch()

@@ -31,8 +31,8 @@ if os.getenv("USE_LOCAL_INDEX"):
 else:
     HF_REPO = os.getenv("HF_INDEX_REPO", "iqrossed/al-itqan-index")
     print(f"Downloading index from {HF_REPO}...")
-    index_path = hf_hub_download(repo_id=HF_REPO, filename="semantic_index.faiss")
-    meta_path  = hf_hub_download(repo_id=HF_REPO, filename="semantic_meta.json")
+    index_path = hf_hub_download(repo_id=HF_REPO, filename="semantic_index.faiss", repo_type="dataset", token=False)
+    meta_path  = hf_hub_download(repo_id=HF_REPO, filename="semantic_meta.json", repo_type="dataset", token=False)
 
 INDEX = faiss.read_index(index_path)
 META  = json.load(open(meta_path, encoding="utf-8"))
