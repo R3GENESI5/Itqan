@@ -742,12 +742,16 @@ python src/audit.py
 ## Known Gaps and Roadmap
 
 ### Data gaps (acknowledged)
-- **الله root (أله):** `الله` appears in ~100% of all hadiths and is correctly treated as a stop word. The root أله has 1,879 Quran ayahs but cannot be meaningfully indexed against specific hadiths.
-- **~315 zero-hadith roots:** Mostly hamza-initial roots (أتي, شيأ, رأي, أخذ) where CAMeL Tools' normalization doesn't match the concordance vocabulary. Patching the most important ones (أمر, ولي, يوم, أرض, وقي, أمن) was done; the rest are lower priority.
-- **Family noise:** A single shared root is sufficient for a hadith to appear in a family. A hadith mentioning `خرج` (to leave) appears in `end_of_times` even if it's about ordinary travel. A relevance threshold (requiring 2+ family roots) would improve precision.
-- **Isnad narrator grades (partial):** 178/280 nodes (63.6%) are now matched and colored. The remaining ~37% are obscure narrators, patronymics without a full name, or names too ambiguous to match without additional biographical data.
-- **Isnad circular links:** D3-sankey rejects cycles in the data, so some books currently show a layout error. Pre-processing to break/remove cycles before rendering is a pending fix.
-- **No per-hadith grade in source data:** The source book JSONs contain only `arabic`, `english`, `id`, `idInBook`. Hadith-level authentication grades (Sahih/Hasan/Da'if) are not in the source data and must be sourced separately.
+
+| Gap | Severity | Detail |
+|-----|----------|--------|
+| **Musnad Ahmad incomplete** | **Critical** | Only 1,374 of ~27,000 hadiths. The 4th most important Sunni collection is 95% missing. Source: Shamela |
+| **Narrator grades** | High | 26-38% of isnad narrators graded per book. Major names colored, but most secondary narrators show as grey/unknown |
+| **~315 zero-hadith roots** | Medium | Mostly hamza-initial roots (أتي, شيأ, رأي, أخذ) where CAMeL Tools normalization doesn't match concordance vocabulary |
+| **Family noise** | Medium | A single shared root is sufficient for a hadith to appear in a family. A hadith mentioning خرج (to leave) appears in end_of_times even if about ordinary travel |
+| **الله root (أله)** | Low | Appears in ~100% of hadiths — correctly treated as stop word. Cannot be meaningfully indexed |
+| **Isnad أبي residual** | Low | ~134 unresolvable "his father" references in Muslim (long-tail kunya misparses) |
+| **No per-hadith grades** | Medium | Source JSONs lack Sahih/Hasan/Da'if authentication grades. Must be sourced separately |
 
 ### Planned phases
 | Phase | What | Status |
@@ -756,17 +760,16 @@ python src/audit.py
 | 1 | Isnad visualizer (D3 Sankey, 11 books) | ✅ Complete |
 | 2 | Semantic search (FAISS + multilingual-e5-small, 87k hadiths) | ✅ Complete |
 | 3 | Conversational Q&A (RAG + Qwen2.5-0.5B) | ✅ Complete |
-| 4 | Isnad narrator grade matching (63.6%, 5-strategy Arabic cascade) | ✅ Complete |
+| 4 | Isnad narrator grade matching (5-strategy Arabic cascade) | ✅ Complete |
 | 5 | App scaffold: reader, root panel, family view | ✅ Complete |
-| 6 | v1.1: Reverse Quran bridge, deep-link URLs, thematic families page | ✅ Complete |
-| 7 | v1.1: Chord viewer rebuild — distinctiveness + narrator×book chords | ✅ Complete |
-| 8 | GitHub Pages deployment + Zenodo DOI (10.5281/zenodo.19453613) | ✅ Complete |
-| 9 | Fix bridge: chapter-aware IDs (was matching wrong hadiths across all chapters) | ✅ Complete |
-| 10 | Fix root highlighting (isnad suppression was hiding matches) | ✅ Complete |
-| 11 | How It Works guide page + chord/isnad explainers + data insights | ✅ Complete |
-| 12 | Docker deployment for NAS (nginx:alpine, Portainer-ready) | ✅ Complete |
-| 13 | Musnad Ahmad expansion (~27k hadiths via sunnah.com API) | 🔄 Next |
-| 14 | Curated HadithReference tafsir table | ⬜ Planned |
+| 6 | v1.1: Reverse Quran bridge, deep links, families, chord rebuild | ✅ Complete |
+| 7 | v1.2: Bridge fix, guide page, isnad cleanup, explainers | ✅ Complete |
+| 8 | GitHub Pages + Zenodo DOIs (paper + code) | ✅ Complete |
+| 9 | Musnad Ahmad full corpus (~27k hadiths from Shamela) | 🔄 Next |
+| 10 | Improve narrator grade matching (target: 60%+) | ⬜ Planned |
+| 11 | Per-hadith authentication grades (Sahih/Hasan/Da'if) | ⬜ Planned |
+| 12 | Curated HadithReference tafsir table | ⬜ Planned |
+| 13 | FAISS index rebuild with expanded corpus | ⬜ Planned |
 
 ---
 
