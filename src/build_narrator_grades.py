@@ -17,8 +17,9 @@ import csv, json, re
 from pathlib import Path
 from collections import defaultdict
 
-SRC  = Path('D:/Hadith/src')
-DATA = Path('D:/Hadith/app/data')
+ROOT = Path(__file__).resolve().parent.parent
+SRC  = ROOT / 'src'
+DATA = ROOT / 'app' / 'data'
 
 # ── Grade normalization ───────────────────────────────────────────────────────
 GRADE_MAP = {

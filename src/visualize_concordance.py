@@ -7,8 +7,9 @@ import json, re
 from pathlib import Path
 from collections import defaultdict
 
-DATA = Path('D:/Hadith/app/data')
-OUT  = Path('D:/Hadith/app/concordance_audit.html')
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / 'app' / 'data'
+OUT  = ROOT / 'app' / 'concordance_audit.html'
 
 def load(name): return json.load(open(DATA / name, encoding='utf-8'))
 

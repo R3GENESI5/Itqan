@@ -1,12 +1,17 @@
 """Full concordance and bridge audit."""
 import json, glob, os
+from pathlib import Path
 from collections import defaultdict
 
-conc   = json.load(open('D:/Hadith/app/data/concordance.json'))
-wd     = json.load(open('D:/Hadith/app/data/word_defs_v2.json'))
-bridge = json.load(open('D:/Hadith/app/data/quran_hadith_bridge.json'))
-fam    = json.load(open('D:/Hadith/app/data/family_corpus.json'))
-alias  = json.load(open('D:/Hadith/src/root_alias_map.json'))
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / 'app' / 'data'
+SRC  = ROOT / 'src'
+
+conc   = json.load(open(DATA / 'concordance.json'))
+wd     = json.load(open(DATA / 'word_defs_v2.json'))
+bridge = json.load(open(DATA / 'quran_hadith_bridge.json'))
+fam    = json.load(open(DATA / 'family_corpus.json'))
+alias  = json.load(open(SRC / 'root_alias_map.json'))
 
 # ── 1. Per-book concordance coverage ─────────────────────────────────────────
 book_counts      = defaultdict(int)
@@ -18,7 +23,7 @@ for word, ids in conc.items():
         book_unique_words[book].add(word)
 
 book_hadith_counts = {}
-for book_dir in glob.glob('D:/Hadith/app/data/sunni/*/'):
+for book_dir in glob.glob(str(DATA / 'sunni' / '*') + '/'):
     book_id = os.path.basename(os.path.normpath(book_dir))
     idx_path = os.path.join(book_dir, 'index.json')
     if not os.path.exists(idx_path):
@@ -105,7 +110,7 @@ for root, topic in spot_roots.items():
         print(f'  {root:8s} {topic:25s}  NOT IN BRIDGE')
 
 # ── 6. Narrator index spot-check ─────────────────────────────────────────────
-narr = json.load(open('D:/Hadith/app/data/narrator_index.json'))
+narr = json.load(open(DATA / 'narrator_index.json'))
 print(f'\n=== NARRATOR INDEX ===')
 print(f'  Total narrators indexed: {len(narr):,}')
 top_n = sorted(narr.items(), key=lambda x: -x[1].get('count',0))[:15]
@@ -115,7 +120,7 @@ for name, data in top_n:
     print(f'  {name:30s} {data.get("count",0):>7,}  {", ".join(books)}')
 
 # ── 7. Hadith connections integrity ──────────────────────────────────────────
-hconn = json.load(open('D:/Hadith/app/data/hadith_connections.json'))
+hconn = json.load(open(DATA / 'hadith_connections.json'))
 print(f'\n=== HADITH CONNECTIONS ===')
 print(f'  Total connected hadith pairs: {len(hconn):,}')
 sample = list(hconn.items())[:3]
@@ -125,15 +130,15 @@ for hid, connections in sample:
 # ── 8. Data files cross-check ─────────────────────────────────────────────────
 print('\n=== DATA FILES SUMMARY ===')
 files = {
-    'concordance.json':         'D:/Hadith/app/data/concordance.json',
-    'word_defs_v2.json':        'D:/Hadith/app/data/word_defs_v2.json',
-    'quran_hadith_bridge.json': 'D:/Hadith/app/data/quran_hadith_bridge.json',
-    'family_corpus.json':       'D:/Hadith/app/data/family_corpus.json',
-    'narrator_index.json':      'D:/Hadith/app/data/narrator_index.json',
-    'hadith_connections.json':  'D:/Hadith/app/data/hadith_connections.json',
-    'roots_lexicon.json':       'D:/Hadith/app/data/roots_lexicon.json',
-    'root_alias_map.json':      'D:/Hadith/src/root_alias_map.json',
-    'bridge_analysis.json':     'D:/Hadith/src/bridge_analysis.json',
+    'concordance.json':         str(DATA / 'concordance.json'),
+    'word_defs_v2.json':        str(DATA / 'word_defs_v2.json'),
+    'quran_hadith_bridge.json': str(DATA / 'quran_hadith_bridge.json'),
+    'family_corpus.json':       str(DATA / 'family_corpus.json'),
+    'narrator_index.json':      str(DATA / 'narrator_index.json'),
+    'hadith_connections.json':  str(DATA / 'hadith_connections.json'),
+    'roots_lexicon.json':       str(DATA / 'roots_lexicon.json'),
+    'root_alias_map.json':      str(SRC / 'root_alias_map.json'),
+    'bridge_analysis.json':     str(SRC / 'bridge_analysis.json'),
 }
 for name, path in files.items():
     if os.path.exists(path):

@@ -24,7 +24,8 @@ Usage:
 import json, os, time
 from pathlib import Path
 
-DATA    = Path('D:/Hadith/app/data')
+ROOT    = Path(__file__).resolve().parent.parent
+DATA    = ROOT / 'app' / 'data'
 OUT_DIR = DATA / 'semantic'
 OUT_DIR.mkdir(exist_ok=True)
 

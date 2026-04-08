@@ -35,8 +35,9 @@ def save(p, d, indent=None):
     print(f'  Saved {Path(p).name} ({Path(p).stat().st_size//1024} KB)')
 
 print('Loading data...')
+QURAN_DATA = ROOT / 'quran' / 'data'
 q_roots  = load(DATA / 'quran-bil-quran-roots_index.json' if (DATA / 'quran-bil-quran-roots_index.json').exists()
-                else Path('D:/GRAPHS/quran-bil-quran/app/data/roots_index.json'))
+                else QURAN_DATA / 'roots_index.json')
 wd       = load(DATA / 'word_defs_v2.json')
 conc     = load(DATA / 'concordance.json')
 
