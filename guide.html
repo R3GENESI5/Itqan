@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itqan — How It Works</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0f;
+            color: #e0d8c8;
+            line-height: 1.7;
+        }
+        a { color: #d4a855; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Top nav ─────────────────────────────── */
+        .top-nav {
+            display: flex; gap: 12px; padding: 14px 24px;
+            background: rgba(18,14,10,.92); border-bottom: 1px solid #2a2420;
+            font-size: .85rem; flex-wrap: wrap; align-items: center;
+        }
+        .top-nav a {
+            color: #8a8070; padding: 2px 10px;
+            border: 1px solid #333; border-radius: 4px;
+        }
+        .top-nav a:hover { color: #d4a855; border-color: #d4a855; text-decoration: none; }
+
+        /* ── Hero ────────────────────────────────── */
+        .hero {
+            text-align: center; padding: 3rem 1.5rem 1.5rem;
+            max-width: 800px; margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2rem; color: #d4a855;
+            margin-bottom: .5rem; font-weight: 600;
+        }
+        .hero p {
+            color: #b0a898; font-size: 1.05rem;
+            max-width: 640px; margin: 0 auto;
+        }
+
+        /* ── Flow diagram ────────────────────────── */
+        .flow-section {
+            max-width: 700px; margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .flow-section h2 {
+            text-align: center; font-size: 1.1rem;
+            color: #8a8070; font-weight: 400;
+            letter-spacing: .1em; text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .flow-svg {
+            width: 100%; max-width: 660px;
+            margin: 0 auto; display: block;
+        }
+
+        /* ── Steps ───────────────────────────────── */
+        .steps {
+            max-width: 900px; margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #1e1a16;
+            align-items: center;
+        }
+        .step:last-child { border-bottom: none; }
+        .step.reverse { direction: rtl; }
+        .step.reverse > * { direction: ltr; }
+        .step-num {
+            font-size: .8rem; color: #d4a855;
+            letter-spacing: .15em; text-transform: uppercase;
+            margin-bottom: .5rem;
+        }
+        .step-title {
+            font-size: 1.35rem; color: #e0d8c8;
+            margin-bottom: .75rem; font-weight: 600;
+        }
+        .step-desc {
+            color: #a09888; font-size: .95rem;
+            margin-bottom: 1rem;
+        }
+        .step-try {
+            display: inline-block;
+            padding: .5rem 1.2rem;
+            border: 1px solid #d4a855;
+            color: #d4a855;
+            border-radius: 4px;
+            font-size: .9rem;
+            transition: all .2s;
+        }
+        .step-try:hover {
+            background: #d4a855; color: #0a0a0f;
+            text-decoration: none;
+        }
+        .step-img {
+            width: 100%; border-radius: 8px;
+            border: 1px solid #2a2420;
+            box-shadow: 0 4px 20px rgba(0,0,0,.4);
+        }
+
+        /* ── Also section ────────────────────────── */
+        .also {
+            max-width: 900px; margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .also h2 {
+            font-size: 1.1rem; color: #8a8070; font-weight: 400;
+            letter-spacing: .1em; text-transform: uppercase;
+            text-align: center; margin-bottom: 1.5rem;
+        }
+        .also-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+        }
+        .also-card {
+            background: #1a1612; border: 1px solid #2a2420;
+            border-radius: 8px; padding: 1.5rem;
+        }
+        .also-card h3 {
+            font-size: 1.1rem; color: #e0d8c8; margin-bottom: .5rem;
+        }
+        .also-card p {
+            color: #8a8070; font-size: .9rem; margin-bottom: .75rem;
+        }
+
+        /* ── Footer ──────────────────────────────── */
+        .guide-footer {
+            text-align: center; padding: 2rem;
+            border-top: 1px solid #1e1a16;
+            color: #666; font-size: .85rem;
+        }
+
+        /* ── Responsive ──────────────────────────── */
+        @media (max-width: 700px) {
+            .step { grid-template-columns: 1fr; }
+            .step.reverse { direction: ltr; }
+            .hero h1 { font-size: 1.5rem; }
+            .also-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="index.html" title="Home">&#x1F3E0;</a>
+    <a href="quran/index.html">Quran</a>
+    <a href="app/index.html">Hadith</a>
+    <a href="app/families.html">Families</a>
+    <a href="app/chord.html">Chords</a>
+    <a href="app/isnad.html">Isnad</a>
+</div>
+
+<div class="hero">
+    <h1>How Itqan Works</h1>
+    <p>Start with the Quran. Every word is a doorway &mdash; hover to see its meaning, click to uncover its
+    three-letter root, and follow that root through classical tafsir, thematic families, related verses,
+    and into 87,000+ hadiths across 18 books.</p>
+</div>
+
+<!-- ── Flow Diagram ──────────────────────────────────────────────────────── -->
+<div class="flow-section">
+    <h2>The Journey of a Word</h2>
+    <svg class="flow-svg" viewBox="0 0 660 520" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, system-ui, sans-serif">
+        <defs>
+            <marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                <path d="M0,0 L8,3 L0,6" fill="none" stroke="#d4a855" stroke-width="1.2"/>
+            </marker>
+        </defs>
+
+        <!-- Step 1: Read Quran -->
+        <rect x="200" y="10" width="260" height="50" rx="8" fill="#1a1612" stroke="#d4a855" stroke-width="1.5"/>
+        <text x="230" y="32" fill="#d4a855" font-size="14" font-weight="600" font-family="Amiri, serif">&#x0661;</text>
+        <text x="250" y="32" fill="#d4a855" font-size="13" font-weight="600">Read the Quran</text>
+        <text x="250" y="48" fill="#8a8070" font-size="10">Open a surah &middot; read the Arabic text</text>
+
+        <line x1="330" y1="60" x2="330" y2="80" stroke="#d4a855" stroke-width="1.2" marker-end="url(#ah)"/>
+
+        <!-- Step 2: Hover -->
+        <rect x="200" y="80" width="260" height="50" rx="8" fill="#1a1612" stroke="#d4a855" stroke-width="1.5"/>
+        <text x="230" y="102" fill="#d4a855" font-size="14" font-weight="600" font-family="Amiri, serif">&#x0662;</text>
+        <text x="250" y="102" fill="#d4a855" font-size="13" font-weight="600">Hover Over a Word</text>
+        <text x="250" y="118" fill="#8a8070" font-size="10">Instant tooltip with English meaning</text>
+
+        <line x1="330" y1="130" x2="330" y2="150" stroke="#d4a855" stroke-width="1.2" marker-end="url(#ah)"/>
+
+        <!-- Step 3: Click → Root Panel -->
+        <rect x="180" y="150" width="300" height="58" rx="10" fill="#2a2218" stroke="#d4a855" stroke-width="2"/>
+        <text x="210" y="174" fill="#d4a855" font-size="14" font-weight="600" font-family="Amiri, serif">&#x0663;</text>
+        <text x="232" y="174" fill="#d4a855" font-size="14" font-weight="700">Click &rarr; Root Panel Opens</text>
+        <text x="232" y="194" fill="#b0a898" font-size="10">Three-letter root &middot; meaning &middot; frequency</text>
+
+        <line x1="330" y1="208" x2="330" y2="228" stroke="#d4a855" stroke-width="1.2" marker-end="url(#ah)"/>
+
+        <!-- Step 4: Explore deeper (branches) -->
+        <rect x="125" y="228" width="410" height="46" rx="8" fill="#1a1612" stroke="#d4a855" stroke-width="1.2"/>
+        <text x="145" y="248" fill="#d4a855" font-size="14" font-weight="600" font-family="Amiri, serif">&#x0664;</text>
+        <text x="167" y="248" fill="#d4a855" font-size="12" font-weight="600">Scroll Down &mdash; Each Section Reveals More</text>
+        <text x="167" y="264" fill="#8a8070" font-size="10">Toggle open the panels you want to explore</text>
+
+        <!-- Branch lines down to 4 panels -->
+        <line x1="210" y1="274" x2="210" y2="300" stroke="#555" stroke-width="1"/>
+        <line x1="310" y1="274" x2="310" y2="300" stroke="#555" stroke-width="1"/>
+        <line x1="410" y1="274" x2="410" y2="300" stroke="#555" stroke-width="1"/>
+        <line x1="510" y1="274" x2="510" y2="300" stroke="#555" stroke-width="1"/>
+
+        <!-- Panel boxes -->
+        <rect x="140" y="300" width="140" height="46" rx="6" fill="#1a1612" stroke="#555" stroke-width="1"/>
+        <text x="210" y="319" text-anchor="middle" fill="#e0d8c8" font-size="11" font-weight="600">&#x0627;&#x0644;&#x0645;&#x0641;&#x0631;&#x062F;&#x0627;&#x062A; Mufradat</text>
+        <text x="210" y="336" text-anchor="middle" fill="#8a8070" font-size="9">classical tafsir</text>
+
+        <rect x="290" y="300" width="130" height="46" rx="6" fill="#1a1612" stroke="#555" stroke-width="1"/>
+        <text x="355" y="319" text-anchor="middle" fill="#e0d8c8" font-size="11" font-weight="600">Semantic Family</text>
+        <text x="355" y="336" text-anchor="middle" fill="#8a8070" font-size="9">39 thematic groups</text>
+
+        <rect x="430" y="300" width="160" height="46" rx="6" fill="#1a1612" stroke="#555" stroke-width="1"/>
+        <text x="510" y="319" text-anchor="middle" fill="#e0d8c8" font-size="11" font-weight="600">Connected Verses</text>
+        <text x="510" y="336" text-anchor="middle" fill="#8a8070" font-size="9">every ayah with this root</text>
+
+        <!-- Converge to step 5 -->
+        <line x1="330" y1="346" x2="330" y2="380" stroke="#555" stroke-width="1"/>
+        <text x="340" y="370" fill="#6a6050" font-size="9">keep scrolling</text>
+
+        <!-- Step 5: Hadith Bridge -->
+        <rect x="155" y="380" width="350" height="58" rx="10" fill="#2a2218" stroke="#d4a855" stroke-width="2"/>
+        <text x="185" y="404" fill="#d4a855" font-size="14" font-weight="600" font-family="Amiri, serif">&#x0665;</text>
+        <text x="207" y="404" fill="#d4a855" font-size="14" font-weight="700">Connected Hadiths</text>
+        <text x="207" y="424" fill="#b0a898" font-size="10">Jump to 87,000+ hadiths &middot; matching words highlighted</text>
+
+        <line x1="330" y1="438" x2="330" y2="460" stroke="#d4a855" stroke-width="1.2" marker-end="url(#ah)"/>
+
+        <!-- Step 6: Deep dive -->
+        <rect x="170" y="460" width="320" height="46" rx="8" fill="#1a1612" stroke="#555" stroke-width="1"/>
+        <text x="185" y="480" fill="#d4a855" font-size="14" font-weight="600" font-family="Amiri, serif">&#x0666;</text>
+        <text x="207" y="480" fill="#e0d8c8" font-size="12" font-weight="600">Read, Click Words, Repeat</text>
+        <text x="207" y="496" fill="#8a8070" font-size="10">Every hadith word leads back to a root</text>
+
+        <!-- Loop arrow back -->
+        <path d="M490,483 Q560,483 560,400 Q560,200 490,190" fill="none" stroke="#d4a855" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#ah)" opacity=".5"/>
+        <text x="568" y="340" fill="#6a6050" font-size="9" transform="rotate(90,568,340)">explore deeper</text>
+    </svg>
+</div>
+
+<!-- ── Step-by-step with screenshots ─────────────────────────────────────── -->
+<div class="steps">
+
+    <!-- Step 1: Read the Quran -->
+    <div class="step">
+        <div class="step-text">
+            <div class="step-num">Step 1 &mdash; Read</div>
+            <div class="step-title">Open the Quran</div>
+            <div class="step-desc">
+                Select any surah. The Arabic text is displayed with full diacritics and verse-by-verse layout.
+                Every word is live &mdash; this isn't a static PDF.
+            </div>
+            <a href="quran/index.html" class="step-try">Open Quran Reader &rarr;</a>
+        </div>
+        <img src="docs/screenshots/quran-reader.png" alt="Quran reader showing Arabic text" class="step-img" loading="lazy">
+    </div>
+
+    <!-- Step 2: Hover & Click -->
+    <div class="step reverse">
+        <div class="step-text">
+            <div class="step-num">Step 2 &mdash; Discover</div>
+            <div class="step-title">Hover, Then Click</div>
+            <div class="step-desc">
+                <strong>Hover</strong> any Arabic word for an instant English meaning.
+                <strong>Click</strong> it to open the Root Panel &mdash; the three-letter root that gives the word
+                its core meaning, plus its Quranic frequency and Meccan/Medinan distribution.
+            </div>
+            <a href="quran/index.html#2" class="step-try">Try it: Surah al-Baqarah &rarr;</a>
+        </div>
+        <img src="docs/screenshots/quran-root-panel.png" alt="Quran root panel with meaning and frequency" class="step-img" loading="lazy">
+    </div>
+
+    <!-- Step 3: Tafsir & Distinctions -->
+    <div class="step">
+        <div class="step-text">
+            <div class="step-num">Step 3 &mdash; Understand</div>
+            <div class="step-title">Classical Meaning &amp; Context</div>
+            <div class="step-desc">
+                Toggle open <strong>Mufradat al-Quran</strong> for al-Raghib al-Isfahani's classical definition of
+                the root &mdash; the standard Quranic lexicon for over 900 years.
+                <br><br>
+                <strong>Linguistic Distinctions</strong> shows how near-synonyms differ. Arabic has multiple words
+                for concepts like "knowledge" or "fear" &mdash; each root carries a distinct shade of meaning.
+            </div>
+        </div>
+        <img src="docs/screenshots/quran_panel.png" alt="Mufradat classical definitions panel" class="step-img" loading="lazy">
+    </div>
+
+    <!-- Step 4: Families & Verses -->
+    <div class="step reverse">
+        <div class="step-text">
+            <div class="step-num">Step 4 &mdash; Connect</div>
+            <div class="step-title">Families &amp; Connected Verses</div>
+            <div class="step-desc">
+                The <strong>Semantic Family</strong> panel shows which thematic group this root belongs to &mdash;
+                39 families like <em>mercy, justice, prayer, trade, eschatology</em>.
+                <br><br>
+                <strong>Connected Verses</strong> lists every ayah in the Quran containing this root,
+                so you can trace how a concept threads through different surahs.
+            </div>
+            <a href="app/families.html" class="step-try">Browse All 35 Families &rarr;</a>
+        </div>
+        <img src="docs/screenshots/families-page.png" alt="Thematic families page" class="step-img" loading="lazy">
+    </div>
+
+    <!-- Step 5: Hadith Bridge -->
+    <div class="step">
+        <div class="step-text">
+            <div class="step-num">Step 5 &mdash; Bridge</div>
+            <div class="step-title">Into the Hadith Corpus</div>
+            <div class="step-desc">
+                At the bottom of the root panel: <strong>Connected Hadiths</strong>. Click through to the Hadith
+                Library filtered by this root across all 18 books. Every matching word is
+                <span style="background:rgba(184,134,11,.25);padding:1px 4px;border-radius:3px">highlighted in gold</span>
+                so you can see exactly where the connection is.
+                <br><br>
+                1,336 Arabic roots bridge 6,236 ayahs to 87,000+ hadiths &mdash; the way classical scholars studied
+                Quran and Sunnah together.
+            </div>
+            <a href="app/index.html?root=%D8%B5%D9%84%D9%88" class="step-try">Try it: root &#x635;&#x644;&#x648; (prayer) &rarr;</a>
+        </div>
+        <img src="docs/screenshots/hadith-root-filter.png" alt="Hadiths filtered by Quran root with highlighted words" class="step-img" loading="lazy">
+    </div>
+
+    <!-- Step 6: Keep going -->
+    <div class="step reverse">
+        <div class="step-text">
+            <div class="step-num">Step 6 &mdash; Repeat</div>
+            <div class="step-title">Every Hadith Word Leads Back</div>
+            <div class="step-desc">
+                In the Hadith Library, every Arabic word is clickable too. Click one to see its root,
+                its meaning, and every other hadith sharing that root. The cycle continues &mdash;
+                Quran to Hadith, Hadith to Quran, all through shared roots.
+            </div>
+            <a href="app/index.html" class="step-try">Open Hadith Library &rarr;</a>
+        </div>
+        <img src="docs/screenshots/hadith-word-panel.png" alt="Hadith word panel showing root and connected hadiths" class="step-img" loading="lazy">
+    </div>
+
+</div>
+
+<!-- ── What the data reveals ──────────────────────────────────────────────── -->
+<div class="also">
+    <h2>What the Data Reveals</h2>
+    <p style="text-align:center;color:#8a8070;font-size:.92rem;max-width:640px;margin:0 auto 1.5rem">
+        When you connect 6,236 Quran verses to 87,000+ hadiths through 1,336 shared Arabic roots,
+        patterns emerge that no manual reading could surface.
+    </p>
+    <div class="also-grid">
+        <div class="also-card">
+            <h3>Meccan Compression</h3>
+            <p>Meccan surahs use fewer, more concentrated roots &mdash; the same core vocabulary repeated with
+            intensity. Medinan surahs expand into a broader vocabulary covering law, governance, and social contracts.
+            The Quran's own linguistic structure shifts as its audience and purpose shift.</p>
+        </div>
+        <div class="also-card">
+            <h3>Provision Connects to Action</h3>
+            <p>The thematic family for <em>provision</em> (rizq) overlaps most with <em>body</em> (hands, feet),
+            <em>travel</em>, <em>worship</em>, and <em>speech</em>. The hadith corpus links sustenance to physical effort,
+            movement, devotion, and what you say &mdash; not to passive waiting.</p>
+        </div>
+        <div class="also-card">
+            <h3>Book Fingerprints</h3>
+            <p>Each hadith collection has a thematic signature. Musannaf Ibn Abi Shaybah is heavy on fighting,
+            inheritance, and wealth (fiqh rulings). Malik's Muwatta concentrates on purification and worship
+            (Madinan practice). Bukhari is distinctive in knowledge and eschatology. The data confirms what
+            scholars have said for centuries about each compiler's editorial intent.</p>
+        </div>
+        <div class="also-card">
+            <h3>Quran&ndash;Hadith Root Correlation</h3>
+            <p>Roots that are frequent in the Quran tend to be frequent in hadith &mdash; but with significant
+            outliers. Some roots are far more prominent in hadith than their Quranic frequency would predict
+            (practical, legal roots), while others are Quran-heavy but rare in hadith (cosmological, poetic roots).
+            These divergences reveal the different registers of revelation vs. prophetic teaching.</p>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:1rem">
+        <a href="https://doi.org/10.5281/zenodo.19453612" class="step-try">Read the full paper &rarr;</a>
+    </div>
+</div>
+
+<!-- ── Also available ────────────────────────────────────────────────────── -->
+<div class="also">
+    <h2>Also in Itqan</h2>
+    <div class="also-grid">
+        <div class="also-card">
+            <h3>Isnad Visualizer</h3>
+            <p>Interactive tree diagrams of narrator transmission chains &mdash; see how hadith knowledge flowed
+            from the Prophet through generations of scholars.</p>
+            <a href="app/isnad.html" class="step-try">Explore &rarr;</a>
+        </div>
+        <div class="also-card">
+            <h3>Chord Graphs</h3>
+            <p>Three views: thematic family overlaps, book distinctiveness (which books specialize in which themes),
+            and narrator-book distributions.</p>
+            <a href="app/chord.html" class="step-try">Explore &rarr;</a>
+        </div>
+        <div class="also-card">
+            <h3>Hadith Search</h3>
+            <p>Full-text search in English or Arabic across all 18 books. Also works as a direct entry point &mdash;
+            find a hadith, click a word, and enter the root discovery flow.</p>
+            <a href="app/index.html" class="step-try">Search &rarr;</a>
+        </div>
+        <div class="also-card">
+            <h3>Shia Hadith Library</h3>
+            <p>A parallel collection with the same interactive Arabic text and root-click functionality,
+            covering the major Shia hadith compilations.</p>
+            <a href="app/shia.html" class="step-try">Explore &rarr;</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── Built on ───────────────────────────────────────────────────────────── -->
+<div class="also" style="margin-top:1rem">
+    <h2>Built On</h2>
+    <p style="text-align:center;color:#8a8070;font-size:.9rem;max-width:600px;margin:0 auto 1.5rem">
+        Itqan builds on and extends three open-source projects. Full technical details in the
+        <a href="https://github.com/R3GENESI5/Itqan#readme">GitHub README</a>.
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem">
+        <div class="also-card">
+            <h3>KASHAF</h3>
+            <p>Isnad visualization concept and Sankey data model. Itqan extends it from Bukhari-only
+            to 11 books with D3, narrator grading, and interactive controls.</p>
+        </div>
+        <div class="also-card">
+            <h3>BasilSuhail</h3>
+            <p>FAISS semantic search concept. Itqan upgrades from 15k hadiths to 87k, swaps the English-only
+            model for multilingual-e5-small (Arabic-native), and adds root family tagging.</p>
+        </div>
+        <div class="also-card">
+            <h3>HadithRAG</h3>
+            <p>RAG conversational Q&amp;A with isnad-preserving retrieval. Itqan replaces GPT with
+            open-source Qwen2.5, adds multi-turn, deduplication, and source grounding.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ── What's original ───────────────────────────────────────────────────── -->
+<div class="also" style="margin-top:1rem">
+    <h2>What&rsquo;s Original in Itqan</h2>
+    <p style="text-align:center;color:#8a8070;font-size:.9rem;max-width:640px;margin:0 auto 1.5rem">
+        The source projects provided <em>concepts</em>. Everything below was built from scratch
+        and has no precedent in any open-source Islamic studies tool.
+    </p>
+    <div class="also-grid">
+        <div class="also-card" style="border-color:rgba(212,168,85,.3);background:rgba(212,168,85,.04)">
+            <h3 style="color:#d4a855">Quran&ndash;Hadith Root Bridge</h3>
+            <p>1,336 shared Arabic roots connecting 6,236 ayahs to 87,000+ hadiths through 837,632 verified links.
+            Click a root in the Quran, see every hadith across 18 books. No existing tool does this.</p>
+        </div>
+        <div class="also-card" style="border-color:rgba(212,168,85,.3);background:rgba(212,168,85,.04)">
+            <h3 style="color:#d4a855">39 Thematic Families</h3>
+            <p>Roots grouped by semantic field from classical lexicography (al-Raghib al-Isfahani).
+            Mercy, justice, prayer, trade, eschatology &mdash; each family spans both Quran and Hadith.</p>
+        </div>
+        <div class="also-card" style="border-color:rgba(212,168,85,.3);background:rgba(212,168,85,.04)">
+            <h3 style="color:#d4a855">Word-Level Morphology</h3>
+            <p>32,413 Arabic words across 87k hadiths, each mapped to its root, Lane&rsquo;s Lexicon definition,
+            and grammatical form. Click any word in any hadith for instant analysis.</p>
+        </div>
+        <div class="also-card" style="border-color:rgba(212,168,85,.3);background:rgba(212,168,85,.04)">
+            <h3 style="color:#d4a855">Concordance, Chords &amp; Guide</h3>
+            <p>A full Mu&rsquo;jam al-Mufahris (1.15M word&times;hadith entries), three interactive chord
+            diagrams with interpretive annotations, and a visual discovery guide &mdash; all new.</p>
+        </div>
+    </div>
+</div>
+
+<div class="guide-footer">
+    <a href="index.html">&#x1F3E0; Back to Itqan</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://doi.org/10.5281/zenodo.19453612">Paper</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://doi.org/10.5281/zenodo.19453613">Code</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/R3GENESI5/Itqan#readme">GitHub &amp; Technical README</a>
+</div>
+
+</body>
+</html>
