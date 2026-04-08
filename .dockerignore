@@ -1,0 +1,22 @@
+.git
+.github
+.claude
+node_modules
+src
+docs
+hf_spaces
+*.py
+*.md
+CITATION.cff
+.gitignore
+.dockerignore
+Dockerfile
+Dockerfile.ai
+docker-compose.yml
+netlify.toml
+serve.json
+setup_itqan_cron.sh
+# Exclude root-level screenshots but keep quran PWA icons
+welcome.png
+hadith-list.png
+bukhari-chapter1.png
