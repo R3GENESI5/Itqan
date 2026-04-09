@@ -1558,14 +1558,28 @@ const App = {
         if (!hash) return;
         const parts = hash.split('/');
         const [bookId, chIdx, hadithId] = parts;
-        if (bookId) {
+        if (!bookId) return;
+
+        // Skip if we're already on this book+chapter (prevents reload loop)
+        const targetCh = chIdx !== undefined ? parseInt(chIdx) : 0;
+        if (bookId === this.currentBookId && targetCh === this.currentChapterIdx && !hadithId) {
+            return;
+        }
+
+        if (bookId !== this.currentBookId) {
             this.selectBook(bookId).then(() => {
                 if (chIdx !== undefined) {
-                    this.loadChapter(parseInt(chIdx)).then(() => {
+                    this.loadChapter(targetCh).then(() => {
                         if (hadithId) this.scrollToHadith(hadithId);
                     });
                 }
             });
+        } else if (targetCh !== this.currentChapterIdx) {
+            this.loadChapter(targetCh).then(() => {
+                if (hadithId) this.scrollToHadith(hadithId);
+            });
+        } else if (hadithId) {
+            this.scrollToHadith(hadithId);
         }
     },
 
