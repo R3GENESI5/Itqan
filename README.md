@@ -527,19 +527,17 @@ Narrator names are normalized from 1,422 raw variant strings (e.g. "Abu Huraira"
 
 ---
 
-## The Concordance Audit Dashboard
+## Data Quality Verification
 
-`app/concordance_audit.html` — a Chart.js verification dashboard used during development.
+`app/concordance_audit.html` — a Chart.js dashboard for verifying pipeline output. Regenerate with `python src/visualize_concordance.py`. Key charts:
 
-![Concordance & Bridge Audit Dashboard](docs/screenshots/concordance-audit.png)
-*Five-chart data quality dashboard: family coverage, top roots, per-book indexing, word frequency, and Quran↔Hadith correlation*
+1. **39 families bar chart** — hadith coverage per family, showing which themes dominate the corpus
+2. **Top 40 roots** — hadith count vs ayah count side by side; reveals which roots are over/under-represented between Quran and Hadith
+3. **Per-book coverage** — total hadiths vs concordance entries per book; verifies every book is indexed (112k total)
+4. **Word frequency distribution** — most words are rare; ~81 hit the 2,000 cap (صلي, قال, كان)
+5. **Quran freq vs Hadith count scatter** — positive correlation with outliers: abstract theological roots are Quran-heavy, legal practice roots are Hadith-heavy
 
-Five charts:
-1. **39 families bar chart** — hadith coverage per family, new families highlighted in red
-2. **Top 40 roots** — hadith count vs ayah count side by side; shows which roots are over/under-represented between the two corpora
-3. **Per-book coverage** — total hadiths vs concordance entries per book; verifies every book is indexed
-4. **Word frequency distribution** — histogram of how many words appear in 1–4 hadiths vs 5–19 vs ... vs 2000 (cap). Most words are rare; ~81 words hit the 2000 cap including صلي, قال, كان
-5. **Quran freq vs Hadith count scatter** — hover any dot to see root + meaning. Shows rough positive correlation but interesting outliers: roots frequent in Quran but rare in Hadith (abstract theological), and roots rare in Quran but very frequent in Hadith (legal practice detail)
+> **Note:** Screenshots in `docs/screenshots/` may be from earlier versions. The live dashboard at `concordance_audit.html` always reflects the current data.
 
 ---
 
@@ -791,10 +789,18 @@ graph TD
         RAG["🤖 RAG Q&A<br/>Qwen2.5-1.5B · cited answers"]
     end
 
-    style ITQAN fill:#1a1612,stroke:#d4a855,color:#e0d8c8
-    style AI fill:#1a1612,stroke:#555,color:#aaa
-    style QV fill:#2a2218,stroke:#d4a855,color:#e0d8c8
-    style HV fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+    style ITQAN fill:#f9f6f0,stroke:#b8860b,color:#2c1810
+    style AI fill:#f0f0f0,stroke:#888,color:#555
+    style QV fill:#fff8e7,stroke:#b8860b,color:#2c1810
+    style HV fill:#fff8e7,stroke:#b8860b,color:#2c1810
+    style RP fill:#fefce8,stroke:#b8860b,color:#2c1810
+    style WP fill:#fefce8,stroke:#b8860b,color:#2c1810
+    style IS fill:#f0f8f0,stroke:#2e8b57,color:#1a3a1a
+    style RJ fill:#f0f8f0,stroke:#2e8b57,color:#1a3a1a
+    style CH fill:#f5f0ff,stroke:#7b68ee,color:#2a1a3a
+    style FM fill:#f5f0ff,stroke:#7b68ee,color:#2a1a3a
+    style SE fill:#f0f0f0,stroke:#888,color:#555
+    style RAG fill:#f0f0f0,stroke:#888,color:#555
 ```
 
 ### Data Pipeline
@@ -820,10 +826,10 @@ graph LR
     ARSANAD["📋 AR-Sanad 280K"] --> UNIFIED["narrator_unified.json<br/>65,391 profiles · 75 MB"]
     OPENITI["📚 8 Classical Texts<br/>83,082 entries"] --> UNIFIED
 
-    style RAW fill:#2a2218,stroke:#d4a855,color:#e0d8c8
-    style BRIDGE fill:#2a2218,stroke:#d4a855,color:#e0d8c8
-    style UNIFIED fill:#2a2218,stroke:#d4a855,color:#e0d8c8
-    style WENSINCK fill:#1a2218,stroke:#4aaa70,color:#e0d8c8
+    style RAW fill:#fff8e7,stroke:#b8860b,color:#2c1810
+    style BRIDGE fill:#fff8e7,stroke:#b8860b,color:#2c1810
+    style UNIFIED fill:#f0f8f0,stroke:#2e8b57,color:#1a3a1a
+    style WENSINCK fill:#e8f5e9,stroke:#2e8b57,color:#1a3a1a
 ```
 
 ### Dual-Stemmer Root Resolution
@@ -838,10 +844,10 @@ graph TD
     PATCHED --> FINAL["96.3% Coverage<br/>1,590 roots · 1,528,346 links"]
     CONNECTED --> FINAL
 
-    style CONNECTED fill:#1a2a1a,stroke:#4aaa70,color:#e0d8c8
-    style PATCHED fill:#2a2a1a,stroke:#d4a855,color:#e0d8c8
-    style ZERO fill:#2a1a1a,stroke:#e74c3c,color:#e0d8c8
-    style FINAL fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+    style CONNECTED fill:#e8f5e9,stroke:#2e8b57,color:#1a3a1a
+    style PATCHED fill:#fff8e7,stroke:#b8860b,color:#2c1810
+    style ZERO fill:#fde8e8,stroke:#c0392b,color:#3a1a1a
+    style FINAL fill:#e8f5e9,stroke:#2e8b57,color:#1a3a1a
 ```
 
 **Design principle:** Itqan works fully offline without AI. Itqan AI enhances but is never required. A user with no internet still gets the complete Quran-Hadith study workflow.
