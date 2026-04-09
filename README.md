@@ -5,7 +5,7 @@
 
 > *"Itqan"* (إتقان) means mastery, perfection, and precision in craft. This project applies that principle to Islamic source texts: every connection between the Quran and the Hadith corpus is grounded in classical Arabic root morphology, not keyword guessing.
 
-A unified Quran and Hadith study platform — **1,336 shared Arabic roots** connecting **6,236 Quran ayahs** to **112k+ hadiths** through **862,661 root links**. Open the Quran, click any root, see every connected hadith across 18 books. Fully static, offline-capable, no backend required.
+A unified Quran and Hadith study platform — **1,336 shared Arabic roots** connecting **6,236 Quran ayahs** to **112k+ hadiths** through **1,326,229 root links**. Open the Quran, click any root, see every connected hadith across 18 books. Fully static, offline-capable, no backend required.
 
 **[Itqan AI](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** — an optional companion app providing concordance search and RAG-powered Q&A over the same corpus.
 
@@ -27,7 +27,7 @@ The result is a set of open JSON files that any developer can load and build on,
 
 **Corpus:** 112,221 Sunni hadiths + standalone Shia database
 **Quran roots:** 1,651 unique roots, 6,236 ayahs
-**Cross-references:** 862,661 Quran↔Hadith root links through 1,336 shared roots
+**Cross-references:** 1,326,229 Quran↔Hadith root links through 1,336 shared roots
 **Thematic families:** 39 (35 classical + 4 new: End of Times, Jihad, Statecraft, Family Law)
 
 ### Getting Started
@@ -60,7 +60,7 @@ These components have no precedent in any of the source projects or, to our know
 
 | Component | What it does | Scale |
 |-----------|-------------|-------|
-| **Quran↔Hadith root bridge** | Connects every Quran root to every hadith containing a word from that root | 1,336 roots, 862,661 links |
+| **Quran↔Hadith root bridge** | Connects every Quran root to every hadith containing a word from that root | 1,336 roots, 1,326,229 links |
 | **39 thematic families** | Roots grouped by semantic field (mercy, justice, prayer, trade...) from classical lexicography | 39 families spanning both corpora |
 | **Word-level morphological definitions** | Click any Arabic word in any hadith → root, Lane's Lexicon definition, morphological form | 32,413 words across 112k hadiths |
 | **Mufradat al-Quran integration** | Al-Raghib al-Isfahani's classical root definitions in the Quran reader | 1,651 roots |
@@ -133,7 +133,7 @@ RAW HADITH TEXT (Arabic, 18 books, 112,221 hadiths)
         │
         ▼
   quran_hadith_bridge.json            1,651 roots fully connected
-  862,661 total Quran↔Hadith root links
+  1,326,229 total Quran↔Hadith root links
         │
         ▼
   family_corpus.json                  39 thematic families
