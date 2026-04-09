@@ -1,7 +1,7 @@
 """
 Al-Itqan Semantic Search — HuggingFace Space
 ============================================
-BasilSuhail upgrade: hybrid semantic + keyword search over 87k hadiths.
+BasilSuhail upgrade: hybrid semantic + keyword search over 112k hadiths.
 
 Deploy:
   1. Create a new Space at huggingface.co/spaces (Gradio SDK)
@@ -115,7 +115,7 @@ def search(query: str, top_k: int, book_filter: str, family_filter: str, grade_f
         block = f"""### {rank}. {book_name} #{m['num']}
 **Score:** {score:.3f} &nbsp;|&nbsp; **Grade:** {grade_str} &nbsp;|&nbsp; **Families:** {families}
 
-<div dir="rtl" style="font-size:1.1rem;font-family:'Traditional Arabic',serif;line-height:1.8;background:#1a1a2e;padding:10px;border-radius:6px;margin:6px 0">{arabic[:400]}</div>
+<div dir="rtl" style="font-size:1.05rem;font-family:'Noto Naskh Arabic',serif;line-height:1.9;background:#1a1612;border:1px solid #2a2420;padding:12px;border-radius:8px;margin:8px 0;color:#e0d8c8">{arabic[:400]}</div>
 
 {english[:350]}{"…" if len(english) > 350 else ""}
 
@@ -135,7 +135,7 @@ families_list = ["All", "worship", "knowledge", "end_of_times", "statecraft",
 with gr.Blocks(title="Al-Itqan Semantic Search", theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
     # 🔍 Al-Itqan — Semantic Hadith Search
-    Search 87,688 hadiths across 18 books in **Arabic or English**.
+    Search 112,221 hadiths across 18 books in **Arabic or English**.
     Uses multilingual embeddings — finds hadiths by *meaning*, not just keywords.
     Results include Quran family tags from the root bridge.
     """)
@@ -160,7 +160,7 @@ with gr.Blocks(title="Al-Itqan Semantic Search", theme=gr.themes.Soft()) as demo
     gr.Markdown("""
     ---
     **Model:** `intfloat/multilingual-e5-small` (Apache-2.0) — supports Classical Arabic
-    **Index:** 87,688 hadiths · 384-dim vectors · FAISS cosine similarity
+    **Index:** 112,221 hadiths · 384-dim vectors · FAISS cosine similarity
     **Data:** Al-Itqan root bridge — each result tagged with Quran thematic family
     """)
 

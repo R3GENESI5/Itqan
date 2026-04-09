@@ -486,56 +486,67 @@ def handle_rag(question: str, history: list, show_sources: bool, top_k: int):
 
 # ── Interface ──────────────────────────────────────────────────────────────────
 _CSS = """
-/* ── Page base ─────────────────────────────────── */
-body, .gradio-container { background: #141414 !important; color: #e8e0d0; }
-.gradio-container { max-width: 900px !important; margin: 0 auto !important; padding: 0 16px 40px; }
+/* ── Page base — warm dark theme matching main Itqan app ── */
+body, .gradio-container { background: #0a0a0f !important; color: #e0d8c8; }
+.gradio-container { max-width: 920px !important; margin: 0 auto !important; padding: 0 16px 40px; }
 footer { display: none !important; }
 
 /* ── Header ────────────────────────────────────── */
-.itq-header { text-align: center; padding: 28px 0 20px; border-bottom: 1px solid #2a2a2a; margin-bottom: 20px; }
-.itq-header-ar { font-family: 'Noto Naskh Arabic', serif; font-size: 2rem; color: #c9a96e; letter-spacing: .05em; }
-.itq-header-en { font-size: .85rem; color: #888; margin-top: 4px; }
+.itq-header { text-align: center; padding: 28px 0 20px; border-bottom: 1px solid #2a2420; margin-bottom: 20px; }
+.itq-header-ar { font-family: 'Noto Naskh Arabic', serif; font-size: 2rem; color: #d4a855; letter-spacing: .05em; }
+.itq-header-en { font-size: .85rem; color: #8a8070; margin-top: 4px; }
 .itq-header-stats { font-size: .78rem; color: #666; margin-top: 6px; }
 
 /* ── Tabs ───────────────────────────────────────── */
-.tab-nav button { background: transparent !important; color: #888 !important;
+.tab-nav button { background: transparent !important; color: #8a8070 !important;
   border: none !important; border-bottom: 2px solid transparent !important;
   border-radius: 0 !important; font-size: .9rem; padding: 8px 20px !important; }
-.tab-nav button.selected { color: #c9a96e !important; border-bottom-color: #c9a96e !important; }
+.tab-nav button.selected { color: #d4a855 !important; border-bottom-color: #d4a855 !important; }
 
 /* ── Search bar ─────────────────────────────────── */
 .itq-search-row { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 10px; }
 textarea, input[type=text] {
-  background: #1e1e1e !important; border: 1px solid #333 !important;
-  color: #e8e0d0 !important; border-radius: 8px !important; font-size: 1rem;
+  background: #1a1612 !important; border: 1px solid #333 !important;
+  color: #e0d8c8 !important; border-radius: 8px !important; font-size: 1rem;
 }
-textarea:focus, input:focus { border-color: #c9a96e !important; outline: none !important; box-shadow: none !important; }
-button.primary { background: #c9a96e !important; color: #141414 !important;
+textarea:focus, input:focus { border-color: #d4a855 !important; outline: none !important; box-shadow: none !important; }
+button.primary { background: #d4a855 !important; color: #0a0a0f !important;
   border: none !important; border-radius: 8px !important; font-weight: 600; }
 button.primary:hover { background: #e0be82 !important; }
 
 /* ── Arabic keyboard ────────────────────────────── */
-.ar-kb-wrap { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+.ar-kb-wrap { background: #131318; border: 1px solid #2a2420; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
 .ar-kb-label { font-size: .72rem; color: #666; margin-bottom: 6px; }
 .ar-kb { display: flex; flex-wrap: wrap; gap: 4px; direction: rtl; }
 .ar-kb button {
   font-size: 1.1rem; padding: 5px 9px; border: 1px solid #333; border-radius: 5px;
-  background: #222; color: #d0c8b0; cursor: pointer; font-family: 'Noto Naskh Arabic', serif;
+  background: #1a1612; color: #d0c8b0; cursor: pointer; font-family: 'Noto Naskh Arabic', serif;
   min-width: 34px; text-align: center; transition: background .12s, border-color .12s;
 }
-.ar-kb button:hover { background: #2a2218; border-color: #c9a96e; color: #e8d8a0; }
+.ar-kb button:hover { background: #2a2218; border-color: #d4a855; color: #e8d8a0; }
 
 /* ── Slider ─────────────────────────────────────── */
-input[type=range] { accent-color: #c9a96e; }
-label { color: #888 !important; font-size: .8rem !important; }
+input[type=range] { accent-color: #d4a855; }
+label { color: #8a8070 !important; font-size: .8rem !important; }
 
 /* ── Chatbot ─────────────────────────────────────── */
-.message-wrap { background: #1a1a1a !important; }
-.message.user div { background: #2a2218 !important; color: #e8d8a0 !important; }
-.message.bot div { background: #1e1e1e !important; color: #e0d8c8 !important; }
+.message-wrap { background: #131318 !important; }
+.message.user div { background: #2a2218 !important; color: #e0d8c8 !important; border-radius: 8px !important; }
+.message.bot div { background: #1a1612 !important; color: #e0d8c8 !important; border-radius: 8px !important; }
+
+/* ── Results cards ─────────────────────────────── */
+.itqan-card { background: #1a1612; border: 1px solid #2a2420; border-radius: 8px; padding: 14px; margin-bottom: 10px; }
+.itqan-card:hover { border-color: #d4a855; }
+.itqan-ref { color: #d4a855; font-weight: 600; font-size: .85rem; }
+.itqan-grade-sahih { color: #4aaa70; font-size: .75rem; }
+.itqan-grade-daif { color: #e74c3c; font-size: .75rem; }
+.itqan-arabic { direction: rtl; font-family: 'Noto Naskh Arabic', serif; font-size: 1.05rem; line-height: 1.9; color: #e0d8c8; margin: 8px 0; }
+.itqan-english { color: #a09888; font-size: .88rem; line-height: 1.6; }
+.itqan-families { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.itqan-fam-tag { font-size: .68rem; color: #8a8070; background: #1e1a16; border: 1px solid #2a2420; border-radius: 10px; padding: 1px 8px; }
 
 /* ── Disclaimer ─────────────────────────────────── */
-.itq-footer { font-size: .75rem; color: #555; text-align: center; margin-top: 24px; border-top: 1px solid #222; padding-top: 14px; }
+.itq-footer { font-size: .75rem; color: #555; text-align: center; margin-top: 24px; border-top: 1px solid #2a2420; padding-top: 14px; }
 """
 
 _AR_KB_HTML = """
@@ -582,7 +593,7 @@ with gr.Blocks(title="Itqan AI — الإتقان", css=_CSS) as demo:
     <div class="itq-header">
       <div class="itq-header-ar">الإتقان — Itqan AI</div>
       <div class="itq-header-en">Hadith Search &amp; Q&amp;A</div>
-      <div class="itq-header-stats">87,688 hadiths · 17 books · Arabic concordance · semantic search · AI Q&amp;A</div>
+      <div class="itq-header-stats">112,221 hadiths · 18 books · Arabic concordance · semantic search · AI Q&amp;A</div>
     </div>
     """)
 
