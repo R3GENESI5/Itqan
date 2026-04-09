@@ -563,24 +563,39 @@ The isnad parser (`src/parse_isnad_chains.py`) handles several Arabic-specific c
 
 ## The Rijal Page — Narrator Profiles
 
-`app/rijal.html` — a searchable browser for **65,391 narrator biographies** from the classical hadith tradition.
+`app/rijal.html` — **the largest structured open-source narrator database available**: 65,391 profiles spanning 8 classical texts of hadith scholarship, with 119,860 name variants, 31,822 classical source cross-references, and 28,917 graded profiles. Each narrator's entry consolidates assessments from multiple classical scholars — enabling the kind of multi-source comparison that previously required consulting several physical volumes.
 
 Every narrator who appears in the six canonical books (Kutub al-Sittah) and related collections is profiled with:
 
 - **Full name** and all known **name variants** (e.g., أبو هريرة has 12+ variant spellings across manuscripts)
 - **Kunya** (honorific patronymic), **laqab** (title), **nasab** (lineage), **nisba** (geographic/tribal affiliation)
 - **Ibn Hajar's grade** from *Taqrib al-Tahdhib* — the standard one-line assessment (ثقة, صدوق, ضعيف, etc.)
-- **Al-Dhahabi's assessment** — an independent second opinion
-- **Jarh wa ta'dil** (701 narrators) — the full critical opinions from multiple classical scholars: Abu Hatim al-Razi, Ahmad ibn Hanbal, Ibn Hibban, Ibn 'Adi, al-Nasa'i, etc. This is the raw material that hadith scholars use to evaluate narrator reliability.
+- **Al-Dhahabi's assessment** from *Mizan al-I'tidal* — an independent second opinion
+- **Classical source cross-references** — which of the 8 parsed texts mention this narrator, with entry ID and grade from each
+- **Jarh wa ta'dil** — the full critical opinions from multiple classical scholars: Abu Hatim al-Razi, Ahmad ibn Hanbal, Ibn Hibban, Ibn 'Adi, al-Nasa'i, etc. This is the raw material that hadith scholars use to evaluate narrator reliability.
 - **Death year**, **birth year**, **city of residence**, **tabaqat** (generation in the chain of transmission)
 
 ### Data sources
 
-The unified narrator database (`app/data/narrator_unified.json`, 30 MB) merges three open-source datasets:
+The unified narrator database (`app/data/narrator_unified.json`, 75 MB) is compiled from:
 
-1. **AR-Sanad 280K** (somaia02) — 65,391 narrators with 119,860 name variants and teacher→student ID links. This is the largest structured dataset of hadith narrators available.
-2. **hatemben/hadithdb** — 1,524 Bukhari narrators with detailed jarh wa ta'dil from Tahdhib al-Tahdhib (multiple scholar opinions per narrator, with source references to specific pages in classical texts).
-3. **KASHAF** (OmarShafie/hadith) — 17,093 entries with grades extracted from Tahdhib al-Tahdhib.
+**Structured datasets (JSON/CSV):**
+1. **AR-Sanad 280K** (somaia02) — 18,298 base narrators with name variants and teacher→student ID links
+2. **hatemben/hadithdb** — 1,524 Bukhari narrators with detailed jarh wa ta'dil (multiple scholar opinions with page references)
+3. **KASHAF** (OmarShafie/hadith) — 17,093 entries with grades from Tahdhib al-Tahdhib
+
+**Classical texts parsed from OpenITI (83,082 entries total):**
+
+| Text | Author (d.) | Entries | Focus |
+|------|-------------|---------|-------|
+| **Taqrib al-Tahdhib** | Ibn Hajar (852 AH) | 8,522 | Concise narrator grades |
+| **Tahdhib al-Tahdhib** | Ibn Hajar (852 AH) | 11,761 | Expanded narrator assessments |
+| **Tahdhib al-Kamal** | al-Mizzi (742 AH) | 8,158 | Six Books narrator encyclopedia |
+| **Mizan al-I'tidal** | al-Dhahabi (748 AH) | 10,888 | Criticized narrators |
+| **Al-Jarh wa al-Ta'dil** | Ibn Abi Hatim (327 AH) | 17,516 | Reliability evaluations |
+| **Al-Thiqat** | Ibn Hibban (354 AH) | 16,189 | Reliable narrators |
+| **Al-Kamil fi Du'afa** | Ibn 'Adi (365 AH) | 2,210 | Weak narrators |
+| **Tarikh Baghdad** | al-Khatib (463 AH) | 7,838 | Baghdad scholar biographies |
 
 ### Interaction
 
