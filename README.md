@@ -12,7 +12,7 @@
 | | Metric | Scale |
 |---|--------|-------|
 | 📚 | **Hadith corpus** | 112,221 hadiths across 18 Sunni books + 15,000+ Shia |
-| 🔗 | **Root bridge** | 1,401 shared Arabic roots generating 1,456,898 Quran↔Hadith links |
+| 🔗 | **Root bridge** | 1,590 shared Arabic roots generating 1,528,346 Quran↔Hadith links |
 | 📖 | **Quran coverage** | 6,236 ayahs, 1,651 unique roots, 39 thematic families |
 | 👤 | **Narrator database** | 65,391 narrators with 119,860 name variants, jarh wa ta'dil from 8 classical texts (83,082 entries) |
 | 🔍 | **Morphological dictionary** | 32,413 Arabic words → root + Lane's Lexicon + grammatical form |
@@ -34,11 +34,11 @@ For *ilm al-rijal* (narrator criticism), evaluating a single hadith chain meant 
 
 **Itqan does all of this computationally, instantly, and for free.**
 
-What Wensinck's team took decades to compile for 9 books, Itqan computes for 18. But more importantly, **Itqan builds the bridge that never existed** — connecting Fuad Abd al-Baqi's Quran concordance to Wensinck's hadith concordance through 1,401 shared Arabic roots, generating 1,456,898 verified cross-references. And what required a scholar to open four volumes of rijal, Itqan consolidates from 8 classical texts into one searchable database of 65,391 narrator profiles.
+What Wensinck's team took decades to compile for 9 books, Itqan computes for 18. But more importantly, **Itqan builds the bridge that never existed** — connecting Fuad Abd al-Baqi's Quran concordance to Wensinck's hadith concordance through 1,590 shared Arabic roots, generating 1,528,346 verified cross-references. And what required a scholar to open four volumes of rijal, Itqan consolidates from 8 classical texts into one searchable database of 65,391 narrator profiles.
 
 ### The concordance
 
-Existing platforms (Quran.com, Sunnah.com, islamweb.net) provide keyword search on translations. Itqan operates at the level classical scholars worked: **Arabic root morphology**. The root `صوم` connects every Quran verse about fasting to every hadith whose Arabic text contains a word derived from that root — whether the word is `صيام`, `يصوم`, `الصائم`, `صُمْتُ`, or `صوموا`. One root, all its forms, across both corpora at once. **1,401 shared roots generate 1,456,898 verified connections** between 6,236 Quran ayahs and 112,221 hadiths across 18 books.
+Existing platforms (Quran.com, Sunnah.com, islamweb.net) provide keyword search on translations. Itqan operates at the level classical scholars worked: **Arabic root morphology**. The root `صوم` connects every Quran verse about fasting to every hadith whose Arabic text contains a word derived from that root — whether the word is `صيام`, `يصوم`, `الصائم`, `صُمْتُ`, or `صوموا`. One root, all its forms, across both corpora at once. **1,590 shared roots generate 1,528,346 verified connections** between 6,236 Quran ayahs and 112,221 hadiths across 18 books.
 
 ### The narrator database
 
@@ -50,7 +50,7 @@ Every Arabic word in every hadith is one click away from its three-letter root, 
 
 ### Open data
 
-Everything is open JSON files. A researcher can load `quran_hadith_bridge.json` and query all 1,456,898 root connections programmatically. A developer can build a new app on `narrator_unified.json` and its 65,391 profiles. No API keys, no rate limits, no backend. The live web app is fully static and works offline.
+Everything is open JSON files. A researcher can load `quran_hadith_bridge.json` and query all 1,528,346 root connections programmatically. A developer can build a new app on `narrator_unified.json` and its 65,391 profiles. No API keys, no rate limits, no backend. The live web app is fully static and works offline.
 
 | Quran bil-Quran — root panel | Hadith Reader — root filter mode |
 |---|---|
@@ -62,7 +62,7 @@ Everything is open JSON files. A researcher can load `quran_hadith_bridge.json` 
 
 **Corpus:** 112,221 Sunni hadiths + standalone Shia database
 **Quran roots:** 1,651 unique roots, 6,236 ayahs
-**Cross-references:** 1,456,898 Quran↔Hadith root links through 1,401 shared roots
+**Cross-references:** 1,528,346 Quran↔Hadith root links through 1,590 shared roots
 **Thematic families:** 39 (35 classical + 4 new: End of Times, Jihad, Statecraft, Family Law)
 
 ### Getting Started
@@ -95,7 +95,7 @@ These components have no precedent in any of the source projects or, to our know
 
 | Component | What it does | Scale |
 |-----------|-------------|-------|
-| **Quran↔Hadith root bridge** | Connects every Quran root to every hadith containing a word from that root | 1,401 roots, 1,456,898 links |
+| **Quran↔Hadith root bridge** | Connects every Quran root to every hadith containing a word from that root | 1,590 roots, 1,528,346 links |
 | **39 thematic families** | Roots grouped by semantic field (mercy, justice, prayer, trade...) from classical lexicography | 39 families spanning both corpora |
 | **Word-level morphological definitions** | Click any Arabic word in any hadith → root, Lane's Lexicon definition, morphological form | 32,413 words across 112k hadiths |
 | **Mufradat al-Quran integration** | Al-Raghib al-Isfahani's classical root definitions in the Quran reader | 1,651 roots |
@@ -210,7 +210,7 @@ RAW HADITH TEXT (Arabic, 18 books, 112,221 hadiths)
         │
         ▼
   quran_hadith_bridge.json            1,651 roots fully connected
-  1,456,898 total Quran↔Hadith root links
+  1,528,346 total Quran↔Hadith root links
         │
         ▼
   family_corpus.json                  39 thematic families
