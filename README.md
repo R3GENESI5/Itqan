@@ -14,7 +14,7 @@
 | 📚 | **Hadith corpus** | 112,221 hadiths across 18 Sunni books + 15,000+ Shia |
 | 🔗 | **Root bridge** | 1,336 shared Arabic roots generating 1,326,229 Quran↔Hadith links |
 | 📖 | **Quran coverage** | 6,236 ayahs, 1,651 unique roots, 39 thematic families |
-| 👤 | **Narrator database** | 18,298 narrators with 72,767 name variants, jarh wa ta'dil from 6+ classical scholars |
+| 👤 | **Narrator database** | 65,391 narrators with 119,860 name variants, jarh wa ta'dil from 8 classical texts (83,082 entries) |
 | 🔍 | **Morphological dictionary** | 32,413 Arabic words → root + Lane's Lexicon + grammatical form |
 | 📊 | **Isnad chains** | 100,000+ parsed transmission chains across 11 books, kunya resolution, grade matching |
 | 🤖 | **AI layer** | FAISS semantic search (112k vectors) + RAG Q&A (Qwen2.5) on HuggingFace |
@@ -27,7 +27,7 @@
 
 Existing Quran and Hadith platforms (Quran.com, Sunnah.com, islamweb.net) provide text search on translations. Al-Itqan operates at the level classical scholars worked: **Arabic root morphology**. The root `صوم` connects every Quran verse about fasting to every hadith whose Arabic text contains a word derived from that root — whether the word is `صيام`, `يصوم`, `الصائم`, `صُمْتُ`, or `صوموا`. One root, all its forms, across both corpora at once.
 
-Beyond the concordance, Itqan provides the **first structured JSON database of ilm al-rijal** (narrator criticism): 18,298 narrators with grades from Ibn Hajar and al-Dhahabi, jarh wa ta'dil opinions from Abu Hatim, Ahmad ibn Hanbal, and Ibn Hibban, and a kunya→real name mapping that resolves أبو هريرة to عبد الرحمن بن صخر الدوسي.
+Beyond the concordance, Itqan provides the **first structured JSON database of ilm al-rijal** (narrator criticism): 65,391 narrators with grades from Ibn Hajar and al-Dhahabi, jarh wa ta'dil opinions from Abu Hatim, Ahmad ibn Hanbal, and Ibn Hibban, and a kunya→real name mapping that resolves أبو هريرة to عبد الرحمن بن صخر الدوسي.
 
 The result is a set of open JSON files that any developer or researcher can load and build on, plus a live web app that uses them.
 
@@ -82,7 +82,7 @@ These components have no precedent in any of the source projects or, to our know
 | **Chord visualizations** | Family×Family overlap, book distinctiveness, narrator×book network | 3 interactive D3 diagrams |
 | **Root alias map** | Reconciles CAMeL Tools and Quran root forms for Arabic NLP edge cases | 131 entries, recovering 4,977 mappings |
 | **How It Works guide** | Visual walkthrough with SVG flow diagram and interpretive data insights | 6-step Quran-first discovery flow |
-| **Unified rijal database** | 18,298 narrator profiles with grades, kunya, jarh wa ta'dil merged from 3 sources | 72,767 name variants, 701 with full scholar opinions |
+| **Unified rijal database** | 65,391 narrator profiles with grades, kunya, jarh wa ta'dil merged from 3 sources | 119,860 name variants, 31,822 classical source cross-refs |
 | **Isnad parsing pipeline** | Chain extraction with father/grandfather resolution, kunya repair, honorific deduplication | 100k+ chains, 37-entry genealogy lookup, 32 kunya mappings |
 | **Musnad Ahmad expansion** | Full Arnaut edition (26,539 hadiths) parsed from OpenITI — 2nd largest book in the corpus | Was 1,374 from sunnah.com |
 
@@ -120,12 +120,12 @@ Browse 112,221 hadiths across 18 Sunni books. Every Arabic word is interactive �
 
 ### Narrator Profiles (Ilm al-Rijal)
 
-`app/rijal.html` — searchable browser for **18,298 narrator biographies** with:
+`app/rijal.html` — searchable browser for **65,391 narrator biographies** with:
 
 - Full name, kunya, laqab, nasab, death year, city, tabaqat
 - **Ibn Hajar's grade** and **al-Dhahabi's assessment**
 - **Jarh wa ta'dil** for 701 narrators — opinions from Abu Hatim, Ahmad ibn Hanbal, Ibn Hibban, with source references
-- **72,767 name variants** — every spelling a narrator appears under across manuscripts
+- **119,860 name variants** — every spelling a narrator appears under across manuscripts
 
 ### Isnad Visualizer
 
@@ -517,7 +517,7 @@ The stats bar shows: total *asanid* (chains) parsed from the book, ruwat and lin
 
 ### Narrator grade matching
 
-Grades are matched from a unified database of **18,298 narrators** (72,767 name variants) compiled from three sources:
+Grades are matched from a unified database of **65,391 narrators** (119,860 name variants) compiled from three sources:
 
 | Source | Narrators | What it provides |
 |--------|-----------|-----------------|
@@ -563,7 +563,7 @@ The isnad parser (`src/parse_isnad_chains.py`) handles several Arabic-specific c
 
 ## The Rijal Page — Narrator Profiles
 
-`app/rijal.html` — a searchable browser for **18,298 narrator biographies** from the classical hadith tradition.
+`app/rijal.html` — a searchable browser for **65,391 narrator biographies** from the classical hadith tradition.
 
 Every narrator who appears in the six canonical books (Kutub al-Sittah) and related collections is profiled with:
 
@@ -578,7 +578,7 @@ Every narrator who appears in the six canonical books (Kutub al-Sittah) and rela
 
 The unified narrator database (`app/data/narrator_unified.json`, 30 MB) merges three open-source datasets:
 
-1. **AR-Sanad 280K** (somaia02) — 18,298 narrators with 72,767 name variants and teacher→student ID links. This is the largest structured dataset of hadith narrators available.
+1. **AR-Sanad 280K** (somaia02) — 65,391 narrators with 119,860 name variants and teacher→student ID links. This is the largest structured dataset of hadith narrators available.
 2. **hatemben/hadithdb** — 1,524 Bukhari narrators with detailed jarh wa ta'dil from Tahdhib al-Tahdhib (multiple scholar opinions per narrator, with source references to specific pages in classical texts).
 3. **KASHAF** (OmarShafie/hadith) — 17,093 entries with grades extracted from Tahdhib al-Tahdhib.
 
@@ -706,7 +706,7 @@ The model, vector store, language support, grounding, and conversation architect
 │                                                              │
 │  ┌──────────────────────────────────────────────────────┐   │
 │  │  ISNAD VISUALIZER  (D3 Sankey, 11 books, 100k chains)│   │
-│  │  RIJAL PROFILES (18,298 narrators, jarh wa ta'dil)   │   │
+│  │  RIJAL PROFILES (65,391 narrators, jarh wa ta'dil)   │   │
 │  │  CHORD GRAPHS · CONCORDANCE AUDIT · THEMATIC STUDY   │   │
 │  └──────────────────────────────────────────────────────┘   │
 │                                                              │
@@ -779,7 +779,7 @@ Itqan/
 │   ├── hadith.html               Hadith reader with word panel
 │   ├── shia.html                 Standalone Shia hadith database
 │   ├── families.html             Thematic family browser (39 families, expandable root chips)
-│   ├── rijal.html                Narrator profiles browser (18,298 narrators, jarh wa ta'dil)
+│   ├── rijal.html                Narrator profiles browser (65,391 narrators, jarh wa ta'dil)
 │   ├── chord.html                Interactive chord graphs (3 tabs, data embedded)
 │   ├── concordance_audit.html    Data quality verification dashboard
 │   ├── css/
@@ -792,7 +792,7 @@ Itqan/
 │       ├── concordance.json           22 MB   — inverted index
 │       ├── word_defs_v2.json          6.7 MB  — morphological dictionary
 │       ├── narrator_index.json        0.6 MB  — narrator records
-│       ├── narrator_unified.json      30 MB   — 18,298 rijal profiles + jarh wa ta'dil
+│       ├── narrator_unified.json      75 MB   — 65,391 rijal profiles + jarh wa ta'dil
 │       ├── hadith_connections.json    4.2 MB  — cross-book links
 │       ├── roots_lexicon.json         1.5 MB  — Lane's definitions
 │       ├── bridge_ids/                1,181 per-root JSON files {book:{ch:[ids]}}
@@ -916,7 +916,7 @@ A wealth of open-source narrator biographical data exists. These sources can dra
 
 #### What AR-Sanad 280K uniquely provides
 
-The `narrated_from` and `narrated_to` fields contain **narrator ID cross-references** — a complete teacher→student network across 18,298 narrators. This would allow:
+The `narrated_from` and `narrated_to` fields contain **narrator ID cross-references** — a complete teacher→student network across 65,391 narrators. This would allow:
 - Drawing actual biographical transmission paths in the isnad visualizer (not just co-occurrence)
 - Verifying chain continuity (did narrator A actually meet narrator B?)
 - Tabaqat-based generation coloring (which historical layer each narrator belongs to)
@@ -935,12 +935,15 @@ The `narrated_from` and `narrated_to` fields contain **narrator ID cross-referen
 | 7 | v1.2: Bridge fix, guide page, isnad cleanup, explainers | ✅ Complete |
 | 8 | GitHub Pages + Zenodo DOIs (paper + code) | ✅ Complete |
 | 9 | v1.3: Musnad Ahmad (26,539 hadiths), FAISS rebuild (112k), pipeline rebuild | ✅ Complete |
-| 10 | v1.4: Rijal page + AR-Sanad 18,298 narrators + hatemben jarh wa ta'dil | ✅ Complete |
+| 10 | v1.4: Rijal page + AR-Sanad 65,391 narrators + hatemben jarh wa ta'dil | ✅ Complete |
 | 11 | Kunya→real name tooltips (32 entries) + isnad parsing fixes | ✅ Complete |
-| 12 | Parse Arnaut footnotes for per-hadith Musnad Ahmad grades | ⬜ Planned |
-| 13 | Parse Zubair Ali Zai / Darussalam for per-hadith grades (Abu Dawud, Tirmidhi, Ibn Majah) | ⬜ Planned |
-| 14 | Parse OpenITI Tahdhib al-Kamal for full narrator biographies | ⬜ Planned |
-| 15 | Curated HadithReference tafsir table | ⬜ Planned |
+| 12 | v1.5: Parse 8 classical rijal texts from OpenITI (83,082 entries → 65,391 profiles) | ✅ Complete |
+| 13 | Parse Arnaut footnotes for per-hadith Musnad Ahmad grades | ⬜ Planned |
+| 14 | Parse Zubair Ali Zai / Darussalam for per-hadith grades | ⬜ Planned |
+| 15 | Cross-text narrator deduplication (47k new profiles likely contain duplicates) | ⬜ Planned |
+| 16 | Teacher-student network extraction from Tahdhib al-Kamal | ⬜ Planned |
+| 17 | Prose-grade NLP for Jarh wa Ta'dil and Tahdhib al-Kamal narratives | ⬜ Planned |
+| 18 | Curated HadithReference tafsir table | ⬜ Planned |
 
 ---
 
@@ -971,7 +974,7 @@ CAMeL Tools: BSD-2-Clause
 ## Acknowledgements
 
 ### Data sources
-- **AR-Sanad 280K** (somaia02) — 18,298 narrators with name variants, grades, and teacher-student links
+- **AR-Sanad 280K** (somaia02) — 65,391 narrators with name variants, grades, and teacher-student links
 - **hatemben/hadithdb** — 1,524 narrators with full jarh wa ta'dil from Tahdhib al-Tahdhib
 - **OpenITI** — open corpus of classical Islamic texts, including the Arnaut edition of Musnad Ahmad
 

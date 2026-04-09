@@ -29,6 +29,12 @@ nginx.conf
 .dockerignore
 PLAN.md
 
+# OpenITI raw texts and parsed JSON (79MB + 27MB — regenerate with scripts)
+src/rijal_raw/
+src/rijal_parsed/
+musnad_openiti.txt
+app/data/narrator_unified.json.bak
+
 # Intermediate build artifacts
 src/_chord_data.json
 src/_kashaf_narrators.csv
