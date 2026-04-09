@@ -17,6 +17,7 @@
 | 👤 | **Narrator database** | 65,391 narrators with 119,860 name variants, jarh wa ta'dil from 8 classical texts (83,082 entries) |
 | 🔍 | **Morphological dictionary** | 32,413 Arabic words → root + Lane's Lexicon + grammatical form |
 | 📊 | **Isnad chains** | 100,000+ parsed transmission chains across 11 books, kunya resolution, grade matching |
+| 📜 | **Wensinck concordance** | 1,486 roots, 1,042,279 references — digital recreation of the 33-year, 7-volume physical concordance |
 | 🤖 | **AI layer** | FAISS semantic search (112k vectors) + RAG Q&A (Qwen2.5) on HuggingFace |
 
 **[Live App](https://r3genesi5.github.io/Itqan/)** · **[Itqan AI](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** · **[Paper](https://doi.org/10.5281/zenodo.19453612)** · **[How It Works](https://r3genesi5.github.io/Itqan/guide.html)**
@@ -104,6 +105,7 @@ These components have no precedent in any of the source projects or, to our know
 | **How It Works guide** | Visual walkthrough with SVG flow diagram and interpretive data insights | 6-step Quran-first discovery flow |
 | **Unified rijal database** | 65,391 narrator profiles with grades, kunya, jarh wa ta'dil merged from 3 sources | 119,860 name variants, 31,822 classical source cross-refs |
 | **Isnad parsing pipeline** | Chain extraction with father/grandfather resolution, kunya repair, honorific deduplication | 100k+ chains, 37-entry genealogy lookup, 32 kunya mappings |
+| **Digital Wensinck concordance** | Root-organised hadith concordance recreating Wensinck's 33-year, 7-volume work computationally | 1,486 roots, 1,042,279 references, 18 books (vs 9 original) |
 | **Musnad Ahmad expansion** | Full Arnaut edition (26,539 hadiths) parsed from OpenITI — 2nd largest book in the corpus | Was 1,374 from sunnah.com |
 
 The data pipeline, the root bridge, the families, the word panel, the concordance, the chord graphs, the rijal database, the isnad parsing, the guide, and the interpretive annotations — all of this is new.
@@ -280,6 +282,45 @@ The **Mu'jam al-Mufahris** — the classical concordance index. Medieval scholar
 - IDs format: `book_id:chapter_index:hadith_id_in_chapter` (3-part, chapter-aware — fixed from the original 2-part format where `idInBook` restarted per chapter causing false matches)
 
 **Power:** Click any Arabic word in the reader → instantly retrieve every hadith in the corpus that contains it, across all 18 books. Full-text search with zero search engine infrastructure.
+
+---
+
+### `wensinck.json` (9.6 MB)
+
+**The digital Wensinck** — a computational recreation of A.J. Wensinck's *Mu'jam al-Mufahris li-Alfaz al-Hadith al-Nabawi*, the 7-volume concordance that took a team of orientalists from 1936–1969 to compile for 9 books. Itqan generates the equivalent for **18 books** in ~10 seconds.
+
+```json
+"صوم": {
+  "root":      "صوم",
+  "buckwalter": "Swm",
+  "gloss":     "to abstain, fast (from food, drink, and coitus)...",
+  "forms":     ["الصوم", "بالصوم", "بصوم", "صوم", "صومه", ...],
+  "books": {
+    "خ": ["13:1", "13:5", "13:9", ...],
+    "م": ["13:1", "13:2", ...],
+    "د": ["0:263", "0:287", ...],
+    "حم": ["1:42", "2:103", ...]
+  },
+  "total":     794,
+  "wensinck9": true
+}
+```
+
+| Field | Meaning |
+|---|---|
+| `root` | Arabic triliteral root |
+| `buckwalter` | Buckwalter transliteration |
+| `gloss` | Lane's Lexicon definition |
+| `forms` | All surface-form words found in the corpus for this root |
+| `books` | References per book using traditional abbreviations (خ=Bukhari, م=Muslim, د=Abu Dawud, ت=Tirmidhi, ن=Nasa'i, جه=Ibn Majah, حم=Ahmad, ط=Malik, دي=Darimi, plus 9 extended books) |
+| `total` | Total references across all books |
+| `wensinck9` | `true` if the root appears in Wensinck's original 9 books |
+
+- **1,486 roots** indexed (1,427 in Wensinck's original 9-book scope)
+- **1,042,279 total references** across 18 books
+- Generate with: `python src/enrich_data.py --step wensinck`
+
+**Power:** A scholar can look up any Arabic root and see every hadith reference across 18 books, organised exactly as Wensinck intended — but covering twice the corpus, computed in seconds instead of decades, and queryable as JSON.
 
 ---
 
@@ -830,6 +871,7 @@ Itqan/
 │       ├── narrator_unified.json      75 MB   — 65,391 rijal profiles + jarh wa ta'dil
 │       ├── hadith_connections.json    4.2 MB  — cross-book links
 │       ├── roots_lexicon.json         1.5 MB  — Lane's definitions
+│       ├── wensinck.json              9.6 MB  — digital Wensinck concordance (1,486 roots)
 │       ├── bridge_ids/                1,181 per-root JSON files {book:{ch:[ids]}}
 │       ├── chord_matrices.json        13 KB   — pre-computed overlap matrices
 │       ├── sunni/                     Per-book hadith JSON (~50 MB total)
