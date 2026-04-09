@@ -84,10 +84,22 @@ def extract_chain(arabic_text):
         clean
     )
     chain = []
-    for seg in segments[1:]:  # skip text before first verb
+    segs = segments[1:]  # skip text before first verb
+    for idx, seg in enumerate(segs):
         # Take up to the next verb, comma, or paragraph break
         name_part = re.split(r'[،,\n]|(?:\s+(?:قال|ان|انه)\s)', seg)[0]
         name_part = clean_name(name_part)
+
+        # Kunya repair: if name_part is just أبي/أبو, peek at next segment
+        # to see if it forms a kunya (e.g. أبي + صالح = أبي صالح)
+        if name_part in ('أبي', 'أبو', 'ابي', 'ابو') and idx + 1 < len(segs):
+            next_seg = re.split(r'[،,\n]|(?:\s+(?:قال|ان|انه)\s)', segs[idx + 1])[0]
+            next_name = clean_name(next_seg)
+            if next_name and len(next_name) >= 2 and next_name not in ('الله', 'رسول', 'النبي'):
+                # This is a kunya: أبي + صالح = أبي صالح
+                name_part = name_part + ' ' + next_name
+                segs[idx + 1] = ''  # consume the next segment
+
         # Filter: must be 3+ chars, no digits, not a common Arabic particle
         if (len(name_part) >= 3
                 and not re.search(r'\d', name_part)
