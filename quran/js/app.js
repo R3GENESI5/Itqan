@@ -386,9 +386,11 @@ const App = {
 
     // ── Data Loading ───────────────────────────────
     async loadSurah(num, skipHash, skipScroll) {
-        // Hide welcome screen when any surah loads
+        // Hide welcome screen and show surah header when any surah loads
         const welcome = document.getElementById('quran-welcome');
         if (welcome) welcome.style.display = 'none';
+        const surahHeader = document.getElementById('surah-header');
+        if (surahHeader) surahHeader.style.display = '';
 
         if (!this.surahCache[num]) {
             const resp = await fetch(`data/surahs/${num}.json`);
