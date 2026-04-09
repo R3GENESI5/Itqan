@@ -33,12 +33,12 @@
 
 /* ── Dark Mode ─────────────────────────────────── */
 .dark-mode {
-    --bg: #0a0a0f;
-    --bg-alt: #131318;
-    --surface: #1a1612;
-    --text: #e0d8c8;
-    --text-muted: #8a8070;
-    --gold: #d4a855;
+    --bg: #1a1612;
+    --bg-alt: #231e18;
+    --surface: #2a2420;
+    --text: #e8dfd5;
+    --text-muted: #a09080;
+    --gold: #d4a020;
     --gold-light: rgba(212, 160, 32, 0.15);
     --gold-hover: rgba(212, 160, 32, 0.10);
     --green: #6aaa80;
