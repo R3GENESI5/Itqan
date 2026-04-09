@@ -57,6 +57,39 @@
 
         /* No results */
         .no-results { text-align: center; color: #555; padding: 40px; }
+
+        /* Dashboard */
+        .dashboard { max-width: 900px; margin: 0 auto 16px; padding: 0 20px; }
+        .dash-section { margin-bottom: 16px; }
+        .dash-title { font-size: .78rem; color: #d4a855; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+        .grade-bars { display: flex; gap: 6px; flex-wrap: wrap; }
+        .grade-bar {
+            flex: 1; min-width: 80px; padding: 10px 8px; border-radius: 6px; text-align: center;
+            cursor: pointer; transition: all .15s; border: 1px solid transparent;
+        }
+        .grade-bar:hover { border-color: #d4a855; transform: translateY(-2px); }
+        .grade-bar.active { border-color: #d4a855; box-shadow: 0 0 8px rgba(212,168,85,.3); }
+        .gb-count { font-size: 1.2rem; font-weight: 700; }
+        .gb-label { font-size: .65rem; text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+        .gb-pct { font-size: .6rem; opacity: .7; }
+
+        .tabaqat-grid { display: flex; gap: 4px; flex-wrap: wrap; }
+        .tab-chip {
+            font-size: .72rem; padding: 4px 10px; border-radius: 12px; cursor: pointer;
+            border: 1px solid #333; color: #8a8070; transition: all .15s;
+        }
+        .tab-chip:hover { border-color: #d4a855; color: #d4a855; }
+        .tab-chip.active { background: #d4a855; color: #0a0a0f; border-color: #d4a855; }
+        .tab-chip .chip-count { font-weight: 600; color: #d4a855; margin-left: 4px; }
+        .tab-chip.active .chip-count { color: #0a0a0f; }
+
+        .city-chips { display: flex; gap: 4px; flex-wrap: wrap; }
+        .city-chip {
+            font-size: .7rem; padding: 3px 8px; border-radius: 10px; cursor: pointer;
+            border: 1px solid #2a2420; color: #777; transition: all .15s;
+        }
+        .city-chip:hover { border-color: #d4a855; color: #d4a855; }
+        .city-chip.active { background: #1a1612; border-color: #d4a855; color: #d4a855; }
     </style>
 </head>
 <body>
@@ -75,10 +108,25 @@
     <div class="sub">65,391 narrators from 8 classical texts · Grades by Ibn Hajar, al-Dhahabi, Ibn Hibban, Ibn Abi Hatim · Jarh wa Ta'dil</div>
 </div>
 
+<div class="dashboard">
+    <div class="dash-section">
+        <div class="dash-title">Narrator Grades</div>
+        <div class="grade-bars" id="grade-bars"></div>
+    </div>
+    <div class="dash-section">
+        <div class="dash-title">Generations (Tabaqat)</div>
+        <div class="tabaqat-grid" id="tabaqat-chips"></div>
+    </div>
+    <div class="dash-section">
+        <div class="dash-title">Top Cities</div>
+        <div class="city-chips" id="city-chips"></div>
+    </div>
+</div>
+
 <div class="search-bar">
     <input id="search" type="search" placeholder="Search by name, kunya, or city… (Arabic or English)" autocomplete="off" spellcheck="false">
 </div>
-<div class="filters">
+<div class="filters" style="display:none">
     <select id="grade-filter">
         <option value="">All grades</option>
         <option value="companion">Companion (صحابي)</option>
@@ -109,33 +157,40 @@ const GRADE_LABELS = {
 let allProfiles = [];
 let displayed = 0;
 const PAGE_SIZE = 50;
+let activeGrade = '';
+let activeTabaqa = '';
+let activeCity = '';
+
+// Clean tabaqat: map long narrative descriptions to the core generation
+const TABAQAT_CLEAN = {
+    'الأولى': 1, 'الثانية': 2, 'الثالثة': 3, 'الرابعة': 4, 'الخامسة': 5,
+    'السادسة': 6, 'السابعة': 7, 'الثامنة': 8, 'التاسعة': 9, 'العاشرة': 10,
+    'الحادية عشرة': 11, 'الثانية عشرة': 12
+};
+
+function cleanTabaqa(t) {
+    if (!t) return '';
+    for (const [key, num] of Object.entries(TABAQAT_CLEAN)) {
+        if (t.startsWith(key)) return key;
+    }
+    if (t.includes('صحابي') || t.includes('صحابية') || t.includes('الصحابة')) return 'صحابي';
+    if (t.includes('مخضرم')) return 'مخضرم';
+    return '';
+}
 
 async function init() {
     const resp = await fetch('data/narrator_unified.json');
     const data = await resp.json();
 
-    // Convert profiles dict to array
     allProfiles = Object.values(data.profiles).sort((a, b) => {
-        // Companions first, then by grade, then by name
         const order = { companion: 0, reliable: 1, mostly_reliable: 2, weak: 3, abandoned: 4, fabricator: 5, unknown: 6 };
         return (order[a.grade_en] || 6) - (order[b.grade_en] || 6) || a.full_name.localeCompare(b.full_name, 'ar');
     });
 
-    // Populate tabaqat filter
-    const tabaqat = new Set();
-    allProfiles.forEach(p => { if (p.tabaqat) tabaqat.add(p.tabaqat); });
-    const tabSel = document.getElementById('tabaqat-filter');
-    [...tabaqat].sort().forEach(t => {
-        const opt = document.createElement('option');
-        opt.value = t; opt.textContent = t;
-        tabSel.appendChild(opt);
-    });
+    buildDashboard();
 
     document.getElementById('search').addEventListener('input', () => { displayed = 0; render(); });
-    document.getElementById('grade-filter').addEventListener('change', () => { displayed = 0; render(); });
-    document.getElementById('tabaqat-filter').addEventListener('change', () => { displayed = 0; render(); });
 
-    // Infinite scroll
     window.addEventListener('scroll', () => {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) loadMore();
     });
@@ -143,14 +198,90 @@ async function init() {
     render();
 }
 
+function buildDashboard() {
+    // Grade bars
+    const gradeCounts = {};
+    const GRADE_ORDER = ['companion', 'reliable', 'mostly_reliable', 'weak', 'abandoned', 'fabricator', 'unknown'];
+    GRADE_ORDER.forEach(g => gradeCounts[g] = 0);
+    allProfiles.forEach(p => { gradeCounts[p.grade_en || 'unknown']++; });
+
+    const barsEl = document.getElementById('grade-bars');
+    barsEl.innerHTML = '';
+    const total = allProfiles.length;
+    GRADE_ORDER.forEach(g => {
+        const count = gradeCounts[g] || 0;
+        if (count === 0) return;
+        const color = GRADE_COLORS[g];
+        const bar = document.createElement('div');
+        bar.className = 'grade-bar';
+        bar.style.background = color + '18';
+        bar.innerHTML = `<div class="gb-count" style="color:${color}">${count.toLocaleString()}</div>
+            <div class="gb-label" style="color:${color}">${GRADE_LABELS[g]}</div>
+            <div class="gb-pct" style="color:${color}">${(count*100/total).toFixed(1)}%</div>`;
+        bar.addEventListener('click', () => {
+            activeGrade = activeGrade === g ? '' : g;
+            document.querySelectorAll('.grade-bar').forEach(b => b.classList.remove('active'));
+            if (activeGrade) bar.classList.add('active');
+            displayed = 0; render();
+        });
+        barsEl.appendChild(bar);
+    });
+
+    // Tabaqat chips — only the 12 main generations + Sahabi + Mukhadram
+    const tabCounts = {};
+    allProfiles.forEach(p => {
+        const t = cleanTabaqa(p.tabaqat);
+        if (t) tabCounts[t] = (tabCounts[t] || 0) + 1;
+    });
+    const TAB_ORDER = ['صحابي', 'مخضرم', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة',
+        'السادسة', 'السابعة', 'الثامنة', 'التاسعة', 'العاشرة', 'الحادية عشرة', 'الثانية عشرة'];
+    const tabEl = document.getElementById('tabaqat-chips');
+    tabEl.innerHTML = '';
+    TAB_ORDER.forEach(t => {
+        const count = tabCounts[t];
+        if (!count) return;
+        const chip = document.createElement('span');
+        chip.className = 'tab-chip';
+        chip.innerHTML = `${t} <span class="chip-count">${count.toLocaleString()}</span>`;
+        chip.addEventListener('click', () => {
+            activeTabaqa = activeTabaqa === t ? '' : t;
+            document.querySelectorAll('.tab-chip').forEach(c => c.classList.remove('active'));
+            if (activeTabaqa) chip.classList.add('active');
+            displayed = 0; render();
+        });
+        tabEl.appendChild(chip);
+    });
+
+    // City chips — top 15
+    const cityCounts = {};
+    allProfiles.forEach(p => { if (p.city) cityCounts[p.city] = (cityCounts[p.city] || 0) + 1; });
+    const topCities = Object.entries(cityCounts).sort((a,b) => b[1]-a[1]).slice(0, 15);
+    const cityEl = document.getElementById('city-chips');
+    cityEl.innerHTML = '';
+    topCities.forEach(([city, count]) => {
+        const chip = document.createElement('span');
+        chip.className = 'city-chip';
+        chip.textContent = `${city} (${count})`;
+        chip.addEventListener('click', () => {
+            activeCity = activeCity === city ? '' : city;
+            document.querySelectorAll('.city-chip').forEach(c => c.classList.remove('active'));
+            if (activeCity) chip.classList.add('active');
+            displayed = 0; render();
+        });
+        cityEl.appendChild(chip);
+    });
+}
+
 function getFiltered() {
     const q = document.getElementById('search').value.trim().toLowerCase();
-    const grade = document.getElementById('grade-filter').value;
-    const tab = document.getElementById('tabaqat-filter').value;
 
     return allProfiles.filter(p => {
-        if (grade && p.grade_en !== grade) return false;
-        if (tab && p.tabaqat !== tab) return false;
+        if (activeGrade && p.grade_en !== activeGrade) return false;
+        if (activeTabaqa) {
+            const ct = cleanTabaqa(p.tabaqat);
+            if (ct !== activeTabaqa) return false;
+        }
+        if (activeCity && p.city !== activeCity) return false;
         if (q) {
             const haystack = (p.full_name + ' ' + p.kunya + ' ' + (p.namings || []).join(' ') + ' ' + p.city + ' ' + p.laqab + ' ' + p.nasab).toLowerCase();
             return haystack.includes(q);
