@@ -18,7 +18,7 @@
 | 🔍 | **Morphological dictionary** | 33,758 Arabic words → root + Lane's Lexicon + grammatical form |
 | 📊 | **Isnad chains** | 100,000+ parsed transmission chains across 11 books, kunya resolution, grade matching |
 | 📜 | **Wensinck concordance** | 1,486 roots, 1,042,279 references — digital recreation of the 33-year, 7-volume physical concordance |
-| ✅ | **Per-hadith grading** | 32,645 hadiths graded (29%) — Kutub al-Sittah fully covered (Sahih + Al-Albani) |
+| ✅ | **Per-hadith grading** | 33,043 hadiths graded (29%) — Kutub al-Sittah fully covered (Sahih + Al-Albani) |
 | 🤖 | **AI layer** | FAISS semantic search (112k vectors) + RAG Q&A (Qwen2.5) on HuggingFace |
 
 **[Live App](https://r3genesi5.github.io/Itqan/)** · **[Itqan AI](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** · **[Paper](https://doi.org/10.5281/zenodo.19453612)** · **[How It Works](https://r3genesi5.github.io/Itqan/guide.html)** · **[Dev History](https://r3genesi5.github.io/Itqan/app/history.html)**
@@ -884,7 +884,7 @@ graph TD
 | Qudsi 40 | 40 | Not graded |
 | Shah Waliullah 40 | 40 | Not graded |
 
-**Per-hadith grading: 32,645 / 112,221 (29%)** — the 6 canonical Kutub al-Sittah are fully graded.
+**Per-hadith grading: 33,043 / 112,221 (29%)** — the 6 canonical Kutub al-Sittah are fully graded.
 
 **Shia:** 18 books, ~15,000+ hadiths — standalone searchable database (`app/shia.html`). Not connected to the root bridge or thematic families.
 
@@ -1010,7 +1010,7 @@ python src/audit.py
 | Gap | Severity | Detail |
 |-----|----------|--------|
 | **Narrator grades** | Medium | 50-61% of isnad narrators graded per book after AR-Sanad integration. Further improvement requires NLP parsing of OpenITI rijal texts |
-| **Per-hadith grades (remaining)** | Medium | 32,645 of 112,221 graded (29%). The 6 canonical books are covered. Ahmad (26k) has Arnaut footnotes in OpenITI. Remaining 11 books (54k) have no known grading source |
+| **Per-hadith grades (remaining)** | Medium | 33,043 of 112,221 graded (29%). The 6 canonical books are covered. Ahmad (26k) has Arnaut footnotes in OpenITI. Remaining 11 books (54k) have no known grading source |
 | **Musnad Ahmad English** | Medium | 26,539 Arabic hadiths (Arnaut edition), English translations for only ~1,374 (sunnah.com subset) |
 | **61 zero-hadith roots** | Low | Confirmed by dual-stemmer validation — genuinely rare Quranic vocabulary (avg 6.8 ayahs each). Down from 315 before Wensinck integration |
 | **Family noise** | Medium | A single shared root is sufficient for family membership — relevance threshold (2+ roots) would improve precision |
@@ -1074,7 +1074,7 @@ The `narrated_from` and `narrated_to` fields contain **narrator ID cross-referen
 | 11 | Kunya→real name tooltips (32 entries) + isnad parsing fixes | ✅ Complete |
 | 12 | v1.5: Parse 8 classical rijal texts from OpenITI (83,082 entries → 65,391 profiles) | ✅ Complete |
 | 13 | v1.6: Dual-stemmer root bridge (81% → 96.3%), Wensinck concordance, 1,345 form patches | ✅ Complete |
-| 14 | Per-hadith grading: Bukhari+Muslim auto-tagged + Al-Albani scrape (32,645 graded, 29%) | ✅ Complete |
+| 14 | Per-hadith grading: Bukhari+Muslim auto-tagged + Al-Albani scrape (33,043 graded, 29%) | ✅ Complete |
 | 15 | Parse Arnaut footnotes for per-hadith Musnad Ahmad grades (26,539) | ⬜ Next |
 | 16 | Parse Zubair Ali Zai / Darussalam for additional grades | ⬜ Planned |
 | 15 | Cross-text narrator deduplication (47k new profiles likely contain duplicates) | ⬜ Planned |
@@ -1098,7 +1098,7 @@ The `narrated_from` and `narrated_to` fields contain **narrator ID cross-referen
 | **v1.4** | Apr 9 | Isnad cleanup, AR-Sanad merge, rijal page | 18,298 narrators, 61% graded |
 | **v1.5** | Apr 9 | 8 classical rijal texts parsed from OpenITI | 65,391 narrators, 83k entries |
 | **v1.6** | Apr 9 | Dual-stemmer bridge (Wensinck solved the 315-root gap) | 96.3% coverage, 1.53M links |
-| **v1.6.1** | Apr 9 | Per-hadith grading: Bukhari+Muslim (Sahih) + Al-Albani (4 books) | 32,645 graded (29%), Kutub al-Sittah fully covered |
+| **v1.6.1** | Apr 9 | Per-hadith grading (33k, 7 books) + isnad relative resolution (76 genealogy entries) + UI fixes | 33,043 graded, 76 genealogy lookups, charts + history page |
 
 **Scale:** 1.1M lines of JSON · 13,753 lines of code · 21 Python scripts · 3,587 files · 798 MB of data
 
