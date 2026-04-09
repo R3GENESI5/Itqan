@@ -178,10 +178,10 @@ html = f"""<!DOCTYPE html>
 <div class="stat-row">
   <div class="stat"><div class="num">{len(conc):,}</div><div class="lbl">Words in concordance</div></div>
   <div class="stat"><div class="num">{sum(len(v) for v in conc.values()):,}</div><div class="lbl">Total concordance links</div></div>
-  <div class="stat"><div class="num">837,632</div><div class="lbl">Quran↔Hadith root links</div></div>
+  <div class="stat"><div class="num">{sum(d['hadith_count'] for d in bridge.values()):,}</div><div class="lbl">Quran↔Hadith root links</div></div>
   <div class="stat"><div class="num">{sum(1 for d in bridge.values() if d['hadith_count']>0):,}</div><div class="lbl">Roots with hadith coverage</div></div>
-  <div class="stat"><div class="num">39</div><div class="lbl">Thematic families</div></div>
-  <div class="stat"><div class="num">87,688</div><div class="lbl">Hadith corpus size</div></div>
+  <div class="stat"><div class="num">{len(fam):,}</div><div class="lbl">Thematic families</div></div>
+  <div class="stat"><div class="num">{sum(book_hadith_counts.values()):,}</div><div class="lbl">Hadith corpus size</div></div>
 </div>
 
 <div class="grid grid-2">
