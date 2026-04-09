@@ -9,6 +9,8 @@ Steps:
   C. freq         — word frequency per book → word_freq.json
   D. narrators    — extract narrator index → narrator_index.json
   E. connections  — hadith-bil-hadith (matn-only, tiered) → hadith_connections.json
+  F. concordance  — word-level inverted index → concordance.json
+  G. wensinck     — root-organised Mu'jam al-Mufahras → wensinck.json
 
 Usage:
     python src/enrich_data.py                        # run all
@@ -16,6 +18,7 @@ Usage:
     python src/enrich_data.py --step stemmer
     python src/enrich_data.py --step narrators
     python src/enrich_data.py --step connections
+    python src/enrich_data.py --step wensinck
 """
 
 import argparse
@@ -1072,12 +1075,189 @@ def build_word_defs_v2():
     return word_defs_v2
 
 
+# ── Step G: Wensinck Mu'jam al-Mufahras (root-based concordance) ──────────────
+
+# Wensinck's original 9 canonical collections + abbreviations
+WENSINCK_BOOKS = {
+    'bukhari':  'خ',
+    'muslim':   'م',
+    'abudawud': 'د',
+    'tirmidhi': 'ت',
+    'nasai':    'ن',
+    'ibnmajah': 'جه',
+    'ahmed':    'حم',
+    'malik':    'ط',
+    'darimi':   'دي',
+}
+
+# Extended books beyond Wensinck's original scope
+EXTRA_BOOK_ABBR = {
+    'aladab_almufrad':         'أدب',
+    'bulugh_almaram':          'بلغ',
+    'mishkat_almasabih':       'مشك',
+    'musannaf_ibnabi_shaybah': 'مصن',
+    'nawawi40':                'نو٤٠',
+    'qudsi40':                 'قد٤٠',
+    'riyad_assalihin':         'رياض',
+    'shahwaliullah40':         'شاه',
+    'shamail_muhammadiyah':    'شمائل',
+}
+
+ALL_BOOK_ABBR = {**WENSINCK_BOOKS, **EXTRA_BOOK_ABBR}
+
+
+def build_wensinck_index():
+    """
+    Build a root-organised Mu'jam al-Mufahras — the concordance Wensinck
+    compiled by hand in 1936, now generated from all 18 Sunni books.
+
+    For each Arabic root: every derived surface form found, a Lane's Lexicon
+    gloss, and hadith references grouped by book using traditional abbreviations.
+
+    Output: app/data/wensinck.json
+    {
+      "صلو": {
+        "root": "صلو",
+        "buckwalter": "Slw",
+        "gloss": "prayer, to pray, bless",
+        "forms": ["صلاه", "صلي", "يصلي", ...],
+        "books": {
+          "خ":  ["2:3", "4:12", ...],   // chapter:idInBook
+          "م":  ["1:5", ...],
+          ...
+        },
+        "total": 4523,
+        "wensinck9": true   // true if root appears in the original 9 books
+      }
+    }
+    """
+    print('\n── Step G: Building Wensinck Mu\'jam al-Mufahras ─────')
+
+    # Load roots lexicon for definitions
+    lex_path = DATA / 'roots_lexicon.json'
+    if not lex_path.exists():
+        print('  ✗ roots_lexicon.json not found — run --step lexicon first')
+        return {}
+    lexicon = read_json(lex_path)
+
+    # Build root_index for find_root (same approach as build_word_defs)
+    root_index: dict[str, tuple] = {}
+    for root_ar, entry in lexicon.items():
+        norm_root = normalize(root_ar)
+        root_index[norm_root] = (root_ar, entry)
+        bw = entry.get('buckwalter', '')
+        if bw:
+            root_index[bw.lower()] = (root_ar, entry)
+
+    def find_root(word: str):
+        norm = normalize(word)
+        if norm in root_index: return root_index[norm]
+        stem = light_stem(norm)
+        if stem in root_index: return root_index[stem]
+        no_al = norm[2:] if norm.startswith('ال') else norm
+        if no_al in root_index: return root_index[no_al]
+        stem2 = light_stem(no_al)
+        if stem2 in root_index: return root_index[stem2]
+        for base in [stem2, stem, no_al]:
+            if not base: continue
+            if base.endswith('ء'):
+                no_hamza = base[:-1]
+                if no_hamza in root_index: return root_index[no_hamza]
+                stemmed_nh = light_stem(no_hamza)
+                if stemmed_nh in root_index: return root_index[stemmed_nh]
+                if no_hamza.endswith('ا'):
+                    for sfx in ['و', 'ي']:
+                        alt = no_hamza[:-1] + sfx
+                        if alt in root_index: return root_index[alt]
+                if len(stemmed_nh) == 2:
+                    gem = stemmed_nh + stemmed_nh[-1]
+                    if gem in root_index: return root_index[gem]
+            if base.endswith('ا'):
+                alt = base[:-1] + 'و'
+                if alt in root_index: return root_index[alt]
+            if base.endswith('ه'):
+                alt_w = base[:-1] + 'و'
+                alt_y = base[:-1] + 'ي'
+                if alt_w in root_index: return root_index[alt_w]
+                if alt_y in root_index: return root_index[alt_y]
+                trimmed = base[:-1]
+                if trimmed in root_index: return root_index[trimmed]
+            if base.endswith('ي'):
+                alt = base[:-1] + 'و'
+                if alt in root_index: return root_index[alt]
+        return None
+
+    # root_ar → { forms: set, books: { book_id: set of "ch:hadith" } }
+    index: dict[str, dict] = defaultdict(lambda: {
+        'forms': set(),
+        'books': defaultdict(set),
+    })
+
+    total_hadiths = 0
+    for book_id, ch_idx, h in iter_all_hadiths('sunni'):
+        arabic = h.get('arabic', '')
+        if not arabic:
+            continue
+        h_num = h.get('idInBook', '')
+        ref = f"{ch_idx}:{h_num}"
+
+        tokens = set(tokenize_matn(arabic))
+        for tok in tokens:
+            result = find_root(tok)
+            if result:
+                root_ar, _ = result
+                entry = index[root_ar]
+                entry['forms'].add(tok)
+                entry['books'][book_id].add(ref)
+        total_hadiths += 1
+
+    print(f'  Scanned {total_hadiths:,} hadiths, found {len(index):,} roots')
+
+    # Build final output
+    wensinck = {}
+    for root_ar in sorted(index.keys()):
+        entry = index[root_ar]
+        lex_entry = lexicon.get(root_ar, {})
+
+        # Convert book_id → abbreviation, refs as sorted lists
+        books_out = {}
+        in_wensinck9 = False
+        for book_id, refs in sorted(entry['books'].items()):
+            abbr = ALL_BOOK_ABBR.get(book_id, book_id)
+            books_out[abbr] = sorted(refs, key=lambda r: (
+                int(r.split(':')[0]) if r.split(':')[0].isdigit() else 0,
+                int(r.split(':')[1]) if len(r.split(':')) > 1 and r.split(':')[1].isdigit() else 0
+            ))
+            if book_id in WENSINCK_BOOKS:
+                in_wensinck9 = True
+
+        total = sum(len(v) for v in books_out.values())
+
+        wensinck[root_ar] = {
+            'root': root_ar,
+            'buckwalter': lex_entry.get('buckwalter', ''),
+            'gloss': lex_entry.get('summary_en', ''),
+            'forms': sorted(entry['forms']),
+            'books': books_out,
+            'total': total,
+            'wensinck9': in_wensinck9,
+        }
+
+    write_json(DATA / 'wensinck.json', wensinck)
+    kb = (DATA / 'wensinck.json').stat().st_size // 1024
+    total_refs = sum(e['total'] for e in wensinck.values())
+    w9 = sum(1 for e in wensinck.values() if e['wensinck9'])
+    print(f'  ✓ {len(wensinck):,} roots, {total_refs:,} total references → wensinck.json ({kb:,} KB)')
+    print(f'    {w9:,} roots in Wensinck\'s original 9 books')
+    return wensinck
+
+
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description='Hadith enrichment pipeline')
     parser.add_argument('--step', choices=['lexicon','stemmer','freq','narrators',
-                                           'connections','concordance','camel','all'])
+                                           'connections','concordance','camel','wensinck','all'])
     args = parser.parse_args()
 
     if args.step == 'lexicon':
@@ -1094,6 +1274,8 @@ def main():
         build_concordance_index()
     elif args.step == 'camel':
         build_word_defs_v2()
+    elif args.step == 'wensinck':
+        build_wensinck_index()
     else:
         # Full pipeline
         lexicon = build_roots_lexicon()
@@ -1103,11 +1285,12 @@ def main():
         build_hadith_connections()
         build_concordance_index()
         build_word_defs_v2()
+        build_wensinck_index()
 
     print('\n✓ Done.')
     for f in ['roots_lexicon.json','word_defs.json','word_defs_v2.json',
               'word_freq.json','narrator_index.json',
-              'hadith_connections.json','concordance.json']:
+              'hadith_connections.json','concordance.json','wensinck.json']:
         p = DATA / f
         if p.exists():
             print(f'  {f}: {p.stat().st_size//1024} KB')
