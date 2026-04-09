@@ -612,11 +612,16 @@ The isnad parser (`src/parse_isnad_chains.py`) handles several Arabic-specific c
 
 | Problem | What it is | How it's fixed |
 |---------|-----------|---------------|
-| **أبيه / أبي** | "his father" — relative reference, not a name | 37-entry father lookup table resolving to actual names (e.g., هشام بن عروة → عروة بن الزبير) |
+| **أبيه / أبي** | "his/my father" — relative reference | 37-entry father lookup table (e.g., هشام بن عروة → عروة بن الزبير) |
 | **جده** | "his grandfather" | 8-entry grandfather map (e.g., شعيب بن محمد → عبد الله بن عمرو) |
+| **أمه / أمي** | "his/my mother" | 15-entry mother lookup (e.g., علقمة → مرجانة مولاة عائشة) + name extraction after comma |
+| **جدته** | "his grandmother" | 6-entry grandmother map (e.g., عباد بن تميم → أم عمارة) |
+| **عمه / عمي** | "his/my uncle" | 10-entry uncle lookup (e.g., ابن أخي ابن شهاب → الزهري) + name extraction (عن عمه، واسع بن حبان → واسع) |
+| **مولاه / خاله / أخيه** | freed slave / maternal uncle / brother | Name extracted from text when it follows the relative term; dropped only if standalone with no name |
 | **Broken kunyas** | `عن أبي صالح` split into `أبي` + `صالح` | Peek-ahead repair: if `أبي` is standalone, merge with next segment |
 | **Honorific duplication** | `أبي هريرة` ≠ `أبي هريرة ـ رضى الله عنه ـ` | Strip رضى الله عنه, kashida (ـ), trailing قال |
-| **عمي / أمه** | "my uncle" / "his mother" | Dropped (too ambiguous to resolve) |
+
+**Total genealogy lookup entries: 76** (37 father + 8 grandfather + 15 mother + 6 grandmother + 10 uncle). Names following relative terms (عن عمه، واسع بن حبان) are extracted automatically without needing a lookup entry.
 
 ### Kunya → real name tooltips
 
@@ -1074,7 +1079,7 @@ The `narrated_from` and `narrated_to` fields contain **narrator ID cross-referen
 | 11 | Kunya→real name tooltips (32 entries) + isnad parsing fixes | ✅ Complete |
 | 12 | v1.5: Parse 8 classical rijal texts from OpenITI (83,082 entries → 65,391 profiles) | ✅ Complete |
 | 13 | v1.6: Dual-stemmer root bridge (81% → 96.3%), Wensinck concordance, 1,345 form patches | ✅ Complete |
-| 14 | Per-hadith grading: Bukhari+Muslim auto-tagged + Al-Albani scrape (33,043 graded, 29%) | ✅ Complete |
+| 14 | Per-hadith grading: Bukhari+Muslim (Sahih) + Al-Albani (4 books) + Shamail | ✅ Complete |
 | 15 | Arnaut grades for Musnad Ahmad (25,509 graded from DOCX tahqiq edition) | ✅ Complete |
 | 16 | Parse Zubair Ali Zai / Darussalam for additional grades | ⬜ Planned |
 | 15 | Cross-text narrator deduplication (47k new profiles likely contain duplicates) | ⬜ Planned |
