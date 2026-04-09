@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itqan. The Story</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0f; color: #e0d8c8; line-height: 1.8; }
+        a { color: #d4a855; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .top-nav { display: flex; gap: 12px; padding: 14px 24px; background: rgba(18,14,10,.92); border-bottom: 1px solid #2a2420; font-size: .85rem; flex-wrap: wrap; }
+        .top-nav a { color: #8a8070; padding: 2px 10px; border: 1px solid #333; border-radius: 4px; }
+        .top-nav a:hover { color: #d4a855; border-color: #d4a855; text-decoration: none; }
+
+        .hero { text-align: center; padding: 3rem 1.5rem 2rem; max-width: 700px; margin: 0 auto; }
+        .hero h1 { font-family: 'Amiri', serif; font-size: 2.4rem; color: #d4a855; margin-bottom: .5rem; }
+        .hero .subtitle { color: #8a8070; font-size: 1rem; font-style: italic; }
+
+        .content { max-width: 680px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+        .content h2 { color: #d4a855; font-size: 1.3rem; margin: 2.5rem 0 .75rem; font-weight: 600; }
+        .content p { color: #b0a898; font-size: .95rem; margin-bottom: 1.2rem; }
+        .content .highlight { color: #e0d8c8; font-weight: 500; }
+        .content .arabic { font-family: 'Amiri', serif; font-size: 1.15rem; color: #d4a855; direction: rtl; text-align: center; margin: 1.5rem 0; line-height: 2; }
+        .content .verse-ref { font-size: .8rem; color: #666; text-align: center; margin-top: -1rem; margin-bottom: 1.5rem; }
+
+        .milestone { background: #1a1612; border-left: 3px solid #d4a855; padding: 14px 18px; margin: 1.5rem 0; border-radius: 0 6px 6px 0; }
+        .milestone .date { font-size: .75rem; color: #d4a855; text-transform: uppercase; letter-spacing: .1em; }
+        .milestone .text { font-size: .9rem; color: #a09888; margin-top: 4px; }
+
+        .next { background: rgba(74,170,112,.06); border: 1px solid rgba(74,170,112,.2); border-radius: 8px; padding: 18px 22px; margin: 2rem 0; }
+        .next h3 { color: #4aaa70; font-size: 1rem; margin-bottom: 8px; }
+        .next p { color: #9aaa98; font-size: .9rem; }
+
+        .footer { text-align: center; padding: 2rem; border-top: 1px solid #1e1a16; color: #555; font-size: .82rem; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="index.html" title="Home">&#x1F3E0;</a>
+    <a href="quran/index.html">Quran</a>
+    <a href="app/index.html">Hadith</a>
+    <a href="app/rijal.html">Narrators</a>
+    <a href="guide.html">How It Works</a>
+    <a href="app/history.html">Dev History</a>
+</div>
+
+<div class="hero">
+    <h1>The Story Behind Itqan</h1>
+    <div class="subtitle">How reading the Quran word by word led to the first computational concordance</div>
+</div>
+
+<div class="content">
+
+    <h2>Bismillah: where it all began</h2>
+
+    <p>I was four years old when my father held my hand and had me read my <span class="highlight">Bismillah</span>. That was the beginning of a relationship with the Quran that would last a lifetime.</p>
+
+    <p>By the time I was nine, I was trying to understand what I was reading. The Urdu translations were more difficult than the Arabic itself, heavy, old-fashioned language that a child couldn't penetrate. I was frustrated. I wanted to know what Allah was saying to me, but the tools available felt like barriers rather than bridges.</p>
+
+    <p>But I kept going. The Quran was a friend through all those years. A companion.</p>
+
+    <h2>2003&ndash;2010: when friendship became love</h2>
+
+    <p>From 2003 to 2010, something shifted. I could not live without the Quran. Every day, whatever I could do: listening to it, trying to recite it, sitting with it even when I didn't understand every word. I didn't know Arabic. I didn't have a teacher. But I had the Book, and I had the desperate desire to understand it.</p>
+
+    <p>The way I learned was the only way I knew: I would read an ayah, then search the entire Quran for every other ayah that used the same word. Because Allah says:</p>
+
+    <div class="arabic">وَنَزَّلْنَا عَلَيْكَ الْكِتَابَ تِبْيَانًا لِّكُلِّ شَيْءٍ</div>
+    <div class="verse-ref">An-Nahl 16:89. "And We have sent down to you the Book as a clarification for all things"</div>
+
+    <p>Allah says the Quran explains itself, one part is explained by another. I experienced this firsthand. The word used in one surah carries a shade of meaning that only becomes clear when you see how the same root appears in another surah, in a different context. But finding those connections manually was exhausting. I would read an ayah with the word <span class="highlight">رِزْق</span> (provision) and want to find every other ayah that talks about provision. Not just رزق but يَرْزُقُ، رَازِقِينَ، الرَّزَّاقُ. All the same root, all different forms. How do you find them without knowing every morphological pattern?</p>
+
+    <h2>The book that changed everything</h2>
+
+    <p>Then I found <span class="highlight">Fuad Abd al-Baqi's concordance</span>, <em>al-Mu'jam al-Mufahras li-Alfaz al-Quran al-Karim</em>. A book where you look up any Arabic root and find every ayah containing it. It was exactly what I needed.</p>
+
+    <p>But you still had to know the root. If you didn't know that كَتَبَ, يَكْتُبُ, كِتَابٌ, مَكْتُوبٌ, and الكَاتِبِينَ all come from the same root ك-ت-ب, the book couldn't help you. And it covered only the Quran. What about the hadith? What if the Prophet ﷺ explained the same concept using the same root?</p>
+
+    <p>At the time, I didn't know Wensinck's hadith concordance existed. I didn't know anyone had ever tried to index hadith by root. All I knew was: Fuad Abd al-Baqi's book helped me find Quran words by root, and I wished someone had done the same thing for hadith.</p>
+
+    <h2>2015&ndash;2017: my only companion</h2>
+
+    <p>From 2015 to 2017, the Quran was my everything. My happiness, my sadness, my tears of joy, my embrace. I was memorizing it. I could not bear to be separated from it. Every surah I memorized became part of me.</p>
+
+    <p>During that time, the concordance was literally in my head. I could recall a root and find all the words from the Quran in my mind. Every root I encountered became a thread I wanted to pull, to see where it led across the Book. When you have memorized a surah and you encounter the same root in another surah, you feel the connection physically. You want to see ALL of them. You want to see the pattern Allah wove across 114 surahs.</p>
+
+    <h2>Ramadan: where the idea was born</h2>
+
+    <p>It started in Ramadan. I was deep in the Quran, using Fuad Abd al-Baqi's concordance to trace words across surahs. And I had discovered <span class="highlight">al-Furuq al-Lughawiyyah</span>, the science of linguistic distinctions. Arabic doesn't have true synonyms. خَشْيَة and خَوْف both translate as "fear" in English, but they are not the same. رَحْمَة and رَأْفَة both translate as "mercy," but a scholar knows the difference. Every root carries a precise shade of meaning that no translation captures.</p>
+
+    <p>I was sitting with these books in Ramadan, tracing roots, reading the Furuq, and I thought: <span class="highlight">what if this could be an app?</span> Starting from the Quran. Click any word, see its root, see al-Raghib al-Isfahani's classical definition, see the Furuq, how this word differs from its near-synonyms. And then, from that root, see every verse in the Quran and every hadith across every book that shares it.</p>
+
+    <p>I am not a developer or a software engineer. I didn't know what NLP was, or what a morphological analyzer does, or how to parse Arabic text computationally. But the idea was born in that Ramadan, and it wouldn't leave.</p>
+
+    <h2>The first steps: Quran bil-Quran</h2>
+
+    <p>It was the 19th of Ramadan, 2026, around March 18th. The idea crystallized. And I started. Not knowing where it would go, not knowing how. Just starting.</p>
+
+    <p>The earliest work wasn't about hadith at all. It was pure Quran. Root databases, stem mappings, ayah-root connections. Then <span class="highlight">Mutashabihat ul-Quran</span>, finding the similar and matching verses. The exact concept of "Quran explains Quran" turned into code.</p>
+
+    <p>Then it became <span class="highlight">Quran bil-Quran</span>, a full app where you could click any word in any verse and see every other verse sharing its trilateral root. I grouped 1,651 roots into semantic families. I integrated al-Raghib al-Isfahani's <em>Mufradat</em> and the <em>Furuq al-Lughawiyyah</em>. The Quran was finally explaining itself digitally, the way I had been trying to do by hand for years.</p>
+
+    <p>It was deployed. It worked. But it covered only the Quran.</p>
+
+    <h2>Then came the hadith</h2>
+
+    <p>The question was obvious: what about the Sunnah? The Prophet ﷺ explained the Quran. His words used the same Arabic roots. If I could connect Quranic roots to hadith roots, I would have the first tool that bridges both corpora computationally, through shared morphology.</p>
+
+    <p>What followed was the most intense period of development. Every day a new exploration, every day a new problem solved, every day the corpus grew and the connections deepened.</p>
+
+    <h2>And then I discovered Wensinck</h2>
+
+    <p>It was only <em>during</em> development that I learned about <span class="highlight">Wensinck.s hadith concordance</span>, a 7-volume work that a team of European orientalists spent from 1936 to 1969 compiling, doing for 9 hadith books what Fuad Abd al-Baqi did for the Quran. I had been building the same thing computationally without knowing it already existed in physical form.</p>
+
+    <p>But Wensinck's concordance and Fuad Abd al-Baqi's concordance existed in complete isolation. <span class="highlight">No one had ever connected them.</span> The Quran concordance knew about Quran roots. The hadith concordance knew about hadith words. Neither bridged the two.</p>
+
+    <p>That bridge, connecting Quran roots to hadith roots, is what Itqan builds. And later, Wensinck's methodology would solve a problem I couldn't solve alone: 315 Quranic roots that my primary stemmer couldn't match to hadiths. Building an independent concordance using Wensinck's light-stemmer approach recovered 254 of them. <span class="highlight">Two methods, built independently, cross-validating each other.</span></p>
+
+    <h2>Little by little, every day</h2>
+
+    <p>I started. Little by little. One problem at a time. Every day was a new exploration.</p>
+
+    <div class="milestone">
+        <div class="date">Week 1: The Quran concordance</div>
+        <div class="text">Built root databases, stem mappings, ayah-root connections. Every word in the Quran traced to its trilateral root. 1,651 roots mapped across 6,236 ayahs. Integrated al-Raghib al-Isfahani's <em>Mufradat</em> for classical definitions and the <em>Furuq al-Lughawiyyah</em> for how near-synonyms differ.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 2: Mutashabihat and families</div>
+        <div class="text">Built Mutashabihat ul-Quran, matching verses that share phrases and roots. Grouped 1,651 roots into semantic families: mercy, justice, prayer, provision, eschatology. The Quran's internal cross-references became navigable. Click any word, see every other verse sharing its root. The Quran bil-Quran app went live.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: The hadith bridge</div>
+        <div class="text">The Quran concordance worked. Now: what about the Sunnah? Downloaded 49,000 hadiths from sunnah.com. Ran every Arabic word through CAMeL Tools. 32,413 words mapped to roots. Built the bridge: for each Quranic root, find every hadith sharing it. 384,016 connections. For the first time, the Quran concordance and the hadith corpus were linked through shared root morphology.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: The bridge was wrong</div>
+        <div class="text">Found that idInBook restarted every chapter in 14 of 18 books. Every Quran-to-Hadith filter had been showing false matches. Fixed with chapter-aware IDs. Verified 100% accuracy. Added Musannaf Ibn Abi Shaybah, 37,943 hadiths not available on Sunnah.com. Corpus jumped to 87,000.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: Musnad Ahmad</div>
+        <div class="text">Ahmad had only 1,374 hadiths from sunnah.com. The full book has 26,539. Found the complete Arnaut edition on OpenITI, the Open Islamicate Texts Initiative. Parsed the entire Arabic text. Corpus jumped to 112,000. Ahmad became the 2nd largest book.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: The narrator problem</div>
+        <div class="text">"أبيه" (his father) was showing as a top narrator in ALL 11 books. It's not a person, it's a relative reference. Built genealogy lookup tables for fathers, mothers, grandfathers, grandmothers, uncles, 76 entries. Kunyas were splitting (أبي صالح → أبي + صالح). Honorifics were duplicating narrators. Each fix revealed the next problem.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: The classical texts</div>
+        <div class="text">Parsed 8 classical texts of ilm al-rijal from OpenITI, 83,082 entries from Tahdhib al-Kamal, Mizan al-I'tidal, Al-Jarh wa al-Ta'dil, Al-Thiqat, Al-Kamil fi Du'afa, Tarikh Baghdad, and more. 65,391 narrator profiles. The largest structured open-source narrator database available.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: Wensinck and the breakthrough</div>
+        <div class="text">315 Quranic roots had zero hadith connections. Built an independent concordance, and only then discovered it was the same method Wensinck used in his 7-volume physical concordance. The two stemmers cross-validated each other. Root coverage jumped from 81% to 96.3%. The 61 remaining roots are confirmed by both methods to have no hadith attestation, the first empirical lower bound on the Quran's distinctive vocabulary.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Week 3: Grading</div>
+        <div class="text">Per-hadith grading. Bukhari and Muslim auto-tagged as Sahih. Al-Albani grades scraped for 4 books. Arnaut's grades parsed from the DOCX tahqiq edition for all 26,539 Ahmad hadiths. 59,365 hadiths graded, 52% of the corpus. Every grade traceable to a named scholar.</div>
+    </div>
+
+    <h2>What it became</h2>
+
+    <p>112,221 hadiths across 18 books. 1,590 of 1,651 Quranic roots connected. 1,528,346 verified root links. 65,391 narrator profiles from 8 classical texts. 33,758 Arabic words with morphological definitions. 100,656 isnad chains parsed. A digital Wensinck concordance. A searchable rijal database with jarh wa ta'dil from multiple classical scholars.</p>
+
+    <p>What took Wensinck's team 33 years, this computes in seconds. What took a scholar physically opening four volumes of biographical dictionaries, this consolidates into one search. What no one had ever done, connecting the Quran concordance to the hadith concordance through shared roots, is now a click away.</p>
+
+    <p>And it is free. And it will remain free. Because this is a <em>sadaqah jariyah</em>.</p>
+
+    <div class="arabic">مَن سَنَّ فِي الإِسْلَامِ سُنَّةً حَسَنَةً فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا</div>
+    <div class="verse-ref">Sahih Muslim, "Whoever establishes a good practice in Islam will have its reward and the reward of all who act upon it"</div>
+
+    <h2>What comes next</h2>
+
+    <div class="next">
+        <h3>The narrator's portrait</h3>
+        <p>Every narrator has a story. The hadiths they narrate are the hadiths they carried through their lives, what they heard, what they memorized, what they chose to transmit. A narrator's collection IS their portrait: Abu Huraira's 5,000+ narrations paint a picture of a man who spent every moment near the Prophet. Aisha's narrations reveal the private life no one else had access to. Ali's cluster in Ahmad reflects the Kufan transmission school. The next step is to build this portrait: for every narrator, show not just their grade and biography, but the actual hadiths they carried, the themes they transmitted, the scholars they taught.</p>
+    </div>
+
+    <div class="next">
+        <h3>The complete narrator database</h3>
+        <p>65,391 profiles from 8 classical texts. But 47,000 of those may be duplicates across texts, the same narrator listed differently in Tahdhib al-Kamal and Mizan al-I'tidal. A deduplication pass would consolidate these. And the teacher-student links from AR-Sanad (16,886 narrators with who-taught-whom IDs) would transform the isnad visualizer from co-occurrence to actual biographical transmission paths.</p>
+    </div>
+
+    <div class="next">
+        <h3>The remaining 48%</h3>
+        <p>52% of hadiths are graded. The remaining 48%. Musannaf Ibn Abi Shaybah (38,000), Muwatta Malik, Darimi, and 7 smaller books. await grading sources. The Quran-only roots (61 confirmed by dual-stemmer validation) await deeper linguistic analysis. And the 8 classical texts have grades embedded in narrative prose that NLP could extract.</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <a href="https://www.linkedin.com/in/alibinshahid/">Ali Bin Shahid</a>
+    &nbsp;&middot;&nbsp; <a href="index.html">Home</a>
+    &nbsp;&middot;&nbsp; <a href="https://github.com/R3GENESI5/Itqan">GitHub</a>
+    &nbsp;&middot;&nbsp; <a href="https://doi.org/10.5281/zenodo.19453612">Paper</a>
+</div>
+
+</body>
+</html>
