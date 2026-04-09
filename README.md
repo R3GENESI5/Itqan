@@ -27,7 +27,7 @@
 
 Existing Quran and Hadith platforms (Quran.com, Sunnah.com, islamweb.net) provide text search on translations. Al-Itqan operates at the level classical scholars worked: **Arabic root morphology**. The root `صوم` connects every Quran verse about fasting to every hadith whose Arabic text contains a word derived from that root — whether the word is `صيام`, `يصوم`, `الصائم`, `صُمْتُ`, or `صوموا`. One root, all its forms, across both corpora at once.
 
-Beyond the concordance, Itqan provides the **first structured JSON database of ilm al-rijal** (narrator criticism): 65,391 narrators with grades from Ibn Hajar and al-Dhahabi, jarh wa ta'dil opinions from Abu Hatim, Ahmad ibn Hanbal, and Ibn Hibban, and a kunya→real name mapping that resolves أبو هريرة to عبد الرحمن بن صخر الدوسي.
+Beyond the concordance, Itqan provides **the largest structured open-source narrator database available** — 65,391 profiles spanning 8 classical texts of hadith scholarship (Tahdhib al-Kamal, Mizan al-I'tidal, Al-Jarh wa al-Ta'dil, Al-Thiqat, Al-Kamil fi Du'afa, Tarikh Baghdad, Tahdhib al-Tahdhib, Taqrib al-Tahdhib), with grades from Ibn Hajar and al-Dhahabi, jarh wa ta'dil opinions from Abu Hatim, Ahmad ibn Hanbal, and Ibn Hibban, and a kunya→real name mapping that resolves أبو هريرة to عبد الرحمن بن صخر الدوسي.
 
 The result is a set of open JSON files that any developer or researcher can load and build on, plus a live web app that uses them.
 
