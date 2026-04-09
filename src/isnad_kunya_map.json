@@ -1,0 +1,39 @@
+{
+    "_comment": "Maps kunya (أبو/أبي X) to real name for isnad visualizer tooltip. Both أبو and أبي forms map to the same entry. Source: Ibn Hajar's Taqrib al-Tahdhib via KASHAF.",
+
+    "أبو هريرة":           {"real": "عبد الرحمن بن صخر الدوسي", "en": "Abd al-Rahman ibn Sakhr al-Dawsi", "note": "Most prolific hadith narrator, d. 57 AH"},
+    "أبي هريرة":           {"real": "عبد الرحمن بن صخر الدوسي", "en": "Abd al-Rahman ibn Sakhr al-Dawsi", "note": "Most prolific hadith narrator, d. 57 AH"},
+
+    "أبو صالح":            {"real": "ذكوان السمان", "en": "Dhakwan al-Samman", "note": "Major Medinan tabi'i, d. 101 AH"},
+    "أبي صالح":            {"real": "ذكوان السمان", "en": "Dhakwan al-Samman", "note": "Major Medinan tabi'i, d. 101 AH"},
+    "أبي صالح السمان":     {"real": "ذكوان السمان", "en": "Dhakwan al-Samman", "note": "Major Medinan tabi'i, d. 101 AH"},
+
+    "أبو أسامة":           {"real": "حماد بن أسامة القرشي", "en": "Hammad ibn Usama al-Qurashi", "note": "Kufan muhaddith, d. 201 AH"},
+    "أبو معاوية":          {"real": "محمد بن خازم الضرير", "en": "Muhammad ibn Khazim al-Darir", "note": "Blind Kufan muhaddith, d. 195 AH"},
+    "أبو نعيم":            {"real": "الفضل بن دكين", "en": "al-Fadl ibn Dukayn", "note": "Kufan hafiz, d. 219 AH"},
+    "أبو اليمان":          {"real": "الحكم بن نافع", "en": "al-Hakam ibn Nafi'", "note": "Syrian muhaddith, d. 222 AH"},
+    "أبو الوليد":          {"real": "هشام بن عبد الملك الطيالسي", "en": "Hisham ibn Abd al-Malik al-Tayalisi", "note": "Basran hafiz, d. 227 AH"},
+    "أبو بكر بن أبي شيبة": {"real": "عبد الله بن محمد بن أبي شيبة", "en": "Abdullah ibn Muhammad ibn Abi Shayba", "note": "Compiler of the Musannaf, d. 235 AH"},
+    "أبو كريب":            {"real": "محمد بن العلاء الهمداني", "en": "Muhammad ibn al-'Ala al-Hamdani", "note": "Kufan hafiz, d. 248 AH"},
+    "أبو خالد الأحمر":     {"real": "سليمان بن حيان", "en": "Sulayman ibn Hayyan", "note": "Kufan muhaddith, d. 189 AH"},
+    "أبو عوانة":           {"real": "الوضاح بن عبد الله اليشكري", "en": "al-Waddah ibn Abdullah al-Yashkuri", "note": "Wasiti hafiz, d. 176 AH"},
+    "أبو داود":            {"real": "سليمان بن الأشعث السجستاني", "en": "Sulayman ibn al-Ash'ath al-Sijistani", "note": "Compiler of the Sunan, d. 275 AH"},
+    "أبو الأحوص":          {"real": "سلام بن سليم الحنفي", "en": "Sallam ibn Sulaym al-Hanafi", "note": "Kufan muhaddith, d. 179 AH"},
+    "أبو بكر":             {"real": "عبد الله بن عثمان", "en": "Abdullah ibn Uthman (Abu Bakr al-Siddiq)", "note": "First Caliph, Companion, d. 13 AH"},
+
+    "أبي إسحاق":           {"real": "عمرو بن عبد الله السبيعي", "en": "Amr ibn Abdullah al-Sabi'i", "note": "Major Kufan tabi'i, d. 129 AH"},
+    "أبي الزبير":          {"real": "محمد بن مسلم بن تدرس", "en": "Muhammad ibn Muslim ibn Tadrus", "note": "Meccan tabi'i, d. 126 AH"},
+    "أبي الزبير المكي":    {"real": "محمد بن مسلم بن تدرس", "en": "Muhammad ibn Muslim ibn Tadrus", "note": "Meccan tabi'i, d. 126 AH"},
+    "أبي الزناد":          {"real": "عبد الله بن ذكوان", "en": "Abdullah ibn Dhakwan", "note": "Son of Abu Salih, Medinan faqih, d. 130 AH"},
+    "أبي النضر":           {"real": "سالم بن أبي أمية", "en": "Salim ibn Abi Umayya", "note": "Medinan mawla, d. 129 AH"},
+    "أبي سلمة":            {"real": "عبد الله بن عبد الرحمن بن عوف", "en": "Abdullah ibn Abd al-Rahman ibn Awf", "note": "Medinan tabi'i, d. 94 AH"},
+    "أبي سلمة بن عبد الرحمن":      {"real": "عبد الله بن عبد الرحمن بن عوف", "en": "Abdullah ibn Abd al-Rahman ibn Awf", "note": "Medinan tabi'i, d. 94 AH"},
+    "أبي سلمة بن عبد الرحمن بن عوف": {"real": "عبد الله بن عبد الرحمن بن عوف", "en": "Abdullah ibn Abd al-Rahman ibn Awf", "note": "Medinan tabi'i, d. 94 AH"},
+    "أبي قلابة":           {"real": "عبد الله بن زيد الجرمي", "en": "Abdullah ibn Zayd al-Jarmi", "note": "Basran tabi'i, d. 104 AH"},
+    "أبي وائل":            {"real": "شقيق بن سلمة", "en": "Shaqiq ibn Salama", "note": "Kufan mukhadram, d. 82 AH"},
+    "أبي سعيد":            {"real": "سعد بن مالك بن سنان الخدري", "en": "Sa'd ibn Malik al-Khudri", "note": "Companion, d. 74 AH"},
+    "أبي سعيد الخدري":     {"real": "سعد بن مالك بن سنان الخدري", "en": "Sa'd ibn Malik al-Khudri", "note": "Companion, d. 74 AH"},
+    "أبي أمامة":           {"real": "صدي بن عجلان الباهلي", "en": "Sudayy ibn 'Ajlan al-Bahili", "note": "Companion, d. 86 AH"},
+    "أبي حازم بن دينار":   {"real": "سلمة بن دينار", "en": "Salama ibn Dinar", "note": "Medinan tabi'i, d. 140 AH"},
+    "أبي شعبة":            {"real": "غير معروف", "en": "Unknown — possibly a chain variant", "note": ""}
+}

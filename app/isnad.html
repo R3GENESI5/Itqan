@@ -359,13 +359,18 @@ function render() {
         unknown:'Unknown status'
       }[d.grade_en] || d.grade_en;
       const color = GRADE_COLORS[d.grade_en] || '#aaa';
+      const realName = d.real_name ? `<div style="color:#d4a855;font-size:.85rem;margin:2px 0">${d.real_name}</div>` : '';
+      const nameEn = d.name_en ? `<div style="color:#aaa;font-size:.78rem">${d.name_en}</div>` : '';
+      const bio = d.bio ? `<div style="color:#888;font-size:.72rem;font-style:italic;margin-top:2px">${d.bio}</div>` : '';
       showTip(
         `<strong>${d.id}</strong>
          <span class="grade" style="background:${color}22;color:${color};border:1px solid ${color}55">${gradeLabel}</span><br>
-         ${d.grade_ar ? `<span style="font-family:\'Traditional Arabic\',serif;font-size:1rem;direction:rtl">${d.grade_ar}</span><br>` : ''}
+         ${realName}${nameEn}
+         ${d.grade_ar ? `<span style="font-family:'Traditional Arabic',serif;font-size:1rem;direction:rtl">${d.grade_ar}</span><br>` : ''}
          <span class="num">${fmt(d.count)}</span> hadiths in this book<br>
          ${d.death ? `Death: <span class="num">${d.death}</span><br>` : ''}
-         ${d.places ? `<span style="color:#888;font-size:.72rem">${d.places.slice(0,80)}</span>` : ''}`,
+         ${d.places ? `<span style="color:#888;font-size:.72rem">${d.places.slice(0,80)}</span>` : ''}
+         ${bio}`,
         e
       );
     })

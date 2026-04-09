@@ -50,6 +50,15 @@ if FATHER_MAP_PATH.exists():
         FATHER_MAP = {strip_diacritics(k): strip_diacritics(v)
                       for k, v in raw.items() if not k.startswith('_')}
 
+# Kunya → real name lookup for tooltip display
+KUNYA_MAP_PATH = Path(__file__).parent / 'isnad_kunya_map.json'
+KUNYA_MAP = {}
+if KUNYA_MAP_PATH.exists():
+    with open(KUNYA_MAP_PATH, encoding='utf-8') as f:
+        raw = json.load(f)
+        KUNYA_MAP = {strip_diacritics(k): v
+                     for k, v in raw.items() if not k.startswith('_')}
+
 # Grandfather lookup for resolving عن جده
 GRANDFATHER_MAP_PATH = Path(__file__).parent / 'isnad_grandfather_map.json'
 GRANDFATHER_MAP = {}
@@ -158,7 +167,10 @@ def book_isnad_graph(book_id, hadiths, grade_lookup):
     node_idx = {}
     for name, count in top_narrators:
         grade_data = grade_lookup.get(name, {})
-        nodes.append({
+        # Look up kunya → real name
+        name_stripped = strip_diacritics(name)
+        kunya_data = KUNYA_MAP.get(name_stripped, {})
+        node = {
             'id':       name,
             'count':    count,
             'grade_en': grade_data.get('grade_en', 'unknown'),
@@ -166,7 +178,12 @@ def book_isnad_graph(book_id, hadiths, grade_lookup):
             'color':    grade_data.get('color', '#95a5a6'),
             'death':    grade_data.get('death', ''),
             'places':   grade_data.get('places', ''),
-        })
+        }
+        if kunya_data:
+            node['real_name'] = kunya_data.get('real', '')
+            node['name_en']   = kunya_data.get('en', '')
+            node['bio']       = kunya_data.get('note', '')
+        nodes.append(node)
         node_idx[name] = len(node_idx)
 
     # Build links (only between nodes in our top set)
