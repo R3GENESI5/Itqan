@@ -1,23 +1,46 @@
 {
-  "total_profiles": 118045,
-  "total_names": 178859,
-  "grades": {
-    "unknown": 71457,
-    "reliable": 21095,
-    "weak": 4498,
-    "mostly_reliable": 8321,
-    "companion": 10463,
-    "abandoned": 1409,
-    "fabricator": 802
-  },
   "files": [
-    "by_name.json",
-    "profiles_unknown.json",
-    "profiles_reliable.json",
-    "profiles_weak.json",
-    "profiles_mostly_reliable.json",
-    "profiles_companion.json",
-    "profiles_abandoned.json",
-    "profiles_fabricator.json"
-  ]
+    {
+      "name": "by_name.json",
+      "type": "name_index"
+    },
+    {
+      "name": "profiles_companion.json",
+      "type": "profiles",
+      "grade": "companion"
+    },
+    {
+      "name": "profiles_reliable.json",
+      "type": "profiles",
+      "grade": "reliable"
+    },
+    {
+      "name": "profiles_mostly_reliable.json",
+      "type": "profiles",
+      "grade": "mostly_reliable"
+    },
+    {
+      "name": "profiles_weak.json",
+      "type": "profiles",
+      "grade": "weak"
+    },
+    {
+      "name": "profiles_abandoned.json",
+      "type": "profiles",
+      "grade": "abandoned"
+    },
+    {
+      "name": "profiles_fabricator.json",
+      "type": "profiles",
+      "grade": "fabricator"
+    },
+    {
+      "name": "profiles_unknown.json",
+      "type": "profiles",
+      "grade": "unknown"
+    }
+  ],
+  "total_profiles": 117893,
+  "total_variants": 178706,
+  "version": "1.8"
 }
