@@ -92,21 +92,59 @@ The data pipeline, the root bridge, the families, the word panel, the concordanc
 
 ## How It Works
 
-Open `quran/index.html` — that's the entry point. Every Quran verse has root dots under each word. Click any root and a side panel opens with:
+**[Interactive guide with flow diagram →](https://r3genesi5.github.io/Itqan/guide.html)**
 
-- **Root meaning** — al-Raghib al-Isfahani's *Mufradat Alfaz al-Quran* (d. 1108 CE)
-- **Linguistic distinctions** — *Furuq* (الفروق): precise semantic differences between near-synonyms
-- **Semantic families** — which of the 39 thematic families this root belongs to
-- **Connected Quran verses** — every ayah sharing this root
-- **Connected hadiths** — per-book counts with a link to browse them
+### The Quran→Hadith discovery flow
 
-Click a hadith book badge and Itqan opens the hadith view filtered to that root — showing only hadiths whose Arabic text contains a word from the same root, across 18 Sunni books plus a standalone Shia collection. The hadith view also works standalone: browse by book and chapter, full-text search, grade badges (Sahih/Hasan/Da'if), and word-level morphological definitions.
+1. **Read the Quran** — open `quran/index.html`, select any surah
+2. **Hover any word** — instant English meaning tooltip
+3. **Click any word** — root panel opens with:
+   - **Root meaning** from al-Raghib al-Isfahani's *Mufradat Alfaz al-Quran* (d. 1108 CE)
+   - **Linguistic distinctions** — *Furuq* (الفروق): how near-synonyms differ
+   - **Semantic family** — which of the 39 thematic families this root belongs to
+   - **Connected Quran verses** — every ayah containing this root
+   - **Connected hadiths** — per-book counts with a link to browse them
+4. **Jump to hadiths** — click through to the Hadith Library filtered by this root across all 18 books. Matching words are highlighted in gold.
+5. **Click any hadith word** — the cycle continues: root, Lane's Lexicon definition, every other hadith sharing that root. Quran to Hadith, Hadith to Quran, all through shared roots.
 
-**v1.1:** Opening the hadith view with a root filter now shows connected Quran verses for that root (reverse bridge), linking back to the Quran view. Hadiths are shareable via deep-link URLs (`#bukhari/0/3`), and a new Thematic Families page lets users browse all 39 semantic families with expandable root chips.
+### The Hadith Library
+
+Browse 112,221 hadiths across 18 Sunni books. Every Arabic word is interactive — click for root, morphology, and corpus-wide connections. Features:
+
+- **18 books** including the 9 canonical collections + Musnad Ahmad (26,539, full Arnaut edition) + Musannaf Ibn Abi Shaybah (37,943) + supplementary collections
+- **Word panel** — 32,413 Arabic words with root, Lane's Lexicon definition, grammatical form, corpus frequency
+- **Root filter mode** — `?root=صلو` shows only hadiths containing prayer-root words, highlighted in gold
+- **Deep links** — `#bukhari/0/3` links directly to a specific hadith, shareable
+- **Cross-book connections** — "see also" links across books for the same hadith
+- **Shia Library** — 18 books, ~15,000+ hadiths, standalone searchable database
+
+### Narrator Profiles (Ilm al-Rijal)
+
+`app/rijal.html` — searchable browser for **18,298 narrator biographies** with:
+
+- Full name, kunya, laqab, nasab, death year, city, tabaqat
+- **Ibn Hajar's grade** and **al-Dhahabi's assessment**
+- **Jarh wa ta'dil** for 701 narrators — opinions from Abu Hatim, Ahmad ibn Hanbal, Ibn Hibban, with source references
+- **72,767 name variants** — every spelling a narrator appears under across manuscripts
+
+### Isnad Visualizer
+
+`app/isnad.html` — D3-sankey flow diagrams showing hadith transmission chains across 11 books (100,656 parsed chains). Narrator nodes colored by grade, kunya→real name in tooltips. See the [Isnad section](#the-isnad-visualizer) for full documentation.
+
+### Thematic Families & Chord Graphs
+
+- **39 families** — roots grouped by semantic field (mercy, justice, prayer, trade, eschatology...)
+- **Chord diagrams** — 3 tabs: Family×Family overlap, Book Distinctiveness, Narrator×Book network
+- Interpretive annotations reveal: provision connects to action, prayer↔purification, each book's editorial fingerprint
 
 ### Itqan AI — Optional Companion
 
-**[Itqan AI on HuggingFace](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** — concordance search (Arabic morphological lookup or English semantic search) and RAG-powered Q&A over the full 112k hadith corpus. Not required for the core study workflow.
+**[Itqan AI on HuggingFace](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** — two modes:
+
+1. **Concordance search** — Arabic morphological lookup (instant, no model) or English semantic search (FAISS, 112k vectors)
+2. **RAG Q&A** — ask any question in Arabic or English → Qwen2.5-1.5B generates a cited answer from retrieved hadiths only
+
+Not required for the core study workflow. Itqan works fully offline without AI.
 
 ---
 
