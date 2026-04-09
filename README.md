@@ -395,8 +395,8 @@ Narrator names are normalized from 1,422 raw variant strings (e.g. "Abu Huraira"
 
 **What it reveals:**
 
-- **Abu Hurayra** (3,828 hadiths) dominates Bukhari (958) and Muslim (742) but barely appears in Ahmad (6)
-- **Ali ibn Abi Talib** (564) clusters heavily in Ahmad (301) — more than all other books combined
+- **Abu Hurayra** dominates across all major books: Ahmad (2,724), Muslim (882), Bukhari (662)
+- **Ali ibn Abi Talib** clusters heavily in Ahmad — reflecting Ahmad ibn Hanbal's Kufan sources
 - **Aisha** (2,155) has strong presence in Bukhari (645), Nasa'i (393), and Muslim (336)
 - **Anas ibn Malik** (1,926) is remarkably evenly distributed across 12 books
 - **Small collections** (Nawawi 40, Qudsi 40, Shah Waliullah 40) have zero or near-zero narrator connections — these are curated anthologies, not narrated collections

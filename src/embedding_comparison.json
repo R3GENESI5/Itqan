@@ -1,0 +1,1188 @@
+{
+  "config": {
+    "sample_size": 10000,
+    "top_k": 5,
+    "total_hadiths": 87056,
+    "e5_model": "intfloat/multilingual-e5-small",
+    "minilm_model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "summary": {
+    "e5_small": {
+      "avg_top1_score": 0.8712,
+      "avg_arabic_match_at5": 0.1333,
+      "query_wins": 12
+    },
+    "minilm": {
+      "avg_top1_score": 0.7483,
+      "avg_arabic_match_at5": 0.1333,
+      "query_wins": 0
+    },
+    "avg_overlap_at5": 0.0
+  },
+  "queries": [
+    {
+      "query_arabic": "الصلاة",
+      "query_english": "prayer",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 1747,
+            "score": 0.8829,
+            "book": "malik",
+            "num": 213,
+            "arabic": "وَحَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم ص",
+            "english": "Yahya related to me from Malik from Hisham ibn Urwa from his\nfather that the Messenger of Allah, may"
+          },
+          {
+            "rank": 6967,
+            "score": 0.8827,
+            "book": "bukhari",
+            "num": 95,
+            "arabic": "حَدَّثَنَا أَبُو مَعْمَرٍ، حَدَّثَنَا عَبْدُ الْوَارِثِ، عَنِ الْحُسَيْنِ، عَنِ ابْنِ بُرَيْدَةَ، حَدَّثَنِي عَبْدُ اللّ",
+            "english": "Narrated `Abdullah Al Muzam: The Prophet (ﷺ) said, \"Perform (an optional) prayer before Maghrib pray"
+          },
+          {
+            "rank": 6119,
+            "score": 0.8817,
+            "book": "nasai",
+            "num": 30,
+            "arabic": "أَخْبَرَنَا مَحْمُودُ بْنُ غَيْلاَنَ الْمَرْوَزِيُّ، قَالَ حَدَّثَنَا وَكِيعٌ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ عَاصِمِ ",
+            "english": "It was narrated from Abdullah that he said: \"Shall I not show you how the Messenger of Allah (ﷺ) pra"
+          },
+          {
+            "rank": 2255,
+            "score": 0.8817,
+            "book": "tirmidhi",
+            "num": 33,
+            "arabic": "حَدَّثَنَا مَحْمُودُ بْنُ غَيْلاَنَ، حَدَّثَنَا أَبُو دَاوُدَ الطَّيَالِسِيُّ، وَأَبُو النَّضْرِ، عَنْ مُحَمَّدِ بْنِ طَ",
+            "english": "Abdullah bin Mas'ud narrated that : Allah's Messenger said: \"Salatul-Wusta is the Asr prayer.\""
+          },
+          {
+            "rank": 6158,
+            "score": 0.8808,
+            "book": "bukhari",
+            "num": 152,
+            "arabic": "حَدَّثَنَا أَبُو النُّعْمَانِ، حَدَّثَنَا أَبُو عَوَانَةَ، عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، عَنْ جَابِرِ بْنِ سَمُرَ",
+            "english": "Narrated Jabir bin Samura: Sa`d said, \"I used to pray with them a prayer similar to that of Allah's "
+          }
+        ],
+        "top1_score": 0.8829,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 555,
+            "score": 0.7069,
+            "book": "shahwaliullah40",
+            "num": 26,
+            "arabic": "حُبُّكَ الشَّيْءَ یُعْمِيْ وَ یُصِمُّ",
+            "english": "Your love of something can blind and deafen (you)."
+          },
+          {
+            "rank": 4050,
+            "score": 0.6412,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 4777,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، قَالَ سَمِعْتُ سُفْيَانَ، يَقُولُ: يُصَلِّي الصَّلَاةَ الَّتِي نَسِيَهَا",
+            "english": "Wakī‘ → Sufyān Wakī‘ reported: I heard Sufyān say: “He prays the prayer which he forgot.”"
+          },
+          {
+            "rank": 384,
+            "score": 0.6281,
+            "book": "shahwaliullah40",
+            "num": 25,
+            "arabic": "لَا شَکَرَ اللهَ مَنْ لَّا یَشْکُرُ النَّاسَ",
+            "english": "He does not thank Allah who does not thank people."
+          },
+          {
+            "rank": 7073,
+            "score": 0.6263,
+            "book": "bulugh_almaram",
+            "num": 78,
+            "arabic": "وَأَصْلُهُ فِي مُسْلِم ٍ  1‏ .‏‏1 ‏- مسلم ( 376 )‏ ولفظه: كان أصحاب رسول الله صلى الله عليه وسلم ينامون.‏ ثم يصلون ولا ي",
+            "english": "Its origin is in Muslim."
+          },
+          {
+            "rank": 5781,
+            "score": 0.6121,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          }
+        ],
+        "top1_score": 0.7069,
+        "arabic_match_at5": 0.2
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "الصيام في رمضان",
+      "query_english": "fasting in Ramadan",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 7051,
+            "score": 0.8663,
+            "book": "riyad_assalihin",
+            "num": 256,
+            "arabic": "وعن أبي هريرة رضي الله عنه قال‏:‏ قال رسول الله صلى الله عليه وسلم‏:‏ ‏\n\"‏أفضل الصيام بعد رمضان‏:‏ شهر الله المحرم، وأفض",
+            "english": "Abu Hurairah (May Allah be pleased with him) reported: The Messenger of Allah (ﷺ) said, \"The best mo"
+          },
+          {
+            "rank": 9287,
+            "score": 0.8614,
+            "book": "mishkat_almasabih",
+            "num": 31,
+            "arabic": "عَن حَفْصَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «مَنْ لَمْ يَجْمَع",
+            "english": "Hafsa reported God’s messenger as saying, “He who does not before dawn express his intention of fast"
+          },
+          {
+            "rank": 3990,
+            "score": 0.8606,
+            "book": "muslim",
+            "num": 157,
+            "arabic": "حَدَّثَنِي أَحْمَدُ بْنُ سَعِيدِ بْنِ صَخْرٍ الدَّارِمِيُّ، حَدَّثَنَا حَبَّانُ، حَدَّثَنَا حَمَّادٌ، عَنْ ثَابِتٍ، عَنْ",
+            "english": "Anas reported: (The people) stood up for the night prayer when a man spoke forth: I need to say some"
+          },
+          {
+            "rank": 6928,
+            "score": 0.8588,
+            "book": "bulugh_almaram",
+            "num": 26,
+            "arabic": "وَأَصْلُهُ فِي \n\" اَلْمُتَّفَقِِ \" مِنْ حَدِيثِ عَائِشَةَ; { أَنَّ حَمْزَةَ بْنَ عَمْرٍو سَأَلَ }   1‏‏1 ‏- صحيح.‏ رواه ",
+            "english": "And it's basic meaning is in Al-Bukhari and Muslim from the narration of Aisha (with the wording) \"t"
+          },
+          {
+            "rank": 7620,
+            "score": 0.8566,
+            "book": "darimi",
+            "num": 18,
+            "arabic": "أَخْبَرَنَا عُثْمَانُ بْنُ مُحَمَّدٍ  ، حَدَّثَنَا هُشَيْمٌ  ، حَدَّثَنَا ابْنُ أَبِي لَيْلَى  ، عَنْ الْقَاسِمِ بْنِ عَ",
+            "english": ""
+          }
+        ],
+        "top1_score": 0.8663,
+        "arabic_match_at5": 0.4
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 7073,
+            "score": 0.7528,
+            "book": "bulugh_almaram",
+            "num": 78,
+            "arabic": "وَأَصْلُهُ فِي مُسْلِم ٍ  1‏ .‏‏1 ‏- مسلم ( 376 )‏ ولفظه: كان أصحاب رسول الله صلى الله عليه وسلم ينامون.‏ ثم يصلون ولا ي",
+            "english": "Its origin is in Muslim."
+          },
+          {
+            "rank": 4703,
+            "score": 0.7251,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 8567,
+            "arabic": "حَدَّثَنَا مُعْتَمِرٌ، عَنْ لَيْثٍ قَالَ: رَأَيْتُ طَلْحَةَ يَقْرَأُ فِي الْمُصْحَفِ",
+            "english": "Mu‘tamir → Layth → Ṭalḥah Mu‘tamir narrated to us, from Layth, who said: “I saw Ṭalḥah reading from "
+          },
+          {
+            "rank": 555,
+            "score": 0.7224,
+            "book": "shahwaliullah40",
+            "num": 26,
+            "arabic": "حُبُّكَ الشَّيْءَ یُعْمِيْ وَ یُصِمُّ",
+            "english": "Your love of something can blind and deafen (you)."
+          },
+          {
+            "rank": 4050,
+            "score": 0.7103,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 4777,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، قَالَ سَمِعْتُ سُفْيَانَ، يَقُولُ: يُصَلِّي الصَّلَاةَ الَّتِي نَسِيَهَا",
+            "english": "Wakī‘ → Sufyān Wakī‘ reported: I heard Sufyān say: “He prays the prayer which he forgot.”"
+          },
+          {
+            "rank": 5551,
+            "score": 0.7054,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 9205,
+            "arabic": "حَدَّثَنَا أَبُو الْأَحْوَصِ، عَنْ مُغِيرَةَ، قَالَ: سَأَلْتُ إِبْرَاهِيمَ عَنْ ذَلِكَ؟ قَالَ: فَلَا بَأْسَ بِهِ أَنْ يَ",
+            "english": "Abū al-Aḥwaṣ → Mughīrah → Ibrāhīm Abū al-Aḥwaṣ narrated to us, from Mughīrah, who said: I asked Ibrā"
+          }
+        ],
+        "top1_score": 0.7528,
+        "arabic_match_at5": 0.6
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "الزكاة والصدقة",
+      "query_english": "zakat and charity",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 7914,
+            "score": 0.8657,
+            "book": "muslim",
+            "num": 61,
+            "arabic": "وَحَدَّثَنَاهُ قُتَيْبَةُ، حَدَّثَنَا يَعْقُوبُ، ح وَحَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ، حَدَّثَنَا عَبْدُ الرَّحْمَنِ، بْن",
+            "english": "A hadith like this has been transmitted by Sahl b. Sa'd."
+          },
+          {
+            "rank": 8585,
+            "score": 0.8656,
+            "book": "muslim",
+            "num": 76,
+            "arabic": "وَحَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ، حَدَّثَنَا زُهَيْرٌ، حَدَّثَنَا أَبُو الزُّبَيْرِ، ح وَحَدَّثَنَا يَحْيَى بْنُ،\n يَح",
+            "english": "It is reported on the authority of Jabir and Ibn Umar that Allah's Messenger (ﷺ) forbade (the prepar"
+          },
+          {
+            "rank": 3565,
+            "score": 0.8656,
+            "book": "bukhari",
+            "num": 104,
+            "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ ـ رضى الله عنهما ـ أَنَّ رَ",
+            "english": "Narrated Ibn `Umar: Allah's Messenger (ﷺ) made it incumbent on all the slave or free Muslims, male o"
+          },
+          {
+            "rank": 6681,
+            "score": 0.8637,
+            "book": "muslim",
+            "num": 20,
+            "arabic": "حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ، حَدَّثَنَا عَلِيُّ بْنُ مُسْهِرٍ، عَنْ زَكَرِيَّاءَ، عَنِ الشَّعْبِيِّ،\n عَ",
+            "english": "'A'isha reported Allah's Messenger (ﷺ) as saying: He who loves to meet Allah, Allah also loves to me"
+          },
+          {
+            "rank": 9212,
+            "score": 0.8635,
+            "book": "muslim",
+            "num": 63,
+            "arabic": "حَدَّثَنِي أَبُو الطَّاهِرِ، أَخْبَرَنَا ابْنُ وَهْبٍ، أَخْبَرَنِي مَالِكُ بْنُ أَنَسٍ، وَيُونُسُ بْنُ يَزِيدَ،\n عَنِ اب",
+            "english": "'A'isha reported: Allah's Messenger (ﷺ) said: There is no trouble that comes to a believer except th"
+          }
+        ],
+        "top1_score": 0.8657,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 384,
+            "score": 0.652,
+            "book": "shahwaliullah40",
+            "num": 25,
+            "arabic": "لَا شَکَرَ اللهَ مَنْ لَّا یَشْکُرُ النَّاسَ",
+            "english": "He does not thank Allah who does not thank people."
+          },
+          {
+            "rank": 8953,
+            "score": 0.6474,
+            "book": "bulugh_almaram",
+            "num": 33,
+            "arabic": "وَزَادَ أَحْمَدُ فِي آخِرِهِ قِصَّةَ قَوْلِ بِلَالٍ فِي آذَانِ اَلْفَجْرِ: { اَلصَّلَاةُ خَيْرٌ مِنَ اَلنَّوْمِ }   1‏ .",
+            "english": "Ahmad added to the end of the above Hadith, the story of BIlal's statement in the Fajr Adhan (mornin"
+          },
+          {
+            "rank": 555,
+            "score": 0.6358,
+            "book": "shahwaliullah40",
+            "num": 26,
+            "arabic": "حُبُّكَ الشَّيْءَ یُعْمِيْ وَ یُصِمُّ",
+            "english": "Your love of something can blind and deafen (you)."
+          },
+          {
+            "rank": 942,
+            "score": 0.6289,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 1072,
+            "score": 0.6281,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 17522,
+            "arabic": "حَدَّثَنَا هُشَيْمٌ، عَنِ الْعَوَّامِ، أَنَّ مَسْرُوقًا أَجَازَ إِقْرَارَهُ",
+            "english": "Hushaym → Al-‘Awwām → Masrūq Hushaym told us, from Al-‘Awwām, that Masrūq permitted his acknowledgme"
+          }
+        ],
+        "top1_score": 0.652,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "بر الوالدين",
+      "query_english": "honoring parents",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 9674,
+            "score": 0.8803,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "حَدَّثَنَا عَبْدُ اللهِ بْنُ يَزِيدَ، قَالَ‏:‏ حَدَّثَنَا حَيْوَةُ قَالَ‏:‏ حَدَّثَنِي أَبُو عُثْمَانَ الْوَلِيدُ بْنُ أ",
+            "english": "Abu Khirash al-Aslami reported that he heard the Messenger of Allah,\nmay Allah bless him and grant h"
+          },
+          {
+            "rank": 2915,
+            "score": 0.8798,
+            "book": "ibnmajah",
+            "num": 114,
+            "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ عُمَرَ بْنِ الْهَيَّاجِ، حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى، أَنْبَأَنَا إِبْرَاهِيمُ بْن",
+            "english": "It was narrated that Abu Musa said: \"The Messenger of Allah (ﷺ) cursed the one who separates a mothe"
+          },
+          {
+            "rank": 6226,
+            "score": 0.8764,
+            "book": "muslim",
+            "num": 290,
+            "arabic": "حَدَّثَنِي أَحْمَدُ بْنُ عُثْمَانَ بْنِ حَكِيمٍ الأَوْدِيُّ، حَدَّثَنَا خَالِدٌ، - يَعْنِي ابْنَ مَخْلَدٍ - حَدَّثَنِي \n",
+            "english": "This hadith has been reported on the authority of Abu Huraira with the same chain of transmitters."
+          },
+          {
+            "rank": 9339,
+            "score": 0.8745,
+            "book": "abudawud",
+            "num": 102,
+            "arabic": "حَدَّثَنَا هَارُونُ بْنُ عَبْدِ اللَّهِ، حَدَّثَنَا ابْنُ أَبِي فُدَيْكٍ، عَنِ الضَّحَّاكِ، - يَعْنِي ابْنَ عُثْمَانَ - ",
+            "english": "Narrated 'Aishah: I swear by Allah, the Messenger of Allah (ﷺ) prayed in the mosque over the two son"
+          },
+          {
+            "rank": 8376,
+            "score": 0.8742,
+            "book": "darimi",
+            "num": 6,
+            "arabic": "أَخْبَرَنَا عَبْدُ اللَّهِ بْنُ يَزِيدَ  ، حَدَّثَنَا حَيْوَةُ  ، أَخْبَرَنَا أَبُو هَانِئٍ الْخَوْلَانِيُّ  : أَنَّ أَب",
+            "english": ""
+          }
+        ],
+        "top1_score": 0.8803,
+        "arabic_match_at5": 0.4
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 384,
+            "score": 0.7535,
+            "book": "shahwaliullah40",
+            "num": 25,
+            "arabic": "لَا شَکَرَ اللهَ مَنْ لَّا یَشْکُرُ النَّاسَ",
+            "english": "He does not thank Allah who does not thank people."
+          },
+          {
+            "rank": 942,
+            "score": 0.7145,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 3904,
+            "score": 0.7092,
+            "book": "shahwaliullah40",
+            "num": 37,
+            "arabic": "کَادَ الْفَقْرُ أَنْ یَکُوْنَ کُفْرًا",
+            "english": "Poverty can almost turn into disbelief."
+          },
+          {
+            "rank": 5781,
+            "score": 0.6891,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          },
+          {
+            "rank": 219,
+            "score": 0.6885,
+            "book": "malik",
+            "num": 6,
+            "arabic": "باب مَا يُنْهَى أَنْ يُنْبَذَ فِيهِ",
+            "english": ""
+          }
+        ],
+        "top1_score": 0.7535,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "الأمانة والصدق",
+      "query_english": "honesty and trustworthiness",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 2654,
+            "score": 0.8755,
+            "book": "mishkat_almasabih",
+            "num": 93,
+            "arabic": "وَعَنْ حَارِثَةَ بْنِ وَهْبٌ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: \n\" تصدقوا فَإِنَّهُ يَأْتِي",
+            "english": "Haritha b. Wahb told that God's messenger exhorted the people to give sadaqa, for the time was comin"
+          },
+          {
+            "rank": 4863,
+            "score": 0.8749,
+            "book": "mishkat_almasabih",
+            "num": 66,
+            "arabic": "وَعَنْ أَبِي سَعِيدٍ الْخُدْرِيُّ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: \n\" الْمُؤْمِنُونَ فِي ا",
+            "english": "Aba Sa'id al-Khudri reported God’s Messenger as saying, “The believers in the world are in three cla"
+          },
+          {
+            "rank": 9965,
+            "score": 0.8736,
+            "book": "muslim",
+            "num": 29,
+            "arabic": "وَحَدَّثَنَا يَحْيَى بْنُ يَحْيَى، وَقُتَيْبَةُ، قَالَ يَحْيَى أَخْبَرَنَا وَقَالَ، قُتَيْبَةُ حَدَّثَنَا أَبُو الأَحْوَ",
+            "english": "Haritha b. Wahb reported: I prayed with the Messenger of Allah (ﷺ) two rak'ahs and most of them offe"
+          },
+          {
+            "rank": 7412,
+            "score": 0.872,
+            "book": "abudawud",
+            "num": 293,
+            "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ حُزَابَةَ، حَدَّثَنَا إِسْحَاقُ، - يَعْنِي ابْنَ مَنْصُورٍ - حَدَّثَنَا أَسْبَاطُ الْهَمْدَانِ",
+            "english": "Narrated AbuHurayrah: The Prophet (ﷺ) said: Faith prevented assassination. A believer should not ass"
+          },
+          {
+            "rank": 3390,
+            "score": 0.8701,
+            "book": "ibnmajah",
+            "num": 53,
+            "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ الصَّبَّاحِ، وَعَمَّارُ بْنُ خَالِدٍ الْوَاسِطِيُّ، قَالاَ حَدَّثَنَا أَبُو بَكْرِ بْنُ عَيَّا",
+            "english": "It was\nnarrated from ‘Abdul-Jabbar bin Wa’il that his father said: “I\nperformed prayer with the Prop"
+          }
+        ],
+        "top1_score": 0.8755,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 5781,
+            "score": 0.7457,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          },
+          {
+            "rank": 4050,
+            "score": 0.7324,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 4777,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، قَالَ سَمِعْتُ سُفْيَانَ، يَقُولُ: يُصَلِّي الصَّلَاةَ الَّتِي نَسِيَهَا",
+            "english": "Wakī‘ → Sufyān Wakī‘ reported: I heard Sufyān say: “He prays the prayer which he forgot.”"
+          },
+          {
+            "rank": 1300,
+            "score": 0.7094,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 16510,
+            "arabic": "حَدَّثَنَا هُشَيْمٌ، عَنْ مُغِيرَةَ، عَنِ الشَّعْبِيِّ، عَنْ شُرَيْحٍ، أَنَّهُ كَانَ يَقُولُ فِي الْعِنِّينِ إِذَا لَمْ ",
+            "english": "Hushaym → Mughīrah → Al-Sha‘bī → Shurayḥ Hushaym told us, from Mughīrah, from Al-Sha‘bī, from Shuray"
+          },
+          {
+            "rank": 6281,
+            "score": 0.7084,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَلِمُسْلِمٍ : { وَهُوَ يَؤُمُّ اَلنَّاسَ فِي اَلْمَسْجِدِ }  .‏",
+            "english": "Muslim has: \"While he (ﷺ) led the people in the prayer in the masjid...\""
+          },
+          {
+            "rank": 2398,
+            "score": 0.704,
+            "book": "nasai",
+            "num": 37,
+            "arabic": "قَالَ إِسْحَاقُ أَنْبَأَنَا أَبُو مُعَاوِيَةَ، عَنِ الأَعْمَشِ، بِهَذَا الإِسْنَادِ مِثْلَهُ ‏.‏",
+            "english": "(Another chain) with similarity."
+          }
+        ],
+        "top1_score": 0.7457,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "التوبة والاستغفار",
+      "query_english": "repentance and seeking forgiveness",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 2205,
+            "score": 0.8751,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 2403,
+            "arabic": "حَدَّثَنَا أَبُو بَكْرٍ قَالَ: نا ابْنُ فُضَيْلٍ، وَأَبُو مُعَاوِيَةَ، عَنِ الْأَعْمَشِ، عَنْ إِبْرَاهِيمَ التَّيْمِيِّ،",
+            "english": "Abū Bakr → Ibn Fuḍayl + Abū Mu‘āwiyah → Al-A‘mash → Ibrāhīm at-Taymī → Al-Ḥārith ibn Suwayd → Ibn Ma"
+          },
+          {
+            "rank": 6283,
+            "score": 0.8748,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 29784,
+            "arabic": "حَدَّثَنَا عَبْدَةُ بْنُ سُلَيْمَانَ، عَنْ مُحَمَّدِ بْنِ عَمْرٍو، عَنْ أَبِي سَلَمَةَ، قَالَ: قَالَ عَبْدُ اللَّهِ بْنُ",
+            "english": "'Abdah b. Sulayman, Muhammad b. 'Amr, Abu Salamah, 'Abd Allah b. Salam 'Abdah b. Sulayman narrated t"
+          },
+          {
+            "rank": 4014,
+            "score": 0.8729,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 12577,
+            "arabic": "حَدَّثَنَا عَبْدَةُ، عَنْ حُمَيْدٍ، عَنْ يَعْلَى بْنِ حَكِيمٍ، عَنْ سَعِيدِ بْنِ جُبَيْرٍ، فِي رَجُلٍ أَفْطَرَ يَوْمًا م",
+            "english": "Abdah -> Humayd -> Ya'la ibn Hakim -> Sa'id ibn Jubayr Abdah narrated to us from Humayd, from Ya'la "
+          },
+          {
+            "rank": 6051,
+            "score": 0.8728,
+            "book": "bukhari",
+            "num": 22,
+            "arabic": "حَدَّثَنِي مُحَمَّدُ بْنُ عُبَيْدِ اللَّهِ، حَدَّثَنَا ابْنُ أَبِي حَازِمٍ، عَنْ أَبِيهِ، عَنْ سَهْلٍ، قَالَ جَاءَنَا رَ",
+            "english": "Narrated Sahl: Allah's Messenger (ﷺ) came to us while we were digging the trench and carrying out th"
+          },
+          {
+            "rank": 9049,
+            "score": 0.8708,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 29202,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، عَنْ فُضَيْلِ بْنِ مَرْزُوقٍ، عَنْ عَطِيَّةَ، عَنْ أَبِي سَعِيدٍ، قَالَ: \"مَنْ قَالَ إِذَا خَرَجَ إِ",
+            "english": "Waki', Fudayl b. Marzuq, 'Atiyah, Abu Sa'id Waki' narrated to us, from Fudayl b. Marzuq, from 'Atiya"
+          }
+        ],
+        "top1_score": 0.8751,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 639,
+            "score": 0.8098,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَضَعَّفَهُ أَحْمَدُ وَغَيْرُهُ.‏",
+            "english": "and Ahmad and others graded it Da’if"
+          },
+          {
+            "rank": 5781,
+            "score": 0.7674,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          },
+          {
+            "rank": 942,
+            "score": 0.7288,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 3904,
+            "score": 0.7252,
+            "book": "shahwaliullah40",
+            "num": 37,
+            "arabic": "کَادَ الْفَقْرُ أَنْ یَکُوْنَ کُفْرًا",
+            "english": "Poverty can almost turn into disbelief."
+          },
+          {
+            "rank": 9066,
+            "score": 0.7068,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 2689,
+            "arabic": "حَدَّثَنَا هُشَيْمٌ، عَنِ الْمُغِيرَةَ، عَنْ إِبْرَاهِيمَ، قَالَ: السُّجُودُ عَلَى الْجَبْهَةِ وَالْأَنْفِ",
+            "english": "Hushaym → Mughīrah → Ibrāhīm Hushaym told us, from Mughīrah, from Ibrāhīm, who said: \"Prostration is"
+          }
+        ],
+        "top1_score": 0.8098,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "الجهاد في سبيل الله",
+      "query_english": "jihad in the path of God",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 2407,
+            "score": 0.8645,
+            "book": "aladab_almufrad",
+            "num": 49,
+            "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ الْعَلاَءِ، قَالَ‏:‏ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدِ بْنِ عَبْدِ اللهِ، عَنْ أَبِي ب",
+            "english": "Abu Musa reported that the Messenger of Allah, may Allah bless\nhim and grant him peace, said, \"The s"
+          },
+          {
+            "rank": 906,
+            "score": 0.8637,
+            "book": "nasai",
+            "num": 3,
+            "arabic": "أَخْبَرَنَا أَحْمَدُ بْنُ صَالِحٍ الْبَغْدَادِيُّ، قَالَ حَدَّثَنَا يَحْيَى بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنِي ابْنُ عَجْل",
+            "english": "It was narrated from Abu Hurairah that the Messenger of Allah (ﷺ) forbade urinating into standing wa"
+          },
+          {
+            "rank": 2584,
+            "score": 0.8637,
+            "book": "darimi",
+            "num": 85,
+            "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ  ، حَدَّثَنَا سُلَيْمَانُ هُوَ : ابْنُ الْمُغِيرَةِ  عَنْ حُمَيْدِ بْنِ هِلَال",
+            "english": ""
+          },
+          {
+            "rank": 6095,
+            "score": 0.8634,
+            "book": "ahmed",
+            "num": 64,
+            "arabic": "حَدَّثَنَا أَبُو سَعِيدٍ، حَدَّثَنَا عَبْدُ اللَّهِ بْنُ لَهِيعَةَ، حَدَّثَنَا عَمْرُو بْنُ شُعَيْبٍ، عَنْ أَبِيهِ، عَنْ",
+            "english": "It was narrated from Umar that the Messenger of Allah ﷺ said: `No father is to be killed in retaliat"
+          },
+          {
+            "rank": 4063,
+            "score": 0.8629,
+            "book": "muslim",
+            "num": 238,
+            "arabic": "وَحَدَّثَنِيهِ حَرْمَلَةُ بْنُ يَحْيَى، أَخْبَرَنَا ابْنُ وَهْبٍ، أَخْبَرَنِي يُونُسُ، عَنِ ابْنِ شِهَابٍ، عَنْ حَنْظَلَ",
+            "english": "Hanzala b. 'Ali al-Aslaml reported that he had heard Abu Huraira (Allah be pleased with him) as sayi"
+          }
+        ],
+        "top1_score": 0.8645,
+        "arabic_match_at5": 0.6
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 6281,
+            "score": 0.8201,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَلِمُسْلِمٍ : { وَهُوَ يَؤُمُّ اَلنَّاسَ فِي اَلْمَسْجِدِ }  .‏",
+            "english": "Muslim has: \"While he (ﷺ) led the people in the prayer in the masjid...\""
+          },
+          {
+            "rank": 942,
+            "score": 0.7827,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 384,
+            "score": 0.7702,
+            "book": "shahwaliullah40",
+            "num": 25,
+            "arabic": "لَا شَکَرَ اللهَ مَنْ لَّا یَشْکُرُ النَّاسَ",
+            "english": "He does not thank Allah who does not thank people."
+          },
+          {
+            "rank": 5781,
+            "score": 0.7359,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          },
+          {
+            "rank": 639,
+            "score": 0.7329,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَضَعَّفَهُ أَحْمَدُ وَغَيْرُهُ.‏",
+            "english": "and Ahmad and others graded it Da’if"
+          }
+        ],
+        "top1_score": 0.8201,
+        "arabic_match_at5": 0.8
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "حقوق الجار",
+      "query_english": "rights of neighbors",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 961,
+            "score": 0.8548,
+            "book": "bulugh_almaram",
+            "num": 301,
+            "arabic": "وَعَنْ أَبِي هُرَيْرَةَ ‏- رضى الله عنه ‏- أَنَّ رَسُولَ اَللَّهِ ‏- صلى الله عليه وسلم ‏-قَالَ: { وَاَلَّذِي نَفْسِي بِ",
+            "english": "Narrated Abu Hurairah (RA): Allah's Messenger (ﷺ) said: \"By Him in Whose Hand my soul is, I have tho"
+          },
+          {
+            "rank": 6950,
+            "score": 0.8539,
+            "book": "bulugh_almaram",
+            "num": 33,
+            "arabic": "وَعَنْ عَوْفِ بْنِ مَالِكٍ ‏- رضى الله عنه ‏- قَالَ: { صَلَّى رَسُولُ اَللَّهِ ‏- صلى الله عليه وسلم ‏-عَلَى جَنَازَةٍ، ",
+            "english": "‘Auf bin Malik (RAA) narrated that the Messenger of Allah (ﷺ) offered the funeral prayer, and I memo"
+          },
+          {
+            "rank": 4955,
+            "score": 0.8535,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 23143,
+            "arabic": "حَدَّثَنَا أَبُو بَكْرٍ قَالَ: حَدَّثَنَا مُعْتَمِرٌ، عَنْ أَبِيهِ، عَنْ مُغِيرَةَ، وَالشَّعْبِيِّ فِي رَجُلٍ غَرِبٍ وَل",
+            "english": "Abu Bakr → Mu‘tamir → His Father → Mughīrah and Al-Sha‘bī Abu Bakr narrated to us, he said: Mu‘tamir"
+          },
+          {
+            "rank": 4650,
+            "score": 0.8525,
+            "book": "bulugh_almaram",
+            "num": 7,
+            "arabic": "وَعَنْ أَبِي هُرَيْرَةَ ‏- رضى الله عنه ‏- قَالَ:  رَسُولُ اَللَّهِ ‏- صلى الله عليه وسلم ‏-{ لِيُسَلِّمْ اَلصَّغِيرُ عَ",
+            "english": "Abu Hurairah (RAA) narrated that the Messenger of Allah (ﷺ) said: “The young should salute the old, "
+          },
+          {
+            "rank": 3312,
+            "score": 0.8513,
+            "book": "bulugh_almaram",
+            "num": 37,
+            "arabic": "وَعَنْ عَلِيِّ بْنِ أَبِي طَالِبٍ ‏- رضى الله عنه ‏- قَالَ: { أَمَرَنِي رَسُولُ اَللَّهِ ‏- صلى الله عليه وسلم ‏-أَنْ أَ",
+            "english": "Narrated 'Ali bin Abu Talib (RA): Allah's Messenger (ﷺ) commanded me to sell two youths who were bro"
+          }
+        ],
+        "top1_score": 0.8548,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 9101,
+            "score": 0.6863,
+            "book": "muslim",
+            "num": 160,
+            "arabic": "وَحَدَّثَنِي هَارُونُ بْنُ عَبْدِ اللَّهِ، حَدَّثَنَا رَوْحُ بْنُ عُبَادَةَ، حَدَّثَنَا شُعْبَةُ، بِهَذَا الإِسْنَادِ\n م",
+            "english": "This hadith has been narrated on the authority of Shu'ba with the same chain of transmitters but the"
+          },
+          {
+            "rank": 5910,
+            "score": 0.6607,
+            "book": "bulugh_almaram",
+            "num": 6,
+            "arabic": "وَلِمُسْلِمٍ مِنْ حَدِيثِ أَبِي مُوسَى: { فَأَقَامَ اَلْفَجْرَ حِينَ اِنْشَقَّ اَلْفَجْرُ, وَالنَّاسُ لَا يَكَادُ يَعْرِ",
+            "english": "Narrated Abu Musa (RA) in another version of Muslim: He (ﷺ) offered the Fajr prayer at daybreak when"
+          },
+          {
+            "rank": 1072,
+            "score": 0.6548,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 17522,
+            "arabic": "حَدَّثَنَا هُشَيْمٌ، عَنِ الْعَوَّامِ، أَنَّ مَسْرُوقًا أَجَازَ إِقْرَارَهُ",
+            "english": "Hushaym → Al-‘Awwām → Masrūq Hushaym told us, from Al-‘Awwām, that Masrūq permitted his acknowledgme"
+          },
+          {
+            "rank": 942,
+            "score": 0.6409,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 1300,
+            "score": 0.6236,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 16510,
+            "arabic": "حَدَّثَنَا هُشَيْمٌ، عَنْ مُغِيرَةَ، عَنِ الشَّعْبِيِّ، عَنْ شُرَيْحٍ، أَنَّهُ كَانَ يَقُولُ فِي الْعِنِّينِ إِذَا لَمْ ",
+            "english": "Hushaym → Mughīrah → Al-Sha‘bī → Shurayḥ Hushaym told us, from Mughīrah, from Al-Sha‘bī, from Shuray"
+          }
+        ],
+        "top1_score": 0.6863,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "النية في العبادة",
+      "query_english": "intention in worship",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 2458,
+            "score": 0.8671,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 4727,
+            "arabic": "حَدَّثَنَا سُفْيَانُ بْنُ عُيَيْنَةَ، عَنْ مَعْمَرِ بْنِ عَبْدِ اللَّهِ، عَنْ عَبْدِ الْكَرِيمِ، عَنْ سَعِيدِ بْنِ الْمُ",
+            "english": "Sufyān ibn ‘Uyaynah → Ma‘mar ibn ‘Abd Allāh → ‘Abd al-Karīm → Sa‘īd ibn al-Musayyib Sufyān ibn ‘Uyay"
+          },
+          {
+            "rank": 7809,
+            "score": 0.8637,
+            "book": "muslim",
+            "num": 299,
+            "arabic": "حَدَّثَنَا يَحْيَى بْنُ يَحْيَى، أَخْبَرَنَا جَعْفَرُ بْنُ سُلَيْمَانَ، عَنْ أَبِي عِمْرَانَ الْجَوْنِيِّ، عَنْ عَبْدِ ا",
+            "english": "Abu Dharr reported: The Messenger of Allah (ﷺ) said to me: O Abu Dharr, you would soon find after me"
+          },
+          {
+            "rank": 5992,
+            "score": 0.8629,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 7264,
+            "arabic": "حَدَّثَنَا أَبُو بَكْرِ بْنُ عَيَّاشٍ، عَنْ مُغِيرَةَ، عَنِ الْحَارِثِ الْعُكْلِيِّ، عَنْ عَبْدِ اللَّهِ بْنِ يَحْيَى، ع",
+            "english": "Abu Bakr ibn Ayyash → Mughirah → Al-Harith al-Ukli → Abdullah ibn Yahya → Ali Abu Bakr ibn Ayyash na"
+          },
+          {
+            "rank": 6033,
+            "score": 0.8628,
+            "book": "malik",
+            "num": 7,
+            "arabic": "حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسل",
+            "english": "Yahya related to me from Malik from Nafi from Abdullah ibn Umar\nthat the Messenger of Allah, may All"
+          },
+          {
+            "rank": 2255,
+            "score": 0.8628,
+            "book": "tirmidhi",
+            "num": 33,
+            "arabic": "حَدَّثَنَا مَحْمُودُ بْنُ غَيْلاَنَ، حَدَّثَنَا أَبُو دَاوُدَ الطَّيَالِسِيُّ، وَأَبُو النَّضْرِ، عَنْ مُحَمَّدِ بْنِ طَ",
+            "english": "Abdullah bin Mas'ud narrated that : Allah's Messenger said: \"Salatul-Wusta is the Asr prayer.\""
+          }
+        ],
+        "top1_score": 0.8671,
+        "arabic_match_at5": 0.2
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 8550,
+            "score": 0.7172,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 10435,
+            "arabic": "حَدَّثَنَا عَبَّادُ بْنُ عَوَّامٍ، عَنْ مِسْعَرٍ، قَالَ: سَمِعْتُ حَمَّادًا، يَقُولُ: مَنْ لَمْ يَكُنْ عِنْدَهُ مَالٌ يَ",
+            "english": "‘Abbād ibn ‘Awwām → Mis‘ar → Ḥammād ‘Abbād ibn ‘Awwām told us, from Mis‘ar, who said: I heard Ḥammād"
+          },
+          {
+            "rank": 34,
+            "score": 0.7116,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 9701,
+            "arabic": "حَدَّثَنَا عَبَّادٌ، عَنْ إِسْمَاعِيلَ، عَنِ الْحَسَنِ: أَنَّهُ كَانَ يَكْرَهُ أَنْ يَدْخُلَ الْمُعْتَكِفُ الْقَبْرَ",
+            "english": "‘Abbād → Ismā‘īl → Al-Ḥasan ‘Abbād narrated to us, from Ismā‘īl, from Al-Ḥasan, “That he disliked fo"
+          },
+          {
+            "rank": 9421,
+            "score": 0.6946,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 19881,
+            "arabic": "حَدَّثَنَا عَبَّادٌ، عَنْ حَجَّاجٍ أَنَّهُ كَانَ لَا يَرَى بِالطَّيْرِ كُلِّهِ بَأْسًا، إِلَّا أَنْ تُقَذِّرَ مِنْهُ شَي",
+            "english": "‘Abbād → Ḥajjāj ‘Abbād narrated to us, from Ḥajjāj, that he saw no harm in all birds, unless you fin"
+          },
+          {
+            "rank": 1326,
+            "score": 0.6886,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 25732,
+            "arabic": "حَدَّثَنَا مُعْتَمِرُ بْنُ سُلَيْمَانَ، عَنْ عَبَّادِ بْنِ عَبَّادٍ، قَالَ: رَأَيْتُ أَبَا مِجْلَزٍ، وَخَالِدًا الْأَثْب",
+            "english": "Mu'tamir ibn Sulayman → 'Abbad ibn 'Abbad → Abu Mijlaz & Khalid Al-Athbaj 'Abbad ibn 'Abbad said: \"I"
+          },
+          {
+            "rank": 7033,
+            "score": 0.6877,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 29673,
+            "arabic": "حَدَّثَنَا عَبَّادُ بْنُ الْعَوَّامِ، عَنْ سَعِيدٍ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ: أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ ",
+            "english": "'Abbad b. al-'Awwam, Sa'id, Qatadah, Anas 'Abbad b. al-'Awwam narrated to us, from Sa'id, from Qatad"
+          }
+        ],
+        "top1_score": 0.7172,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "الرحمة بالضعفاء",
+      "query_english": "mercy toward the weak",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 5219,
+            "score": 0.8759,
+            "book": "nasai",
+            "num": 42,
+            "arabic": "أَخْبَرَنَا عَبْدَةُ بْنُ عَبْدِ اللَّهِ، عَنْ سُوَيْدٍ، عَنْ زُهَيْرٍ، عَنْ مُوسَى بْنِ عُقْبَةَ، عَنْ سَالِمِ بْنِ عَب",
+            "english": "It was narrated from 'Abdullah bin 'Umar that: when the Messenger of Allah was in Dhul-Hulaifah some"
+          },
+          {
+            "rank": 1053,
+            "score": 0.8739,
+            "book": "nasai",
+            "num": 85,
+            "arabic": "أَخْبَرَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا مُحَمَّدٌ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي رَجَاءٍ، قَالَ سَ",
+            "english": "It was narrated that Abu Raja' said: \"I asked Al-Hasan about Nabidh made in earthenware jars - is it"
+          },
+          {
+            "rank": 8066,
+            "score": 0.8726,
+            "book": "nasai",
+            "num": 36,
+            "arabic": "أَخْبَرَنَا عَلِيُّ بْنُ حُجْرٍ، قَالَ أَنْبَأَنَا ابْنُ الْمُبَارَكِ، عَنْ مَعْمَرٍ، عَنِ الأَشْعَثِ بْنِ عَبْدِ اللَّه",
+            "english": "It was narrated from 'Abdullah bin Mughaffal that the Prophet (ﷺ) said: \"None of you should urinate "
+          },
+          {
+            "rank": 3047,
+            "score": 0.8717,
+            "book": "abudawud",
+            "num": 13,
+            "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ اللَّهِ، حَدَّثَنَا الْمُغِيرَةُ بْنُ سَلَمَةَ، حَدَّثَنَا ابْنُ الْمُبَارَكِ، عَنِ الأ",
+            "english": "Narrated Ibn Abzi: Ubayy ibn Ka'b) said: The Prophet (ﷺ) read the verse: \"Say: In the bounty of Alla"
+          },
+          {
+            "rank": 3968,
+            "score": 0.8717,
+            "book": "nasai",
+            "num": 268,
+            "arabic": "أَخْبَرَنَا سُلَيْمَانُ بْنُ سَلْمٍ، قَالَ أَنْبَأَنَا النَّضْرُ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ قَتَادَةَ، عَنْ بَكْرِ",
+            "english": "It was narrated from Ibn 'Umar, : That the Messenger of Allah  said: \"Silk is only worn by one who h"
+          }
+        ],
+        "top1_score": 0.8759,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 639,
+            "score": 0.8353,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَضَعَّفَهُ أَحْمَدُ وَغَيْرُهُ.‏",
+            "english": "and Ahmad and others graded it Da’if"
+          },
+          {
+            "rank": 7897,
+            "score": 0.7395,
+            "book": "riyad_assalihin",
+            "num": 133,
+            "arabic": "وعَنْ عائشة رضي اللَّه عنْهَا نَحْوُهُ، متفقٌ عليه.",
+            "english": "A similar narration was narrated on the authority of 'Aishah."
+          },
+          {
+            "rank": 3658,
+            "score": 0.7368,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 34884,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، عَنْ سُفْيَانَ، عَنْ أَبِي إِسْحَاقَ، عَنْ مُرَّةَ: \" {وَأَفْئِدَتُهُمْ هَوَاءٌ} [إبراهيم: 43] \"، قَ",
+            "english": "Wakī‘, from Sufyān, from Abū Isḥāq, from Murrah Wakī‘ narrated to us, from Sufyān, from Abū Isḥāq, f"
+          },
+          {
+            "rank": 856,
+            "score": 0.7256,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 1754,
+            "arabic": "حَدَّثَنَا ابْنُ فُضَيْلٍ، عَنْ مُغِيرَةَ، عَنْ إِبْرَاهِيمَ، فِي النُّخَاعَةِ , قَالَ: خُذْهَا وَخُذْ مَا حَمَلَتْ فَإِ",
+            "english": "Ibn Fuḍayl → Mughīrah → Ibrāhīm Ibn Fuḍayl reported from Mughīrah from Ibrāhīm regarding phlegm. He "
+          },
+          {
+            "rank": 9332,
+            "score": 0.7255,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 35951,
+            "arabic": "حَدَّثَنَا شَبَابَةُ عَنْ وَرْقَاءَ عَنِ ابْنِ أَبِي نَجِيحٍ عَنْ مُجَاهِدٍ {كَمَا بَدَأْنَا أَوَّلَ خَلْقٍ نُعِيدُهُ} [",
+            "english": "Shabābah, from Warqā’, from Ibn Abī Najīḥ, from Mujāhid Shabābah narrated to us, from Warqā’, from I"
+          }
+        ],
+        "top1_score": 0.8353,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "العلم وطلبه",
+      "query_english": "knowledge and seeking it",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 942,
+            "score": 0.8783,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 8677,
+            "score": 0.8775,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 33994,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، وَعَبْدَةُ بْنُ سُلَيْمَانَ، عَنِ الْأَعْمَشِ، عَنْ ثُمَامَةَ بْنِ عُقْبَةَ الْمَحْلَمِيِّ، عَنْ زَي",
+            "english": "Wakī‘ > ‘Abdah ibn Sulaymān > Al-A‘mash > Thumāmah ibn ‘Uqbah al-Maḥlamī > Zayd ibn Arqam Wakī‘ and "
+          },
+          {
+            "rank": 1744,
+            "score": 0.8763,
+            "book": "mishkat_almasabih",
+            "num": 52,
+            "arabic": "وَعَنْ عَائِشَةَ أَنَّهَا قَالَتْ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: «إِنَّ اللَّهَ عَ",
+            "english": "‘Aisha said she heard God’s messenger say that God revealed\nto him, “ If anyone follows a path in se"
+          },
+          {
+            "rank": 9970,
+            "score": 0.8758,
+            "book": "mishkat_almasabih",
+            "num": 152,
+            "arabic": "عَنْ أَبِي سَعِيدٍ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: \" إِذَا رَأَيْتُمُ الرَّجُلَ يَتَعَاه",
+            "english": "Abu Sa'id al-Khudri reported God’s Messenger as saying, “When you see a man frequenting the mosque, "
+          },
+          {
+            "rank": 6452,
+            "score": 0.8754,
+            "book": "mishkat_almasabih",
+            "num": 791,
+            "arabic": "وَعَنْ أَوْسِ بْنِ أَوْسٍ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: \n\" مَنْ غَسَّلَ يَوْمَ الْجُمُ",
+            "english": "Aus b. Aus reported God's Messenger as saying, “If anyone washes and bathes on Friday, goes out earl"
+          }
+        ],
+        "top1_score": 0.8783,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 639,
+            "score": 0.7235,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَضَعَّفَهُ أَحْمَدُ وَغَيْرُهُ.‏",
+            "english": "and Ahmad and others graded it Da’if"
+          },
+          {
+            "rank": 5781,
+            "score": 0.7221,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          },
+          {
+            "rank": 219,
+            "score": 0.7013,
+            "book": "malik",
+            "num": 6,
+            "arabic": "باب مَا يُنْهَى أَنْ يُنْبَذَ فِيهِ",
+            "english": ""
+          },
+          {
+            "rank": 6281,
+            "score": 0.6867,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَلِمُسْلِمٍ : { وَهُوَ يَؤُمُّ اَلنَّاسَ فِي اَلْمَسْجِدِ }  .‏",
+            "english": "Muslim has: \"While he (ﷺ) led the people in the prayer in the masjid...\""
+          },
+          {
+            "rank": 555,
+            "score": 0.6864,
+            "book": "shahwaliullah40",
+            "num": 26,
+            "arabic": "حُبُّكَ الشَّيْءَ یُعْمِيْ وَ یُصِمُّ",
+            "english": "Your love of something can blind and deafen (you)."
+          }
+        ],
+        "top1_score": 0.7235,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    },
+    {
+      "query_arabic": "الموت والآخرة",
+      "query_english": "death and the hereafter",
+      "e5_small": {
+        "hits": [
+          {
+            "rank": 5818,
+            "score": 0.8683,
+            "book": "abudawud",
+            "num": 25,
+            "arabic": "حَدَّثَنَا مُسَدَّدٌ، حَدَّثَنَا عِيسَى بْنُ يُونُسَ، حَدَّثَنَا الأَعْمَشُ، عَنْ أَبِي سُفْيَانَ، عَنْ جَابِرِ بْنِ عَب",
+            "english": "Narrated Jabir b. 'Abd Allah : I heard the Messenger of Allah (ﷺ) say three days before his death: N"
+          },
+          {
+            "rank": 2414,
+            "score": 0.8654,
+            "book": "ibnmajah",
+            "num": 18,
+            "arabic": "حَدَّثَنَا أَحْمَدُ بْنُ الأَزْهَرِ، حَدَّثَنَا مُحَمَّدُ بْنُ عِيسَى، حَدَّثَنَا يُوسُفُ بْنُ الْمَاجِشُونِ، حَدَّثَنَا",
+            "english": "Muhammad\nbin Munkadir said: “I entered upon Jabir bin ‘Abdullah when\nhe\nwas dying, and I said: ‘Conv"
+          },
+          {
+            "rank": 9965,
+            "score": 0.8653,
+            "book": "muslim",
+            "num": 29,
+            "arabic": "وَحَدَّثَنَا يَحْيَى بْنُ يَحْيَى، وَقُتَيْبَةُ، قَالَ يَحْيَى أَخْبَرَنَا وَقَالَ، قُتَيْبَةُ حَدَّثَنَا أَبُو الأَحْوَ",
+            "english": "Haritha b. Wahb reported: I prayed with the Messenger of Allah (ﷺ) two rak'ahs and most of them offe"
+          },
+          {
+            "rank": 3056,
+            "score": 0.8649,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 35257,
+            "arabic": "حَدَّثَنَا وَكِيعٌ، عَنْ مُوسَى بْنِ عُبَيْدَةَ، عَنْ مُحَمَّدِ بْنِ كَعْبٍ قَالَ: إِذَا أَرَادَ اللَّهُ بِعَبْدِهِ خَيْ",
+            "english": "Waki' > Musa bin 'Ubaydah > Muhammad bin Ka'b Waki' narrated to us, from Musa bin 'Ubaydah, from Muh"
+          },
+          {
+            "rank": 2765,
+            "score": 0.8648,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 34697,
+            "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ بِشْرٍ، عَنْ مِسْعَرٍ، عَنْ عَمْرِو بْنِ مُرَّةَ، عَنْ عَبْدِ اللَّهِ بْنِ سَلَمَةَ قَالَ: قَا",
+            "english": "Muhammad bin Bishr > Mis'ar > 'Amr bin Murrah > 'Abdullah bin Salamah Muhammad bin Bishr narrated fr"
+          }
+        ],
+        "top1_score": 0.8683,
+        "arabic_match_at5": 0.0
+      },
+      "minilm": {
+        "hits": [
+          {
+            "rank": 384,
+            "score": 0.7764,
+            "book": "shahwaliullah40",
+            "num": 25,
+            "arabic": "لَا شَکَرَ اللهَ مَنْ لَّا یَشْکُرُ النَّاسَ",
+            "english": "He does not thank Allah who does not thank people."
+          },
+          {
+            "rank": 6281,
+            "score": 0.7556,
+            "book": "bulugh_almaram",
+            "num": 90,
+            "arabic": "وَلِمُسْلِمٍ : { وَهُوَ يَؤُمُّ اَلنَّاسَ فِي اَلْمَسْجِدِ }  .‏",
+            "english": "Muslim has: \"While he (ﷺ) led the people in the prayer in the masjid...\""
+          },
+          {
+            "rank": 942,
+            "score": 0.7479,
+            "book": "shahwaliullah40",
+            "num": 14,
+            "arabic": "الرَّاجِعُ فِيْ هِبَتِهِ کَالرَّاجِعِ فِيْ قَیْئِهِ",
+            "english": "Someone who takes back his gift is like someone who eats his vomit."
+          },
+          {
+            "rank": 5781,
+            "score": 0.7259,
+            "book": "aladab_almufrad",
+            "num": 8,
+            "arabic": "وَبَابَانِ يُعَجَّلاَنِ فِي الدُّنْيَا‏:‏ الْبَغْيُ، وَقَطِيعَةُ الرَّحِمِ‏.‏",
+            "english": "\"Two doors come quickly in this world: outrage and cutting off\nrelatives.\""
+          },
+          {
+            "rank": 1072,
+            "score": 0.7048,
+            "book": "musannaf_ibnabi_shaybah",
+            "num": 17522,
+            "arabic": "حَدَّثَنَا هُشَيْمٌ، عَنِ الْعَوَّامِ، أَنَّ مَسْرُوقًا أَجَازَ إِقْرَارَهُ",
+            "english": "Hushaym → Al-‘Awwām → Masrūq Hushaym told us, from Al-‘Awwām, that Masrūq permitted his acknowledgme"
+          }
+        ],
+        "top1_score": 0.7764,
+        "arabic_match_at5": 0.0
+      },
+      "overlap_at5": 0
+    }
+  ]
+}
