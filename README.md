@@ -25,9 +25,13 @@
 
 ## What This Is
 
-For 1,400 years, studying the connection between the Quran and the Hadith required mastery of Classical Arabic, access to a physical library of biographical dictionaries, and years of training in root morphology and narrator criticism. A scholar wanting to trace how the Quranic concept of *rizq* (provision) manifests across the hadith corpus would need to know every Arabic word derived from the root ر-ز-ق, then manually search across multiple hadith collections, then cross-reference each narrator in the chain against several volumes of *ilm al-rijal*.
+In 1945, Muhammad Fuad Abd al-Baqi published *al-Mu'jam al-Mufahris li-Alfaz al-Quran al-Karim* — a concordance of every word in the Quran indexed by root. It took him **years of manual work** to compile a single volume covering 6,236 verses. His hadith concordance (*Mu'jam al-Mufahris li-Alfaz al-Hadith al-Nabawi*) took a team of scholars **decades** and covered only the six canonical books. Neither work connected Quran roots to hadith roots — that cross-reference existed only in the minds of scholars who had memorized both corpora.
+
+For *ilm al-rijal* (narrator criticism), a scholar evaluating a single hadith chain would consult **Tahdhib al-Kamal** (35 volumes) for the narrator biography, **Taqrib al-Tahdhib** for Ibn Hajar's grade, **Mizan al-I'tidal** for al-Dhahabi's assessment, and **Al-Jarh wa al-Ta'dil** for earlier opinions — physically opening four books and cross-referencing by name, hoping the name wasn't ambiguous across the thousands of entries.
 
 **Itqan does all of this computationally, instantly, and for free.**
+
+What took Fuad Abd al-Baqi years, Itqan computes in seconds — not for 6 books but for 18, not for the Quran alone but bridging both corpora through 1,336 shared roots. What required a scholar to open four volumes of rijal, Itqan consolidates into one searchable JSON file spanning 8 classical texts and 65,391 narrator profiles.
 
 ### The concordance
 
