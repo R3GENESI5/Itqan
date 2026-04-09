@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itqan — Quran &amp; Hadith Study Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0f;
+            color: #e0d8c8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 2rem;
+        }
+        .title-ar {
+            font-family: 'Amiri', serif;
+            font-size: 3.5rem;
+            color: #d4a855;
+            margin-bottom: 0.25rem;
+            direction: rtl;
+        }
+        .title-en {
+            font-size: 1.1rem;
+            color: #8a8070;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .desc {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #b0a898;
+            margin-bottom: 2.5rem;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .stat-n { display: block; font-size: 1.6rem; color: #d4a855; font-weight: 700; }
+        .stat-l { font-size: 0.8rem; color: #8a8070; text-transform: uppercase; letter-spacing: 0.1em; }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        a.btn {
+            display: inline-block;
+            padding: 0.75rem 1.8rem;
+            border: 1px solid #d4a855;
+            color: #d4a855;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        a.btn:hover {
+            background: #d4a855;
+            color: #0a0a0f;
+        }
+        a.btn.secondary {
+            border-color: #555;
+            color: #999;
+        }
+        a.btn.secondary:hover {
+            background: #555;
+            color: #e0d8c8;
+        }
+        a.btn.green {
+            border-color: #4aaa70;
+            color: #4aaa70;
+        }
+        a.btn.green:hover {
+            background: #4aaa70;
+            color: #0a0a0f;
+        }
+        .doi-row {
+            margin-top: 1.5rem;
+            display: flex; justify-content: center; gap: 1.5rem;
+            flex-wrap: wrap; align-items: center;
+        }
+        .doi-label {
+            display: flex; flex-direction: column; align-items: center; gap: 4px;
+        }
+        .doi-label span {
+            font-size: 0.7rem; color: #666;
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title-ar">الإتقان</div>
+        <div class="title-en">Itqan</div>
+        <p class="desc">
+            Unlike keyword search on Quran.com or Sunnah.com, every Arabic word here is interactive.<br>
+            Click any word to see its three-letter root, Lane's Lexicon definition,
+            and every connected verse or hadith &mdash; across both corpora at once.
+        </p>
+        <div class="stats">
+            <div><span class="stat-n">112k+</span><span class="stat-l">Hadiths</span></div>
+            <div><span class="stat-n">6,236</span><span class="stat-l">Ayahs</span></div>
+            <div><span class="stat-n">1.5M</span><span class="stat-l">Root Links</span></div>
+            <div><span class="stat-n">65k</span><span class="stat-l">Narrators</span></div>
+            <div><span class="stat-n">18</span><span class="stat-l">Books</span></div>
+        </div>
+        <div class="links">
+            <a href="quran/index.html" class="btn">Quran bil-Quran</a>
+            <a href="app/index.html" class="btn">Hadith Library</a>
+            <a href="guide.html" class="btn secondary">How It Works</a>
+            <a href="app/isnad.html" class="btn green">Isnad Visualizer</a>
+            <a href="app/rijal.html" class="btn secondary">Narrator Profiles</a>
+            <a href="app/families.html" class="btn secondary">Thematic Families</a>
+            <a href="app/chord.html" class="btn secondary">Chord Graphs</a>
+            <a href="app/history.html" class="btn secondary">Dev History</a>
+            <a href="story.html" class="btn secondary">The Story</a>
+        </div>
+        <div class="doi-row">
+            <div class="doi-label">
+                <span>Paper</span>
+                <a href="https://doi.org/10.5281/zenodo.19453612"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19453612.svg" alt="Paper DOI"></a>
+            </div>
+            <div class="doi-label">
+                <span>Code</span>
+                <a href="https://doi.org/10.5281/zenodo.19453613"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19453613.svg" alt="Code DOI"></a>
+            </div>
+        </div>
+        <div style="margin-top:2.5rem;max-width:540px;margin-left:auto;margin-right:auto;padding:18px 22px;border:1px solid rgba(74,170,112,.3);border-radius:8px;background:rgba(74,170,112,.06);text-align:left;font-size:.82rem;line-height:1.75;color:#9aaa98">
+            <span style="color:#4aaa70;font-weight:600">&#x1F330; Open &amp; free.</span>
+            This project is built as a <em>sadaqah jariyah</em> &mdash; ongoing charity through beneficial knowledge.
+            Use it, share it, build upon it. If it helps your research, a citation is appreciated.
+            Please do not place it behind a paywall; let it remain accessible to anyone seeking to learn.
+            If someone does profit from it without giving back, I trust that account will be settled
+            by the One from whom nothing is hidden.
+            <div style="margin-top:12px;color:rgba(74,170,112,.6);font-size:1.05rem;direction:rtl;font-family:'Amiri',serif;letter-spacing:.02em;line-height:1.9">
+                مَن سَنَّ فِي الإِسْلَامِ سُنَّةً حَسَنَةً فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا
+            </div>
+        </div>
+        <div style="margin-top:1rem;text-align:center">
+            <a href="https://github.com/R3GENESI5/Itqan#readme" style="color:#666;font-size:.82rem;text-decoration:none;border-bottom:1px solid #333;padding-bottom:2px;transition:all .2s" onmouseover="this.style.color='#d4a855';this.style.borderColor='#d4a855'" onmouseout="this.style.color='#666';this.style.borderColor='#333'">Source &amp; technical docs on GitHub</a>
+        </div>
+        <div style="margin-top:2rem;text-align:center;font-size:.8rem;color:#555">
+            Researched, compiled &amp; developed by <a href="https://www.linkedin.com/in/alibinshahid/" style="color:#8a8070;text-decoration:none;border-bottom:1px solid #444" onmouseover="this.style.color='#d4a855';this.style.borderColor='#d4a855'" onmouseout="this.style.color='#8a8070';this.style.borderColor='#444'">Ali Bin Shahid</a>
+        </div>
+        <div style="margin-top:.8rem;font-size:.72rem;color:#444;text-align:center">v1.6 &middot; 112,221 hadiths &middot; 65,391 narrator profiles &middot; 1,528,346 root links</div>
+    </div>
+</body>
+</html>
