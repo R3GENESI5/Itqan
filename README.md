@@ -527,17 +527,21 @@ Narrator names are normalized from 1,422 raw variant strings (e.g. "Abu Huraira"
 
 ---
 
-## Data Quality Verification
+## Data Quality & Visualization
 
-`app/concordance_audit.html` — a Chart.js dashboard for verifying pipeline output. Regenerate with `python src/visualize_concordance.py`. Key charts:
+Regenerate charts: `python src/generate_charts.py` (matplotlib) or `python src/visualize_concordance.py` (interactive Chart.js dashboard).
 
-1. **39 families bar chart** — hadith coverage per family, showing which themes dominate the corpus
-2. **Top 40 roots** — hadith count vs ayah count side by side; reveals which roots are over/under-represented between Quran and Hadith
-3. **Per-book coverage** — total hadiths vs concordance entries per book; verifies every book is indexed (112k total)
-4. **Word frequency distribution** — most words are rare; ~81 hit the 2,000 cap (صلي, قال, كان)
-5. **Quran freq vs Hadith count scatter** — positive correlation with outliers: abstract theological roots are Quran-heavy, legal practice roots are Hadith-heavy
+| 39 Thematic Families — Hadith Coverage | Per-Book Hadith Count (Ahmad highlighted) |
+|---|---|
+| ![Families](docs/screenshots/chart-families.png) | ![Per-book](docs/screenshots/chart-per-book.png) |
 
-> **Note:** Screenshots in `docs/screenshots/` may be from earlier versions. The live dashboard at `concordance_audit.html` always reflects the current data.
+| Dual-Stemmer Root Resolution (96.3%) | Quran Frequency vs Hadith Coverage |
+|---|---|
+| ![Dual stemmer](docs/screenshots/chart-dual-stemmer.png) | ![Scatter](docs/screenshots/chart-quran-vs-hadith.png) |
+
+| Itqan Growth: v1.0 → v1.6 |
+|---|
+| ![Version growth](docs/screenshots/chart-version-growth.png) |
 
 ---
 
