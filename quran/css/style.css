@@ -69,7 +69,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: var(--font-ar);
+    font-family: var(--font-en);
     background: var(--bg);
     color: var(--text);
     line-height: 1.8;
