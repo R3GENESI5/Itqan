@@ -122,51 +122,76 @@
 
     <h2>Little by little, every day</h2>
 
-    <p>I started. Little by little. One problem at a time. Every day was a new exploration.</p>
+    <p>I started. Little by little. One problem at a time. Every day was a new exploration. And every day, I am utterly astounded by Allah's mercy. How He helps me. How He lets me do it. Something appears in my inbox, a random video, a link, anything that comes my way, and it adds a layer into the project I didn't know was missing. This entire journey has been guided in ways I cannot explain rationally.</p>
 
     <div class="milestone">
-        <div class="date">Week 1: The Quran concordance</div>
-        <div class="text">Built root databases, stem mappings, ayah-root connections. Every word in the Quran traced to its trilateral root. 1,651 roots mapped across 6,236 ayahs. Integrated al-Raghib al-Isfahani's <em>Mufradat</em> for classical definitions and the <em>Furuq al-Lughawiyyah</em> for how near-synonyms differ.</div>
+        <div class="date">The Quran concordance</div>
+        <div class="text">Root databases, stem mappings, ayah-root connections. Every word in the Quran traced to its trilateral root. 1,651 roots mapped across 6,236 ayahs. Integrated al-Raghib al-Isfahani's <em>Mufradat</em> and the <em>Furuq al-Lughawiyyah</em>. Grouped roots into semantic families: mercy, justice, prayer, provision, eschatology. Built Mutashabihat ul-Quran, matching verses that share roots. The Quran bil-Quran app went live.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 2: Mutashabihat and families</div>
-        <div class="text">Built Mutashabihat ul-Quran, matching verses that share phrases and roots. Grouped 1,651 roots into semantic families: mercy, justice, prayer, provision, eschatology. The Quran's internal cross-references became navigable. Click any word, see every other verse sharing its root. The Quran bil-Quran app went live.</div>
+        <div class="date">The hadith bridge, and the first heartbreak</div>
+        <div class="text">The Quran concordance worked. Now: what about the Sunnah? Downloaded 49,000 hadiths. Ran every Arabic word through CAMeL Tools. 32,413 words mapped to roots. Built the bridge: for each Quranic root, find every hadith sharing it. 384,016 connections appeared. I was ecstatic. Then I clicked a root and the hadiths were wrong. Completely unrelated hadiths were showing up. The bridge was broken.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: The hadith bridge</div>
-        <div class="text">The Quran concordance worked. Now: what about the Sunnah? Downloaded 49,000 hadiths from sunnah.com. Ran every Arabic word through CAMeL Tools. 32,413 words mapped to roots. Built the bridge: for each Quranic root, find every hadith sharing it. 384,016 connections. For the first time, the Quran concordance and the hadith corpus were linked through shared root morphology.</div>
+        <div class="date">The roots wouldn't transfer</div>
+        <div class="text">This was the most frustrating period. The Quran uses one canonical form for a root, CAMeL Tools uses another. قضي in the Quran becomes قضو in CAMeL. بيع becomes بوع. أمن becomes ومن. 315 Quranic roots returned zero hadith matches. Not because the words didn't exist in the hadiths, but because the two systems disagreed on what to call the root. I built an alias map, 131 entries, painstakingly cross-referencing Quran forms to CAMeL forms. It recovered thousands of connections. But 315 roots still showed zero. I was stuck.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: The bridge was wrong</div>
-        <div class="text">Found that idInBook restarted every chapter in 14 of 18 books. Every Quran-to-Hadith filter had been showing false matches. Fixed with chapter-aware IDs. Verified 100% accuracy. Added Musannaf Ibn Abi Shaybah, 37,943 hadiths not available on Sunnah.com. Corpus jumped to 87,000.</div>
+        <div class="date">Ayah markers and shifting words</div>
+        <div class="text">Then a different problem. The roots were not following the words. I would click a word and get the definition of the wrong word. At first it was off by one. Then by two. Then by ten. Then by fifty. Then by hundreds. By the time I reached the later surahs, the lag was thousands of words. Clicking a word in Surah Al-Nas would give me the root of a word from Surah Al-Baqarah. I had no clue what was happening. It turned out that every ayah marker, every delimiter, every verse number in the text was being counted as a "word" by the tokenizer. Each one pushed every subsequent root assignment further and further off. The lag accumulated across the entire Quran. The fix was invisible but fundamental: strip every non-word token before mapping roots to positions.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: Musnad Ahmad</div>
-        <div class="text">Ahmad had only 1,374 hadiths from sunnah.com. The full book has 26,539. Found the complete Arnaut edition on OpenITI, the Open Islamicate Texts Initiative. Parsed the entire Arabic text. Corpus jumped to 112,000. Ahmad became the 2nd largest book.</div>
+        <div class="date">Defective roots and hollow verbs</div>
+        <div class="text">Arabic has "defective" verbs where the third root letter is weak (و or ي). These change form unpredictably. هدي becomes هدو. صلي becomes صلو. The root extraction would work for strong verbs but fail silently on these. I would search for a root I knew existed in hadith and get nothing back. Completely dumbfounded. The fix required understanding classical Arabic morphological patterns that I had never formally studied.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: The narrator problem</div>
-        <div class="text">"أبيه" (his father) was showing as a top narrator in ALL 11 books. It's not a person, it's a relative reference. Built genealogy lookup tables for fathers, mothers, grandfathers, grandmothers, uncles, 76 entries. Kunyas were splitting (أبي صالح → أبي + صالح). Honorifics were duplicating narrators. Each fix revealed the next problem.</div>
+        <div class="date">No JSONs anywhere</div>
+        <div class="text">Nothing was available as structured data. The classical texts existed only as PDFs, scanned books, DjVu files. I had to OCR them, extract text, write custom parsers for each format. The output was messy, full of artifacts, misread characters, broken diacritics. Every source required a different parser. Arnaut's Musnad Ahmad grades were in a DOCX file on Archive.org. Riyad al-Salihin grades were embedded in inline Arabic text on web pages. The 8 classical rijal texts were in OpenITI's mARkdown format, each with a different internal structure. Every single data source was a struggle to extract clean, usable data from.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: The classical texts</div>
-        <div class="text">Parsed 8 classical texts of ilm al-rijal from OpenITI, 83,082 entries from Tahdhib al-Kamal, Mizan al-I'tidal, Al-Jarh wa al-Ta'dil, Al-Thiqat, Al-Kamil fi Du'afa, Tarikh Baghdad, and more. 65,391 narrator profiles. The largest structured open-source narrator database available.</div>
+        <div class="date">The hadith IDs were lying</div>
+        <div class="text">Then I discovered that idInBook restarts at 1 for every chapter in 14 of 18 books. Hadith #2 in Bukhari doesn't mean one hadith. It means 97 different hadiths, one in each chapter. Every Quran-to-Hadith filter had been showing false matches since the beginning. The entire bridge was producing wrong results. I had to rebuild the ID system from scratch with chapter-aware identifiers. After the fix, I verified every single connection: 100% accuracy.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: Wensinck and the breakthrough</div>
-        <div class="text">315 Quranic roots had zero hadith connections. Built an independent concordance, and only then discovered it was the same method Wensinck used in his 7-volume physical concordance. The two stemmers cross-validated each other. Root coverage jumped from 81% to 96.3%. The 61 remaining roots are confirmed by both methods to have no hadith attestation, the first empirical lower bound on the Quran's distinctive vocabulary.</div>
+        <div class="date">Musnad Ahmad: the missing 95%</div>
+        <div class="text">Ahmad had only 1,374 hadiths from sunnah.com. The full Musnad has 26,539. I was working with 5% of one of the most important hadith collections. Found the complete Arnaut edition on OpenITI. Parsed the entire Arabic text. The corpus jumped from 87,000 to 112,000. Ahmad became the 2nd largest book after Musannaf.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Week 3: Grading</div>
-        <div class="text">Per-hadith grading. Bukhari and Muslim auto-tagged as Sahih. Al-Albani grades scraped for 4 books. Arnaut's grades parsed from the DOCX tahqiq edition for all 26,539 Ahmad hadiths. 59,365 hadiths graded, 52% of the corpus. Every grade traceable to a named scholar.</div>
+        <div class="date">أبيه ,عمه ,أمي ,خالي ,جدي: the ghost narrators</div>
+        <div class="text">I opened the isnad visualizer and there he was: "أبيه" (his father), showing as one of the top narrators in ALL 11 books. Hundreds of hadith chains flowing through him. But أبيه is not a person. It means "his father." Then I found أبي (my father), جده (his grandfather), عمه (his uncle), أمه (his mother), خاله (his maternal uncle), مولاه (his freed slave). All showing as ghost narrators. Each one needed a different solution.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">The family tree inside the chain</div>
+        <div class="text">"عن عمه واسع بن حبان" means "from his uncle, Wasii bin Habban." The uncle's name IS there, after the word عمه. But "عن أبيه" means "from his father" with no name given, because scholars knew that Hisham ibn Urwa's father was Urwa ibn al-Zubayr. I had to build genealogy tables: 37 father-son pairs, 8 grandfather pairs, 15 mother entries, 6 grandmother entries, 10 uncle entries. Each one researched from classical rijal sources. 76 entries total.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">أبي صالح became أبي + صالح</div>
+        <div class="text">Then the kunyas broke. Abu Salih (أبي صالح) is a single name, a kunya. But the parser was splitting it into two tokens: أبي (which triggered the "his father" lookup) and صالح (which became a separate narrator). Abu Huraira was appearing as two different narrators: أبي هريرة and أبي هريرة رضى الله عنه with the honorific. Every kunya in every isnad was potentially wrong. The fix required peek-ahead logic: if أبي stands alone, it's "my father." If it's followed by a name, merge them into a kunya.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">8 classical texts, 83,082 entries</div>
+        <div class="text">Parsed Tahdhib al-Kamal, Tahdhib al-Tahdhib, Taqrib al-Tahdhib, Mizan al-I'tidal, Al-Jarh wa al-Ta'dil, Al-Thiqat, Al-Kamil fi Du'afa, and Tarikh Baghdad from OpenITI. 83,082 entries of classical Arabic biographical text, each one a narrator profile. Fuzzy-matched them against the existing database. 65,391 profiles. The largest structured open-source narrator database available.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Wensinck and the breakthrough</div>
+        <div class="text">315 Quranic roots still had zero hadith connections. I built an independent concordance using a light stemmer, and only then discovered it was the same method Wensinck had used in his 7-volume physical concordance from the 1930s. The light stemmer found hadith attestations for 254 of the 315 "missing" roots. 1,345 surface forms that CAMeL had never seen. Two completely independent methods, cross-validating each other. Root coverage jumped from 81% to 96.3%. The 61 remaining roots are confirmed by both methods to have no hadith attestation. The first empirical lower bound on the Quran's distinctive vocabulary.</div>
+    </div>
+
+    <div class="milestone">
+        <div class="date">Grading: who said this hadith is authentic?</div>
+        <div class="text">112,000 hadiths and not a single one was graded. Bukhari and Muslim are self-authenticated as Sahih, so I tagged those. Then scraped Al-Albani's grades from sunnah.com for four books. Then found Arnaut's tahqiq edition of Musnad Ahmad as a DOCX file on Archive.org and parsed all 26,539 grades from it. Riyad al-Salihin grades were extracted from inline Arabic on web pages. 59,365 hadiths graded, 52% of the corpus. Every grade traceable to a named scholar: Al-Albani, Arnaut, or the compilers themselves.</div>
     </div>
 
     <h2>What it became</h2>
