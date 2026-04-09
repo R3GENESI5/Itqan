@@ -51,8 +51,28 @@ h1 { color: #f0c060; font-size: 1.5rem; margin-bottom: 4px; }
 </style>
 </head>
 <body>
+
+<div style="display:flex;gap:10px;margin-bottom:16px;padding:14px 24px">
+  <a href="../index.html" style="font-size:.82rem;color:#8a8070;text-decoration:none;padding:4px 12px;border:1px solid #333;border-radius:4px" title="Itqan Home">&#x1F3E0;</a>
+  <a href="../quran/index.html" style="font-size:.82rem;color:#8a8070;text-decoration:none;padding:4px 12px;border:1px solid #333;border-radius:4px">Quran</a>
+  <a href="index.html" style="font-size:.82rem;color:#8a8070;text-decoration:none;padding:4px 12px;border:1px solid #333;border-radius:4px">Hadith</a>
+  <a href="families.html" style="font-size:.82rem;color:#8a8070;text-decoration:none;padding:4px 12px;border:1px solid #333;border-radius:4px">Families</a>
+  <a href="isnad.html" style="font-size:.82rem;color:#8a8070;text-decoration:none;padding:4px 12px;border:1px solid #333;border-radius:4px">Isnad</a>
+  <a href="rijal.html" style="font-size:.82rem;color:#8a8070;text-decoration:none;padding:4px 12px;border:1px solid #333;border-radius:4px">Narrators</a>
+</div>
+
 <h1>Al-Itqan &middot; Chord Graphs</h1>
 <div class="sub">Interactive thematic overlap &middot; 112,221 hadiths &middot; 39 families &middot; 18 books</div>
+
+<div style="background:rgba(240,192,96,.08);border:1px solid rgba(240,192,96,.25);border-radius:8px;padding:10px 16px;margin:0 auto 14px;max-width:780px;font-size:.82rem;color:#aaa;line-height:1.5;text-align:left">
+  <strong style="color:#f0c060">What is a chord diagram?</strong><br>
+  A chord diagram shows connections between groups arranged in a circle. Each <strong>arc</strong> on the outer ring is a category (a thematic family, a book, or a narrator). A <strong>ribbon</strong> connecting two arcs means those categories share something: the thicker the ribbon, the stronger the connection.
+  <br><br>
+  <strong style="color:#f0c060">What does this tell you?</strong><br>
+  <strong>Family &times; Family</strong> reveals which Quranic themes co-occur in the same hadiths, e.g. how often <em>prayer</em> and <em>purification</em> appear together vs. <em>trade</em> and <em>justice</em>.<br>
+  <strong>Book &times; Family</strong> shows what each book specialises in: only over-represented themes are shown, so you see what makes Bukhari different from Muslim or Abu Dawud.<br>
+  <strong>Narrator &times; Book</strong> maps which narrators dominate which books, revealing the transmission network behind the hadith corpus.
+</div>
 
 <div class="tabs" id="tab-bar">
   <div class="tab active" data-tab="fam">Family &times; Family Overlap</div>
