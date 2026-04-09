@@ -20,7 +20,7 @@
 | 📜 | **Wensinck concordance** | 1,486 roots, 1,042,279 references — digital recreation of the 33-year, 7-volume physical concordance |
 | 🤖 | **AI layer** | FAISS semantic search (112k vectors) + RAG Q&A (Qwen2.5) on HuggingFace |
 
-**[Live App](https://r3genesi5.github.io/Itqan/)** · **[Itqan AI](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** · **[Paper](https://doi.org/10.5281/zenodo.19453612)** · **[How It Works](https://r3genesi5.github.io/Itqan/guide.html)**
+**[Live App](https://r3genesi5.github.io/Itqan/)** · **[Itqan AI](https://huggingface.co/spaces/iqrossed/al-itqan-rag)** · **[Paper](https://doi.org/10.5281/zenodo.19453612)** · **[How It Works](https://r3genesi5.github.io/Itqan/guide.html)** · **[Dev History](https://r3genesi5.github.io/Itqan/app/history.html)**
 
 ---
 
@@ -864,6 +864,7 @@ Itqan/
 │   ├── shia.html                 Standalone Shia hadith database
 │   ├── families.html             Thematic family browser (39 families, expandable root chips)
 │   ├── rijal.html                Narrator profiles browser (65,391 narrators, jarh wa ta'dil)
+│   ├── history.html              Development history (v1.0–v1.6 with key files and stats)
 │   ├── chord.html                Interactive chord graphs (3 tabs, data embedded)
 │   ├── concordance_audit.html    Data quality verification dashboard
 │   ├── css/
@@ -1030,6 +1031,25 @@ The `narrated_from` and `narrated_to` fields contain **narrator ID cross-referen
 | 16 | Teacher-student network extraction from Tahdhib al-Kamal | ⬜ Planned |
 | 17 | Prose-grade NLP for Jarh wa Ta'dil and Tahdhib al-Kamal narratives | ⬜ Planned |
 | 18 | Curated HadithReference tafsir table | ⬜ Planned |
+
+---
+
+## Version History
+
+**[Full interactive history with stories →](https://r3genesi5.github.io/Itqan/app/history.html)**
+
+| Version | Date | What happened | Key metric |
+|---------|------|--------------|------------|
+| **v1.0** | Apr 5 | CAMeL morphology, concordance, 6 books | 49k hadiths, 32,413 words |
+| **v1.0.1** | Apr 5–6 | Musannaf, root bridge, 39 families, isnad parser, chords | 87k hadiths, 384k root links |
+| **v1.1** | Apr 7 | Quran reader, reverse bridge, deep links, GitHub Pages | Live deployment |
+| **v1.2** | Apr 8 | Bridge fix (idInBook was chapter-local), guide page | 0 false positives |
+| **v1.3** | Apr 9 | Musnad Ahmad full (OpenITI Arnaut), FAISS rebuild | 112k hadiths, 1.33M links |
+| **v1.4** | Apr 9 | Isnad cleanup, AR-Sanad merge, rijal page | 18,298 narrators, 61% graded |
+| **v1.5** | Apr 9 | 8 classical rijal texts parsed from OpenITI | 65,391 narrators, 83k entries |
+| **v1.6** | Apr 9 | Dual-stemmer bridge (Wensinck solved the 315-root gap) | 96.3% coverage, 1.53M links |
+
+**Scale:** 1.1M lines of JSON · 13,753 lines of code · 21 Python scripts · 3,587 files · 798 MB of data
 
 ---
 
