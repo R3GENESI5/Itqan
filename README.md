@@ -769,43 +769,79 @@ The model, vector store, language support, grounding, and conversation architect
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    ITQAN  (static, offline-capable)           │
-│                                                              │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │  QURAN VIEW  (quran/index.html — entry point)        │   │
-│  │  Click any root → side panel:                         │   │
-│  │   • Mufradat definition  • Furuq distinctions         │   │
-│  │   • Semantic families    • Connected verses            │   │
-│  │   • Connected hadiths + per-book counts               │   │
-│  │                     │                                  │   │
-│  │              click hadith badge                        │   │
-│  │                     ▼                                  │   │
-│  │  HADITH VIEW  (app/index.html)                        │   │
-│  │  112k hadiths · 18 books · grade badges                │   │
-│  │  Root filter mode (?root=X) or standalone browse      │   │
-│  │  Word panel: root, morphology, Lane's Lexicon         │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                                                              │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │  ISNAD VISUALIZER  (D3 Sankey, 11 books, 100k chains)│   │
-│  │  RIJAL PROFILES (65,391 narrators, jarh wa ta'dil)   │   │
-│  │  CHORD GRAPHS · CONCORDANCE AUDIT · THEMATIC STUDY   │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                                                              │
-│  Data (lazy-loaded):                                         │
-│    quran_hadith_bridge.json  21 MB · concordance.json 22 MB │
-│    family_corpus.json 12.6 MB · Per-book hadith ~50 MB      │
-└─────────────────────────────────────────────────────────────┘
+### App Architecture
 
-┌─────────────────────────────────────────────────────────────┐
-│            ITQAN AI  (HuggingFace — optional companion)      │
-│                                                              │
-│  Concordance search (Arabic morphological / English FAISS)  │
-│  RAG Q&A: Qwen2.5-1.5B + FAISS retrieval, multi-turn       │
-│  Every result tagged with family + root                      │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    subgraph ITQAN["ITQAN (static, offline-capable)"]
+        QV["🕌 Quran Reader<br/>quran/index.html<br/>6,236 ayahs · hover for meaning · click for root"]
+        QV -->|"click root →<br/>panel opens"| RP["📖 Root Panel<br/>Mufradat · Furuq · Families<br/>Connected Verses · Connected Hadiths"]
+        RP -->|"click hadith badge"| HV["📚 Hadith Library<br/>app/index.html<br/>112k hadiths · 18 books · grade badges"]
+        HV -->|"click any Arabic word"| WP["🔍 Word Panel<br/>Root · Lane's Lexicon · Morphology<br/>Every hadith sharing this root"]
+        WP -->|"cycle continues"| QV
+
+        IS["🔗 Isnad Visualizer<br/>D3 Sankey · 11 books · 100k chains"]
+        RJ["👤 Rijal Profiles<br/>65,391 narrators · jarh wa ta'dil"]
+        CH["📊 Chord Graphs<br/>Family overlap · Book distinctiveness"]
+        FM["🏷️ 39 Thematic Families<br/>Semantic root groupings"]
+    end
+
+    subgraph AI["ITQAN AI (HuggingFace — optional)"]
+        SE["🔍 Semantic Search<br/>FAISS · 112k vectors"]
+        RAG["🤖 RAG Q&A<br/>Qwen2.5-1.5B · cited answers"]
+    end
+
+    style ITQAN fill:#1a1612,stroke:#d4a855,color:#e0d8c8
+    style AI fill:#1a1612,stroke:#555,color:#aaa
+    style QV fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+    style HV fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+```
+
+### Data Pipeline
+
+```mermaid
+graph LR
+    RAW["📝 Raw Hadith Arabic<br/>18 books · 112,221 hadiths"] --> CAMEL["🧠 CAMeL Tools<br/>Morphological Analysis"]
+    CAMEL --> WD["word_defs_v2.json<br/>33,758 words → roots"]
+    WD --> CONC["concordance.json<br/>Inverted index · 29 MB"]
+    CONC --> BRIDGE["quran_hadith_bridge.json<br/>1,590 roots · 1,528,346 links"]
+
+    RAW --> WENSINCK["📜 Wensinck Stemmer<br/>Light stemmer · 1,486 roots"]
+    WENSINCK --> |"1,345 forms<br/>patched into"| WD
+    WENSINCK --> WJSON["wensinck.json<br/>1,042,279 references"]
+
+    QROOTS["📖 Quran Roots<br/>1,651 roots"] --> BRIDGE
+    FAMILIES["🏷️ 39 Families"] --> BRIDGE
+    BRIDGE --> BIDS["bridge_ids/*.json<br/>1,324 per-root files"]
+    BRIDGE --> FCORP["family_corpus.json<br/>39 families · 26 MB"]
+
+    RAW --> ISNAD["⛓️ Isnad Parser<br/>100k chains parsed"]
+    ISNAD --> IG["isnad_graph.json"]
+    ARSANAD["📋 AR-Sanad 280K"] --> UNIFIED["narrator_unified.json<br/>65,391 profiles · 75 MB"]
+    OPENITI["📚 8 Classical Texts<br/>83,082 entries"] --> UNIFIED
+
+    style RAW fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+    style BRIDGE fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+    style UNIFIED fill:#2a2218,stroke:#d4a855,color:#e0d8c8
+    style WENSINCK fill:#1a2218,stroke:#4aaa70,color:#e0d8c8
+```
+
+### Dual-Stemmer Root Resolution
+
+```mermaid
+graph TD
+    Q["1,651 Quranic Roots"] --> CAMEL_CHECK{"CAMeL Tools<br/>finds hadith match?"}
+    CAMEL_CHECK -->|"Yes: 1,336 roots"| CONNECTED["✅ Connected<br/>81% coverage"]
+    CAMEL_CHECK -->|"No: 315 roots"| WENSINCK_CHECK{"Wensinck Stemmer<br/>finds hadith match?"}
+    WENSINCK_CHECK -->|"Yes: 254 roots"| PATCHED["✅ Patched<br/>+1,345 forms added"]
+    WENSINCK_CHECK -->|"No: 61 roots"| ZERO["❌ Quran-Only<br/>avg 6.8 ayahs each<br/>genuinely rare vocabulary"]
+    PATCHED --> FINAL["96.3% Coverage<br/>1,590 roots · 1,528,346 links"]
+    CONNECTED --> FINAL
+
+    style CONNECTED fill:#1a2a1a,stroke:#4aaa70,color:#e0d8c8
+    style PATCHED fill:#2a2a1a,stroke:#d4a855,color:#e0d8c8
+    style ZERO fill:#2a1a1a,stroke:#e74c3c,color:#e0d8c8
+    style FINAL fill:#2a2218,stroke:#d4a855,color:#e0d8c8
 ```
 
 **Design principle:** Itqan works fully offline without AI. Itqan AI enhances but is never required. A user with no internet still gets the complete Quran-Hadith study workflow.
