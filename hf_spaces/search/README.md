@@ -33,6 +33,6 @@ Researched, compiled & developed by [Ali Bin Shahid](https://www.linkedin.com/in
 Part of the [Itqan](https://github.com/R3GENESI5/Itqan) project:
 - 112,221 hadiths across 18 Sunni books (including full Musnad Ahmad, Arnaut edition)
 - 1,590 shared Arabic roots generating 1,528,346 Quran-Hadith links
-- 118,045 narrator profiles with jarh wa ta'dil
+- 117,893 narrator profiles with jarh wa ta'dil
 - 39 thematic families from classical lexicography
 - FAISS index hosted at [iqrossed/al-itqan-index](https://huggingface.co/datasets/iqrossed/al-itqan-index)

@@ -28,6 +28,6 @@ abstract: >-
   The first open-source computational concordance connecting 6,236 Quran
   ayahs to 112,221 hadiths across 18 books through 1,590 shared Arabic
   roots (1,528,346 links). Includes a structured narrator database of
-  118,045 profiles with jarh wa ta'dil parsed from 15 classical texts, isnad
+  117,893 profiles with jarh wa ta'dil parsed from 15 classical texts, isnad
   chain visualization, 39 thematic families, and morphological
   definitions for 33,758 Arabic words.
