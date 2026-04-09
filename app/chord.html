@@ -16,509 +16,365 @@ body {
 }
 h1 { color: #f0c060; font-size: 1.5rem; margin-bottom: 4px; }
 .sub { color: #666; font-size: .85rem; margin-bottom: 22px; }
-.tabs { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
+.tabs { display: flex; gap: 6px; margin-bottom: 20px; }
 .tab {
   padding: 8px 22px; border-radius: 20px; border: 1px solid #333;
   cursor: pointer; font-size: .88rem; color: #aaa;
-  background: #12121f; transition: all .2s; user-select: none;
+  background: #12121f; transition: all .2s;
 }
-.tab:hover { border-color: #f0c060; color: #ddd; }
 .tab.active { background: #f0c060; color: #111; border-color: #f0c060; font-weight: 600; }
 .panel { display: none; width: 100%; max-width: 960px; flex-direction: column; align-items: center; }
 .panel.active { display: flex; }
-.info-bar {
-  background: rgba(240,192,96,.08); border: 1px solid rgba(240,192,96,.25);
-  border-radius: 8px; padding: 10px 16px; margin-bottom: 14px;
-  font-size: .82rem; color: #aaa; line-height: 1.5; max-width: 720px; text-align: center;
-}
-.info-bar strong { color: #f0c060; }
-.chart-title { color: #f0c060; font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
 #tooltip {
   position: fixed; pointer-events: none;
   background: rgba(10,10,25,.96); border: 1px solid #444;
   border-radius: 8px; padding: 10px 14px;
-  font-size: .82rem; line-height: 1.55; color: #ccc;
-  max-width: 320px; z-index: 999; display: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,.5);
+  font-size: .82rem; line-height: 1.65; max-width: 260px;
+  z-index: 999; display: none;
 }
-#tooltip .tt-title { color: #f0c060; font-weight: 700; font-size: .92rem; margin-bottom: 4px; }
-#tooltip .num { color: #7cf; font-weight: 600; }
-svg { width: 100%; height: auto; }
+#tooltip strong { color: #f0c060; display: block; margin-bottom: 2px; }
+.num { color: #7eb3f0; }
+.info-bar {
+  background: #12121f; border: 1px solid #2a2a3a;
+  border-radius: 8px; padding: 9px 16px; font-size: .78rem;
+  color: #777; margin-bottom: 14px; text-align: center; width: 100%;
+}
+.info-bar strong { color: #aaa; }
 .legend {
-  display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center;
-  margin-top: 12px; padding: 8px 0; max-width: 900px;
+  display: flex; flex-wrap: wrap; gap: 6px 14px;
+  margin-top: 12px; justify-content: center; max-width: 900px;
 }
-.legend-item { display: flex; align-items: center; gap: 4px; font-size: .72rem; color: #999; }
-.legend-swatch { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
-.new-family { color: #ff8c00 !important; font-weight: 600; }
-.top-nav { display: flex; gap: 10px; margin-bottom: 16px; }
-.top-nav a {
-  font-size: .82rem; color: #8a8070; text-decoration: none;
-  padding: 4px 12px; border: 1px solid #333; border-radius: 4px;
-  transition: all .15s;
-}
-.top-nav a:hover { color: #f0c060; border-color: #f0c060; }
+.leg { display: flex; align-items: center; gap: 5px; font-size: .72rem; color: #999;
+       cursor: pointer; padding: 2px 5px; border-radius: 3px; }
+.leg:hover { background: #1a1a30; }
+.swatch { width: 11px; height: 11px; border-radius: 2px; flex-shrink: 0; }
 </style>
 </head>
 <body>
-
-<div class="top-nav">
-  <a href="../index.html" title="Itqan Home">🏠</a>
-  <a href="../quran/index.html">Quran</a>
-  <a href="index.html">Hadith</a>
-  <a href="families.html">Families</a>
-  <a href="isnad.html">Isnad</a>
-</div>
-<h1>Al-Itqan — Chord Visualisations</h1>
-<p class="sub">Interactive co-occurrence and network diagrams</p>
-
-<div class="info-bar" style="max-width:780px;margin-bottom:20px;text-align:left">
-  <strong>What is a chord diagram?</strong><br>
-  A chord diagram shows connections between groups arranged in a circle. Each <strong>arc</strong> on the
-  outer ring is a category (a thematic family, a book, or a narrator). A <strong>ribbon</strong> connecting
-  two arcs means those categories share something &mdash; the thicker the ribbon, the stronger the connection.
-  <br><br>
-  <strong>What does this tell you?</strong><br>
-  <strong>Family &times; Family</strong> reveals which Quranic themes co-occur in the same hadiths &mdash; e.g., how often
-  <em>prayer</em> and <em>purification</em> appear together vs. <em>trade</em> and <em>justice</em>.<br>
-  <strong>Book Distinctiveness</strong> shows what each book specialises in &mdash; only over-represented themes are shown,
-  so you see what makes Bukhari different from Muslim or Abu Dawud.<br>
-  <strong>Narrator &times; Book</strong> maps which narrators dominate which books, revealing the transmission
-  network behind the hadith corpus.
-</div>
+<h1>Al-Itqan · Chord Graphs</h1>
+<div class="sub">Interactive thematic overlap · 87,688 hadiths · 39 families · 18 books</div>
 
 <div class="tabs">
-  <div class="tab active" data-tab="family">Family x Family Overlap</div>
-  <div class="tab" data-tab="dist">Book Distinctiveness</div>
-  <div class="tab" data-tab="narrator">Narrator x Book</div>
+  <div class="tab active" onclick="showTab('fam')">Family × Family Overlap</div>
+  <div class="tab"        onclick="showTab('book')">Book × Family Distribution</div>
 </div>
 
-<div id="panel-family" class="panel active">
-  <div class="info-bar"><strong>Hover</strong> an arc to see family details and top overlaps. <strong>Hover</strong> a ribbon to see shared hadith count. <strong>Click</strong> an arc to isolate its connections. <strong>Click</strong> background to reset.</div>
-  <details class="info-bar" style="text-align:left;cursor:pointer">
-    <summary style="color:#f0c060;font-weight:600">What the overlaps reveal</summary>
-    <div style="margin-top:8px">
-      <strong>Provision</strong> (rizq) connects most to <em>Body</em> (hands, feet), <em>Travel</em>, <em>Worship</em>, and <em>Speech</em>.
-      The corpus is saying: provision is bound to what your hands do, where your feet go, how you worship, and what you say.<br><br>
-      <strong>Prayer</strong> and <strong>Purification</strong> have one of the strongest overlaps &mdash; reflecting the prophetic principle
-      that <em>la taqbal salat bi-ghayri tuhur</em> (no prayer is accepted without purification).<br><br>
-      <strong>Knowledge</strong> connects heavily to <em>Speech</em> and <em>Scripture</em> &mdash; in the hadith corpus,
-      knowledge is inseparable from its transmission through words and written revelation.<br><br>
-      <strong>Paradise</strong> and <strong>Hellfire</strong> are tightly linked &mdash; the corpus rarely discusses one
-      without the other, always presenting them as paired consequences.
-    </div>
-  </details>
-  <svg id="svg-family" viewBox="-480 -480 960 960"></svg>
-  <div id="legend-family" class="legend"></div>
+<div class="panel active" id="panel-fam">
+  <div class="info-bar">
+    <strong>Hover</strong> an arc to see overlaps &middot;
+    <strong>Click</strong> an arc to isolate its connections &middot;
+    click background to reset &middot;
+    <span style="color:#f0a060">&#9632;</span> = new family
+  </div>
+  <svg id="svg-fam"></svg>
+  <div class="legend" id="leg-fam"></div>
 </div>
 
-<div id="panel-dist" class="panel">
-  <div class="chart-title">What makes each book unique?</div>
-  <div class="info-bar">Chord width = <strong>excess hadiths above corpus average</strong> for that family. Only <strong>over-represented</strong> family connections are shown, so most books connect to just 1-3 families. <strong>Hover</strong> an arc for details. <strong>Click</strong> to isolate.</div>
-  <details class="info-bar" style="text-align:left;cursor:pointer">
-    <summary style="color:#f0c060;font-weight:600">What the distinctiveness reveals</summary>
-    <div style="margin-top:8px">
-      <strong>Musannaf Ibn Abi Shaybah</strong> dominates in <em>Fighting</em>, <em>Life &amp; Death</em>, and <em>Wealth</em> &mdash;
-      consistent with its purpose as a comprehensive fiqh reference covering jihad rulings, inheritance law, and financial transactions.<br><br>
-      <strong>Bukhari</strong> is distinctive in <em>Knowledge</em>, <em>End Times</em>, and <em>Family Law</em> &mdash;
-      reflecting al-Bukhari&rsquo;s editorial choices: he titled chapters to extract legal and theological rulings, not just collect narrations.<br><br>
-      <strong>Malik&rsquo;s Muwatta</strong> concentrates on <em>Purification</em> and <em>Worship</em> &mdash; the earliest
-      surviving hadith compilation, focused on the lived practice (<em>amal</em>) of Madinah.<br><br>
-      Books like <strong>Tirmidhi</strong> and <strong>Nasa&rsquo;i</strong> show almost no distinctiveness &mdash;
-      they cover all themes proportionally, acting as balanced encyclopedic collections rather than specialised works.
-    </div>
-  </details>
-  <svg id="svg-dist" viewBox="-480 -480 960 960"></svg>
-  <div id="legend-dist" class="legend"></div>
-</div>
-
-<div id="panel-narrator" class="panel">
-  <div class="chart-title">The Transmission Network &mdash; Who narrated where</div>
-  <div class="info-bar"><strong>Hover</strong> a narrator arc to see their top books. <strong>Hover</strong> a book arc to see its top narrators. <strong>Hover</strong> a ribbon for the exact count. <strong>Click</strong> an arc to isolate. <strong>Click</strong> background to reset.</div>
-  <details class="info-bar" style="text-align:left;cursor:pointer">
-    <summary style="color:#f0c060;font-weight:600">What the narrator network reveals</summary>
-    <div style="margin-top:8px">
-      <strong>Abu Huraira</strong> appears in nearly every book with the thickest ribbons &mdash; the single most prolific
-      narrator in Sunni hadith, with over 5,000 attributed narrations.<br><br>
-      <strong>Ibn Umar</strong> and <strong>Aisha</strong> are the next most connected, but with different distributions:
-      Ibn Umar is strongest in legal collections (Abu Dawud, Nasa&rsquo;i), while Aisha dominates in
-      Bukhari and Muslim &mdash; reflecting her unique access to the Prophet&rsquo;s private life.<br><br>
-      Books like <strong>Musannaf</strong> draw from a much wider pool of narrators (including lesser-known ones),
-      while <strong>Malik&rsquo;s Muwatta</strong> relies on a tight cluster centred on the Madinan transmission school.
-    </div>
-  </details>
-  <svg id="svg-narrator" viewBox="-480 -480 960 960"></svg>
-  <div id="legend-narrator" class="legend"></div>
+<div class="panel" id="panel-book">
+  <div class="info-bar">
+    <span style="color:#a8ccf0">&#9632;</span> Blues = books &middot;
+    <span style="color:#f0c080">&#9632;</span> Oranges = top 15 families &middot;
+    chord width = shared hadiths &middot; hover / click to explore
+  </div>
+  <svg id="svg-book"></svg>
+  <div class="legend" id="leg-book"></div>
 </div>
 
 <div id="tooltip"></div>
 
 <script>
-const DATA = {"book_keys": ["musannaf_ibnabi_shaybah", "bukhari", "muslim", "abudawud", "nasai", "tirmidhi", "mishkat_almasabih", "ibnmajah", "darimi", "ahmed", "bulugh_almaram", "malik", "riyad_assalihin", "aladab_almufrad", "shamail_muhammadiyah", "qudsi40", "nawawi40", "shahwaliullah40"], "book_labels": ["Musannaf", "Bukhari", "Muslim", "Abudawud", "Nasai", "Tirmidhi", "Mishkat", "Ibnmajah", "Darimi", "Ahmed", "Bulugh", "Malik", "Riyad Salihin", "Adab Mufrad", "Shamail", "Qudsi 40", "Nawawi 40", "Shah Wali 40"], "fam_keys": ["movement_journey", "worship", "body", "speech_communication", "provision", "fighting", "time", "knowledge", "earth_sky", "life_death", "end_of_times", "wealth", "statecraft", "family_law", "creation"], "fam_labels": ["Movement", "Worship", "Body", "Speech", "Provision", "Fighting", "Time", "Knowledge", "Earth & Sky", "Life & Death", "End Times", "Wealth", "Governance", "Family Law", "Creation"], "dist_matrix": [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2168, 0, 0, 0, 1442, 0, 1331, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 990, 0, 0, 0, 0, 0, 0, 0, 529, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 566, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 308, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 650, 541, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 242, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 591, 0, 413, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 373, 0, 261, 0, 0, 0, 0, 0, 0, 0, 0, 211, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 179, 0, 0, 142, 0, 0, 254, 0, 0, 0, 115, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 219, 0, 0, 0, 347, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 145, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 110, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 990, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 373, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 179, 219, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 566, 0, 0, 0, 591, 261, 0, 0, 0, 0, 115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 413, 0, 142, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 308, 650, 0, 0, 0, 0, 347, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 529, 0, 0, 0, 541, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1442, 0, 0, 0, 0, 0, 0, 0, 0, 254, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 242, 0, 0, 0, 0, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1331, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 211, 115, 0, 145, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]], "nar_keys": ["Abu Hurayra", "Aisha", "Anas ibn Malik", "Ibn Umar", "Ibn Abbas", "Jabir ibn Abdullah", "Abdullah ibn Masud", "Ali ibn Abi Talib", "Abu Said al-Khudri", "Abu Musa", "Al-Bara ibn Azib", "Abu Dharr", "Abdullah ibn Amr", "Nafi", "Sahl ibn Sad", "Hudhayfah", "Umm Salama", "Abu Bakr", "Abu Qatada", "Abu Umama"], "nar_totals": [3828, 2155, 1926, 1735, 1639, 1112, 655, 564, 561, 281, 243, 144, 134, 123, 118, 108, 105, 95, 90, 65], "nar_matrix": [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 958, 742, 429, 502, 466, 48, 224, 0, 6, 152, 0, 271, 16, 14, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 645, 336, 308, 393, 159, 28, 120, 0, 0, 57, 0, 78, 0, 31, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 685, 320, 196, 243, 199, 27, 79, 0, 4, 45, 0, 81, 1, 46, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 538, 260, 230, 247, 156, 30, 103, 0, 17, 65, 0, 81, 0, 8, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 491, 166, 300, 252, 191, 28, 85, 0, 14, 49, 0, 43, 2, 18, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 239, 248, 159, 166, 118, 28, 62, 0, 1, 43, 0, 42, 3, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 92, 62, 102, 65, 5, 25, 0, 0, 14, 0, 33, 1, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 19, 14, 52, 64, 12, 16, 0, 301, 13, 0, 7, 2, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 163, 105, 66, 69, 52, 17, 28, 0, 1, 18, 0, 37, 2, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 112, 54, 24, 24, 18, 8, 11, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 110, 29, 30, 25, 33, 6, 0, 0, 0, 0, 0, 7, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 34, 24, 23, 14, 5, 3, 0, 0, 0, 0, 14, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 7, 8, 38, 21, 0, 9, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72, 21, 13, 9, 6, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 86, 11, 4, 6, 2, 1, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 18, 16, 14, 5, 2, 9, 0, 0, 4, 0, 8, 0, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 16, 9, 20, 25, 4, 11, 0, 0, 7, 0, 8, 0, 4, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 9, 17, 20, 4, 0, 1, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 16, 17, 12, 4, 4, 0, 0, 0, 0, 0, 9, 0, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 12, 3, 15, 5, 11, 0, 1, 0, 0, 10, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [958, 645, 685, 538, 491, 239, 254, 62, 163, 112, 110, 26, 45, 72, 86, 30, 1, 38, 26, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [742, 336, 320, 260, 166, 248, 92, 19, 105, 54, 29, 34, 7, 21, 11, 18, 16, 9, 16, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [429, 308, 196, 230, 300, 159, 62, 14, 66, 24, 30, 24, 8, 13, 4, 16, 9, 17, 17, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [502, 393, 243, 247, 252, 166, 102, 52, 69, 24, 25, 23, 38, 9, 6, 14, 20, 20, 12, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [466, 159, 199, 156, 191, 118, 65, 64, 52, 18, 33, 14, 21, 6, 2, 5, 25, 4, 4, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [48, 28, 27, 30, 28, 28, 5, 12, 17, 8, 6, 5, 0, 1, 1, 2, 4, 0, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [224, 120, 79, 103, 85, 62, 25, 16, 28, 11, 0, 3, 9, 1, 0, 9, 11, 1, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 4, 17, 14, 1, 0, 301, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [152, 57, 45, 65, 49, 43, 14, 13, 18, 0, 0, 0, 6, 0, 0, 4, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [271, 78, 81, 81, 43, 42, 33, 7, 37, 30, 7, 14, 0, 0, 8, 8, 8, 0, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [16, 0, 1, 0, 2, 3, 1, 2, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [14, 31, 46, 8, 18, 3, 2, 2, 3, 0, 3, 0, 0, 0, 0, 2, 4, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]], "family_keys": ["creation", "knowledge", "guidance", "provision", "punishment", "mercy", "worship", "revelation", "life_death", "earth_sky", "fear_hope", "speech_communication", "truth_falsehood", "justice", "light_darkness", "seeing_hearing", "water", "fighting", "wealth", "patience_gratitude", "heart_soul", "prophets_messengers", "covenant_promise", "time", "movement_journey", "paradise", "hellfire", "family_kinship", "deception_hypocrisy", "pride_humility", "repentance_return", "purity", "plants_agriculture", "animals", "body", "end_of_times", "jihad", "statecraft", "family_law"], "family_labels": ["Creating, originating, fa", "Knowing, understanding, p", "Guidance, misguidance, pa", "Provision, sustenance, fo", "Punishment, retribution, ", "Mercy, forgiveness, pardo", "Worship, prayer, fasting,", "Revelation, scripture, re", "Life, death, resurrection", "Earth, heavens, mountains", "Fear, awe, hope, security", "Speech, communication, gl", "Truth, falsehood, lying, ", "Justice, equity, oppressi", "Light, darkness, illumina", "Seeing, hearing, blindnes", "Water, rain, springs, riv", "Fighting, striving, war, ", "Wealth, trade, profit, lo", "Patience, gratitude, prai", "Heart, soul, chest, intel", "Prophets, messengers, rev", "Covenant, oath, vow, prom", "Day, night, time, epoch, ", "Walking, traveling, migra", "Paradise, bliss, eternity", "Hellfire, blaze, burning,", "Family, children, parents", "Plotting, scheming, decep", "Pride, arrogance, humilit", "Repentance, returning to ", "Purity, purification, cle", "Plants, seeds, trees, fru", "Cattle, sheep, horses, bi", "Hands, feet, face, eyes, ", "Signs of the Hour, eschat", "Striving in the way of Al", "Islamic governance, calip", "Marriage, divorce, inheri"], "family_matrix": [[13553, 7078, 5067, 7656, 4889, 4536, 8868, 4774, 6759, 6967, 5944, 8231, 4598, 6082, 4064, 4184, 5627, 6650, 6619, 4399, 4269, 2861, 2523, 7014, 9643, 3962, 3950, 5950, 2384, 5121, 3004, 4833, 3984, 5032, 8800, 7004, 5257, 6453, 6132], [7078, 15370, 5452, 8473, 5252, 4714, 9651, 5147, 7352, 7483, 6385, 9123, 4920, 6812, 4333, 4644, 6277, 7561, 7272, 4724, 4544, 2976, 2706, 7841, 10519, 4250, 4035, 6550, 2479, 5665, 3262, 5195, 4171, 5634, 10279, 7334, 5833, 7095, 7247], [5067, 5452, 10027, 5935, 3951, 3739, 6585, 3862, 5281, 5304, 4768, 6263, 3744, 4788, 3392, 3526, 4447, 5277, 5173, 3602, 3565, 2492, 2226, 5401, 7063, 3265, 3224, 4623, 2129, 4124, 2651, 3791, 3311, 4073, 6497, 5369, 4436, 5551, 4782], [7656, 8473, 5935, 18255, 5404, 5054, 10836, 5244, 7876, 8053, 6907, 9947, 5252, 7067, 4666, 4596, 7369, 8049, 7855, 4938, 4841, 2984, 2782, 8328, 11848, 4518, 4469, 7011, 2729, 5784, 3328, 5625, 4503, 5803, 11957, 7869, 5986, 7645, 7612], [4889, 5252, 3951, 5404, 9768, 3611, 6360, 3732, 5141, 5174, 4537, 6107, 4010, 4643, 3372, 3427, 4630, 5055, 5126, 3483, 3421, 2435, 2216, 5264, 6798, 3243, 3175, 4490, 2064, 3940, 2547, 3942, 3126, 3792, 6442, 5308, 4189, 4901, 4582], [4536, 4714, 3739, 5054, 3611, 8501, 5790, 3497, 4649, 4640, 4330, 5519, 3343, 4195, 3033, 3157, 4260, 4607, 4551, 3329, 3190, 2314, 2001, 4695, 6042, 3040, 3024, 3984, 1901, 3819, 2487, 3548, 2979, 3670, 5783, 4653, 3778, 4414, 4169], [8868, 9651, 6585, 10836, 6360, 5790, 22596, 6047, 9380, 9835, 7981, 11688, 5758, 8095, 5168, 5298, 7679, 9552, 8902, 5756, 5367, 3218, 2908, 10305, 14197, 5049, 6951, 7912, 2704, 6869, 3739, 6461, 4915, 6653, 12976, 9524, 7041, 8573, 8129], [4774, 5147, 3862, 5244, 3732, 3497, 6047, 8489, 4974, 5127, 4481, 5745, 3691, 4504, 3267, 3400, 4296, 4816, 4809, 3411, 3353, 2485, 2139, 5165, 6469, 3096, 3220, 4438, 1990, 3925, 2533, 3678, 2980, 3717, 5965, 5113, 4035, 4768, 4636], [6759, 7352, 5281, 7876, 5141, 4649, 9380, 4974, 14795, 7176, 6133, 8566, 4663, 6197, 4382, 4408, 5726, 6897, 6956, 4497, 4397, 3193, 2594, 7382, 10063, 4134, 4236, 6017, 2374, 5490, 3144, 5070, 3965, 5026, 9104, 11232, 5509, 6613, 6442], [6967, 7483, 5304, 8053, 5174, 4640, 9835, 5127, 7176, 15184, 6229, 8868, 4810, 6492, 4251, 4449, 6249, 7184, 7148, 4603, 4450, 2862, 2628, 7826, 10202, 4087, 4201, 6184, 2450, 5423, 3141, 5123, 4068, 5322, 9386, 7422, 5671, 6683, 6497], [5944, 6385, 4768, 6907, 4537, 4330, 7981, 4481, 6133, 6229, 11925, 7381, 4223, 5694, 3861, 3936, 5149, 6240, 6113, 4240, 4065, 2751, 2433, 6305, 8382, 3749, 3818, 5281, 2276, 4867, 2880, 4439, 3638, 4574, 7725, 6273, 5051, 6990, 5467], [8231, 9123, 6263, 9947, 6107, 5519, 11688, 5745, 8566, 8868, 7381, 19808, 5707, 7640, 4882, 5068, 7140, 10367, 10571, 5408, 5148, 3156, 3032, 8959, 12534, 4873, 4606, 7520, 2668, 6315, 3574, 6021, 4691, 6326, 11768, 8585, 6707, 7984, 8445], [4598, 4920, 3744, 5252, 4010, 3343, 5758, 3691, 4663, 4810, 4223, 5707, 8957, 4369, 3148, 3244, 6288, 4635, 4898, 3422, 3289, 2343, 2163, 4729, 6549, 2958, 2832, 4520, 1946, 3673, 2435, 3550, 2993, 3693, 5831, 4749, 3929, 4495, 5523], [6082, 6812, 4788, 7067, 4643, 4195, 8095, 4504, 6197, 6492, 5694, 7640, 4369, 12795, 3906, 4031, 5319, 6279, 6328, 4119, 4034, 2715, 2412, 6401, 8523, 3732, 3483, 5528, 2198, 4836, 2837, 4400, 3657, 4683, 8013, 6184, 5121, 8471, 5868], [4064, 4333, 3392, 4666, 3372, 3033, 5168, 3267, 4382, 4251, 3861, 4882, 3148, 3906, 7372, 3008, 3718, 4256, 4144, 3102, 3024, 2195, 1884, 4378, 5411, 2856, 2806, 3848, 1863, 3561, 2298, 3257, 2820, 3378, 5168, 4317, 3600, 4014, 4052], [4184, 4644, 3526, 4596, 3427, 3157, 5298, 3400, 4408, 4449, 3936, 5068, 3244, 4031, 3008, 7298, 3800, 4208, 4224, 3209, 3105, 2216, 1950, 4533, 5573, 2897, 2783, 3830, 1875, 3647, 2354, 3301, 2791, 3357, 5214, 4423, 4401, 4199, 3922], [5627, 6277, 4447, 7369, 4630, 4260, 7679, 4296, 5726, 6249, 5149, 7140, 6288, 5319, 3718, 3800, 12226, 5983, 5792, 3975, 3824, 2537, 2337, 6234, 8438, 3497, 3661, 5270, 2201, 4376, 2699, 4305, 3489, 4441, 8173, 5890, 4617, 5595, 5498], [6650, 7561, 5277, 8049, 5055, 4607, 9552, 4816, 6897, 7184, 6240, 10367, 4635, 6279, 4256, 4208, 5983, 15947, 7242, 4496, 4368, 2808, 2601, 7210, 10780, 4130, 3928, 6146, 2364, 5117, 3113, 4926, 4056, 5241, 9456, 6958, 9933, 7437, 6492], [6619, 7272, 5173, 7855, 5126, 4551, 8902, 4809, 6956, 7148, 6113, 10571, 4898, 6328, 4144, 4224, 5792, 7242, 14447, 4624, 4233, 2851, 2525, 7042, 9928, 4042, 3749, 6048, 2370, 5356, 3086, 4985, 3984, 5128, 8961, 6817, 5681, 7030, 6697], [4399, 4724, 3602, 4938, 3483, 3329, 5756, 3411, 4497, 4603, 4240, 5408, 3422, 4119, 3102, 3209, 3975, 4496, 4624, 7920, 3132, 2254, 2060, 4593, 5854, 3040, 3063, 4097, 1888, 3835, 2467, 3647, 2927, 3458, 5488, 4524, 3763, 4291, 4283], [4269, 4544, 3565, 4841, 3421, 3190, 5367, 3353, 4397, 4450, 4065, 5148, 3289, 4034, 3024, 3105, 3824, 4368, 4233, 3132, 7768, 2242, 1998, 4444, 5680, 2891, 2777, 3950, 1913, 3533, 2381, 3479, 2878, 3310, 5358, 4711, 3620, 4243, 4119], [2861, 2976, 2492, 2984, 2435, 2314, 3218, 2485, 3193, 2862, 2751, 3156, 2343, 2715, 2195, 2216, 2537, 2808, 2851, 2254, 2242, 3877, 1561, 2881, 3408, 2084, 1956, 2680, 1518, 2490, 1853, 2520, 2110, 2580, 3281, 3230, 2539, 2804, 2723], [2523, 2706, 2226, 2782, 2216, 2001, 2908, 2139, 2594, 2628, 2433, 3032, 2163, 2412, 1884, 1950, 2337, 2601, 2525, 2060, 1998, 1561, 4095, 2598, 3186, 1833, 1650, 2521, 1356, 2211, 1563, 2051, 1879, 2170, 2970, 2804, 2245, 2732, 2686], [7014, 7841, 5401, 8328, 5264, 4695, 10305, 5165, 7382, 7826, 6305, 8959, 4729, 6401, 4378, 4533, 6234, 7210, 7042, 4593, 4444, 2881, 2598, 15540, 10505, 4205, 4653, 6200, 2474, 5460, 3205, 5169, 4178, 5465, 9661, 7672, 5667, 7143, 7500], [9643, 10519, 7063, 11848, 6798, 6042, 14197, 6469, 10063, 10202, 8382, 12534, 6549, 8523, 5411, 5573, 8438, 10780, 9928, 5854, 5680, 3408, 3186, 10505, 23934, 5174, 5542, 8512, 2833, 7028, 4176, 6821, 5225, 6908, 13812, 11326, 7628, 9838, 8808], [3962, 4250, 3265, 4518, 3243, 3040, 5049, 3096, 4134, 4087, 3749, 4873, 2958, 3732, 2856, 2897, 3497, 4130, 4042, 3040, 2891, 2084, 1833, 4205, 5174, 6917, 2836, 3696, 1769, 3396, 2218, 3161, 2827, 3313, 5018, 4105, 3349, 3866, 3814], [3950, 4035, 3224, 4469, 3175, 3024, 6951, 3220, 4236, 4201, 3818, 4606, 2832, 3483, 2806, 2783, 3661, 3928, 3749, 3063, 2777, 1956, 1650, 4653, 5542, 2836, 7499, 3605, 1746, 3420, 2182, 3253, 2491, 3030, 5241, 4396, 3168, 3791, 3541], [5950, 6550, 4623, 7011, 4490, 3984, 7912, 4438, 6017, 6184, 5281, 7520, 4520, 5528, 3848, 3830, 5270, 6146, 6048, 4097, 3950, 2680, 2521, 6200, 8512, 3696, 3605, 12485, 2274, 4633, 2863, 4549, 3738, 4710, 8505, 6282, 4962, 5724, 9215], [2384, 2479, 2129, 2729, 2064, 1901, 2704, 1990, 2374, 2450, 2276, 2668, 1946, 2198, 1863, 1875, 2201, 2364, 2370, 1888, 1913, 1518, 1356, 2474, 2833, 1769, 1746, 2274, 3479, 2063, 1507, 1930, 1788, 2029, 2694, 2433, 2093, 2313, 2511], [5121, 5665, 4124, 5784, 3940, 3819, 6869, 3925, 5490, 5423, 4867, 6315, 3673, 4836, 3561, 3647, 4376, 5117, 5356, 3835, 3533, 2490, 2211, 5460, 7028, 3396, 3420, 4633, 2063, 9910, 2690, 3938, 3266, 4045, 6532, 5341, 4246, 5288, 4800], [3004, 3262, 2651, 3328, 2547, 2487, 3739, 2533, 3144, 3141, 2880, 3574, 2435, 2837, 2298, 2354, 2699, 3113, 3086, 2467, 2381, 1853, 1563, 3205, 4176, 2218, 2182, 2863, 1507, 2690, 5093, 2591, 2207, 2509, 3610, 3220, 2740, 2983, 2985], [4833, 5195, 3791, 5625, 3942, 3548, 6461, 3678, 5070, 5123, 4439, 6021, 3550, 4400, 3257, 3301, 4305, 4926, 4985, 3647, 3479, 2520, 2051, 5169, 6821, 3161, 3253, 4549, 1930, 3938, 2591, 10057, 3146, 3852, 6677, 5107, 3957, 4660, 4644], [3984, 4171, 3311, 4503, 3126, 2979, 4915, 2980, 3965, 4068, 3638, 4691, 2993, 3657, 2820, 2791, 3489, 4056, 3984, 2927, 2878, 2110, 1879, 4178, 5225, 2827, 2491, 3738, 1788, 3266, 2207, 3146, 7267, 3329, 5005, 4050, 3424, 3869, 3887], [5032, 5634, 4073, 5803, 3792, 3670, 6653, 3717, 5026, 5322, 4574, 6326, 3693, 4683, 3378, 3357, 4441, 5241, 5128, 3458, 3310, 2580, 2170, 5465, 6908, 3313, 3030, 4710, 2029, 4045, 2509, 3852, 3329, 10310, 7003, 5037, 4512, 4903, 4831], [8800, 10279, 6497, 11957, 6442, 5783, 12976, 5965, 9104, 9386, 7725, 11768, 5831, 8013, 5168, 5214, 8173, 9456, 8961, 5488, 5358, 3281, 2970, 9661, 13812, 5018, 5241, 8505, 2694, 6532, 3610, 6677, 5005, 7003, 22037, 9407, 6921, 8552, 8883], [7004, 7334, 5369, 7869, 5308, 4653, 9524, 5113, 11232, 7422, 6273, 8585, 4749, 6184, 4317, 4423, 5890, 6958, 6817, 4524, 4711, 3230, 2804, 7672, 11326, 4105, 4396, 6282, 2433, 5341, 3220, 5107, 4050, 5037, 9407, 14572, 5490, 6644, 6391], [5257, 5833, 4436, 5986, 4189, 3778, 7041, 4035, 5509, 5671, 5051, 6707, 3929, 5121, 3600, 4401, 4617, 9933, 5681, 3763, 3620, 2539, 2245, 5667, 7628, 3349, 3168, 4962, 2093, 4246, 2740, 3957, 3424, 4512, 6921, 5490, 11291, 5188, 5107], [6453, 7095, 5551, 7645, 4901, 4414, 8573, 4768, 6613, 6683, 6990, 7984, 4495, 8471, 4014, 4199, 5595, 7437, 7030, 4291, 4243, 2804, 2732, 7143, 9838, 3866, 3791, 5724, 2313, 5288, 2983, 4660, 3869, 4903, 8552, 6644, 5188, 13624, 5939], [6132, 7247, 4782, 7612, 4582, 4169, 8129, 4636, 6442, 6497, 5467, 8445, 5523, 5868, 4052, 3922, 5498, 6492, 6697, 4283, 4119, 2723, 2686, 7500, 8808, 3814, 3541, 9215, 2511, 4800, 2985, 4644, 3887, 4831, 8883, 6391, 5107, 5939, 13576]], "family_totals": [13553, 15370, 10027, 18255, 9768, 8501, 22596, 8489, 14795, 15184, 11925, 19808, 8957, 12795, 7372, 7298, 12226, 15947, 14447, 7920, 7768, 3877, 4095, 15540, 23934, 6917, 7499, 12485, 3479, 9910, 5093, 10057, 7267, 10310, 22037, 14572, 11291, 13624, 13576]};
+const DATA = {"family_keys":["creation","knowledge","guidance","provision","punishment","mercy","worship","revelation","life_death","earth_sky","fear_hope","speech_communication","truth_falsehood","justice","light_darkness","seeing_hearing","water","fighting","wealth","patience_gratitude","heart_soul","prophets_messengers","covenant_promise","time","movement_journey","paradise","hellfire","family_kinship","deception_hypocrisy","pride_humility","repentance_return","purity","plants_agriculture","animals","body","end_of_times","jihad","statecraft","family_law"],"family_labels":["Creating, originating, fa","Knowing, understanding, p","Guidance, misguidance, pa","Provision, sustenance, fo","Punishment, retribution, ","Mercy, forgiveness, pardo","Worship, prayer, fasting,","Revelation, scripture, re","Life, death, resurrection","Earth, heavens, mountains","Fear, awe, hope, security","Speech, communication, gl","Truth, falsehood, lying, ","Justice, equity, oppressi","Light, darkness, illumina","Seeing, hearing, blindnes","Water, rain, springs, riv","Fighting, striving, war, ","Wealth, trade, profit, lo","Patience, gratitude, prai","Heart, soul, chest, intel","Prophets, messengers, rev","Covenant, oath, vow, prom","Day, night, time, epoch, ","Walking, traveling, migra","Paradise, bliss, eternity","Hellfire, blaze, burning,","Family, children, parents","Plotting, scheming, decep","Pride, arrogance, humilit","Repentance, returning to ","Purity, purification, cle","Plants, seeds, trees, fru","Cattle, sheep, horses, bi","Hands, feet, face, eyes, ","Signs of the Hour, eschat","Striving in the way of Al","Islamic governance, calip","Marriage, divorce, inheri"],"family_matrix":[[13553,7078,5067,7656,4889,4536,8868,4774,6759,6967,5944,8231,4598,6082,4064,4184,5627,6650,6619,4399,4269,2861,2523,7014,9643,3962,3950,5950,2384,5121,3004,4833,3984,5032,8800,7004,5257,6453,6132],[7078,15370,5452,8473,5252,4714,9651,5147,7352,7483,6385,9123,4920,6812,4333,4644,6277,7561,7272,4724,4544,2976,2706,7841,10519,4250,4035,6550,2479,5665,3262,5195,4171,5634,10279,7334,5833,7095,7247],[5067,5452,10027,5935,3951,3739,6585,3862,5281,5304,4768,6263,3744,4788,3392,3526,4447,5277,5173,3602,3565,2492,2226,5401,7063,3265,3224,4623,2129,4124,2651,3791,3311,4073,6497,5369,4436,5551,4782],[7656,8473,5935,18255,5404,5054,10836,5244,7876,8053,6907,9947,5252,7067,4666,4596,7369,8049,7855,4938,4841,2984,2782,8328,11848,4518,4469,7011,2729,5784,3328,5625,4503,5803,11957,7869,5986,7645,7612],[4889,5252,3951,5404,9768,3611,6360,3732,5141,5174,4537,6107,4010,4643,3372,3427,4630,5055,5126,3483,3421,2435,2216,5264,6798,3243,3175,4490,2064,3940,2547,3942,3126,3792,6442,5308,4189,4901,4582],[4536,4714,3739,5054,3611,8501,5790,3497,4649,4640,4330,5519,3343,4195,3033,3157,4260,4607,4551,3329,3190,2314,2001,4695,6042,3040,3024,3984,1901,3819,2487,3548,2979,3670,5783,4653,3778,4414,4169],[8868,9651,6585,10836,6360,5790,22596,6047,9380,9835,7981,11688,5758,8095,5168,5298,7679,9552,8902,5756,5367,3218,2908,10305,14197,5049,6951,7912,2704,6869,3739,6461,4915,6653,12976,9524,7041,8573,8129],[4774,5147,3862,5244,3732,3497,6047,8489,4974,5127,4481,5745,3691,4504,3267,3400,4296,4816,4809,3411,3353,2485,2139,5165,6469,3096,3220,4438,1990,3925,2533,3678,2980,3717,5965,5113,4035,4768,4636],[6759,7352,5281,7876,5141,4649,9380,4974,14795,7176,6133,8566,4663,6197,4382,4408,5726,6897,6956,4497,4397,3193,2594,7382,10063,4134,4236,6017,2374,5490,3144,5070,3965,5026,9104,11232,5509,6613,6442],[6967,7483,5304,8053,5174,4640,9835,5127,7176,15184,6229,8868,4810,6492,4251,4449,6249,7184,7148,4603,4450,2862,2628,7826,10202,4087,4201,6184,2450,5423,3141,5123,4068,5322,9386,7422,5671,6683,6497],[5944,6385,4768,6907,4537,4330,7981,4481,6133,6229,11925,7381,4223,5694,3861,3936,5149,6240,6113,4240,4065,2751,2433,6305,8382,3749,3818,5281,2276,4867,2880,4439,3638,4574,7725,6273,5051,6990,5467],[8231,9123,6263,9947,6107,5519,11688,5745,8566,8868,7381,19808,5707,7640,4882,5068,7140,10367,10571,5408,5148,3156,3032,8959,12534,4873,4606,7520,2668,6315,3574,6021,4691,6326,11768,8585,6707,7984,8445],[4598,4920,3744,5252,4010,3343,5758,3691,4663,4810,4223,5707,8957,4369,3148,3244,6288,4635,4898,3422,3289,2343,2163,4729,6549,2958,2832,4520,1946,3673,2435,3550,2993,3693,5831,4749,3929,4495,5523],[6082,6812,4788,7067,4643,4195,8095,4504,6197,6492,5694,7640,4369,12795,3906,4031,5319,6279,6328,4119,4034,2715,2412,6401,8523,3732,3483,5528,2198,4836,2837,4400,3657,4683,8013,6184,5121,8471,5868],[4064,4333,3392,4666,3372,3033,5168,3267,4382,4251,3861,4882,3148,3906,7372,3008,3718,4256,4144,3102,3024,2195,1884,4378,5411,2856,2806,3848,1863,3561,2298,3257,2820,3378,5168,4317,3600,4014,4052],[4184,4644,3526,4596,3427,3157,5298,3400,4408,4449,3936,5068,3244,4031,3008,7298,3800,4208,4224,3209,3105,2216,1950,4533,5573,2897,2783,3830,1875,3647,2354,3301,2791,3357,5214,4423,4401,4199,3922],[5627,6277,4447,7369,4630,4260,7679,4296,5726,6249,5149,7140,6288,5319,3718,3800,12226,5983,5792,3975,3824,2537,2337,6234,8438,3497,3661,5270,2201,4376,2699,4305,3489,4441,8173,5890,4617,5595,5498],[6650,7561,5277,8049,5055,4607,9552,4816,6897,7184,6240,10367,4635,6279,4256,4208,5983,15947,7242,4496,4368,2808,2601,7210,10780,4130,3928,6146,2364,5117,3113,4926,4056,5241,9456,6958,9933,7437,6492],[6619,7272,5173,7855,5126,4551,8902,4809,6956,7148,6113,10571,4898,6328,4144,4224,5792,7242,14447,4624,4233,2851,2525,7042,9928,4042,3749,6048,2370,5356,3086,4985,3984,5128,8961,6817,5681,7030,6697],[4399,4724,3602,4938,3483,3329,5756,3411,4497,4603,4240,5408,3422,4119,3102,3209,3975,4496,4624,7920,3132,2254,2060,4593,5854,3040,3063,4097,1888,3835,2467,3647,2927,3458,5488,4524,3763,4291,4283],[4269,4544,3565,4841,3421,3190,5367,3353,4397,4450,4065,5148,3289,4034,3024,3105,3824,4368,4233,3132,7768,2242,1998,4444,5680,2891,2777,3950,1913,3533,2381,3479,2878,3310,5358,4711,3620,4243,4119],[2861,2976,2492,2984,2435,2314,3218,2485,3193,2862,2751,3156,2343,2715,2195,2216,2537,2808,2851,2254,2242,3877,1561,2881,3408,2084,1956,2680,1518,2490,1853,2520,2110,2580,3281,3230,2539,2804,2723],[2523,2706,2226,2782,2216,2001,2908,2139,2594,2628,2433,3032,2163,2412,1884,1950,2337,2601,2525,2060,1998,1561,4095,2598,3186,1833,1650,2521,1356,2211,1563,2051,1879,2170,2970,2804,2245,2732,2686],[7014,7841,5401,8328,5264,4695,10305,5165,7382,7826,6305,8959,4729,6401,4378,4533,6234,7210,7042,4593,4444,2881,2598,15540,10505,4205,4653,6200,2474,5460,3205,5169,4178,5465,9661,7672,5667,7143,7500],[9643,10519,7063,11848,6798,6042,14197,6469,10063,10202,8382,12534,6549,8523,5411,5573,8438,10780,9928,5854,5680,3408,3186,10505,23934,5174,5542,8512,2833,7028,4176,6821,5225,6908,13812,11326,7628,9838,8808],[3962,4250,3265,4518,3243,3040,5049,3096,4134,4087,3749,4873,2958,3732,2856,2897,3497,4130,4042,3040,2891,2084,1833,4205,5174,6917,2836,3696,1769,3396,2218,3161,2827,3313,5018,4105,3349,3866,3814],[3950,4035,3224,4469,3175,3024,6951,3220,4236,4201,3818,4606,2832,3483,2806,2783,3661,3928,3749,3063,2777,1956,1650,4653,5542,2836,7499,3605,1746,3420,2182,3253,2491,3030,5241,4396,3168,3791,3541],[5950,6550,4623,7011,4490,3984,7912,4438,6017,6184,5281,7520,4520,5528,3848,3830,5270,6146,6048,4097,3950,2680,2521,6200,8512,3696,3605,12485,2274,4633,2863,4549,3738,4710,8505,6282,4962,5724,9215],[2384,2479,2129,2729,2064,1901,2704,1990,2374,2450,2276,2668,1946,2198,1863,1875,2201,2364,2370,1888,1913,1518,1356,2474,2833,1769,1746,2274,3479,2063,1507,1930,1788,2029,2694,2433,2093,2313,2511],[5121,5665,4124,5784,3940,3819,6869,3925,5490,5423,4867,6315,3673,4836,3561,3647,4376,5117,5356,3835,3533,2490,2211,5460,7028,3396,3420,4633,2063,9910,2690,3938,3266,4045,6532,5341,4246,5288,4800],[3004,3262,2651,3328,2547,2487,3739,2533,3144,3141,2880,3574,2435,2837,2298,2354,2699,3113,3086,2467,2381,1853,1563,3205,4176,2218,2182,2863,1507,2690,5093,2591,2207,2509,3610,3220,2740,2983,2985],[4833,5195,3791,5625,3942,3548,6461,3678,5070,5123,4439,6021,3550,4400,3257,3301,4305,4926,4985,3647,3479,2520,2051,5169,6821,3161,3253,4549,1930,3938,2591,10057,3146,3852,6677,5107,3957,4660,4644],[3984,4171,3311,4503,3126,2979,4915,2980,3965,4068,3638,4691,2993,3657,2820,2791,3489,4056,3984,2927,2878,2110,1879,4178,5225,2827,2491,3738,1788,3266,2207,3146,7267,3329,5005,4050,3424,3869,3887],[5032,5634,4073,5803,3792,3670,6653,3717,5026,5322,4574,6326,3693,4683,3378,3357,4441,5241,5128,3458,3310,2580,2170,5465,6908,3313,3030,4710,2029,4045,2509,3852,3329,10310,7003,5037,4512,4903,4831],[8800,10279,6497,11957,6442,5783,12976,5965,9104,9386,7725,11768,5831,8013,5168,5214,8173,9456,8961,5488,5358,3281,2970,9661,13812,5018,5241,8505,2694,6532,3610,6677,5005,7003,22037,9407,6921,8552,8883],[7004,7334,5369,7869,5308,4653,9524,5113,11232,7422,6273,8585,4749,6184,4317,4423,5890,6958,6817,4524,4711,3230,2804,7672,11326,4105,4396,6282,2433,5341,3220,5107,4050,5037,9407,14572,5490,6644,6391],[5257,5833,4436,5986,4189,3778,7041,4035,5509,5671,5051,6707,3929,5121,3600,4401,4617,9933,5681,3763,3620,2539,2245,5667,7628,3349,3168,4962,2093,4246,2740,3957,3424,4512,6921,5490,11291,5188,5107],[6453,7095,5551,7645,4901,4414,8573,4768,6613,6683,6990,7984,4495,8471,4014,4199,5595,7437,7030,4291,4243,2804,2732,7143,9838,3866,3791,5724,2313,5288,2983,4660,3869,4903,8552,6644,5188,13624,5939],[6132,7247,4782,7612,4582,4169,8129,4636,6442,6497,5467,8445,5523,5868,4052,3922,5498,6492,6697,4283,4119,2723,2686,7500,8808,3814,3541,9215,2511,4800,2985,4644,3887,4831,8883,6391,5107,5939,13576]],"family_totals":[13553,15370,10027,18255,9768,8501,22596,8489,14795,15184,11925,19808,8957,12795,7372,7298,12226,15947,14447,7920,7768,3877,4095,15540,23934,6917,7499,12485,3479,9910,5093,10057,7267,10310,22037,14572,11291,13624,13576],"book_keys":["musannaf_ibnabi_shaybah","bukhari","muslim","abudawud","nasai","tirmidhi","mishkat_almasabih","ibnmajah","darimi","ahmed","bulugh_almaram","malik","riyad_assalihin","aladab_almufrad","shamail_muhammadiyah","qudsi40","nawawi40","shahwaliullah40"],"family_keys_top15":["movement_journey","worship","body","speech_communication","provision","fighting","time","knowledge","earth_sky","life_death","end_of_times","wealth","statecraft","family_law","creation"],"book_family_matrix":[[29922,22768,23710,18849,18293,14048,13770,13143,13347,11503,12206,11696,11302,11383,13863],[7938,3603,5727,3452,4300,2510,3412,3474,3696,1777,2361,2036,2246,2309,3121],[7177,3919,5159,3852,4498,2503,3154,3250,3241,1814,2396,1773,2180,2050,3117],[6067,4105,4920,3129,4193,1977,2824,2912,2712,1732,1907,1660,1819,1952,2664],[4887,3106,3537,2505,2894,1676,2486,2577,2392,1352,1749,1473,1734,1685,2100],[4414,2616,2994,2390,2758,1371,2008,2687,2519,1143,1427,1376,1525,1380,1846],[4596,3115,3373,2164,2101,1211,1987,2243,2163,1349,1794,1245,1454,1258,1968],[4118,2626,3641,2166,3190,1327,2404,1851,1907,1242,1488,1245,1370,1620,1742],[2619,1970,2599,1453,2017,1014,1465,1262,1301,816,895,894,953,1206,1117],[2301,1388,1870,1525,1470,711,1267,1122,933,1011,861,775,820,947,1042],[2383,1444,1676,1448,1225,503,1045,1381,835,564,805,782,682,717,983],[2086,1186,1568,1107,1029,497,905,997,811,476,583,625,694,799,832],[1318,844,822,622,570,377,590,562,549,364,534,316,436,303,552],[1228,541,926,587,789,347,484,567,539,314,373,335,360,378,519],[329,173,261,171,207,90,168,148,149,78,108,74,84,90,152],[71,56,50,35,38,20,18,54,27,24,32,30,27,10,33],[64,59,51,33,34,21,21,33,35,18,21,14,38,17,27],[6,3,4,3,6,2,3,9,5,2,2,2,8,2,3]]};
 
-const fmt = d3.format(",");
-const NEW_FAMILIES = new Set(["end_of_times","jihad","statecraft","family_law"]);
-
-/* -- Tooltip helper -- */
-const tip = d3.select("#tooltip");
-function showTip(evt, html) {
-  tip.style("display","block").html(html);
-  var tx = evt.clientX + 14, ty = evt.clientY - 10;
-  var r = tip.node().getBoundingClientRect();
-  if (tx + r.width > window.innerWidth - 10) tx = evt.clientX - r.width - 14;
-  if (ty + r.height > window.innerHeight - 10) ty = evt.clientY - r.height - 10;
-  if (ty < 5) ty = 5;
-  tip.style("left", tx+"px").style("top", ty+"px");
+function showTab(name) {
+  document.querySelectorAll(".tab").forEach((t,i) =>
+    t.classList.toggle("active", ["fam","book"][i] === name));
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+  document.getElementById("panel-" + name).classList.add("active");
 }
-function hideTip() { tip.style("display","none"); }
 
-/* -- Tab switching -- */
-document.querySelectorAll(".tab").forEach(function(t) {
-  t.addEventListener("click", function() {
-    document.querySelectorAll(".tab").forEach(function(b) { b.classList.remove("active"); });
-    document.querySelectorAll(".panel").forEach(function(p) { p.classList.remove("active"); });
-    t.classList.add("active");
-    document.getElementById("panel-" + t.dataset.tab).classList.add("active");
+const tip = document.getElementById("tooltip");
+function showTip(html, e) { tip.innerHTML = html; tip.style.display = "block"; moveTip(e); }
+function moveTip(e) {
+  tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 275) + "px";
+  tip.style.top  = Math.max(e.clientY - 6, 8) + "px";
+}
+function hideTip() { tip.style.display = "none"; }
+const fmt = d3.format(",");
+
+// ── FAMILY CHORD ─────────────────────────────────────────────────────────────
+(function() {
+  const { family_keys, family_labels, family_matrix, family_totals } = DATA;
+  const N = family_keys.length;
+  const NEW = new Set(["end_of_times","jihad","statecraft","family_law"]);
+  const palette = d3.quantize(t => d3.interpolateRainbow(t * .88 + .05), N);
+
+  const W = 800, r0 = 278, r1 = 326;
+  const svg = d3.select("#svg-fam")
+    .attr("viewBox", `${-W/2} ${-W/2} ${W} ${W}`)
+    .attr("width", "100%")
+    .style("max-height", "800px");
+
+  const chordL  = d3.chord().padAngle(.012).sortSubgroups(d3.descending)(family_matrix);
+  const arcPath = d3.arc().innerRadius(r0).outerRadius(r1);
+  const ribPath = d3.ribbon().radius(r0 - 1);
+
+  let active = null;
+
+  const ribbons = svg.append("g").selectAll("path")
+    .data(chordL).join("path")
+    .attr("d", ribPath)
+    .attr("fill", d => palette[d.source.index])
+    .attr("fill-opacity", .52)
+    .attr("stroke", d => d3.color(palette[d.source.index]).darker(.5))
+    .attr("stroke-width", .4)
+    .style("cursor", "pointer")
+    .on("mouseover", function(e, d) {
+      if (active !== null) return;
+      d3.select(this).attr("fill-opacity", .88);
+      showTip(
+        "<strong>" + family_labels[d.source.index] + "</strong>" +
+        "<span style='color:#aaa'> ↔ </span>" +
+        "<strong>" + family_labels[d.target.index] + "</strong><br>" +
+        "<span class='num'>" + fmt(Math.round(d.source.value)) + "</span> shared hadiths", e);
+    })
+    .on("mousemove", moveTip)
+    .on("mouseout", function() {
+      if (active !== null) return;
+      d3.select(this).attr("fill-opacity", .52); hideTip();
+    });
+
+  function resetAll() {
+    active = null;
+    ribbons.attr("fill-opacity", .52).attr("display", null);
+    arcPaths.attr("fill-opacity", 1);
     hideTip();
-  });
-});
-
-/* =======================================================
-   TAB 1 - Family x Family (39x39 symmetric chord)
-   ======================================================= */
-(function buildFamilyChord() {
-  var n = DATA.family_keys.length;
-  var svg = d3.select("#svg-family");
-  var g = svg.append("g");
-  var outerR = 400, innerR = outerR - 28;
-
-  var rainbow = d3.quantize(d3.interpolateRainbow, n);
-
-  var chordData = d3.chord().padAngle(0.04).sortSubgroups(d3.descending)(DATA.family_matrix);
-
-  var arcGen = d3.arc().innerRadius(innerR).outerRadius(outerR);
-  var ribbonGen = d3.ribbon().radius(innerR - 1);
-
-  /* Ribbons */
-  var ribbons = g.append("g").attr("fill-opacity", 0.55)
-    .selectAll("path").data(chordData).join("path")
-    .attr("d", ribbonGen)
-    .attr("fill", function(d) { return rainbow[d.source.index]; })
-    .attr("stroke", "none")
-    .on("mouseover", function(evt, d) {
-      d3.select(this).attr("fill-opacity", 0.9);
-      var si = d.source.index, ti = d.target.index;
-      showTip(evt, '<div class="tt-title">' + DATA.family_labels[si] + ' &#8596; ' + DATA.family_labels[ti] + '</div>Shared: <span class="num">' + fmt(d.source.value) + '</span> hadiths');
-    })
-    .on("mousemove", function(evt) { showTip(evt, tip.html()); })
-    .on("mouseout", function() { d3.select(this).attr("fill-opacity", 0.55); hideTip(); });
-
-  /* Arcs */
-  var isolated = null;
-  var arcs = g.append("g").selectAll("g").data(chordData.groups).join("g");
-
-  arcs.append("path")
-    .attr("d", arcGen)
-    .attr("fill", function(d) { return rainbow[d.index]; })
-    .attr("stroke", "#0d0d1a").attr("stroke-width", 1.5)
-    .style("cursor", "pointer")
-    .on("mouseover", function(evt, d) {
-      var i = d.index;
-      var overlaps = [];
-      for (var j = 0; j < n; j++) {
-        if (j !== i && DATA.family_matrix[i][j] > 0) overlaps.push({ j: j, v: DATA.family_matrix[i][j] });
-      }
-      overlaps.sort(function(a, b) { return b.v - a.v; });
-      var top4 = overlaps.slice(0, 4).map(function(o) {
-        return DATA.family_labels[o.j] + ': <span class="num">' + fmt(o.v) + '</span>';
-      }).join("<br>");
-      showTip(evt, '<div class="tt-title">' + DATA.family_labels[i] + '</div>Total: <span class="num">' + fmt(DATA.family_totals[i]) + '</span> hadiths<br><br><strong>Top overlaps:</strong><br>' + top4);
-    })
-    .on("mousemove", function(evt) { showTip(evt, tip.html()); })
-    .on("mouseout", hideTip)
-    .on("click", function(evt, d) {
-      evt.stopPropagation();
-      var i = d.index;
-      if (isolated === i) { isolated = null; resetOpacity(); return; }
-      isolated = i;
-      ribbons.attr("fill-opacity", function(r) { return (r.source.index === i || r.target.index === i) ? 0.8 : 0.04; });
-      arcs.selectAll("path").attr("opacity", function(ag) {
-        if (ag.index === i) return 1;
-        return DATA.family_matrix[i][ag.index] > 0 ? 0.7 : 0.15;
-      });
-    });
-
-  function resetOpacity() {
-    ribbons.attr("fill-opacity", 0.55);
-    arcs.selectAll("path").attr("opacity", 1);
   }
-  svg.on("click", function() { isolated = null; resetOpacity(); hideTip(); });
+  svg.on("click", resetAll);
 
-  /* Labels */
-  arcs.append("text")
-    .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
-    .attr("dy", ".35em")
-    .attr("transform", function(d) {
-      var a = d.angle * 180 / Math.PI - 90;
-      return "rotate(" + a + ") translate(" + (outerR + 8) + ")" + (a > 90 ? " rotate(180)" : "");
+  const grps = svg.append("g").selectAll("g")
+    .data(chordL.groups).join("g")
+    .style("cursor", "pointer")
+    .on("click", function(e, d) {
+      e.stopPropagation();
+      if (active === d.index) { resetAll(); return; }
+      active = d.index;
+      ribbons
+        .attr("display", c =>
+          (c.source.index === d.index || c.target.index === d.index) ? null : "none")
+        .attr("fill-opacity", .82);
+      arcPaths.attr("fill-opacity", a => {
+        if (a.index === d.index) return 1;
+        return chordL.some(c =>
+          (c.source.index === d.index && c.target.index === a.index) ||
+          (c.target.index === d.index && c.source.index === a.index)) ? 1 : .18;
+      });
     })
-    .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : "start"; })
-    .attr("font-size", "8px")
-    .attr("fill", function(d) { return NEW_FAMILIES.has(DATA.family_keys[d.index]) ? "#ff8c00" : "#999"; })
-    .attr("font-weight", function(d) { return NEW_FAMILIES.has(DATA.family_keys[d.index]) ? "700" : "400"; })
-    .text(function(d) {
-      var span = d.endAngle - d.startAngle;
-      if (span < 0.04) return "";
-      var lbl = DATA.family_labels[d.index];
-      return span < 0.08 ? lbl.slice(0, 12) + "\u2026" : lbl;
+    .on("mouseover", function(e, d) {
+      if (active !== null) return;
+      ribbons.attr("fill-opacity", c =>
+        (c.source.index === d.index || c.target.index === d.index) ? .88 : .1);
+      const top = family_matrix[d.index]
+        .map((v, i) => ({ i, v }))
+        .filter(x => x.i !== d.index && x.v > 0)
+        .sort((a, b) => b.v - a.v).slice(0, 4)
+        .map(x => family_labels[x.i] + ": <span class='num'>" + fmt(x.v) + "</span>")
+        .join("<br>");
+      const star = NEW.has(family_keys[d.index])
+        ? " <span style='color:#e74c3c;font-size:.72rem'>NEW</span>" : "";
+      showTip(
+        "<strong>" + family_labels[d.index] + star + "</strong><br>" +
+        "<span class='num'>" + fmt(family_totals[d.index]) + "</span> hadiths<br><br>" +
+        "Top overlaps:<br>" + top, e);
+    })
+    .on("mousemove", moveTip)
+    .on("mouseout", function() {
+      if (active !== null) return;
+      ribbons.attr("fill-opacity", .52); hideTip();
     });
 
-  /* Legend */
-  var leg = d3.select("#legend-family");
-  DATA.family_keys.forEach(function(k, i) {
-    var isNew = NEW_FAMILIES.has(k);
-    leg.append("div").attr("class", "legend-item")
-      .html('<span class="legend-swatch" style="background:' + rainbow[i] + '"></span><span' + (isNew ? ' class="new-family"' : '') + '>' + DATA.family_labels[i] + '</span>');
+  const arcPaths = grps.append("path")
+    .attr("d", arcPath)
+    .attr("fill", d => palette[d.index])
+    .attr("stroke", d => d3.color(palette[d.index]).darker(.8))
+    .attr("stroke-width", .5);
+
+  grps.append("text")
+    .each(d => { d.angle = (d.startAngle + d.endAngle) / 2; })
+    .attr("transform", d =>
+      "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" +
+      " translate(" + (r1 + 7) + ")" +
+      (d.angle > Math.PI ? " rotate(180)" : ""))
+    .attr("text-anchor", d => d.angle > Math.PI ? "end" : "start")
+    .attr("fill", d => NEW.has(family_keys[d.index]) ? "#f0a060" : "#ccc")
+    .attr("font-size", d => (d.endAngle - d.startAngle) > .13 ? 10 : 0)
+    .text(d => family_labels[d.index].split(",")[0].trim().slice(0, 20));
+
+  const legEl = document.getElementById("leg-fam");
+  family_keys.forEach((k, i) => {
+    const div = document.createElement("div");
+    div.className = "leg";
+    div.innerHTML = "<div class='swatch' style='background:" + palette[i] + "'></div>" +
+      family_labels[i].split(",")[0].trim().slice(0, 22);
+    if (NEW.has(k)) { div.style.color = "#f0a060"; div.style.fontWeight = "600"; }
+    legEl.appendChild(div);
   });
 })();
 
-/* =======================================================
-   TAB 2 - Book Distinctiveness (bipartite chord)
-   ======================================================= */
-(function buildDistChord() {
-  var nBooks = DATA.book_keys.length;   // 18
-  var nFams = DATA.fam_keys.length;     // 15
-  var N = nBooks + nFams;               // 33
-  var svg = d3.select("#svg-dist");
-  var g = svg.append("g");
-  var outerR = 400, innerR = outerR - 28;
+// ── BOOK × FAMILY CHORD ──────────────────────────────────────────────────────
+(function() {
+  const { book_keys, family_keys_top15, book_family_matrix } = DATA;
+  const nB = book_keys.length, nF = family_keys_top15.length;
+  const N  = nB + nF;
 
-  var blueScale = d3.quantize(function(t) { return d3.interpolateBlues(0.35 + t * 0.55); }, nBooks);
-  var orangeScale = d3.quantize(function(t) { return d3.interpolateOranges(0.35 + t * 0.55); }, nFams);
-  function color(i) { return i < nBooks ? blueScale[i] : orangeScale[i - nBooks]; }
+  const matrix = Array.from({ length: N }, (_, r) =>
+    Array.from({ length: N }, (_, c) => {
+      if (r < nB && c >= nB) return book_family_matrix[r][c - nB] || 0;
+      if (c < nB && r >= nB) return book_family_matrix[c][r - nB] || 0;
+      return 0;
+    }));
 
-  var chordData = d3.chord().padAngle(0.04).sortSubgroups(d3.descending)(DATA.dist_matrix);
+  const SHORT = {
+    musannaf_ibnabi_shaybah: "Musannaf IAS",
+    mishkat_almasabih: "Mishkat",
+    riyad_assalihin: "Riyad Salihin",
+    aladab_almufrad: "Adab Mufrad",
+    shamail_muhammadiyah: "Shamail",
+    bulugh_almaram: "Bulugh",
+    shahwaliullah40: "Shah Wali 40",
+    nawawi40: "Nawawi 40",
+    qudsi40: "Qudsi 40",
+  };
+  const cap = s => s.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  const bookLabels = book_keys.map(b => SHORT[b] || cap(b));
+  const famLabels  = family_keys_top15.map(f => cap(f));
+  const labels     = [...bookLabels, ...famLabels];
 
-  var arcGen = d3.arc().innerRadius(innerR).outerRadius(outerR);
-  var ribbonGen = d3.ribbon().radius(innerR - 1);
+  const bookPal = d3.quantize(t => d3.interpolateBlues(.35 + t * .55), nB);
+  const famPal  = d3.quantize(t => d3.interpolateOranges(.4  + t * .5),  nF);
+  const allC    = [...bookPal, ...famPal];
 
-  var ribbons = g.append("g").attr("fill-opacity", 0.6)
-    .selectAll("path").data(chordData).join("path")
-    .attr("d", ribbonGen)
-    .attr("fill", function(d) { return color(d.source.index); })
-    .attr("stroke", "none")
-    .on("mouseover", function(evt, d) {
-      d3.select(this).attr("fill-opacity", 0.9);
-      var si = d.source.index, ti = d.target.index;
-      var sLabel = si < nBooks ? DATA.book_labels[si] : DATA.fam_labels[si - nBooks];
-      var tLabel = ti < nBooks ? DATA.book_labels[ti] : DATA.fam_labels[ti - nBooks];
-      showTip(evt, '<div class="tt-title">' + sLabel + ' &#8596; ' + tLabel + '</div>Excess hadiths: <span class="num">' + fmt(d.source.value) + '</span>');
-    })
-    .on("mousemove", function(evt) { showTip(evt, tip.html()); })
-    .on("mouseout", function() { d3.select(this).attr("fill-opacity", 0.6); hideTip(); });
+  const W = 860, r0 = 308, r1 = 352;
+  const svg = d3.select("#svg-book")
+    .attr("viewBox", `${-W/2} ${-W/2} ${W} ${W}`)
+    .attr("width", "100%")
+    .style("max-height", "860px");
 
-  var isolated = null;
-  var arcs = g.append("g").selectAll("g").data(chordData.groups).join("g");
+  const chordL  = d3.chord().padAngle(.009).sortSubgroups(d3.descending)(matrix);
+  const arcPath = d3.arc().innerRadius(r0).outerRadius(r1);
+  const ribPath = d3.ribbon().radius(r0 - 1);
 
-  arcs.append("path")
-    .attr("d", arcGen)
-    .attr("fill", function(d) { return color(d.index); })
-    .attr("stroke", "#0d0d1a").attr("stroke-width", 1.5)
+  let active = null;
+
+  const ribbons = svg.append("g").selectAll("path")
+    .data(chordL).join("path")
+    .attr("d", ribPath)
+    .attr("fill", d => allC[d.source.index])
+    .attr("fill-opacity", .48)
+    .attr("stroke", d => d3.color(allC[d.source.index]).darker(.6))
+    .attr("stroke-width", .4)
     .style("cursor", "pointer")
-    .on("mouseover", function(evt, d) {
-      var i = d.index;
-      if (i < nBooks) {
-        var conns = [];
-        for (var j = nBooks; j < N; j++) {
-          if (DATA.dist_matrix[i][j] > 0) conns.push({ label: DATA.fam_labels[j - nBooks], v: DATA.dist_matrix[i][j] });
-        }
-        conns.sort(function(a, b) { return b.v - a.v; });
-        var lines = conns.map(function(c) { return c.label + ': <span class="num">+' + fmt(c.v) + '</span>'; }).join("<br>");
-        showTip(evt, '<div class="tt-title">' + DATA.book_labels[i] + '</div><strong>Distinctive families:</strong><br>' + (lines || "<em>none</em>"));
-      } else {
-        var fi = i - nBooks;
-        var conns2 = [];
-        for (var j2 = 0; j2 < nBooks; j2++) {
-          if (DATA.dist_matrix[j2][i] > 0) conns2.push({ label: DATA.book_labels[j2], v: DATA.dist_matrix[j2][i] });
-        }
-        conns2.sort(function(a, b) { return b.v - a.v; });
-        var lines2 = conns2.map(function(c) { return c.label + ': <span class="num">+' + fmt(c.v) + '</span>'; }).join("<br>");
-        showTip(evt, '<div class="tt-title">' + DATA.fam_labels[fi] + '</div><strong>Books that lean toward this:</strong><br>' + (lines2 || "<em>none</em>"));
-      }
+    .on("mouseover", function(e, d) {
+      if (active !== null) return;
+      d3.select(this).attr("fill-opacity", .88);
+      showTip(
+        "<strong>" + labels[d.source.index] + "</strong>" +
+        "<span style='color:#aaa'> ↔ </span>" +
+        "<strong>" + labels[d.target.index] + "</strong><br>" +
+        "<span class='num'>" + fmt(Math.round(d.source.value)) + "</span> hadiths", e);
     })
-    .on("mousemove", function(evt) { showTip(evt, tip.html()); })
-    .on("mouseout", hideTip)
-    .on("click", function(evt, d) {
-      evt.stopPropagation();
-      var i = d.index;
-      if (isolated === i) { isolated = null; resetOpacity(); return; }
-      isolated = i;
-      ribbons.attr("fill-opacity", function(r) { return (r.source.index === i || r.target.index === i) ? 0.85 : 0.03; });
-      arcs.selectAll("path").attr("opacity", function(ag) {
-        if (ag.index === i) return 1;
-        if (DATA.dist_matrix[i] && DATA.dist_matrix[i][ag.index] > 0) return 0.7;
-        if (DATA.dist_matrix[ag.index] && DATA.dist_matrix[ag.index][i] > 0) return 0.7;
-        return 0.12;
-      });
+    .on("mousemove", moveTip)
+    .on("mouseout", function() {
+      if (active !== null) return;
+      d3.select(this).attr("fill-opacity", .48); hideTip();
     });
 
-  function resetOpacity() {
-    ribbons.attr("fill-opacity", 0.6);
-    arcs.selectAll("path").attr("opacity", 1);
+  function resetAll() {
+    active = null;
+    ribbons.attr("fill-opacity", .48).attr("display", null);
+    arcPaths.attr("fill-opacity", 1);
+    hideTip();
   }
-  svg.on("click", function() { isolated = null; resetOpacity(); hideTip(); });
+  svg.on("click", resetAll);
 
-  /* Labels */
-  arcs.append("text")
-    .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
-    .attr("dy", ".35em")
-    .attr("transform", function(d) {
-      var a = d.angle * 180 / Math.PI - 90;
-      return "rotate(" + a + ") translate(" + (outerR + 8) + ")" + (a > 90 ? " rotate(180)" : "");
+  const grps = svg.append("g").selectAll("g")
+    .data(chordL.groups).join("g")
+    .style("cursor", "pointer")
+    .on("click", function(e, d) {
+      e.stopPropagation();
+      if (active === d.index) { resetAll(); return; }
+      active = d.index;
+      ribbons
+        .attr("display", c =>
+          (c.source.index === d.index || c.target.index === d.index) ? null : "none")
+        .attr("fill-opacity", .82);
+      arcPaths.attr("fill-opacity", a => {
+        if (a.index === d.index) return 1;
+        return chordL.some(c =>
+          (c.source.index === d.index && c.target.index === a.index) ||
+          (c.target.index === d.index && c.source.index === a.index)) ? 1 : .15;
+      });
     })
-    .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : "start"; })
-    .attr("font-size", "9px")
-    .attr("fill", function(d) { return d.index < nBooks ? "#8bb8e8" : "#e8a848"; })
-    .text(function(d) {
-      var span = d.endAngle - d.startAngle;
-      if (span < 0.02) return "";
-      return d.index < nBooks ? DATA.book_labels[d.index] : DATA.fam_labels[d.index - nBooks];
+    .on("mouseover", function(e, d) {
+      if (active !== null) return;
+      ribbons.attr("fill-opacity", c =>
+        (c.source.index === d.index || c.target.index === d.index) ? .88 : .1);
+      const isBook = d.index < nB;
+      const total  = matrix[d.index].reduce((s, v) => s + v, 0);
+      const top = (isBook
+        ? famLabels.map((f, j) => ({ label: f, v: book_family_matrix[d.index][j] || 0 }))
+        : bookLabels.map((b, i) => ({ label: b, v: book_family_matrix[i][d.index - nB] || 0 }))
+      ).sort((a, b) => b.v - a.v).slice(0, 4)
+       .map(x => x.label + ": <span class='num'>" + fmt(x.v) + "</span>").join("<br>");
+      showTip(
+        "<strong>" + labels[d.index] + "</strong>" +
+        "<span style='color:#777;font-size:.72rem'> " + (isBook ? "BOOK" : "FAMILY") + "</span><br>" +
+        "<span class='num'>" + fmt(total) + "</span> connections<br><br>" +
+        "Top links:<br>" + top, e);
+    })
+    .on("mousemove", moveTip)
+    .on("mouseout", function() {
+      if (active !== null) return;
+      ribbons.attr("fill-opacity", .48); hideTip();
     });
 
-  /* Legend */
-  var leg = d3.select("#legend-dist");
-  leg.append("div").attr("class","legend-item").html('<span class="legend-swatch" style="background:#5b8abf"></span><strong style="color:#8bb8e8;font-size:.78rem">Books</strong>');
-  DATA.book_keys.forEach(function(k, i) {
-    leg.append("div").attr("class","legend-item")
-      .html('<span class="legend-swatch" style="background:' + blueScale[i] + '"></span>' + DATA.book_labels[i]);
+  const arcPaths = grps.append("path")
+    .attr("d", arcPath)
+    .attr("fill", d => allC[d.index])
+    .attr("stroke", d => d3.color(allC[d.index]).darker(.8))
+    .attr("stroke-width", .5);
+
+  grps.append("text")
+    .each(d => { d.angle = (d.startAngle + d.endAngle) / 2; })
+    .attr("transform", d =>
+      "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" +
+      " translate(" + (r1 + 7) + ")" +
+      (d.angle > Math.PI ? " rotate(180)" : ""))
+    .attr("text-anchor", d => d.angle > Math.PI ? "end" : "start")
+    .attr("fill", d => d.index < nB ? "#a8ccf0" : "#f0c080")
+    .attr("font-size", d => (d.endAngle - d.startAngle) > .055 ? 10 : 0)
+    .attr("font-weight", d => d.index >= nB ? "600" : "normal")
+    .text(d => labels[d.index].slice(0, 16));
+
+  const legEl = document.getElementById("leg-book");
+  const bh = document.createElement("div");
+  bh.style.cssText = "width:100%;font-size:.72rem;color:#7eb3f0;font-weight:700;margin-bottom:3px;padding-left:4px;";
+  bh.textContent = "BOOKS"; legEl.appendChild(bh);
+  book_keys.forEach((k, i) => {
+    const div = document.createElement("div");
+    div.className = "leg";
+    div.innerHTML = "<div class='swatch' style='background:" + bookPal[i] + "'></div>" + bookLabels[i];
+    legEl.appendChild(div);
   });
-  leg.append("div").attr("class","legend-item").style("margin-left","12px")
-    .html('<span class="legend-swatch" style="background:#bf7b3b"></span><strong style="color:#e8a848;font-size:.78rem">Families</strong>');
-  DATA.fam_keys.forEach(function(k, i) {
-    leg.append("div").attr("class","legend-item")
-      .html('<span class="legend-swatch" style="background:' + orangeScale[i] + '"></span>' + DATA.fam_labels[i]);
+  const fh = document.createElement("div");
+  fh.style.cssText = "width:100%;font-size:.72rem;color:#f0a060;font-weight:700;margin-top:8px;margin-bottom:3px;padding-left:4px;";
+  fh.textContent = "FAMILIES"; legEl.appendChild(fh);
+  family_keys_top15.forEach((k, i) => {
+    const div = document.createElement("div");
+    div.className = "leg";
+    div.innerHTML = "<div class='swatch' style='background:" + famPal[i] + "'></div>" + famLabels[i];
+    legEl.appendChild(div);
   });
 })();
-
-/* =======================================================
-   TAB 3 - Narrator x Book (bipartite chord)
-   ======================================================= */
-(function buildNarratorChord() {
-  var nNar = DATA.nar_keys.length;        // 20
-  var nBooks = DATA.book_keys.length;      // 18
-  var N = nNar + nBooks;                   // 38
-  var svg = d3.select("#svg-narrator");
-  var g = svg.append("g");
-  var outerR = 400, innerR = outerR - 28;
-
-  var greenScale = d3.quantize(function(t) { return d3.interpolateGreens(0.3 + t * 0.6); }, nNar);
-  var blueScale = d3.quantize(function(t) { return d3.interpolateBlues(0.35 + t * 0.55); }, nBooks);
-  function color(i) { return i < nNar ? greenScale[i] : blueScale[i - nNar]; }
-
-  var chordData = d3.chord().padAngle(0.04).sortSubgroups(d3.descending)(DATA.nar_matrix);
-
-  var arcGen = d3.arc().innerRadius(innerR).outerRadius(outerR);
-  var ribbonGen = d3.ribbon().radius(innerR - 1);
-
-  var ribbons = g.append("g").attr("fill-opacity", 0.55)
-    .selectAll("path").data(chordData).join("path")
-    .attr("d", ribbonGen)
-    .attr("fill", function(d) { return color(d.source.index); })
-    .attr("stroke", "none")
-    .on("mouseover", function(evt, d) {
-      d3.select(this).attr("fill-opacity", 0.9);
-      var si = d.source.index, ti = d.target.index;
-      var sLabel = si < nNar ? DATA.nar_keys[si] : DATA.book_labels[si - nNar];
-      var tLabel = ti < nNar ? DATA.nar_keys[ti] : DATA.book_labels[ti - nNar];
-      showTip(evt, '<div class="tt-title">' + sLabel + ' &#8596; ' + tLabel + '</div>Hadiths: <span class="num">' + fmt(d.source.value) + '</span>');
-    })
-    .on("mousemove", function(evt) { showTip(evt, tip.html()); })
-    .on("mouseout", function() { d3.select(this).attr("fill-opacity", 0.55); hideTip(); });
-
-  var isolated = null;
-  var arcs = g.append("g").selectAll("g").data(chordData.groups).join("g");
-
-  arcs.append("path")
-    .attr("d", arcGen)
-    .attr("fill", function(d) { return color(d.index); })
-    .attr("stroke", "#0d0d1a").attr("stroke-width", 1.5)
-    .style("cursor", "pointer")
-    .on("mouseover", function(evt, d) {
-      var i = d.index;
-      if (i < nNar) {
-        var books = [];
-        for (var j = nNar; j < N; j++) {
-          if (DATA.nar_matrix[i][j] > 0) books.push({ label: DATA.book_labels[j - nNar], v: DATA.nar_matrix[i][j] });
-        }
-        books.sort(function(a, b) { return b.v - a.v; });
-        var top4 = books.slice(0, 4).map(function(b) { return b.label + ': <span class="num">' + fmt(b.v) + '</span>'; }).join("<br>");
-        showTip(evt, '<div class="tt-title">' + DATA.nar_keys[i] + '</div>Total: <span class="num">' + fmt(DATA.nar_totals[i]) + '</span> hadiths<br><br><strong>Top books:</strong><br>' + top4);
-      } else {
-        var bi = i - nNar;
-        var narrs = [];
-        for (var j2 = 0; j2 < nNar; j2++) {
-          if (DATA.nar_matrix[j2][i] > 0) narrs.push({ label: DATA.nar_keys[j2], v: DATA.nar_matrix[j2][i] });
-        }
-        narrs.sort(function(a, b) { return b.v - a.v; });
-        var top4b = narrs.slice(0, 4).map(function(nr) { return nr.label + ': <span class="num">' + fmt(nr.v) + '</span>'; }).join("<br>");
-        showTip(evt, '<div class="tt-title">' + DATA.book_labels[bi] + '</div><strong>Top narrators:</strong><br>' + top4b);
-      }
-    })
-    .on("mousemove", function(evt) { showTip(evt, tip.html()); })
-    .on("mouseout", hideTip)
-    .on("click", function(evt, d) {
-      evt.stopPropagation();
-      var i = d.index;
-      if (isolated === i) { isolated = null; resetOpacity(); return; }
-      isolated = i;
-      ribbons.attr("fill-opacity", function(r) { return (r.source.index === i || r.target.index === i) ? 0.85 : 0.03; });
-      arcs.selectAll("path").attr("opacity", function(ag) {
-        if (ag.index === i) return 1;
-        if (DATA.nar_matrix[i] && DATA.nar_matrix[i][ag.index] > 0) return 0.7;
-        if (DATA.nar_matrix[ag.index] && DATA.nar_matrix[ag.index][i] > 0) return 0.7;
-        return 0.12;
-      });
-    });
-
-  function resetOpacity() {
-    ribbons.attr("fill-opacity", 0.55);
-    arcs.selectAll("path").attr("opacity", 1);
-  }
-  svg.on("click", function() { isolated = null; resetOpacity(); hideTip(); });
-
-  /* Labels */
-  arcs.append("text")
-    .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
-    .attr("dy", ".35em")
-    .attr("transform", function(d) {
-      var a = d.angle * 180 / Math.PI - 90;
-      return "rotate(" + a + ") translate(" + (outerR + 8) + ")" + (a > 90 ? " rotate(180)" : "");
-    })
-    .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : "start"; })
-    .attr("font-size", "9px")
-    .attr("fill", function(d) { return d.index < nNar ? "#7ec87e" : "#8bb8e8"; })
-    .text(function(d) {
-      var span = d.endAngle - d.startAngle;
-      if (span < 0.02) return "";
-      var lbl = d.index < nNar ? DATA.nar_keys[d.index] : DATA.book_labels[d.index - nNar];
-      return span < 0.05 ? lbl.slice(0, 14) + "\u2026" : lbl;
-    });
-
-  /* Legend */
-  var leg = d3.select("#legend-narrator");
-  leg.append("div").attr("class","legend-item").html('<span class="legend-swatch" style="background:#4a9f4a"></span><strong style="color:#7ec87e;font-size:.78rem">Narrators</strong>');
-  DATA.nar_keys.forEach(function(k, i) {
-    leg.append("div").attr("class","legend-item")
-      .html('<span class="legend-swatch" style="background:' + greenScale[i] + '"></span>' + k);
-  });
-  leg.append("div").attr("class","legend-item").style("margin-left","12px")
-    .html('<span class="legend-swatch" style="background:#5b8abf"></span><strong style="color:#8bb8e8;font-size:.78rem">Books</strong>');
-  DATA.book_keys.forEach(function(k, i) {
-    leg.append("div").attr("class","legend-item")
-      .html('<span class="legend-swatch" style="background:' + blueScale[i] + '"></span>' + DATA.book_labels[i]);
-  });
-})();
-
 </script>
 </body>
 </html>
