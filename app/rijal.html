@@ -179,13 +179,13 @@ function cleanTabaqa(t) {
 }
 
 async function init() {
-    // Load split rijal data (by_name index + per-grade profile chunks)
+    // Load split rijal data (per-grade profile chunks)
     const manifest = await fetch('data/rijal/manifest.json').then(r => r.json());
-    const grades = Object.keys(manifest.grades);
+    const profileFiles = manifest.files.filter(f => f.type === 'profiles');
 
     // Load all profile chunks in parallel
     const chunks = await Promise.all(
-        grades.map(g => fetch(`data/rijal/profiles_${g}.json`).then(r => r.json()))
+        profileFiles.map(f => fetch(`data/rijal/${f.name}`).then(r => r.json()))
     );
 
     // Merge into single profiles object
