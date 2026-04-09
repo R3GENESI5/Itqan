@@ -13,27 +13,22 @@ license: apache-2.0
 # Al-Itqan — Hadith Q&A (RAG)
 
 Ask questions about Islamic topics in Arabic or English.
-Answers are grounded in 87,688 hadiths — sources always cited, no hallucination.
+Answers are grounded in 112,221 hadiths across 18 books — sources always cited, no hallucination.
+
+Researched, compiled & developed by [Ali Bin Shahid](https://www.linkedin.com/in/alibinshahid/)
 
 ## How it works
 
 1. Your question is encoded with `intfloat/multilingual-e5-small`
-2. FAISS retrieves the 5 most semantically relevant hadiths
+2. FAISS retrieves the most semantically relevant hadiths from 112,221 indexed entries
 3. `Qwen2.5-1.5B-Instruct` generates a cited answer from those hadiths only
-
-## Setup
-
-1. Run `src/build_semantic_index.py` from the Al-Itqan repo
-2. Upload `app/data/semantic/` to a HuggingFace dataset repo
-3. Set `HF_INDEX_REPO` environment variable in Space settings
-4. Hardware: CPU Basic (free tier) — model fits in ~1GB RAM
 
 ## Models
 
 | Role | Model | License |
 |------|-------|---------|
 | Embeddings | `intfloat/multilingual-e5-small` | Apache-2.0 |
-| Generation | `Qwen/Qwen2.5-0.5B-Instruct` | Apache-2.0 |
+| Generation | `Qwen/Qwen2.5-1.5B-Instruct` | Apache-2.0 |
 
 ## Limitation
 
@@ -42,5 +37,9 @@ it will say so rather than fabricate. Always verify rulings with a qualified sch
 
 ## Data
 
-Part of the [Al-Itqan](https://github.com/your-org/al-itqan) project —
-87,688 hadiths with Quran root-morphology bridge and 39 thematic families.
+Part of the [Itqan](https://github.com/R3GENESI5/Itqan) project:
+- 112,221 hadiths across 18 Sunni books (including full Musnad Ahmad, Arnaut edition)
+- 1,336 shared Arabic roots generating 1,326,229 Quran-Hadith links
+- 18,298 narrator profiles with jarh wa ta'dil
+- 39 thematic families from classical lexicography
+- FAISS index hosted at [iqrossed/al-itqan-index](https://huggingface.co/datasets/iqrossed/al-itqan-index)
