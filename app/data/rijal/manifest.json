@@ -5,51 +5,51 @@
       "type": "name_index"
     },
     {
-      "name": "profiles_unknown.json",
+      "name": "profiles_companion.json",
       "type": "profiles",
-      "grade": "unknown",
-      "count": 32826
-    },
-    {
-      "name": "profiles_weak.json",
-      "type": "profiles",
-      "grade": "weak",
-      "count": 21746
+      "grade": "companion",
+      "count": 10861
     },
     {
       "name": "profiles_reliable.json",
       "type": "profiles",
       "grade": "reliable",
-      "count": 24864
-    },
-    {
-      "name": "profiles_companion.json",
-      "type": "profiles",
-      "grade": "companion",
-      "count": 10370
+      "count": 26395
     },
     {
       "name": "profiles_mostly_reliable.json",
       "type": "profiles",
       "grade": "mostly_reliable",
-      "count": 18424
+      "count": 21691
     },
     {
-      "name": "profiles_fabricator.json",
+      "name": "profiles_weak.json",
       "type": "profiles",
-      "grade": "fabricator",
-      "count": 1965
+      "grade": "weak",
+      "count": 21438
     },
     {
       "name": "profiles_abandoned.json",
       "type": "profiles",
       "grade": "abandoned",
-      "count": 1409
+      "count": 1383
+    },
+    {
+      "name": "profiles_fabricator.json",
+      "type": "profiles",
+      "grade": "fabricator",
+      "count": 2102
+    },
+    {
+      "name": "profiles_unknown.json",
+      "type": "profiles",
+      "grade": "unknown",
+      "count": 31242
     }
   ],
-  "total_profiles": 111604,
-  "total_variants": 160570,
+  "total_profiles": 115112,
+  "total_variants": 199820,
   "classical_texts": 22,
-  "graded_pct": 70.6,
-  "version": "4.4"
+  "graded_pct": 72.9,
+  "version": "4.6"
 }

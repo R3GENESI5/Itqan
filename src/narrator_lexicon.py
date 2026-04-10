@@ -177,8 +177,11 @@ ISNAD_VERBS = [
 # Transmission notes
 TRANSMISSION_VERBS = [
     r'(?:روى|يروي|حدث)\s+عن\s',
+    r'حدث\s+عن\s',
     r'سمع\s+(?:من|أبا|ابن|عبد|النبي)',
     r'(?:أخرج|روى)\s+له\s',
+    r'\bعن\s+[\u0600-\u06FF]',   # standalone "عن X" — transmission marker
+    r'\bعنه\b',                   # "عنه" = "from him" — transmission marker
 ]
 
 # Biographical prose
@@ -350,6 +353,45 @@ GRADE_COLORS = {
 }
 
 
+# ── VERB-FORM GRADE KEYWORDS ────────────────────────────────────────
+# Condensed Dhahabi texts (Kashif, Mughni, Diwan) use VERB forms instead
+# of adjectives.  "وثق" (was authenticated) instead of "ثقة" (trustworthy).
+#
+# These are ONLY safe in condensed texts where the verb is a standalone
+# evaluation, not embedded in longer prose.  In encyclopedic texts
+# (Tarikh, Siyar), "وثق" might appear in "ولم يوثقه أحد" (nobody
+# trusted him) — the opposite meaning.
+#
+# Use extract_grade_verbs() for Kashif-family texts.  Use extract_grade()
+# for everything else.
+
+GRADE_VERB_KEYWORDS = [
+    # Reliable verbs
+    ('وثقوه', 'reliable'),      # "they authenticated him"
+    ('وثقه', 'reliable'),       # "he authenticated him"
+    ('وثق', 'reliable'),        # "was authenticated"
+    ('احتج به', 'reliable'),    # "was used as proof"
+    # Weak verbs
+    ('ضعفوه', 'weak'),          # "they weakened him"
+    ('ضعفه', 'weak'),           # "he weakened him"
+    ('لينوه', 'weak'),          # "they deemed him soft"
+    ('لينه', 'weak'),           # "he deemed him soft"
+    # Abandoned verbs
+    ('تركوه', 'abandoned'),     # "they abandoned him"
+    ('تركه', 'abandoned'),      # "he abandoned him"
+    # Fabricator verbs
+    ('كذبوه', 'fabricator'),    # "they called him a liar"
+    ('كذبه', 'fabricator'),     # "he called him a liar"
+]
+
+# Title-as-grade: in condensed texts, these titles ARE the evaluation
+GRADE_TITLE_KEYWORDS = [
+    ('الحافظ', 'reliable'),     # "the memorizer" = high praise
+    ('الإمام', 'reliable'),     # "the leader/imam" = high praise
+    ('حافظ كبير', 'reliable'),  # "great memorizer"
+]
+
+
 # ── BOOK-MEMBERSHIP GRADING ─────────────────────────────────────────
 # When extract_grade() finds nothing in the entry text, the *book itself*
 # is evidence.  A narrator listed in a du'afa collection is weak; one
@@ -442,6 +484,45 @@ def extract_grade(text):
     for keyword, grade in GRADE_KEYWORDS:
         if strip_diacritics(keyword) in clean:
             return grade, keyword
+    return None, None
+
+
+def extract_grade_condensed(text):
+    """Extract grade from CONDENSED texts (Kashif, Mughni, Diwan).
+
+    These texts use verb forms ('وثق') instead of adjectives ('ثقة').
+    Checks negation first, then standard keywords, then verb forms, then titles.
+
+    IMPORTANT: Do NOT use this for encyclopedic texts (Tarikh, Siyar)
+    where verb forms appear in longer sentences with different meanings.
+    e.g. 'ولم يوثقه أحد' = 'nobody trusted him' — the opposite!
+
+    Returns (grade_en, grade_ar) or (None, None).
+    """
+    clean = strip_diacritics(text)
+
+    # 1. Check for NEGATION patterns first — these override everything.
+    #    'لم يوثقه' / 'ما وثقه أحد' = NOT trusted -> weak
+    #    Must check BEFORE standard keywords because 'ثقه' (a keyword)
+    #    is a substring of 'يوثقه' and 'وثقه'.
+    if re.search(r'(?:لم\s+ي|ما\s+)(?:وثق|حتج)', clean):
+        return 'weak', 'لم يوثق'
+
+    # 2. Try standard adjective/noun keywords
+    grade, keyword = extract_grade(text)
+    if grade:
+        return grade, keyword
+
+    # 3. Try verb forms (condensed-text specific)
+    for keyword, grade in GRADE_VERB_KEYWORDS:
+        if strip_diacritics(keyword) in clean:
+            return grade, keyword
+
+    # 4. Try title-as-grade
+    for keyword, grade in GRADE_TITLE_KEYWORDS:
+        if strip_diacritics(keyword) in clean:
+            return grade, keyword
+
     return None, None
 
 
@@ -598,7 +679,42 @@ def clean_narrator_name(raw_name, has_sigla_prefix=False):
     if has_sigla_prefix:
         name = strip_book_prefix(name)
 
-    # 3. Strip leading junk
+    # 3. Strip editorial annotations from critical editions
+    # [الحمصي - 6] -> الحمصي   (manuscript variant footnotes)
+    # (32 م) -> ''              (reference markers)
+    name = re.sub(r'\[\s*([^\]]*?)\s*-\s*\d+\s*\]', r'\1', name)
+    name = re.sub(r'\(\s*\d+\s*[مكدق]?\s*\)', '', name)
+    name = re.sub(r'^\(\s*\d+\s*[مكدق]?\s*\)\s*', '', name)
+
+    # 4. Strip sigla prefix + colon: "م د ت ن: NAME" or "بخ: NAME"
+    #    Also handles "خ NAME" (sigla without colon)
+    name = re.sub(r'^[خمدتسقعبرفهصنل\s]+:\s*', '', name)
+    # Standalone single-letter sigla at start: "خ صدقة" -> "صدقة"
+    # But NOT "خالد" or "محمد" (only match if next char is space)
+    name = re.sub(r'^([خمدتسقعبرفهصن])\s+(?=[^\s])', '', name)
+
+    # 5. Strip evaluation text after colon in name
+    # "أحمد بن الأزهر: حافظ، ثقة" -> "أحمد بن الأزهر"
+    # Only strip if what follows the colon looks like an evaluation, not a name
+    colon_m = re.search(r':\s+', name)
+    if colon_m and colon_m.start() > 5:
+        after_colon = name[colon_m.end():]
+        # It's evaluation text if it starts with a grade word, "قال", or bio marker
+        if re.match(r'(?:ثقة|صدوق|ضعيف|متروك|كذاب|مجهول|حافظ|مقبول|واه|وسط|مقل|لم |لا |قال |كان |له |من |عن |محدث|صاحب)', after_colon):
+            name = name[:colon_m.start()]
+        # Or if what follows is a name (starts with proper name), keep it — it's a kunya/alias
+        # "أحمد بن أبي الطيب: سليمان" -> keep both (alias)
+
+    # 6. Strip leading conjunction prefix: "والحافظ X" -> "الحافظ X", "وأحمد" -> "أحمد"
+    if name.startswith('و') and len(name) > 2:
+        after_waw = name[1:]
+        # Only strip if what follows is a name-like word, not "وهب"/"واصل" etc
+        first_after = after_waw.split()[0] if after_waw.split() else ''
+        REAL_WAW_NAMES = {'هب', 'اصل', 'ائل', 'كيع', 'اقد', 'اسط', 'اثلة', 'الد', 'رقاء', 'حشي', 'ابصة'}
+        if first_after and first_after not in REAL_WAW_NAMES and not after_waw.startswith('و'):
+            name = after_waw
+
+    # 7. Strip leading junk
     name = re.sub(r'^[-–—]+\s*', '', name)
     name = re.sub(r'^\(\s*\d+\s*[تقخمدسعم\s]*\d*\s*\)\s*', '', name)
     name = re.sub(r'^\d+\s*\|\s*', '', name)
@@ -639,9 +755,15 @@ def clean_narrator_name(raw_name, has_sigla_prefix=False):
     # 8. Normalize whitespace
     name = re.sub(r'\s+', ' ', name).strip()
 
-    # 9. Remove HTML/stray markup
+    # 9. Remove HTML/stray markup and symbols
     name = re.sub(r'<[^>]+>', '', name)
     name = name.replace('@', '').replace('$', '').replace('*', '')
+
+    # 10. Strip trailing digits (death years, ref numbers leaked into name)
+    name = re.sub(r'\s+\d{1,4}\s*$', '', name)
+    # Strip sigla-colon at start (سعيد: عن أبي → سعيد)
+    name = re.sub(r':\s+عن\s.*$', '', name)
+    name = re.sub(r':\s+(?:محدث|مجهول|مقبول|وسط|مقل|لا يعرف).*$', '', name)
 
     # 10. Length limit (names > 120 chars have prose leak)
     if len(name) > 120:

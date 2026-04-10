@@ -35,17 +35,20 @@ OUT.mkdir(exist_ok=True)
 # Shared utilities
 # ──────────────────────────────────────────────────────────────────────
 
-DIACRITICS_RE = re.compile(
-    r'[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC'
-    r'\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]'
+# Import shared lexicon (single source of truth for boundary logic)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from narrator_lexicon import (
+    GRADE_KEYWORDS, GRADE_COLORS, ABD_COMPOUNDS, SIGLA, BOOK_NAMES,
+    COMPANION_MARKERS, BOOK_GRADE_DEFAULTS,
+    GRADE_VERB_KEYWORDS, GRADE_TITLE_KEYWORDS,
+    DIACRITICS_RE, strip_diacritics,
+    extract_grade, extract_grade_condensed, apply_book_default,
+    clean_narrator_name, strip_book_prefix, truncate_at_biography,
+    fix_abd_compound, is_valid_name, is_cross_reference,
 )
+
 PAGE_RE    = re.compile(r'PageV\d+P\d+')
 MS_RE      = re.compile(r'ms\d+')
-TATWEEL_RE = re.compile(r'\u0640')
-
-
-def strip_diacritics(t):
-    return DIACRITICS_RE.sub('', t)
 
 
 def clean_openiti(text):
@@ -85,78 +88,13 @@ def split_entries(text, pattern):
     return entries
 
 
-# Six Books sigla → full name mapping
-SIGLA_MAP = {
-    'خ': 'البخاري', 'م': 'مسلم', 'د': 'أبو داود',
-    'ت': 'الترمذي', 'س': 'النسائي', 'ق': 'ابن ماجه',
-    'ع': 'الستة', 'بخ': 'الأدب المفرد',
-    'كن': 'مسند مالك', 'فق': 'التفسير',
-    'ر': 'الرموز', '4': 'الأربعة',
-    'تمييز': 'تمييز',
-}
+# (SIGLA_MAP, GRADE_KEYWORDS, GRADE_COLORS, extract_grade, clean_name
+#  are now imported from narrator_lexicon.py above)
 
-# Grade keywords → normalized grade (priority order)
-GRADE_KEYWORDS = [
-    # Companion
-    ('صحابي', 'companion'), ('صحابية', 'companion'), ('له صحبة', 'companion'),
-    ('لها صحبة', 'companion'),
-    # Reliable
-    ('ثقة ثبت', 'reliable'), ('ثقة حافظ', 'reliable'), ('ثقة متقن', 'reliable'),
-    ('ثقة', 'reliable'),
-    # Mostly reliable
-    ('صدوق حسن', 'mostly_reliable'), ('صدوق له أوهام', 'mostly_reliable'),
-    ('صدوق يخطئ', 'mostly_reliable'), ('صدوق يهم', 'mostly_reliable'),
-    ('صدوق', 'mostly_reliable'),
-    ('لا بأس به', 'mostly_reliable'), ('مقبول', 'mostly_reliable'),
-    ('حسن الحديث', 'mostly_reliable'),
-    # Weak
-    ('ضعيف', 'weak'), ('لين الحديث', 'weak'), ('لين', 'weak'),
-    ('فيه لين', 'weak'), ('فيه ضعف', 'weak'), ('سيئ الحفظ', 'weak'),
-    # Abandoned
-    ('متروك', 'abandoned'), ('منكر الحديث', 'abandoned'),
-    # Fabricator
-    ('كذاب', 'fabricator'), ('وضاع', 'fabricator'), ('يضع', 'fabricator'),
-    # Unknown
-    ('مجهول الحال', 'unknown'), ('مجهول', 'unknown'), ('مستور', 'unknown'),
-]
-
-GRADE_COLORS = {
-    'companion':       '#9b59b6',
-    'reliable':        '#2ecc71',
-    'mostly_reliable': '#f39c12',
-    'weak':            '#e74c3c',
-    'abandoned':       '#c0392b',
-    'fabricator':      '#8b0000',
-    'unknown':         '#95a5a6',
-}
-
-
-def extract_grade(text):
-    """Extract the highest-priority grade from Arabic text."""
-    clean = strip_diacritics(text)
-    for keyword, grade in GRADE_KEYWORDS:
-        if strip_diacritics(keyword) in clean:
-            return grade, keyword
-    return None, None
-
-
+# Legacy alias for backward compat in parsers that call clean_name()
 def clean_name(name):
-    """Remove phonetic/explanatory notes from narrator names."""
-    # Remove بضم/بفتح/بكسر pronunciation guides
-    name = re.sub(r'\s+ب(?:ضم|فتح|كسر|سكون)\s+[\u0600-\u06FF]+(?:\s+[\u0600-\u06FF]+)*', '', name)
-    # Remove بعدها/وبعدها descriptors
-    name = re.sub(r'\s+(?:و)?بعدها\s+[\u0600-\u06FF]+', '', name)
-    # Remove وآخره descriptor
-    name = re.sub(r'\s+وآخره\s+[\u0600-\u06FF]+', '', name)
-    # Remove باسم الحيوان المعروف and similar glosses
-    name = re.sub(r'\s+باسم\s+[\u0600-\u06FF\s]+', '', name)
-    # Remove يكنى أبا/يعرف ب descriptors
-    name = re.sub(r'\s+(?:يكنى|يعرف)\s+.*$', '', name)
-    # Remove بالتحتانية and similar
-    name = re.sub(r'\s+بال[\u0600-\u06FF]+ية', '', name)
-    # Remove مصغر/مكبر
-    name = re.sub(r'\s+مصغر[ا]?', '', name)
-    return name.strip()
+    """Legacy wrapper. Use clean_narrator_name() for new code."""
+    return clean_narrator_name(name, has_sigla_prefix=False)
 
 
 def extract_death_year(text):
@@ -373,6 +311,7 @@ def parse_tahdhib_kamal(text):
         # Take the first sentence as the name
         name_end = re.search(r'[.،]', name)
         full_name = name[:name_end.start()].strip() if name_end else name.strip()
+        full_name = clean_name(full_name)
 
         # Extract kunya from header
         kunya = extract_kunya(header)
@@ -468,6 +407,7 @@ def parse_mizan(text):
             full_name = name[:name_end.start()].strip()
         else:
             full_name = re.split(r'[،,]', name)[0].strip()
+        full_name = clean_name(full_name)
 
         # Extract grade from header first (Mizan often has it inline), then body
         grade_en, grade_ar = extract_grade(header)
@@ -475,6 +415,9 @@ def parse_mizan(text):
             grade_en, grade_ar = extract_grade(body)
 
         kunya = extract_kunya(header_clean)
+
+        # Mizan is a criticism book — default to weak if no grade found
+        grade_en, grade_ar = apply_book_default(grade_en, grade_ar, 'mizan_itidal')
 
         entries.append({
             'id': num,
@@ -540,6 +483,7 @@ def parse_jarh_tadil(text):
         name_end = re.search(r'\s+(?:روى|حدثنا|سمعت|نا\s)', name)
         full_name = name[:name_end.start()].strip() if name_end else name.strip()
         full_name = re.sub(r'\.\s*$', '', full_name)
+        full_name = clean_name(full_name)
 
         grade_en, grade_ar = extract_grade(eval_text)
         kunya = extract_kunya(name)
@@ -749,47 +693,19 @@ def parse_tahdhib_tahdhib(text):
         num = int(match.group(1))
         header = match.group(2).strip()
 
-        # Strip leading sigla and full book names
-        # Pattern: single letters (خ م د ت س ق ع) or book names (البخاري, مسلم, etc.)
-        # at the start, followed by the actual narrator name
-        BOOK_NAMES = [
-            'البخاري', 'مسلم', 'أبي داود', 'الترمذي', 'النسائي',
-            'ابن ماجة', 'مسند مالك', 'في التفسير', 'تمييز',
-            'الأدب المفرد', 'الستة', 'الأربعة',
-        ]
-        name = header
-        # Strip sigla prefix: single letters, multi-letter codes, and full book names
-        # Loop to handle chained sigla like "م د ت ق مسلم وأبي داود والترمذي وابن ماجة"
-        SIGLA_CODES = {'خ', 'م', 'د', 'ت', 'س', 'ق', 'ع', 'بخ', 'كن', 'فق', 'ر'}
-        for _ in range(10):  # max iterations
-            old = name
-            # Strip single/multi-letter sigla codes
-            m = re.match(r'^(' + '|'.join(re.escape(s) for s in sorted(SIGLA_CODES, key=len, reverse=True)) + r')\s+', name)
-            if m:
-                name = name[m.end():]
-                continue
-            # Strip full book names
-            stripped = False
-            for bn in BOOK_NAMES:
-                if name.startswith(bn):
-                    name = name[len(bn):].lstrip()
-                    if name.startswith('و'):
-                        name = name[1:].lstrip()
-                    stripped = True
-                    break
-            if stripped:
-                continue
-            # Strip leading و before sigla
-            if name.startswith('و') and len(name) > 1:
-                rest = name[1:].lstrip()
-                if any(rest.startswith(s + ' ') or rest.startswith(s + '\t') for s in SIGLA_CODES) or any(rest.startswith(bn) for bn in BOOK_NAMES):
-                    name = rest
-                    continue
-            break
+        # Use lexicon's strip_book_prefix — handles مسلم/مالك ambiguity
+        name = strip_book_prefix(header)
+
+        # Check for cross-reference entries (بن X هو Y)
+        is_xref, xref_target = is_cross_reference(name, body[:100])
+
         # Trim name at "روى عن" or similar
         name_end = re.search(r'\s+(?:روى\s|نزيل\s|والد\s|صوابه\s)', name)
         if name_end and name_end.start() > 10:
             name = name[:name_end.start()].strip()
+
+        # Restore عبد compounds
+        name = fix_abd_compound(name)
 
         # Extract grade from body
         grade_en, grade_ar = extract_grade(body)
@@ -805,6 +721,8 @@ def parse_tahdhib_tahdhib(text):
             'color': GRADE_COLORS.get(grade_en or 'unknown', '#95a5a6'),
             'death': death,
             'source': 'tahdhib_tahdhib',
+            'is_xref': is_xref,
+            'xref_target': xref_target or '',
         })
 
     return entries
@@ -1112,11 +1030,9 @@ def parse_tarikh_islam(text):
         kunya = extract_kunya(name)
         grade_en, grade_ar = extract_grade(body_clean[:500])
 
-        # Companion detection
+        # Companion detection (shared markers from lexicon)
         if not grade_en:
-            comp_markers = ['صحابي', 'صاحب رسول', 'شهد بدرا', 'من السابقين',
-                           'أحد العشرة', 'من المهاجرين', 'أسلم قديما']
-            if any(m in body_clean[:400] for m in comp_markers):
+            if any(m in body_clean[:400] for m in COMPANION_MARKERS):
                 grade_en = 'companion'
                 grade_ar = 'صحابي'
 
@@ -1175,6 +1091,8 @@ def parse_lisan_mizan(text):
         kunya = extract_kunya(name)
         death = extract_death_year(header + ' ' + body_clean[:500])
         grade_en, grade_ar = extract_grade(header + ' ' + body_clean[:500])
+        # Lisan al-Mizan is an expansion of Mizan — default to weak
+        grade_en, grade_ar = apply_book_default(grade_en, grade_ar, 'lisan_mizan')
 
         entries.append({
             'id': num,
@@ -1303,7 +1221,8 @@ def parse_kashif(text):
         else:
             death = extract_death_year(full_text)
 
-        grade_en, grade_ar = extract_grade(full_text[:500])
+        # Kashif is condensed — uses verb forms (وثق, ضعفه) not adjectives
+        grade_en, grade_ar = extract_grade_condensed(full_text[:500])
 
         # Sigla at end (خ م د ت س ق ع)
         books = []
@@ -1321,6 +1240,119 @@ def parse_kashif(text):
             'death': death,
             'books': books,
             'source': 'kashif',
+        })
+
+    return entries
+
+
+def parse_dhahabi_generic(text, source_id, numbered=True, default_grade=None,
+                          detect_companion_sections=False):
+    """Generic parser for al-Dhahabi's shorter biographical works.
+    Uses shared lexicon for name cleaning and grade extraction.
+
+    Args:
+        detect_companion_sections: If True, tracks section headers and grades
+            entries before the tabi'in section as 'companion'. Used for
+            mucin_tabaqat which has no inline grades — the book structure
+            IS the classification.
+    """
+    lines = text.split('\n')
+    joined = []
+    for line in lines:
+        if line.startswith('~~'):
+            if joined:
+                joined[-1] += ' ' + line[2:].strip()
+            else:
+                joined.append(line[2:].strip())
+        else:
+            joined.append(line)
+
+    full = '\n'.join(joined)
+    full = PAGE_RE.sub('', full)
+    full = MS_RE.sub('', full)
+
+    # Build section map for structural grading
+    # Sections before "تابعين" / "الطبقة" are companion sections
+    in_companion_section = True if detect_companion_sections else False
+    section_boundaries = {}  # line_offset -> is_companion
+    if detect_companion_sections:
+        for m in re.finditer(r'^### \|+\s*(.+)', full, re.MULTILINE):
+            sec_text = m.group(1)
+            # Once we hit tabi'in or tabaqat markers, we're past companions
+            if 'تابع' in sec_text or 'الطبقة' in sec_text or 'طبقة' in sec_text:
+                section_boundaries[m.start()] = False
+            elif 'صحاب' in sec_text or 'النساء' in sec_text:
+                section_boundaries[m.start()] = True
+
+    if numbered:
+        entry_re = re.compile(r'^### \$ (\d+)\s*(.*)', re.MULTILINE)
+    else:
+        entry_re = re.compile(r'^### \$ ()(.*)', re.MULTILINE)
+
+    raw_entries = split_entries(full, entry_re)
+    entries = []
+
+    for idx, (match, body) in enumerate(raw_entries):
+        num = int(match.group(1)) if match.group(1) else idx
+        header = match.group(2).strip()
+
+        # Track section for structural grading
+        if detect_companion_sections:
+            entry_pos = match.start()
+            for boundary_pos in sorted(section_boundaries.keys()):
+                if boundary_pos < entry_pos:
+                    in_companion_section = section_boundaries[boundary_pos]
+
+        body_clean = re.sub(r'^#\s+', '', body, flags=re.MULTILINE)
+        body_clean = re.sub(r'\s+', ' ', body_clean).strip()
+
+        # Determine if header has the name or just sigla
+        header_stripped = re.sub(r'^[خمدتسقعبرفه\s]+$', '', header).strip()
+
+        if header_stripped:
+            name_text = header_stripped
+        else:
+            name_text = body_clean[:200]
+
+        # Clean using shared lexicon
+        name = clean_narrator_name(name_text, has_sigla_prefix=False)
+
+        if not name or len(name) < 3 or not re.search(r'[\u0600-\u06FF]', name):
+            continue
+
+        kunya = extract_kunya(name)
+        full_text = header + ' ' + body_clean
+        death = extract_death_year(full_text[:600])
+        grade_en, grade_ar = extract_grade(full_text[:600])
+
+        # Apply default grade for du'afa books
+        if not grade_en and default_grade:
+            grade_en = default_grade
+            grade_ar = ''
+
+        # Apply book-membership default
+        grade_en, grade_ar = apply_book_default(grade_en, grade_ar, source_id)
+
+        # Companion detection: inline markers
+        if grade_en == 'unknown':
+            if any(m in full_text[:500] for m in COMPANION_MARKERS):
+                grade_en = 'companion'
+                grade_ar = 'صحابي'
+
+        # Companion detection: structural (section-based)
+        if detect_companion_sections and in_companion_section and grade_en == 'unknown':
+            grade_en = 'companion'
+            grade_ar = 'قسم الصحابة'
+
+        entries.append({
+            'id': num,
+            'name': name,
+            'kunya': kunya,
+            'grade_en': grade_en or 'unknown',
+            'grade_ar': grade_ar or '',
+            'color': GRADE_COLORS.get(grade_en or 'unknown', '#95a5a6'),
+            'death': death,
+            'source': source_id,
         })
 
     return entries
@@ -1406,6 +1438,41 @@ PARSERS = {
         'parser': parse_kashif,
         'title': 'Al-Kashif (al-Dhahabi)',
     },
+    'tadhkirat_huffaz': {
+        'file': 'tadhkirat_huffaz.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'tadhkirat_huffaz', numbered=True),
+        'title': 'Tadhkirat al-Huffaz (al-Dhahabi)',
+    },
+    'mughni_ducafa': {
+        'file': 'mughni_ducafa.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'mughni_ducafa', numbered=True, default_grade='weak'),
+        'title': "Al-Mughni fi al-Du'afa (al-Dhahabi)",
+    },
+    'diwan_ducafa': {
+        'file': 'diwan_ducafa.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'diwan_ducafa', numbered=True, default_grade='weak'),
+        'title': "Diwan al-Du'afa (al-Dhahabi)",
+    },
+    'dhayl_diwan': {
+        'file': 'dhayl_diwan.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'dhayl_diwan', numbered=True, default_grade='weak'),
+        'title': "Dhayl Diwan al-Du'afa (al-Dhahabi)",
+    },
+    'mucjam_shuyukh': {
+        'file': 'mucjam_shuyukh.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'mucjam_shuyukh', numbered=False),
+        'title': "Mu'jam al-Shuyukh (al-Dhahabi)",
+    },
+    'macrifa_qurra': {
+        'file': 'macrifa_qurra.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'macrifa_qurra', numbered=True),
+        'title': "Ma'rifat al-Qurra al-Kibar (al-Dhahabi)",
+    },
+    'mucin_tabaqat': {
+        'file': 'mucin_tabaqat.txt',
+        'parser': lambda text: parse_dhahabi_generic(text, 'mucin_tabaqat', numbered=True, detect_companion_sections=True),
+        'title': "Al-Mu'in fi Tabaqat al-Muhaddithin (al-Dhahabi)",
+    },
 }
 
 
@@ -1419,6 +1486,33 @@ def run_parser(key, stats_only=False):
     print(f"  Parsing {info['title']}...")
     text = path.read_text(encoding='utf-8')
     entries = info['parser'](text)
+
+    # ── Universal post-processing gate ──────────────────────────────
+    # Every name passes through clean_narrator_name() regardless of
+    # what the individual parser did. This catches transmission chains,
+    # reference numbers, verb leakage, and other artifacts that
+    # per-parser cleaning may have missed.
+    cleaned = 0
+    dropped = 0
+    for e in entries:
+        raw = e.get('name', '')
+        fixed = clean_narrator_name(raw, has_sigla_prefix=False)
+        # Also strip lisan_mizan reference patterns: (1: 5/ 1)
+        fixed = re.sub(r'\(\d+:\s*\d+[^)]*\)', '', fixed).strip()
+        fixed = re.sub(r'\(\d+\s*/\s*\d+[^)]*\)', '', fixed).strip()
+        # Strip leading sigla + comma: "خت4 ," or "د س ,"
+        fixed = re.sub(r'^[خمدتسقعبرفهصنل\d\s]+[,،]\s*', '', fixed).strip()
+        # Strip leading (ه) or (ز) editor markers
+        fixed = re.sub(r'^\([هزعص]\)\s*', '', fixed).strip()
+        if fixed != raw:
+            cleaned += 1
+        e['name'] = fixed
+    # Drop entries with empty/invalid names
+    before = len(entries)
+    entries = [e for e in entries if e.get('name', '').strip() and len(e['name']) >= 2]
+    dropped = before - len(entries)
+    if cleaned or dropped:
+        print(f"    -> post-clean: {cleaned} names fixed, {dropped} dropped")
 
     # Stats
     grade_dist = Counter(e['grade_en'] for e in entries)

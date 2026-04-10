@@ -60,16 +60,16 @@
 </div>
 
 <div class="scale">
-    <h2>Current Scale (v3.0)</h2>
+    <h2>Current Scale (v4.0)</h2>
     <div class="scale-grid">
         <div class="scale-card"><div class="scale-n">112,221</div><div class="scale-l">Hadiths</div></div>
         <div class="scale-card"><div class="scale-n">96.3%</div><div class="scale-l">Quran roots connected</div></div>
         <div class="scale-card"><div class="scale-n">1.53M</div><div class="scale-l">Root links</div></div>
-        <div class="scale-card"><div class="scale-n">111,604</div><div class="scale-l">Narrator profiles</div></div>
-        <div class="scale-card"><div class="scale-n">70.6%</div><div class="scale-l">Narrators graded</div></div>
+        <div class="scale-card"><div class="scale-n">115,112</div><div class="scale-l">Narrator profiles</div></div>
+        <div class="scale-card"><div class="scale-n">72.9%</div><div class="scale-l">Narrators graded</div></div>
         <div class="scale-card"><div class="scale-n">22</div><div class="scale-l">Classical texts parsed</div></div>
         <div class="scale-card"><div class="scale-n">99.5%</div><div class="scale-l">Clean names</div></div>
-        <div class="scale-card"><div class="scale-n">96%</div><div class="scale-l">Uniquely identified</div></div>
+        <div class="scale-card"><div class="scale-n">77%</div><div class="scale-l">Grading accuracy</div></div>
     </div>
 </div>
 
@@ -314,6 +314,32 @@
             intersection), we found exactly 2 safe merges out of 77,794 profiles. The algorithmic
             approach hit its ceiling. The real solution isn't better code. It's better data: curated
             IDs from scholars who already solved this problem by hand.
+        </div>
+    </div>
+
+    <!-- v4.6 -->
+    <div class="version">
+        <div class="v-header"><span class="v-tag">v4.0</span><span class="v-date">April 10-11, 2026</span></div>
+        <div class="v-title">Gawami al-Kalim + Grading Engine (77%)</div>
+        <div class="v-story">
+            Found a 2.8GB Windows desktop app (Gawami al-Kalim 4.5, Qatar Endowments, 2010) archived
+            on archive.org. Cracked 10 custom .TBX binary files to extract 49,845 narrator profiles,
+            549k chain links, 38k isnad evaluations, 4.1M extended links. All converted to JSON (731 MB).
+            Discovered Books.zip: 1,004 hadith collections with narrator L-tags (GK IDs embedded in text).
+            <br><br>
+            Built a hadith grading engine using the weakest-link rule. Starting accuracy: 50%.
+            Fixed chain direction (isnads go backward). Integrated AR-Sanad's bidirectional chains (234k links).
+            Fame-based disambiguation (famous narrators need no qualifier). The comma revelation:
+            يعني clarifications are disambiguation hints, not noise. Albani reverse loop: 40k graded
+            hadiths upgrade 587 narrator grades from statistical evidence. HokmText: 312 more fixes.
+            <br><br>
+            Final accuracy: 77% vs Albani. 115,112 profiles, 72.9% graded, 199,820 name variants.
+        </div>
+        <div class="v-stats">
+            <div class="v-stat"><b>115,112</b> narrator profiles</div>
+            <div class="v-stat"><b>72.9%</b> graded</div>
+            <div class="v-stat"><b>77%</b> grading accuracy</div>
+            <div class="v-stat"><b>49,845</b> GK narrators mapped</div>
         </div>
     </div>
 

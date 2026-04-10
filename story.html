@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itqan. The Story</title>
+    <title>Itqan — The Story</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0f; color: #e0d8c8; line-height: 1.8; }
@@ -12,26 +12,30 @@
         .top-nav { display: flex; gap: 12px; padding: 14px 24px; background: rgba(18,14,10,.92); border-bottom: 1px solid #2a2420; font-size: .85rem; flex-wrap: wrap; }
         .top-nav a { color: #8a8070; padding: 2px 10px; border: 1px solid #333; border-radius: 4px; }
         .top-nav a:hover { color: #d4a855; border-color: #d4a855; text-decoration: none; }
-
         .hero { text-align: center; padding: 3rem 1.5rem 2rem; max-width: 700px; margin: 0 auto; }
         .hero h1 { font-family: 'Amiri', serif; font-size: 2.4rem; color: #d4a855; margin-bottom: .5rem; }
         .hero .subtitle { color: #8a8070; font-size: 1rem; font-style: italic; }
-
         .content { max-width: 680px; margin: 0 auto; padding: 0 1.5rem 3rem; }
         .content h2 { color: #d4a855; font-size: 1.3rem; margin: 2.5rem 0 .75rem; font-weight: 600; }
         .content p { color: #b0a898; font-size: .95rem; margin-bottom: 1.2rem; }
         .content .highlight { color: #e0d8c8; font-weight: 500; }
         .content .arabic { font-family: 'Amiri', serif; font-size: 1.15rem; color: #d4a855; direction: rtl; text-align: center; margin: 1.5rem 0; line-height: 2; }
         .content .verse-ref { font-size: .8rem; color: #666; text-align: center; margin-top: -1rem; margin-bottom: 1.5rem; }
-
         .milestone { background: #1a1612; border-left: 3px solid #d4a855; padding: 14px 18px; margin: 1.5rem 0; border-radius: 0 6px 6px 0; }
         .milestone .date { font-size: .75rem; color: #d4a855; text-transform: uppercase; letter-spacing: .1em; }
         .milestone .text { font-size: .9rem; color: #a09888; margin-top: 4px; }
-
+        .books { background: rgba(212,168,85,.04); border: 1px solid rgba(212,168,85,.15); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0; font-size: .88rem; color: #a09888; line-height: 1.7; }
+        .books strong { color: #d4a855; }
+        .gk-data { background: rgba(74,170,112,.04); border: 1px solid rgba(74,170,112,.2); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0; }
+        .gk-data h3 { color: #4aaa70; font-size: .95rem; margin-bottom: 8px; }
+        .gk-data p { color: #9aaa98; font-size: .85rem; margin-bottom: 6px; }
+        .gk-data code { color: #8a8070; background: #1a1612; padding: 1px 6px; border-radius: 3px; font-size: .8rem; }
         .next { background: rgba(74,170,112,.06); border: 1px solid rgba(74,170,112,.2); border-radius: 8px; padding: 18px 22px; margin: 2rem 0; }
         .next h3 { color: #4aaa70; font-size: 1rem; margin-bottom: 8px; }
         .next p { color: #9aaa98; font-size: .9rem; }
-
+        .notice { max-width: 680px; margin: 0 auto; padding: 16px 20px; border: 1px solid rgba(74,170,112,.25); border-radius: 8px; background: rgba(74,170,112,.04); text-align: left; font-size: .8rem; line-height: 1.7; color: #9aaa98; }
+        .notice-title { color: #4aaa70; font-weight: 600; }
+        .notice-verse { margin-top: 10px; color: rgba(74,170,112,.5); font-size: 1rem; direction: rtl; font-family: 'Amiri', serif; letter-spacing: .02em; line-height: 1.9; }
         .footer { text-align: center; padding: 2rem; border-top: 1px solid #1e1a16; color: #555; font-size: .82rem; }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +54,7 @@
 
 <div class="hero">
     <h1>The Story Behind Itqan</h1>
-    <div class="subtitle">How reading the Quran word by word led to the first computational concordance</div>
+    <div class="subtitle">From reading the Quran word by word to building the first computational concordance and hadith grading engine</div>
 </div>
 
 <div class="content">
@@ -63,14 +67,14 @@
 
     <p>But I kept going. The Quran was a friend through all those years. A companion.</p>
 
-    <h2>2003&ndash;2010: when friendship became love</h2>
+    <h2>2003 to 2010: when friendship became love</h2>
 
     <p>From 2003 to 2010, something shifted. I could not live without the Quran. Every day, whatever I could do: listening to it, trying to recite it, sitting with it even when I didn't understand every word. I didn't know Arabic. I didn't have a teacher. But I had the Book, and I had the desperate desire to understand it.</p>
 
     <p>The way I learned was the only way I knew: I would read an ayah, then search the entire Quran for every other ayah that used the same word. Because Allah says:</p>
 
     <div class="arabic">وَنَزَّلْنَا عَلَيْكَ الْكِتَابَ تِبْيَانًا لِّكُلِّ شَيْءٍ</div>
-    <div class="verse-ref">An-Nahl 16:89. "And We have sent down to you the Book as a clarification for all things"</div>
+    <div class="verse-ref">An-Nahl 16:89, "And We have sent down to you the Book as a clarification for all things"</div>
 
     <p>Allah says the Quran explains itself, one part is explained by another. I experienced this firsthand. The word used in one surah carries a shade of meaning that only becomes clear when you see how the same root appears in another surah, in a different context. But finding those connections manually was exhausting. I would read an ayah with the word <span class="highlight">رِزْق</span> (provision) and want to find every other ayah that talks about provision. Not just رزق but يَرْزُقُ، رَازِقِينَ، الرَّزَّاقُ. All the same root, all different forms. How do you find them without knowing every morphological pattern?</p>
 
@@ -82,7 +86,7 @@
 
     <p>At the time, I didn't know Wensinck's hadith concordance existed. I didn't know anyone had ever tried to index hadith by root. All I knew was: Fuad Abd al-Baqi's book helped me find Quran words by root, and I wished someone had done the same thing for hadith.</p>
 
-    <h2>2015&ndash;2017: my only companion</h2>
+    <h2>2015 to 2017: my only companion</h2>
 
     <p>From 2015 to 2017, the Quran was my everything. My happiness, my sadness, my tears of joy, my embrace. I was memorizing it. I could not bear to be separated from it. Every surah I memorized became part of me.</p>
 
@@ -110,217 +114,153 @@
 
     <p>The question was obvious: what about the Sunnah? The Prophet ﷺ explained the Quran. His words used the same Arabic roots. If I could connect Quranic roots to hadith roots, I would have the first tool that bridges both corpora computationally, through shared morphology.</p>
 
-    <p>What followed was the most intense period of development. Every day a new exploration, every day a new problem solved, every day the corpus grew and the connections deepened.</p>
+    <p>What followed was the most intense period of development. Every day a new exploration, every day a new problem solved, every day the corpus grew and the connections deepened. And every day, I am utterly astounded by Allah's mercy. How He helps me. How He lets me do it. Something appears in my inbox, a random video, a link, anything that comes my way, and it adds a layer into the project I didn't know was missing. This entire journey has been guided in ways I cannot explain rationally.</p>
 
     <h2>And then I discovered Wensinck</h2>
 
-    <p>It was only <em>during</em> development that I learned about <span class="highlight">Wensinck.s hadith concordance</span>, a 7-volume work that a team of European orientalists spent from 1936 to 1969 compiling, doing for 9 hadith books what Fuad Abd al-Baqi did for the Quran. I had been building the same thing computationally without knowing it already existed in physical form.</p>
+    <p>It was only <em>during</em> development that I learned about <span class="highlight">Wensinck's hadith concordance</span>, a 7-volume work that a team of European orientalists spent from 1936 to 1969 compiling, doing for 9 hadith books what Fuad Abd al-Baqi did for the Quran. I had been building the same thing computationally without knowing it already existed in physical form.</p>
 
-    <p>But Wensinck's concordance and Fuad Abd al-Baqi's concordance existed in complete isolation. <span class="highlight">No one had ever connected them.</span> The Quran concordance knew about Quran roots. The hadith concordance knew about hadith words. Neither bridged the two.</p>
+    <p>But Wensinck's concordance and Fuad Abd al-Baqi's concordance existed in complete isolation. <span class="highlight">No one had ever connected them.</span> Later, Wensinck's methodology would solve a problem I couldn't solve alone: 315 Quranic roots that my primary stemmer couldn't match to hadiths. Two methods, built independently, cross-validating each other. Root coverage jumped from 81% to 96.3%.</p>
 
-    <p>That bridge, connecting Quran roots to hadith roots, is what Itqan builds. And later, Wensinck's methodology would solve a problem I couldn't solve alone: 315 Quranic roots that my primary stemmer couldn't match to hadiths. Building an independent concordance using Wensinck's light-stemmer approach recovered 254 of them. <span class="highlight">Two methods, built independently, cross-validating each other.</span></p>
+    <h2>The problems that made me laugh and cry</h2>
 
-    <h2>Little by little, every day</h2>
-
-    <p>I started. Little by little. One problem at a time. Every day was a new exploration. And every day, I am utterly astounded by Allah's mercy. How He helps me. How He lets me do it. Something appears in my inbox, a random video, a link, anything that comes my way, and it adds a layer into the project I didn't know was missing. This entire journey has been guided in ways I cannot explain rationally.</p>
-
-    <div class="milestone">
-        <div class="date">The Quran concordance</div>
-        <div class="text">Root databases, stem mappings, ayah-root connections. Every word in the Quran traced to its trilateral root. 1,651 roots mapped across 6,236 ayahs. Integrated al-Raghib al-Isfahani's <em>Mufradat</em> and the <em>Furuq al-Lughawiyyah</em>. Grouped roots into semantic families: mercy, justice, prayer, provision, eschatology. Built Mutashabihat ul-Quran, matching verses that share roots. The Quran bil-Quran app went live.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The hadith bridge, and the first heartbreak</div>
-        <div class="text">The Quran concordance worked. Now: what about the Sunnah? Downloaded 49,000 hadiths. Ran every Arabic word through CAMeL Tools. 32,413 words mapped to roots. Built the bridge: for each Quranic root, find every hadith sharing it. 384,016 connections appeared. I was ecstatic. Then I clicked a root and the hadiths were wrong. Completely unrelated hadiths were showing up. The bridge was broken.</div>
-    </div>
+    <p>Every step forward revealed a new problem. Some were so absurd I had to laugh. Others made me want to give up.</p>
 
     <div class="milestone">
         <div class="date">The roots wouldn't transfer</div>
-        <div class="text">This was the most frustrating period. The Quran uses one canonical form for a root, CAMeL Tools uses another. قضي in the Quran becomes قضو in CAMeL. بيع becomes بوع. أمن becomes ومن. 315 Quranic roots returned zero hadith matches. Not because the words didn't exist in the hadiths, but because the two systems disagreed on what to call the root. I built an alias map, 131 entries, painstakingly cross-referencing Quran forms to CAMeL forms. It recovered thousands of connections. But 315 roots still showed zero. I was stuck.</div>
+        <div class="text">The Quran uses one canonical form for a root, CAMeL Tools uses another. قضي becomes قضو. بيع becomes بوع. 315 Quranic roots returned zero hadith matches. Not because the words didn't exist, but because the two systems disagreed on what to call the root. I built an alias map, 196 entries, painstakingly cross-referencing forms. Still stuck. Then the Wensinck concordance solved it.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Ayah markers and shifting words</div>
-        <div class="text">Then a different problem. The roots were not following the words. I would click a word and get the definition of the wrong word. At first it was off by one. Then by two. Then by ten. Then by fifty. Then by hundreds. By the time I reached the later surahs, the lag was thousands of words. Clicking a word in Surah Al-Nas would give me the root of a word from Surah Al-Baqarah. I had no clue what was happening. It turned out that every ayah marker, every delimiter, every verse number in the text was being counted as a "word" by the tokenizer. Each one pushed every subsequent root assignment further and further off. The lag accumulated across the entire Quran. The fix was invisible but fundamental: strip every non-word token before mapping roots to positions.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Defective roots and hollow verbs</div>
-        <div class="text">Arabic has "defective" verbs where the third root letter is weak (و or ي). These change form unpredictably. هدي becomes هدو. صلي becomes صلو. The root extraction would work for strong verbs but fail silently on these. I would search for a root I knew existed in hadith and get nothing back. Completely dumbfounded. The fix required understanding classical Arabic morphological patterns that I had never formally studied.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">No JSONs anywhere</div>
-        <div class="text">Nothing was available as structured data. The classical texts existed only as PDFs, scanned books, DjVu files. I had to OCR them, extract text, write custom parsers for each format. The output was messy, full of artifacts, misread characters, broken diacritics. Every source required a different parser. Arnaut's Musnad Ahmad grades were in a DOCX file on Archive.org. Riyad al-Salihin grades were embedded in inline Arabic text on web pages. The 8 classical rijal texts were in OpenITI's mARkdown format, each with a different internal structure. Every single data source was a struggle to extract clean, usable data from.</div>
+        <div class="date">The ayah markers ate the words</div>
+        <div class="text">Clicking a word gave me the definition of the wrong word. At first off by one. Then by ten. Then by fifty. Then by hundreds. By the later surahs, the lag was thousands of words. Every ayah marker, every delimiter, every verse number was being counted as a "word" by the tokenizer. The lag accumulated across the entire Quran. I had no clue what was happening until I traced it to the delimiters.</div>
     </div>
 
     <div class="milestone">
         <div class="date">The hadith IDs were lying</div>
-        <div class="text">Then I discovered that idInBook restarts at 1 for every chapter in 14 of 18 books. Hadith #2 in Bukhari doesn't mean one hadith. It means 97 different hadiths, one in each chapter. Every Quran-to-Hadith filter had been showing false matches since the beginning. The entire bridge was producing wrong results. I had to rebuild the ID system from scratch with chapter-aware identifiers. After the fix, I verified every single connection: 100% accuracy.</div>
+        <div class="text">idInBook restarts at 1 for every chapter in 14 of 18 books. Hadith #2 in Bukhari means 97 different hadiths, one in each chapter. Every Quran-to-Hadith filter had been showing false matches since the beginning. The entire bridge was producing wrong results.</div>
     </div>
 
     <div class="milestone">
-        <div class="date">Musnad Ahmad: the missing 95%</div>
-        <div class="text">Ahmad had only 1,374 hadiths from sunnah.com. The full Musnad has 26,539. I was working with 5% of one of the most important hadith collections. Found the complete Arnaut edition on OpenITI. Parsed the entire Arabic text. The corpus jumped from 87,000 to 112,000. Ahmad became the 2nd largest book after Musannaf.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">أبيه ,عمه ,أمي ,خالي ,جدي: the ghost narrators</div>
-        <div class="text">I opened the isnad visualizer and there he was: "أبيه" (his father), showing as one of the top narrators in ALL 11 books. Hundreds of hadith chains flowing through him. But أبيه is not a person. It means "his father." Then I found أبي (my father), جده (his grandfather), عمه (his uncle), أمه (his mother), خاله (his maternal uncle), مولاه (his freed slave). All showing as ghost narrators. Each one needed a different solution.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The family tree inside the chain</div>
-        <div class="text">"عن عمه واسع بن حبان" means "from his uncle, Wasii bin Habban." The uncle's name IS there, after the word عمه. But "عن أبيه" means "from his father" with no name given, because scholars knew that Hisham ibn Urwa's father was Urwa ibn al-Zubayr. I had to build genealogy tables: 37 father-son pairs, 8 grandfather pairs, 15 mother entries, 6 grandmother entries, 10 uncle entries. Each one researched from classical rijal sources. 76 entries total.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">أبي صالح became أبي + صالح</div>
-        <div class="text">Then the kunyas broke. Abu Salih (أبي صالح) is a single name, a kunya. But the parser was splitting it into two tokens: أبي (which triggered the "his father" lookup) and صالح (which became a separate narrator). Abu Huraira was appearing as two different narrators: أبي هريرة and أبي هريرة رضى الله عنه with the honorific. Every kunya in every isnad was potentially wrong. The fix required peek-ahead logic: if أبي stands alone, it's "my father." If it's followed by a name, merge them into a kunya.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">22 classical texts, 111,604 profiles</div>
-        <div class="text">Parsed 22 classical texts of ilm al-rijal from OpenITI. Each one a different challenge, a different parser, a different set of problems:
-            <br><br>
-            <strong>The core eight</strong> (Ibn Hajar + al-Dhahabi + early critics):<br>
-            Taqrib al-Tahdhib, Tahdhib al-Tahdhib, Tahdhib al-Kamal (al-Mizzi), Mizan al-I'tidal (al-Dhahabi), Al-Jarh wa al-Ta'dil (Ibn Abi Hatim), Al-Thiqat (Ibn Hibban), Al-Kamil fi Du'afa (Ibn 'Adi), Tarikh Baghdad (al-Khatib).
-            <br><br>
-            <strong>The biographical encyclopedias</strong>:<br>
-            Tabaqat Ibn Sa'd (the earliest), Siyar A'lam al-Nubala (al-Dhahabi's magnum opus), Al-Isaba fi Tamyiz al-Sahaba (Ibn Hajar's companion encyclopedia), Tarikh al-Islam (al-Dhahabi's universal history).
-            <br><br>
-            <strong>The specialized works</strong>:<br>
-            Lisan al-Mizan (Ibn Hajar's expansion of Mizan), Al-Durar al-Kamina (Ibn Hajar's contemporaries), Al-Kashif (al-Dhahabi's condensed reference), Tadhkirat al-Huffaz (al-Dhahabi's hadith masters), Mughni fi al-Du'afa (al-Dhahabi's weak narrators), Diwan al-Du'afa (al-Dhahabi), Dhayl Diwan al-Du'afa (supplement), Mu'jam al-Shuyukh (al-Dhahabi's personal teachers), Ma'rifat al-Qurra (Quran reciters), Mu'in fi Tabaqat al-Muhaddithin (generation list).
-            <br><br>
-            152,000+ entries of classical Arabic biographical text. Fuzzy-matched against the existing database. 111,604 profiles with 160,614 name variants. 127,411 teacher-student links. 70.6% graded. 99.5% clean names. The largest structured open-source narrator database available.
-        </div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Wensinck and the breakthrough</div>
-        <div class="text">315 Quranic roots still had zero hadith connections. I built an independent concordance using a light stemmer, and only then discovered it was the same method Wensinck had used in his 7-volume physical concordance from the 1930s. The light stemmer found hadith attestations for 254 of the 315 "missing" roots. 1,345 surface forms that CAMeL had never seen. Two completely independent methods, cross-validating each other. Root coverage jumped from 81% to 96.3%. The 61 remaining roots are confirmed by both methods to have no hadith attestation. The first empirical lower bound on the Quran's distinctive vocabulary.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Grading: who said this hadith is authentic?</div>
-        <div class="text">112,000 hadiths and not a single one was graded. Bukhari and Muslim are self-authenticated as Sahih, so I tagged those. Then scraped Al-Albani's grades from sunnah.com for four books. Then found Arnaut's tahqiq edition of Musnad Ahmad as a DOCX file on Archive.org and parsed all 26,539 grades from it. Riyad al-Salihin grades were extracted from inline Arabic on web pages. 59,365 hadiths graded, 52% of the corpus. Every grade traceable to a named scholar: Al-Albani, Arnaut, or the compilers themselves.</div>
-    </div>
-
-    <h2>The problems that made me laugh and cry</h2>
-
-    <p>Every step forward revealed a new problem. Some of them were so absurd I had to laugh. Others made me want to give up.</p>
-
-    <div class="milestone">
-        <div class="date">The 42% that found a home</div>
-        <div class="text">When I merged 21,465 entries from 3 new classical texts (Tabaqat, Siyar, Al-Isaba), 8,913 (42%) matched existing profiles. But the 58% that didn't match wasn't all new people. Many were the same narrators with slightly different spellings across texts, and I couldn't merge them safely. The same person, written three different ways in three different centuries, by three different scholars.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">50 false-positive companion merges</div>
-        <div class="text">I tried anchoring 8,243 single-source companions against 1,370 multi-source companions. Found 53 matches. Then checked them. 50 were FALSE. Multiple DIFFERENT people named "عبد الله بن الحارث" all matching the same anchor. The famous common-name problem of Arabic biographical literature. A problem that scholars have struggled with for a thousand years, now in my code.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Death years locked in prose</div>
-        <div class="text">98% of new profiles lack death years in structured form. The years ARE there, written as "مات سنة ست وعشرين ومائة" (died in the year one hundred and twenty-six). My regex only catches numeric "سنة 126". Thousands of temporal anchors, locked behind Arabic word-form numbers. I built a word-form parser that handles 21 different patterns. It now extracts death years that are written out in full Arabic words.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The collision that wasn't</div>
-        <div class="text">"أنس بن مالك" (Anas ibn Malik) exists as TWO separate profiles: ID 8 (the famous companion, 13+ name variants, 5 classical sources) and ID 17074 (a completely different person with mizan+jarh+tabaqat sources). Common names create phantom duplicates that look like real merges. You can't just match on name. You need death years, teachers, students, cities, and even then sometimes you can't be sure.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The ceiling</div>
-        <div class="text">After three dedup strategies (companion anchoring, death-year clustering, teacher-student intersection), I found exactly 2 safe merges out of 77,794 profiles. The algorithmic approach hit its ceiling. The real solution isn't better code. It's better data: curated IDs from scholars who already solved this problem by hand.</div>
+        <div class="date">Ghost narrators: أبيه, عمه, أمي, خالي, جدي</div>
+        <div class="text">"أبيه" (his father) was a top narrator in ALL 11 books. Then أبي, جده, عمه, أمه, خاله, مولاه. None of them are people. Each needed a different solution: genealogy tables (76 entries), kunya merging, name extraction from comma-separated text. Abu Huraira was appearing as two different narrators because of an honorific suffix.</div>
     </div>
 
     <div class="milestone">
         <div class="date">Abu Huraira lost his عبد</div>
-        <div class="text">The most prolific hadith narrator in Islamic history, Abu Huraira (عبد الرحمن بن صخر), was listed as "الرحمن بن صخر." The عبد had been silently stripped from 13,189 names (10.3% of all profiles). عبد الملك بن مروان became "الملك بن مروان." عبد الله بن عباس became "الله بن عباس." Every major companion and caliph had a broken name. I only discovered it when cross-referencing unknown profiles against graded ones and the names didn't match. The fix was a function that detects any name starting with a divine attribute (الله, الرحمن, الملك) and prepends عبد. 80+ divine attributes catalogued.</div>
+        <div class="text">The most prolific narrator in Islamic history was listed as "الرحمن بن صخر." The عبد had been silently stripped from 13,189 names. عبد الملك became "الملك." عبد الله became "الله." Every major companion had a broken name. 80+ divine attributes catalogued to fix it.</div>
     </div>
 
     <div class="milestone">
         <div class="date">"بن ماجة" is not a father</div>
-        <div class="text">1,388 profiles started with "بن ماجة." The parser was capturing the book source marker ("in Ibn Majah's collection") as the narrator's name. The text reads "ق بن ماجة أحمد بن إسماعيل" where ق is the sigla for Ibn Majah's Sunan. The parser ate "بن ماجة" along with the sigla, leaving either a broken name or nothing. The key insight: بن ماجة as a book name is ALWAYS preceded by a sigla. Real patronymics are ALWAYS followed by another name. This disambiguation rule fixed 11,761 entries with zero false positives.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The names that aren't names</div>
-        <div class="text">Entire sentences posing as names: "قال مطين مات سنة ثمان وخمسين ومائتين" (Muteen said: he died in 258 AH) was listed as a narrator name. Complete hadith texts masquerading as names. The parsers were guessing where a name ends and a biography begins in a stream of Arabic text with no punctuation. I built a categorized verb system: citation verbs, editorial markers, isnad verbs, transmission verbs, biography verbs. A universal post-processing gate runs on every name regardless of what the parser did. Result: 31,000 names cleaned. Name quality went from 82.5% to 99.5%.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The Gawami al-Kalim heist</div>
-        <div class="text">I needed an independent narrator database to validate our grades. Every website was a dead end: dorar.net blocks automation, islamweb.net is a book reader, sunnah.com needs an API key, Shamela has Cloudflare. Then I found it: inside a 2.8GB Windows desktop app from 2010, archived on archive.org. Gawami al-Kalim 4.5. Inside was Data/Rawy.zip (116 MB). The files were in a custom binary format, record separator 0x01 (SOH), tab-delimited, scattered control bytes. Cracked it open: 27,756 narrator profiles with pre-assigned grades. Cross-referenced: 2,578 new grades for unknowns. Validated: 91.4% agreement on 5,062 overlapping narrators.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">The isnad chain that grades itself</div>
-        <div class="text">40,000 hadiths from 6 canonical collections have explicit grades from Albani, Zubair Ali Zai, and Arnaut. Every graded hadith implicitly tells you something about its narrators. If a narrator appears in 191 sahih hadiths and only 12 da'if ones, they're demonstrably reliable. I extracted narrator names from 40,000 Arabic isnad chains, counted their appearances in sahih vs. da'if hadiths, and inferred grades. The danger: short names like "محمد بن أحمد" appear in chains of 358 different narrators. Safety rule: only match if 15+ characters AND matches 3 or fewer profiles. This gave 3,479 safe grades, each backed by statistical evidence from actual hadith chains.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">100% traceability</div>
-        <div class="text">5,593 profiles had no classical_sources field. They entered the database through AR-Sanad teacher/student chains or the Kaggle dataset, with no pointer back to a specific book entry. But they weren't phantoms. They all had teacher/student links, the chain IS the provenance. I built a provenance field for every profile: classical text entry (95%), Kaggle ID (1%), or teacher/student chain (4%). Result: 100.00% traceable. Every profile links to its origin. Not a single orphan.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Confidence scoring</div>
-        <div class="text">Not all profiles are equal. An "أبو بشر" graded "reliable" could be any of multiple famous scholars with that kunya. The answer was the teacher/student graph. An Abu Bishr who teaches محمد بن جعفر and learns from سعيد بن جبير is a DIFFERENT person from an Abu Bishr who teaches يحيى بن أبي كثير. I built composite unique keys: name + death year + kunya + first teacher + first student. This resolved 7,511 previously ambiguous profiles. Now every profile has a confidence tier: A (ready for hadith grading), B (usable with caution), C (needs isnad context), D (unreliable identity), F (unusable). 96% of the database is uniquely identified.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Every website is a dead end</div>
-        <div class="text">We had 38,747 unknown narrators. External databases must exist somewhere. We tried dorar.net: 11,436 names came back but they were short-form hadith attributions with no grades, no death years, no biographical data. Just name labels for search filtering. Islamweb.net: navigated to their "Scholar Biographies" section through browser automation. Found Siyar A'lam al-Nubala. The EXACT SAME text we already parsed from OpenITI. Sunnah.com: needs an API key, has hadith grades not narrator grades. Shamela: Cloudflare protection, same texts we already have. The lesson: there is no publicly accessible, structured narrator grading database anywhere on the internet. The only way to get narrator grades is to BUILD the database yourself.</div>
-    </div>
-
-    <div class="milestone">
-        <div class="date">Abu Bakr graded "unknown"</div>
-        <div class="text">We parsed al-Mu'in fi Tabaqat al-Muhaddithin. Entry 1: Abu Bakr al-Siddiq. Grade: unknown. Entry 2: Umar ibn al-Khattab. Unknown. Entry 3: Uthman. Unknown. Entry 4: Ali. Unknown. The four Rightly Guided Caliphs graded as "unknown." The parser searched for grade keywords and found nothing, because al-Mu'in is a TABAQAT book with no inline grades. But the BOOK STRUCTURE is the grade: the first section header says "remaining companions in alphabetical order." Everything before the "greatest of the Successors" section is a companion. We built section tracking into the parser. Abu Bakr went from "unknown" to "companion." 144 profiles recovered, including the ten promised paradise.</div>
+        <div class="text">1,388 profiles started with "بن ماجة." The parser was eating book source markers as narrator names. The disambiguation: بن ماجة as a book name is ALWAYS preceded by a sigla. Real patronymics are ALWAYS followed by another name. Zero false positives on 11,761 entries.</div>
     </div>
 
     <div class="milestone">
         <div class="date">The 42% garbage names</div>
-        <div class="text">After the full pipeline, we ran a name quality audit. Result: 42.4% of all profiles had name issues. Transmission chains embedded in names ("عبيد الله عن موسى بن طلحة"). Colon-separated alternates. Names over 100 characters. Book sigla leaked into names. Grade words embedded in names. The problem: 15 of 22 parsers either used minimal cleaning or none at all. Tarikh Baghdad was 67.9% garbage. We built a universal post-processing gate, three cleaning passes, and a categorized verb system. Result: 82.5% to 99.5% clean names. The cleaning also unlocked 2,927 new dedup merges.</div>
+        <div class="text">After the full pipeline, a name quality audit revealed 42.4% of all profiles had issues. Transmission chains embedded in names. Entire biographical sentences masquerading as names. 15 of 22 parsers had minimal or no cleaning. We built a universal post-processing gate. 82.5% to 99.5% clean.</div>
     </div>
 
-    <div class="milestone">
-        <div class="date">The book that grades by existing</div>
-        <div class="text">After expanding grade keywords from 30 to 104, running verb-form extraction, and trying every external source, we still had narrators graded "unknown" who appeared in books whose ENTIRE PURPOSE is to grade narrators. Mizan al-I'tidal: 5,071 unknowns. Lisan al-Mizan: 7,777 unknowns. These are CRITICISM BOOKS. They only list narrators who have been criticized. Being LISTED in "The Book of Weak Narrators" IS the grade. We built BOOK_GRADE_DEFAULTS in the lexicon. One mapping, applied after keyword extraction fails. Result: 19,633 grades recovered in one stroke. The single highest-yield fix in the entire project.</div>
+    <h2>The 22 classical texts</h2>
+
+    <p>The narrator database didn't arrive as a plan. It grew because each problem demanded a new source.</p>
+
+    <div class="books">
+        <strong>The core eight</strong> came first. <em>Taqrib al-Tahdhib</em> (Ibn Hajar's one-line grades), <em>Tahdhib al-Tahdhib</em> (his expanded assessments), <em>Tahdhib al-Kamal</em> (al-Mizzi's encyclopedia that both abbreviate), <em>Mizan al-I'tidal</em> (al-Dhahabi's criticized narrators), <em>Al-Jarh wa al-Ta'dil</em> (Ibn Abi Hatim, the earliest systematic critic), <em>Al-Thiqat</em> (Ibn Hibban's reliable ones), <em>Al-Kamil fi Du'afa</em> (Ibn 'Adi's weak narrators), <em>Tarikh Baghdad</em> (al-Khatib's Baghdad scholars). These gave us the foundation: 83,082 entries.
     </div>
 
-    <div class="milestone">
-        <div class="date">The editorial brackets that weren't brackets</div>
-        <div class="text">17,378 names had digits in them. Sample: "حبيب بن [أبي - 5] ثابت (6)". These aren't data errors. They're manuscript editorial annotations from the critical editions of the classical texts. [أبي - 5] means "أبي, see footnote 5." The OpenITI texts are digitized from printed critical editions, and the editors' footnote markers came along for the ride. One regex cleaned 14,226 names: extract the text content, discard the footnote number, remove the brackets.</div>
+    <div class="books">
+        <strong>The companion problem</strong> brought the biographical encyclopedias. <em>Al-Isaba fi Tamyiz al-Sahaba</em> (Ibn Hajar's 10,000+ companion encyclopedia) was needed because our companion count was suspiciously low. <em>Tabaqat Ibn Sa'd</em> (the earliest biographical dictionary, 3rd century) and <em>Siyar A'lam al-Nubala</em> (al-Dhahabi's masterwork covering 800 years of scholars) filled the generational gaps. Companions went from ~1,663 to ~10,489.
     </div>
+
+    <div class="books">
+        <strong>The grade gaps</strong> demanded specialized works. <em>Tarikh al-Islam</em> (al-Dhahabi's universal history), <em>Lisan al-Mizan</em> (Ibn Hajar's expansion of Mizan), <em>Al-Durar al-Kamina</em> (Ibn Hajar's contemporaries), <em>Al-Kashif</em> (al-Dhahabi's condensed reference). Then the du'afa books to find weak narrators: <em>Mughni fi al-Du'afa</em>, <em>Diwan al-Du'afa</em>, <em>Dhayl Diwan al-Du'afa</em>. And the specialized lists: <em>Tadhkirat al-Huffaz</em> (hadith masters), <em>Mu'jam al-Shuyukh</em> (al-Dhahabi's personal teachers), <em>Ma'rifat al-Qurra</em> (Quran reciters), <em>Mu'in fi Tabaqat al-Muhaddithin</em> (generation list).
+    </div>
+
+    <div class="books">
+        Then came the discovery that <strong>the book IS the grade</strong>. If a narrator is listed in "The Book of Weak Narrators," their grade is weak. If they're in "The Reliable Ones," they're reliable. If they're in the companion encyclopedia, they're a companion. This single insight recovered 19,633 grades in one stroke. The highest-yield fix in the entire project.
+    </div>
+
+    <h2>111,604 profiles and still not enough</h2>
+
+    <p>By this point, 22 classical texts had been parsed, cleaned, deduplicated. 111,604 narrator profiles. 70.6% graded. 99.5% clean names. A confidence scoring system. Teacher-student chains from AR-Sanad. The database was real. But every external source we tried to cross-reference against was a dead end. Dorar.net blocks automation. Islamweb serves the same texts we already have. Shamela has Cloudflare. Sunnah.com needs an API key. There is no publicly accessible, structured narrator grading database anywhere on the internet.</p>
+
+    <h2>Then we found Gawami al-Kalim</h2>
+
+    <p>A <span class="highlight">2.8GB Windows desktop app from 2010</span>, archived on archive.org. Gawami al-Kalim 4.5, funded by Qatar's Directorate of Endowments. Abandoned software, no API, no documentation. Downloaded the RAR, extracted it, found Data/Rawy.zip (116 MB). Inside: .TBX files in a custom binary format. Record separator 0x01, tab-delimited, scattered control bytes.</p>
+
+    <p>Cracked it open: <span class="highlight">49,845 narrator profiles</span> (we initially thought 27,756, then discovered each record packed multiple narrators as 29-field blocks). 549,173 chain links. 38,355 isnad evaluations. 4.1 million extended chain links. And in the Books.zip: 1,004 hadith collections with narrator L-tags embedded in the text, every narrator in every hadith pre-tagged with their GK ID. 26,759 hadiths across 6 canonical books with perfect narrator identification.</p>
+
+    <p>Cross-referenced against our existing 111,604 profiles: 2,578 new grades recovered. Validated: 91.4% agreement on 5,062 overlapping narrators. GK didn't replace what we had built. It confirmed it, and filled gaps we couldn't reach from classical texts alone.</p>
+
+    <div class="gk-data">
+        <h3>GK Data Available (too large for Git, available on request)</h3>
+        <p><code>gk_json/gk_narrators.json</code> (25 MB) 49,845 narrator profiles</p>
+        <p><code>gk_json/gk_chain_links_sanadrowah.json</code> (110 MB) 549,173 chain links</p>
+        <p><code>gk_json/gk_chain_links_phase2.json</code> (431 MB) 4,179,587 extended links</p>
+        <p><code>gk_json/gk_chain_evaluations.json</code> (15 MB) 38,355 isnad evaluations</p>
+        <p><code>gk_json/gk_hadith_narrator_tags.json</code> (1.5 MB) 26,759 hadiths with narrator L-tags</p>
+        <p><code>gk_json/gk_book_index.json</code> (62 KB) 1,004 book names and IDs</p>
+        <p><code>gk_full_graph.json</code> (30 MB) 72,339 narrators, 255k links</p>
+        <p>Total: ~731 MB of structured GK data converted from .TBX to JSON. Contact <a href="https://www.linkedin.com/in/alibinshahid/">Ali Bin Shahid</a> if you need access.</p>
+    </div>
+
+    <h2>The grading engine: 50% to 77%</h2>
+
+    <p>The entire narrator database was built for one purpose: grading hadiths. Take a hadith text, extract the isnad chain, look up each narrator, apply the weakest-link rule.</p>
+
+    <p>First attempt: 50% accuracy against Albani's grades. Half wrong. The chain direction was reversed (isnad goes backward, position 0 heard from position 1). The wrong Malik was being selected (a companion instead of Imam Malik). The isnad extractor was <em>deleting</em> the يعني clarifications that hadith scholars put there specifically for disambiguation.</p>
+
+    <p>Then the user said three words that changed the architecture: <span class="highlight">"but we have AR-Sanad."</span> AR-Sanad had bidirectional teacher-student chains (234k links each way). GK was the name/grade layer. AR-Sanad was the chain layer. The combined approach worked.</p>
+
+    <p>The comma revelation: "عبد العزيز، يعني ابن محمد" means "Abdul Aziz, MEANING Ibn Muhammad." Our extractor was throwing away the يعني text. Line 73 literally stripped the disambiguation hints that scholars put there for exactly this purpose.</p>
+
+    <p>Fame as disambiguation: when scholars write just "مالك" without qualification, they mean the famous one. The single name IS the disambiguation. Prefer the narrator with the most connections.</p>
+
+    <p>The Albani reverse loop: 40,000 graded hadiths implicitly tell you about their narrators. If a narrator appears in 191 sahih hadiths and only 12 da'if ones, they're demonstrably reliable. 587 wrong grades fixed from statistical evidence.</p>
+
+    <p><span class="highlight">50% to 77% accuracy.</span> Every percentage point earned through a different insight.</p>
 
     <h2>What it became</h2>
 
-    <p>112,221 hadiths across 18 books. 1,590 of 1,651 Quranic roots connected. 1,528,346 verified root links. 111,604 narrator profiles from 22 classical texts, 70.6% graded, 99.5% clean, 96% uniquely identified, 100% traceable. 160,614 name variants. 127,411 teacher-student links. 33,758 Arabic words with morphological definitions. 100,656 isnad chains parsed. A digital Wensinck concordance. Confidence scoring on every profile. 59,365 hadiths graded, 52% of the corpus.</p>
+    <p>112,221 hadiths across 18 books. 1,590 of 1,651 Quranic roots connected. 1,528,346 verified root links. 115,112 narrator profiles from 22 classical texts, 72.9% graded, 99.5% clean, 96% uniquely identified, 100% traceable. 160,614 name variants. 127,411 teacher-student links. 33,758 Arabic words with morphological definitions. 100,656 isnad chains parsed. A digital Wensinck concordance. Confidence scoring on every profile. A grading engine at 77% accuracy. 59,365 hadiths graded by named scholars, 52% of the corpus.</p>
 
     <p>What took Wensinck's team 33 years, this computes in seconds. What took a scholar physically opening four volumes of biographical dictionaries, this consolidates into one search. What no one had ever done, connecting the Quran concordance to the hadith concordance through shared roots, is now a click away.</p>
 
     <p>And it is free. And it will remain free. Because this is a <em>sadaqah jariyah</em>.</p>
 
-    <div class="arabic">مَن سَنَّ فِي الإِسْلَامِ سُنَّةً حَسَنَةً فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا</div>
-    <div class="verse-ref">Sahih Muslim, "Whoever establishes a good practice in Islam will have its reward and the reward of all who act upon it"</div>
+    <div class="notice">
+        <span class="notice-title">&#x1F330; Open &amp; free.</span>
+        This project is built as a <em>sadaqah jariyah</em>, ongoing charity through beneficial knowledge.
+        Use it, share it, build upon it. If it helps your research, a citation is appreciated.
+        Please do not place it behind a paywall. Let it remain accessible to anyone seeking to learn.
+        If someone does profit from it without giving back, I trust that account will be settled
+        by the One from whom nothing is hidden.
+        <div class="notice-verse">
+            مَن سَنَّ فِي الإِسْلَامِ سُنَّةً حَسَنَةً فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا
+        </div>
+    </div>
 
     <h2>What comes next</h2>
 
     <div class="next">
+        <h3>Break past 77%</h3>
+        <p>GK's Books.zip has isnad/matn boundary markers for 26,759 hadiths. Use these as training data to teach the engine where isnads end and matns begin. Use the L-tags as ground truth to find extraction bugs systematically. The goal: 85%+ accuracy.</p>
+    </div>
+
+    <div class="next">
+        <h3>1,004 hadith collections</h3>
+        <p>Books.zip contains 1,004 hadith collections. We use 6. Each new collection feeds the reverse learning loop with more narrator evidence. More evidence means more grades, which means better grading, which means more evidence. The virtuous cycle.</p>
+    </div>
+
+    <div class="next">
         <h3>The narrator's portrait</h3>
-        <p>Every narrator has a story. The hadiths they narrate are the hadiths they carried through their lives, what they heard, what they memorized, what they chose to transmit. A narrator's collection IS their portrait: Abu Huraira's 5,000+ narrations paint a picture of a man who spent every moment near the Prophet. Aisha's narrations reveal the private life no one else had access to. Ali's cluster in Ahmad reflects the Kufan transmission school. The next step is to build this portrait: for every narrator, show the actual hadiths they carried, the themes they transmitted, the scholars they taught.</p>
+        <p>Every narrator has a story. The hadiths they narrate are the hadiths they carried through their lives, what they heard, what they memorized, what they chose to transmit. A narrator's collection IS their portrait: Abu Huraira's 5,000+ narrations paint a picture of a man who spent every moment near the Prophet ﷺ. Aisha's narrations reveal the private life no one else had access to. Ali's cluster in Ahmad reflects the Kufan transmission school. The next step is to build this portrait.</p>
     </div>
 
     <div class="next">
-        <h3>The dedup problem</h3>
-        <p>111,604 profiles from 22 classical texts. But thousands are duplicates across texts, the same narrator listed differently in Tahdhib al-Kamal and Mizan al-I'tidal and Tarikh al-Islam. The algorithmic approach hit its ceiling at 6,394 merges. The next step needs curated scholarly IDs from projects like dorar.net, n007rehan, and Mawsu'at al-Hadith, scholars who already solved this problem by hand over decades.</p>
-    </div>
-
-    <div class="next">
-        <h3>The remaining 48%</h3>
-        <p>52% of hadiths are graded. The remaining 48%: Musannaf Ibn Abi Shaybah (38,000), Muwatta Malik, Darimi, and 7 smaller books await grading sources. The 22 classical texts have grades embedded in narrative prose that NLP could extract. And the 61 Quran-only roots (confirmed by dual-stemmer validation) await deeper linguistic analysis.</p>
+        <h3>The problem that hasn't been solved</h3>
+        <p>We searched for a curated universal narrator ID database. GitHub, islam-db, dorar.net, islamweb, shamela. The n007rehan dataset that everyone references doesn't exist. There is no shortcut. The hadith narrator database is a problem that hasn't been solved computationally by anyone. We are building it from scratch, one classical text at a time, one war story at a time.</p>
     </div>
 
 </div>
