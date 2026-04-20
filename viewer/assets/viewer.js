@@ -67,6 +67,22 @@ async function boot() {
   state.index = await loadJSON('data/index.json');
   state.redirects = await loadJSON('data/redirects.json');
   state.audit = await loadJSON('data/audit_flags.json');
+
+  // Build norm-name -> pid lookup so clicks on teacher/student/chain names resolve.
+  // Prefer higher-freq entries when names collide.
+  state.nameToPid = new Map();
+  const byName = new Map();  // normName -> {pid, freq}
+  for (const row of state.index) {
+    const pid = row[COL.pid], nm = row[COL.name], fr = row[COL.freq] || 0;
+    for (const cand of [pid, nm]) {
+      const n = norm(cand);
+      if (!n) continue;
+      const prev = byName.get(n);
+      if (!prev || fr > prev.freq) byName.set(n, { pid, freq: fr });
+    }
+  }
+  for (const [n, v] of byName) state.nameToPid.set(n, v.pid);
+
   renderHeader();
   populateGradeFilter();
   populateFlagFilter();
@@ -208,22 +224,65 @@ function renderBrowse() {
 }
 
 // ----- Profile view -----
-async function showProfile(pid) {
+// Generate normalized-form variants to try (particle-strip, ibn-cut, kunya swap, composed)
+function nameVariants(n) {
+  const out = new Set([n]);
+  const toks = n.split(/\s+/);
+  if (toks.length && toks[0].length >= 4) {
+    const t0 = toks[0];
+    let stripped = null;
+    if (t0.startsWith('لل') && t0.length >= 5) stripped = 'ال' + t0.substring(2);
+    else if ('ولفب'.includes(t0[0])) stripped = t0.substring(1);
+    if (stripped) out.add([stripped, ...toks.slice(1)].join(' '));
+  }
+  if (toks[0] === 'ابن' && toks.length >= 2) out.add(toks.slice(1).join(' '));
+  // Apply kunya swap to every form already in the set (composes with strip)
+  for (const v of [...out]) {
+    if (v.includes('ابي') || v.includes('ابو') || v.includes('ابا')) {
+      out.add(v.replace(/\bابي\b/g, 'ابو'));
+      out.add(v.replace(/\bابو\b/g, 'ابي'));
+      out.add(v.replace(/\bابا\b/g, 'ابو'));
+    }
+  }
+  return out;
+}
+
+function resolveToPid(key) {
+  if (!key) return null;
+  if (state.index.some(e => e[COL.pid] === key)) return key;
+  if (state.redirects[key]) return state.redirects[key];
+  const n = norm(key);
+  for (const v of nameVariants(n)) {
+    if (state.nameToPid && state.nameToPid.has(v)) return state.nameToPid.get(v);
+  }
+  const hit = state.index.find(e => e[COL.name] === key);
+  if (hit) return hit[COL.pid];
+  return null;
+}
+
+async function showProfile(key) {
   showView('profile');
   const c = $('#profile-content');
   c.innerHTML = 'Loading…';
-  let displayPid = pid;
+  let displayPid = resolveToPid(key);
   let redirectNote = null;
-  if (state.redirects[pid]) {
-    displayPid = state.redirects[pid];
-    redirectNote = `This profile was redirected from "${pid}"`;
+  if (!displayPid) {
+    c.innerHTML = `<div style="padding:16px">No profile matched "<strong>${key}</strong>". This name may exist in a chain but not in the DB as a standalone narrator.</div>`;
+    return;
   }
+  if (state.redirects[displayPid]) {
+    const target = state.redirects[displayPid];
+    redirectNote = `This profile was redirected from "${displayPid}"`;
+    displayPid = target;
+  }
+  if (displayPid !== key) redirectNote = (redirectNote ? redirectNote + '. ' : '') + `(clicked "${key}")`;
   const idxEntry = state.index.find(e => e[COL.pid] === displayPid);
-  if (!idxEntry) { c.textContent = `Profile not found: ${displayPid}`; return; }
+  if (!idxEntry) { c.textContent = `Profile not in index: ${displayPid}`; return; }
   const shard = await loadShard(idxEntry[COL.shard]);
   const p = shard[displayPid];
-  if (!p) { c.textContent = `Profile in shard not found: ${displayPid}`; return; }
+  if (!p) { c.textContent = `Profile not in shard: ${displayPid}`; return; }
   c.innerHTML = '';
+  location.hash = `#profile/${encodeURIComponent(displayPid)}`;
   renderProfile(c, displayPid, p, redirectNote);
 }
 
@@ -825,6 +884,11 @@ function showView(name) {
 }
 function handleHashChange() {
   const h = (location.hash || '#browse').substring(1);
+  if (h.startsWith('profile/')) {
+    const pid = decodeURIComponent(h.substring(8));
+    showProfile(pid);
+    return;
+  }
   if (['dashboard','browse','chain','audit'].includes(h)) showView(h);
   else showView('browse');
 }
