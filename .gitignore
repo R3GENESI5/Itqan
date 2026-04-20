@@ -70,3 +70,11 @@ src/rijal_parsed_v2/
 
 # CSV exports (regenerate with build_rijal_database.py)
 app/data/rijal/csv/
+
+# Viewer lazy-load shards — large, regenerable from src/ scripts, hosted on HF
+viewer/data/shards/
+viewer/data/hadiths/
+viewer/data/narrator_hadiths/
+viewer/data/index.json
+viewer/data/redirects.json
+viewer/data/audit_flags.json
