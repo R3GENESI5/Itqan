@@ -17,10 +17,12 @@ ap = argparse.ArgumentParser()
 ap.add_argument('--apply', action='store_true')
 ap.add_argument('--start', type=int, default=0)
 ap.add_argument('--clusters', type=int, default=50)
+ap.add_argument('--plan', default='D:/Hadith/src/savepoints/spine_phase1_plan.json')
+ap.add_argument('--tag', default='phase1')
 args = ap.parse_args()
 
 CHK = 'D:/Hadith/src/savepoints/sanadset_final_20260416_213020.json'
-plan = json.load(open('D:/Hadith/src/savepoints/spine_phase1_plan.json',encoding='utf-8'))['plans']
+plan = json.load(open(args.plan,encoding='utf-8'))['plans']
 batch = plan[args.start:args.start+args.clusters]
 print(f'Processing clusters {args.start}..{args.start+len(batch)} of {len(plan)}', file=sys.stderr)
 
@@ -58,17 +60,23 @@ def best_grade(*grades):
             best, best_o = g, GRADE_ORDER.get(g, 50)
     return best
 
+# expected freq/alive delta computed from ALIVE donors only — a donor that
+# was already redirected in a prior batch (transitive: appeared in 2 clusters)
+# must not be double-counted. Load DB once to filter.
+_peek = json.load(open(CHK,encoding='utf-8'))['profiles']
+def _alive(pid):
+    p=_peek.get(pid); return isinstance(p,dict) and not p.get('_redirect_to') \
+        and not p.get('_kinship_placeholder') and not p.get('_abandoned')
 # expected freq delta = 0 (freq moves donor->canonical, conserved)
-# expected alive delta = -(number of donors)
-n_donors = sum(len(c['donors']) for c in batch)
+n_donors = sum(1 for c in batch for d in c['donors'] if _alive(d) and _alive(c['canonical']))
 
-with SafeMerge(script_name=f'spine_phase1_b{args.start}', db_path=CHK,
+with SafeMerge(script_name=f'spine_{args.tag}_b{args.start}', db_path=CHK,
                expected_freq_delta=0, expected_alive_delta=-n_donors,
                apply_mode=args.apply, batch_cap=args.clusters*2+5) as sm:
     profs = sm.profs
     for c in batch:
         canon = c['canonical']
-        if canon not in profs: continue
+        if canon not in profs or profs[canon].get('_redirect_to'): continue
         cp = profs[canon]
         # snapshot canonical fields we'll touch
         old_canon = {f: cp.get(f) for f,_ in LIST_FIELDS}
@@ -82,7 +90,7 @@ with SafeMerge(script_name=f'spine_phase1_b{args.start}', db_path=CHK,
                             'pid':canon,'freq':cp.get('frequency') or 0})
         cluster_grade = cp.get('grade_en')   # track best grade across cluster
         for d, dn in zip(c['donors'], c['donor_names']):
-            if d not in profs: continue
+            if d not in profs or profs[d].get('_redirect_to'): continue  # skip already-merged
             dp = profs[d]
             cluster_grade = best_grade(cluster_grade, dp.get('grade_en'))
             for f,keys in LIST_FIELDS:
@@ -100,13 +108,13 @@ with SafeMerge(script_name=f'spine_phase1_b{args.start}', db_path=CHK,
         new_canon['surface_forms']=surface
         sm.change(pid=canon, action='spine_merge_canonical',
                   old_values=old_canon, new_values=new_canon,
-                  reason=f"identity_spine_phase1_gkid_{c['gkid']}")
+                  reason=f"identity_spine_{args.tag}_{c['gkid']}")
         # redirect donors
         for d in c['donors']:
-            if d not in profs: continue
+            if d not in profs or profs[d].get('_redirect_to'): continue  # skip already-merged
             sm.change(pid=d, action=f'redirect_to:{canon}',
                       old_values={'frequency':profs[d].get('frequency'),
                                   'full_name':profs[d].get('full_name')},
                       new_values={'_redirect_to':canon},
-                      reason=f"identity_spine_phase1_gkid_{c['gkid']}")
+                      reason=f"identity_spine_{args.tag}_{c['gkid']}")
     sm.commit()
