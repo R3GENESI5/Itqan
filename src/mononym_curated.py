@@ -47,7 +47,15 @@ TABLE={
  'إسماعيل':{'regime':'co','cands':{'ibn Jaʿfar':'إسماعيل بن جعفر','ibn Abī Khālid':'إسماعيل بن أبي خالد','ibn ʿUlayya':'إسماعيل بن إبراهيم'}},
  'هشام':{'regime':'co','cands':{'ibn ʿUrwa':'هشام بن عروة','al-Dastawāʾī':'هشام الدستوائي','ibn Ḥassān':'هشام بن حسان'}},
  'أبو إسحاق':{'regime':'dominant','ashhar':'al-Sabīʿī (Hamadānī)','cands':{'al-Shaybānī':'أبو إسحاق الشيباني','al-Fazārī':'أبو إسحاق الفزاري'}},
+ # Next tier (2026-06-07 cont.)
+ 'أبو سعيد':{'regime':'dominant','ashhar':'al-Khudrī (ṣaḥābī)','cands':{'al-Ashajj':'أبو سعيد الأشج','ibn al-Aʿrābī':'أبو سعيد بن الأعرابي'}},
+ 'شعيب':{'regime':'dominant','ashhar':'ibn Abī Ḥamza','cands':{'ibn al-Layth':'شعيب بن الليث'}},
+ 'سعيد':{'regime':'co','cands':{'ibn al-Musayyab':'سعيد بن المسيب','ibn Jubayr':'سعيد بن جبير','ibn Abī ʿArūba':'سعيد بن أبي عروبة','ibn Manṣūr':'سعيد بن منصور'}},
+ 'جرير':{'regime':'co','cands':{'ibn ʿAbd al-Ḥamīd':'جرير بن عبد الحميد','ibn Ḥāzim':'جرير بن حازم','ibn ʿAbdullāh(ṣaḥ)':'جرير بن عبد الله'}},
+ 'يونس':{'regime':'co','cands':{'ibn Yazīd al-Aylī':'يونس بن يزيد','ibn ʿUbayd':'يونس بن عبيد','ibn Bukayr':'يونس بن بكير','ibn ʿAbd al-Aʿlā':'يونس بن عبد الأعلى'}},
+ 'شعبة2_placeholder':{'regime':'dominant','ashhar':'(merged)','cands':{}},
 }
+TABLE.pop('شعبة2_placeholder',None)
 
 def resolve(mono, spec):
     nets={lab:net(fn) for lab,fn in spec['cands'].items()}
