@@ -249,6 +249,11 @@ class SafeMerge:
             GRADE_ORDER = {'companion':1,'very_reliable':2,'reliable':3,'mostly_reliable':4,
                            'acceptable':5,'slightly_weak':6,'weak':7,'abandoned':8,'fabricator':9,'unknown':10}
             for c in self.changes:
+                # Redirect actions are NOT downgrades: the donor's grade is
+                # preserved on the canonical target + in old_values/surface_forms.
+                # A redirect stub legitimately has no grade.
+                if c['action'].startswith('redirect_to:'):
+                    continue
                 pid = c['pid']
                 pre_g = self.profs[pid].get('grade_en') or ''
                 post_g = sim[pid].get('grade_en') or ''
