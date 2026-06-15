@@ -60,6 +60,27 @@ def parse_year(t):
         if got and 1<=tot<=1000: return tot
     return None
 
+# ---- isnad neighbours: teachers (روى عن …) and students (وعنه …) from entry text ----
+NB_STOP={"ابيه","امه","جده","اخيه","عمه","جماعه","خلق","ابوه","ابنه","عده","جمع","اخرين",
+         "غيرهم","وغيره","وغيرهم","غير","واحد","ايضا","بنته","النبي","رسول الله","ابيها","اهل"}
+def nbkey(piece):
+    toks=[t for t in piece.split() if t not in ("بن","ابن","ابو","ابي","ابا")]
+    return " ".join(toks[:3]).strip()
+def splitnames(span):
+    out=set()
+    for piece in re.split(r"\s+و\s+|،|\s+ثم\s+", span[:90]):
+        k=nbkey(piece)
+        if len(k)>=4 and k not in NB_STOP: out.add(k)
+        if len(out)>=6: break
+    return out
+STU=re.compile(r"(?:وعنه|روي عنه|حدث عنه|رواه عنه|يروي عنه|اخذ عنه)\s+(.+?)(?:\.|قال|مات|توفي|وثقه|ضعفه|$)")
+TEA=re.compile(r"(?:روي عن(?= )|حدث عن(?= )|يروي عن(?= )|سمع من|اخذ عن(?= )|سمع)\s+(.+?)(?:\.|وعنه|روي عنه|قال|مات|توفي|$)")
+def neighbours(t):
+    tset=set(); sset=set()
+    for m in STU.finditer(t): sset|=splitnames(m.group(1))
+    for m in TEA.finditer(t): tset|=splitnames(m.group(1))
+    return tset, sset
+
 # ---- arsanad canonical index ----
 def ars_death(s):
     m=re.search(r"\d+", s or ""); return int(m.group()) if m else None
@@ -106,11 +127,13 @@ E=[]
 for r in csv.DictReader(open(os.path.join(OUT,"unified_narrator_index.csv"),encoding="utf-8-sig")):
     nn=r["name_norm"]; toks=content_toks(nn)
     if len(toks)<2: continue
-    dyr=parse_year(norm(r["text"]))
+    tnorm=norm(r["text"]); dyr=parse_year(tnorm); tset,sset=neighbours(tnorm)
     E.append({"row":int(r["row_id"]),"slug":r["source_slug"],"book":r["source_book"],
               "page":r["page"],"name":r["narrator_name"],"nn":nn,"toks":set(toks),
-              "ntok":len(toks),"dyr":dyr,"aid":link_arsanad(nn,set(toks),dyr),"core":core_key(nn)})
+              "ntok":len(toks),"dyr":dyr,"tset":tset,"sset":sset,
+              "aid":link_arsanad(nn,set(toks),dyr),"core":core_key(nn)})
 print("entries:",len(E),"| with death yr:",sum(1 for e in E if e["dyr"]),
+      "| with isnad nbrs:",sum(1 for e in E if e["tset"] or e["sset"]),
       "| arsanad-linked:",sum(1 for e in E if e["aid"] is not None))
 
 # ---- union-find ----
@@ -134,6 +157,10 @@ def compatible(a,b):
     # Jaccard (not containment) so a short generic name can't hub long distinct ones.
     if mn>=4 and jac>=0.85: return ("name≈", True)
     if mn>=4 and jac>=0.62 and death_eq: return ("name+death", True)
+    # isnad corroboration: same name-core block + share >=3 transmitters/students
+    shared=len(a["tset"]&b["tset"])+len(a["sset"]&b["sset"])
+    if shared>=3 and jac>=0.45: return ("isnad", True)
+    if shared>=2 and jac>=0.6:  return ("isnad", True)
     return (None, False)
 
 # index entries by arsanad id for cross-block merges
@@ -163,6 +190,12 @@ for core,idx in blocks.items():
         for b in range(a+1,n):
             tag,ok=compatible(E[idx[a]],E[idx[b]])
             if ok and tag!="aid": union(idx[a],idx[b]); ev[tag]+=1
+
+# NOTE: a cross-block isnad merge (pairs sharing rare transmitters across different
+# name-blocks) was prototyped and REJECTED — it merged distinct people who share an
+# isnad circle (e.g. the brothers al-Hasan & Ali b. Salih b. Hayy). Relatives/peers
+# share teachers, so without a matching ism+father anchor it breaks precision.
+# Isnad corroboration is therefore applied only WITHIN a name-core block (see compatible()).
 
 # ---- build clusters ----
 cl=defaultdict(list)

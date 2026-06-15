@@ -95,7 +95,7 @@ books — *conservatively* (precision over recall; no false merges).
 |------|------------|
 | `narrator_clusters.csv` | One row per resolved narrator: `canonical_name`, `arsanad_id`, `basis`, `death`, `tabaqa`, `n_books`, `variant_names` (the merged forms), `members` (book:page). |
 | `entry_to_cluster.csv` | Per-entry → `cluster_id` map (join back to the long-form). |
-| `duplicate_clusters.xlsx` | The **1,294 cross-book duplicates** only — the reviewable result. |
+| `duplicate_clusters.xlsx` | The **1,300 cross-book duplicates** only — the reviewable result. |
 
 **How it merges** (every merge is gated, never on a bare name):
 1. **Canonical anchor** — link each entry to an `arsanad_narrators.csv` `id` via exact
@@ -104,12 +104,21 @@ books — *conservatively* (precision over recall; no false merges).
 2. **Name near-equality** — Jaccard ≥0.85 (≥4 tokens) within a name-core block;
    Jaccard ≥0.62 if death years agree. **Jaccard (not containment)** so a short
    generic name can't "hub" distinct people together.
-3. **Hard splits** — different `arsanad_id` ⇒ never merge; death years >5 apart ⇒
+3. **Isnad corroboration** — within a name-core block, entries that share ≥3 (or ≥2 at
+   Jaccard ≥0.6) of the **transmitters/students** named in their text ("روى عن … وعنه …")
+   merge. The shared ism+father anchor keeps it safe.
+4. **Hard splits** — different `arsanad_id` ⇒ never merge; death years >5 apart ⇒
    never merge.
 
-**Results:** 70,620 entries → **68,781 clusters** (1,417 merged; 1,294 cross-book:
-1,061 span 2 books … 1 spans 7). Evidence tally: 1,276 by canonical id, 712 by
-name, 5 by name+death.
+> **Rejected (honest note):** a *cross-block* isnad merge (pairing entries that share
+> rare transmitters across different name-blocks) was prototyped and **dropped** — it
+> merged distinct people who share an isnad circle, e.g. the **brothers** al-Ḥasan &
+> ʿAlī b. Ṣāliḥ b. Ḥayy. Relatives/peers share teachers, so isnad is only safe *with*
+> a matching ism+father anchor.
+
+**Results:** 70,620 entries → **68,761 clusters** (1,431 merged; 1,300 cross-book:
+~1,060 span 2 books … 1 spans 7). Evidence tally: 1,276 by canonical id, 712 by
+name, 20 by within-block isnad, 5 by name+death.
 
 **⚠️ Precision-first / recall limits.** Only ~3% collapse — most entries are
 genuinely distinct narrators, arsanad covers ~18k of the canonical rawīs, and
