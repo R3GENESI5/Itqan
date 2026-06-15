@@ -86,9 +86,44 @@ duplicates still cluster). The signal is heuristic: `text:صحابي` and the lo
 `arsanad~` matches carry noise. **Filter/trust by `tabaqa_basis`** — `arsanad:tabaqa`
 and `text:وفاة` are the most reliable; treat the rest as hints to verify.
 
+## Deduplication (entity resolution)
+
+`build_dedup.py` collapses entries that refer to the **same narrator** across
+books — *conservatively* (precision over recall; no false merges).
+
+| File | What it is |
+|------|------------|
+| `narrator_clusters.csv` | One row per resolved narrator: `canonical_name`, `arsanad_id`, `basis`, `death`, `tabaqa`, `n_books`, `variant_names` (the merged forms), `members` (book:page). |
+| `entry_to_cluster.csv` | Per-entry → `cluster_id` map (join back to the long-form). |
+| `duplicate_clusters.xlsx` | The **1,294 cross-book duplicates** only — the reviewable result. |
+
+**How it merges** (every merge is gated, never on a bare name):
+1. **Canonical anchor** — link each entry to an `arsanad_narrators.csv` `id` via exact
+   name *or* fuzzy match (token-Jaccard ≥0.8, ≥4 tokens, death-gated). Same id ⇒ merge.
+   This carries word-order / kunya-first / spelling variants (e.g. al-Ifrīqī).
+2. **Name near-equality** — Jaccard ≥0.85 (≥4 tokens) within a name-core block;
+   Jaccard ≥0.62 if death years agree. **Jaccard (not containment)** so a short
+   generic name can't "hub" distinct people together.
+3. **Hard splits** — different `arsanad_id` ⇒ never merge; death years >5 apart ⇒
+   never merge.
+
+**Results:** 70,620 entries → **68,781 clusters** (1,417 merged; 1,294 cross-book:
+1,061 span 2 books … 1 spans 7). Evidence tally: 1,276 by canonical id, 712 by
+name, 5 by name+death.
+
+**⚠️ Precision-first / recall limits.** Only ~3% collapse — most entries are
+genuinely distinct narrators, arsanad covers ~18k of the canonical rawīs, and
+death years parse for only ~3% of entries (the disambiguator is thin). Real
+duplicates with very different phrasing are **missed** rather than guessed. Each
+cluster carries `basis` + `variant_names` so you can audit every merge. The
+principled recall lift is the **isnad teacher/student graph** (arsanad's
+`narrated_from`/`narrated_to` id-lists) — match a narrator's mentioned
+teachers/students to corroborate identity. Feed clusters into `dedup_narrators.py`.
+
 ## Regenerate
 
 ```bash
 python sources/build_unified_index.py      # base index
+python sources/build_dedup.py              # + narrator clusters
 python sources/build_tabaqa_index.py       # + generation arrangement
 ```
