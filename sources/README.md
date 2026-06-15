@@ -48,3 +48,10 @@ gitignored `src/rijal_raw/`).
 | `ilal_daraqutni` | al-ʿIlal al-Wārida | al-Dāraquṭnī (385) | 223 | per-section |
 
 **Total:** 24 books · ~70,600 biographical narrator rows across the workbooks.
+
+## Unified index
+
+`unified/` merges every biographical entry from the 16 narrator-keyed books into
+one cross-source index (`unified_narrator_index.csv` long-form + `unified_by_narrator.csv`
+lookup + xlsx). See `unified/README.md` — note the honest caveat that the
+by-narrator grouping is **collision candidates**, not resolved identities.
