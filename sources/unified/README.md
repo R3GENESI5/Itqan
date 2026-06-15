@@ -59,8 +59,36 @@ own matcher** (`dedup_narrators.py` / `match_narrator_grades.py`), and verify
 before asserting that two entries are the same person. Verdict text is quoted
 verbatim; **no grades are inferred.**
 
+## Arranged by ṭabaqa (generation) — duplicate-hunting aid
+
+To make cross-book duplicates easier to spot, narrators are also grouped by
+**generation layer** (ṣaḥāba → kibār al-tābiʿīn → … → tabaʿ al-atbāʿ). Within one
+generation the candidate set is small, so the same person appearing in several
+books sits close together.
+
+| File | What it is |
+|------|------------|
+| `unified_by_tabaqa.csv` | All 67,590 narrators, sorted by `tabaqa_order` then name. |
+| `multi_source_candidates_by_tabaqa.csv` | The 1,122 ≥2-book candidates, same sort. |
+| `candidates_by_tabaqa.xlsx` | One sheet per generation; ≥3-book rows highlighted. |
+
+**How the generation is assigned** (column `tabaqa_basis`, priority order):
+`arsanad:tabaqa` (Ibn Ḥajar ṭabaqa from the project's `src/arsanad_narrators.csv`)
+→ `text:طبقة` (Taqrīb ordinal in the entry) → `text:وفاة` (death year parsed from
+"مات سنة …" incl. Arabic numeral words) → `text:صحابي` → `arsanad~:*` (looser
+first-5-token name match) → `text:تابعي`. Death years map to bands
+(≤110 / ≤150 / ≤180 / ≤215 / ≤245 / >245 AH).
+
+**⚠️ Coverage & precision.** Only **~35% of the candidates** (and ~18% overall)
+get a generation — the rest are obscure narrators absent from arsanad with no
+self-stated generation, parked in **`٨ غير محدد`** (still name-sorted, so exact
+duplicates still cluster). The signal is heuristic: `text:صحابي` and the loose
+`arsanad~` matches carry noise. **Filter/trust by `tabaqa_basis`** — `arsanad:tabaqa`
+and `text:وفاة` are the most reliable; treat the rest as hints to verify.
+
 ## Regenerate
 
 ```bash
-python sources/build_unified_index.py
+python sources/build_unified_index.py      # base index
+python sources/build_tabaqa_index.py       # + generation arrangement
 ```
