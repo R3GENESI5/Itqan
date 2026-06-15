@@ -13,6 +13,7 @@ Texts downloaded:
   6. Tarikh Baghdad (al-Khatib, d.463)         — Baghdad scholar biographies
   7. Tahdhib al-Tahdhib (Ibn Hajar, d.852)     — Condensed encyclopedia
   8. Taqrib al-Tahdhib (Ibn Hajar, d.852)      — Grading manual
+  9. Al-Kawakib al-Nayyirat (Ibn al-Kayyal, d.939) — Mukhtalitun (ikhtilat) reference
 
 Usage:
     python src/download_openiti_rijal.py
@@ -75,6 +76,12 @@ TEXTS = [
         "title": "Taqrib al-Tahdhib (Ibn Hajar)",
         "url": f"{BASE}/0875AH/master/data/0852IbnHajarCasqalani/0852IbnHajarCasqalani.TaqribTahdhib/0852IbnHajarCasqalani.TaqribTahdhib.JK000121-ara1.completed",
         "filename": "taqrib_tahdhib.txt",
+    },
+    {
+        "id": "kawakib_nayyirat",
+        "title": "Al-Kawakib al-Nayyirat (Ibn al-Kayyal)",
+        "url": f"{BASE}/0950AH/master/data/0939IbnKayyal/0939IbnKayyal.KawakibNayyirat/0939IbnKayyal.KawakibNayyirat.Shamela0000309-ara1.mARkdown",
+        "filename": "kawakib_nayyirat.txt",
     },
 ]
 
