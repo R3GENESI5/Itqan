@@ -32,6 +32,23 @@ COMMON={"عبد","الله","الرحمن","الرحيم","محمد","احمد",
         "بكر","ابراهيم","اسماعيل","يحيي","عبيد","العزيز","الملك","السلام","الحميد","يوسف",
         "ابو","ابي","ابا","ام","الدين","الواحد","الكريم","اسحاق","موسي","هارون","ادم"}
 def distinctive(toks): return {t for t in toks if t not in COMMON}
+def father(nn):
+    t=nn.split()
+    for i,x in enumerate(t):
+        if x in ("بن","ابن") and i+1<len(t):
+            f=[t[i+1]]
+            if f[0] in ("ابي","ابو","ابا","ام") and i+2<len(t): f.append(t[i+2])
+            return tuple(f)
+    return None
+def father_compat(a,b):
+    # same person => same father; tolerant of truncation & grandfather-attribution,
+    # but a father made only of COMMON tokens (e.g. عبد الله) must not bridge.
+    fa,fb=a["fath"],b["fath"]
+    if not fa or not fb: return True
+    if fa==fb: return True
+    if set(fa)<=b["toks"] and (set(fa)-COMMON): return True
+    if set(fb)<=a["toks"] and (set(fb)-COMMON): return True
+    return False
 def core_key(nn):
     t=content_toks(nn)
     return " ".join(t[:3]) if len(t)>=3 else " ".join(t)
@@ -135,7 +152,7 @@ for r in csv.DictReader(open(os.path.join(OUT,"unified_narrator_index.csv"),enco
     tnorm=norm(r["text"]); dyr=parse_year(tnorm); tset,sset=neighbours(tnorm)
     E.append({"row":int(r["row_id"]),"slug":r["source_slug"],"book":r["source_book"],
               "page":r["page"],"name":r["narrator_name"],"nn":nn,"toks":set(toks),
-              "ntok":len(toks),"dyr":dyr,"tset":tset,"sset":sset,
+              "ntok":len(toks),"dyr":dyr,"tset":tset,"sset":sset,"fath":father(nn),
               "aid":link_arsanad(nn,set(toks),dyr),"core":core_key(nn)})
 print("entries:",len(E),"| with death yr:",sum(1 for e in E if e["dyr"]),
       "| with isnad nbrs:",sum(1 for e in E if e["tset"] or e["sset"]),
@@ -209,6 +226,7 @@ def compatible(a,b):
     if ea and eb:
         if abs(ea[0]-eb[0]) > ea[1]+eb[1]+20: return (None, False)
         era_ok = abs(ea[0]-eb[0]) <= ea[1]+eb[1]
+    if not father_compat(a,b): return (None, False)        # same person => same father
     inter=len(a["toks"]&b["toks"]); uni=len(a["toks"]|b["toks"])
     if not uni: return (None, False)
     jac=inter/uni; mn=min(a["ntok"],b["ntok"])
@@ -231,9 +249,11 @@ by_aid=defaultdict(list)
 for i,e in enumerate(E):
     if e["aid"] is not None: by_aid[e["aid"]].append(i)
 ev=Counter()
-for ids in by_aid.values():
-    for j in ids[1:]:
-        union(ids[0],j); ev["aid"]+=1
+for ids in by_aid.values():                      # same canonical id, but split on father conflict
+    for x in range(len(ids)):
+        for y in range(x+1,len(ids)):
+            if father_compat(E[ids[x]],E[ids[y]]):
+                if find(ids[x])!=find(ids[y]): union(ids[x],ids[y]); ev["aid"]+=1
 
 # within-block merges
 blocks=defaultdict(list)
@@ -263,8 +283,27 @@ for core,idx in blocks.items():
 # ---- build clusters ----
 cl=defaultdict(list)
 for i in range(len(E)): cl[find(i)].append(i)
+# safety net: re-split each union with STRICT edges (father agreement AND a shared
+# distinctive token) so no patronymic-conflict cluster can ship, however it formed.
+groups=[]
+for members in cl.values():
+    if len(members)<=1: groups.append(members); continue
+    n=len(members); p=list(range(n))
+    def _f(x,p=p):
+        while p[x]!=x: p[x]=p[p[x]]; x=p[x]
+        return x
+    for x in range(n):
+        ax=E[members[x]]
+        for y in range(x+1,n):
+            bx=E[members[y]]
+            if father_compat(ax,bx) and (distinctive(ax["toks"]) & distinctive(bx["toks"])):
+                p[_f(x)]=_f(y)
+    sub=defaultdict(list)
+    for i in range(n): sub[_f(i)].append(members[i])
+    groups.extend(sub.values())
+row2cl={i:gid for gid,members in enumerate(groups) for i in members}
 clusters=[]
-for root,members in cl.items():
+for root,members in enumerate(groups):
     ms=[E[i] for i in members]
     aids={m["aid"] for m in ms if m["aid"] is not None}
     aid=next(iter(aids)) if len(aids)==1 else ""
@@ -309,7 +348,7 @@ for c in [x for x in clusters if x["n_books"]>1]:
 wb.save(os.path.join(OUT,"duplicate_clusters.xlsx"))
 with open(os.path.join(OUT,"entry_to_cluster.csv"),"w",encoding="utf-8-sig",newline="") as f:
     w=csv.writer(f); w.writerow(["row_id","source_slug","page","name","cluster_id","arsanad_id"])
-    for i,e in enumerate(E): w.writerow([e["row"],e["slug"],e["page"],e["name"],find(i),e["aid"] if e["aid"] is not None else ""])
+    for i,e in enumerate(E): w.writerow([e["row"],e["slug"],e["page"],e["name"],row2cl[i],e["aid"] if e["aid"] is not None else ""])
 
 merged=[c for c in clusters if c["n_entries"]>1]
 multibook=[c for c in clusters if c["n_books"]>1]

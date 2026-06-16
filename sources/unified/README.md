@@ -95,7 +95,7 @@ books — *conservatively* (precision over recall; no false merges).
 |------|------------|
 | `narrator_clusters.csv` | One row per resolved narrator: `canonical_name`, `arsanad_id`, `basis`, `death`, `tabaqa`, `n_books`, `variant_names` (the merged forms), `members` (book:page). |
 | `entry_to_cluster.csv` | Per-entry → `cluster_id` map (join back to the long-form). |
-| `duplicate_clusters.xlsx` | The **1,552 cross-book duplicates** only — the reviewable result. |
+| `duplicate_clusters.xlsx` | The **1,498 cross-book duplicates** only — the reviewable result. |
 
 Dedup is fundamentally a **temporal-fix problem**: same name + same era ⇒ same person;
 same name + different era ⇒ different people. Each entry gets an **era estimate** from
@@ -116,7 +116,11 @@ own date is unknown). Era fixed for 15,599 entries (death 2,214 · arsanad 2,839
 5. **Required for 2–4:** a shared **distinctive (non-common) token** — sharing only
    ubiquitous elements (عبد/الله/محمد/أحمد…) is not identifying, so a common name
    can't "hub" distinct people (this alone cut the largest false cluster 59→10).
-6. **Hard splits:** different `arsanad_id`; death years >5 apart; **incompatible era**.
+6. **Patronymic agreement** — same person ⇒ same father. Every merge (incl. the
+   canonical-id ones) requires compatible fathers, tolerant of truncation and
+   grandfather-attribution (نُسب إلى جدّه) but **not** of a father made only of common
+   tokens. A final safety pass re-splits any union lacking father + distinctive links.
+7. **Hard splits:** different `arsanad_id`; death years >5 apart; **incompatible era**.
 
 > **Rejected (honest note):** a *cross-block* isnad merge (pairing entries with
 > different names that share rare transmitters) was prototyped and **dropped** — it
@@ -124,8 +128,15 @@ own date is unknown). Era fixed for 15,599 entries (death 2,214 · arsanad 2,839
 > ʿAlī b. Ṣāliḥ b. Ḥayy. Relatives/peers share teachers, so isnad is only safe *with*
 > a matching ism+father anchor.
 
-**Results:** 70,620 entries → **68,349 clusters** (1,681 merged; 1,552 cross-book).
-Evidence: 1,276 canonical id · 600 name+era · 520 name≈ · 15 isnad · 5 name+death.
+**Results:** 70,620 entries → **68,471 clusters** (1,618 merged; 1,498 cross-book).
+Evidence: 1,248 canonical id · 577 name+era · 520 name≈ · 15 isnad · 5 name+death.
+
+**Audit.** A patronymic-conflict test (cluster members with different fathers ⇒ likely
+false merge) drove the precision fixes above: **2.8% → 1.2%** of merged clusters. The
+remaining ~1.2% are dominated by *false positives of the test itself* — legitimate
+grandfather-attribution / kunya variants of one person (عبد الله بن [سعيد بن] أبي هند,
+Yazīd b. [ʿAbd Allāh b.] al-Shikhkhīr, Ibn Akhī al-Zuhrī). The egregious merges
+(بصير/أمامة/السفر under one id; عبد الوارث/عبيد الﻟه) were eliminated.
 
 **⚠️ Precision-first / recall limits.** Still conservative — most entries are
 genuinely distinct narrators, and death parses for only ~3% of entries (ṭabaqa+peer
