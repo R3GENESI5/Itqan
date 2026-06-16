@@ -27,6 +27,11 @@ def norm(s):
     s=re.sub(r"[^؀-ۿ\s]"," ",s); return re.sub(r"\s+"," ",s).strip()
 STOP={"بن","ابن","بنت","ابو","ابي","ابا","ام","عبد","ال","مولي","مولاه"}  # weak tokens for blocking
 def content_toks(nn): return [t for t in nn.split() if t not in ("بن","ابن","بنت")]
+# ubiquitous name elements — sharing only these is NOT identifying (prevents hub over-merge)
+COMMON={"عبد","الله","الرحمن","الرحيم","محمد","احمد","علي","الحسن","الحسين","عمر","عثمان",
+        "بكر","ابراهيم","اسماعيل","يحيي","عبيد","العزيز","الملك","السلام","الحميد","يوسف",
+        "ابو","ابي","ابا","ام","الدين","الواحد","الكريم","اسحاق","موسي","هارون","ادم"}
+def distinctive(toks): return {t for t in toks if t not in COMMON}
 def core_key(nn):
     t=content_toks(nn)
     return " ".join(t[:3]) if len(t)>=3 else " ".join(t)
@@ -136,6 +141,54 @@ print("entries:",len(E),"| with death yr:",sum(1 for e in E if e["dyr"]),
       "| with isnad nbrs:",sum(1 for e in E if e["tset"] or e["sset"]),
       "| arsanad-linked:",sum(1 for e in E if e["aid"] is not None))
 
+# ---- TEMPORAL FIX: era estimate per entry (death > tabaqa > peers) ----
+import statistics
+tabmap={}                                  # name_norm -> tabaqa bin (from build_tabaqa output)
+try:
+    for r in csv.DictReader(open(os.path.join(OUT,"unified_by_tabaqa.csv"),encoding="utf-8-sig")):
+        if r["tabaqa_order"]!="8": tabmap[r["name_norm"]]=int(r["tabaqa_order"])
+except Exception as ex: print("  (tabaqa map unavailable:",ex,")")
+TAB_MID={1:55,2:105,3:128,4:162,5:195,6:225,7:262}   # bin -> approx death-year midpoint
+
+short_era=defaultdict(list)                # short/peer name -> death years (for contemporaries)
+def _add(k,d):
+    if k and d: short_era[k].append(d)
+for r in ars:
+    d=ars_death(r["death_year"])
+    if not d: continue
+    forms={norm(r["name"]),norm(r["shuhra"])}
+    try: forms|={norm(v) for v in ast.literal_eval(r["namings"])}
+    except Exception: pass
+    for f in forms:
+        if not f or f=="-": continue
+        t=[x for x in f.split() if x not in ("بن","ابن")]
+        _add(" ".join(t[:3]),d); _add(" ".join(t[:2]),d)
+        if t: _add(t[-1],d)                # nisba/laqab (e.g. الزهري)
+def _res(k):
+    ds=short_era.get(k)
+    if ds and max(ds)-min(ds)<=60: return statistics.median(ds)
+    return None
+def peer_era(e):
+    ds=[]
+    for k in (e["tset"]|e["sset"]):
+        v=_res(k) or _res(k.split()[-1] if k.split() else "")
+        if v: ds.append(v)
+    return statistics.median(ds) if len(ds)>=2 else None
+def era(e):
+    if e["dyr"]: return (e["dyr"],4,"death")
+    if e["aid"] is not None and id_death.get(e["aid"]): return (id_death[e["aid"]],6,"arsanad")
+    t=tabmap.get(e["nn"])
+    if t in TAB_MID: return (TAB_MID[t],22,"tabaqa")
+    pe=peer_era(e)
+    if pe is not None: return (pe,30,"peer")
+    return None
+for e in E: e["era"]=era(e)
+print("  era fixed:",sum(1 for e in E if e["era"]),
+      "(death",sum(1 for e in E if e["era"] and e["era"][2]=="death"),
+      "| arsanad",sum(1 for e in E if e["era"] and e["era"][2]=="arsanad"),
+      "| tabaqa",sum(1 for e in E if e["era"] and e["era"][2]=="tabaqa"),
+      "| peer",sum(1 for e in E if e["era"] and e["era"][2]=="peer"),")")
+
 # ---- union-find ----
 parent=list(range(len(E)))
 def find(x):
@@ -150,17 +203,27 @@ def compatible(a,b):
     if a["aid"] and b["aid"]:
         return ("aid", True) if a["aid"]==b["aid"] else (None, False)
     if a["dyr"] and b["dyr"] and abs(a["dyr"]-b["dyr"])>5: return (None, False)
+    # TEMPORAL split: same name but incompatible era => different people
+    ea,eb=a["era"],b["era"]
+    era_ok=False
+    if ea and eb:
+        if abs(ea[0]-eb[0]) > ea[1]+eb[1]+20: return (None, False)
+        era_ok = abs(ea[0]-eb[0]) <= ea[1]+eb[1]
     inter=len(a["toks"]&b["toks"]); uni=len(a["toks"]|b["toks"])
     if not uni: return (None, False)
     jac=inter/uni; mn=min(a["ntok"],b["ntok"])
     death_eq = bool(a["dyr"] and b["dyr"] and abs(a["dyr"]-b["dyr"])<=1)
-    # Jaccard (not containment) so a short generic name can't hub long distinct ones.
-    if mn>=4 and jac>=0.85: return ("name≈", True)
-    if mn>=4 and jac>=0.62 and death_eq: return ("name+death", True)
-    # isnad corroboration: same name-core block + share >=3 transmitters/students
+    confident_era = era_ok and (a["era"][2] in ("death","arsanad","tabaqa") or b["era"][2] in ("death","arsanad","tabaqa"))
+    sd=len(distinctive(a["toks"]) & distinctive(b["toks"]))   # shared *identifying* tokens
+    # Jaccard (not containment); require shared distinctive token(s) so common names can't hub.
+    if sd>=1 and mn>=4 and jac>=0.85: return ("name≈", True)
+    if sd>=2 and mn>=4 and jac>=0.62 and death_eq: return ("name+death", True)
+    # name + temporal fix (death/tabaqa/peer era agree): safe lower-Jaccard merge
+    if sd>=2 and mn>=4 and jac>=0.55 and confident_era: return ("name+era", True)
+    # isnad corroboration: same name-core block + share transmitters/students
     shared=len(a["tset"]&b["tset"])+len(a["sset"]&b["sset"])
-    if shared>=3 and jac>=0.45: return ("isnad", True)
-    if shared>=2 and jac>=0.6:  return ("isnad", True)
+    if sd>=1 and shared>=3 and jac>=0.45: return ("isnad", True)
+    if sd>=1 and shared>=2 and jac>=0.6:  return ("isnad", True)
     return (None, False)
 
 # index entries by arsanad id for cross-block merges

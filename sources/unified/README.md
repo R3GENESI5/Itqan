@@ -95,39 +95,43 @@ books — *conservatively* (precision over recall; no false merges).
 |------|------------|
 | `narrator_clusters.csv` | One row per resolved narrator: `canonical_name`, `arsanad_id`, `basis`, `death`, `tabaqa`, `n_books`, `variant_names` (the merged forms), `members` (book:page). |
 | `entry_to_cluster.csv` | Per-entry → `cluster_id` map (join back to the long-form). |
-| `duplicate_clusters.xlsx` | The **1,300 cross-book duplicates** only — the reviewable result. |
+| `duplicate_clusters.xlsx` | The **1,552 cross-book duplicates** only — the reviewable result. |
 
-**How it merges** (every merge is gated, never on a bare name):
+Dedup is fundamentally a **temporal-fix problem**: same name + same era ⇒ same person;
+same name + different era ⇒ different people. Each entry gets an **era estimate** from
+the sharpest signal available — **death year → arsanad death → ṭabaqa (generation) →
+contemporaries/peers** (the eras of the teachers/students it transmits with, when its
+own date is unknown). Era fixed for 15,599 entries (death 2,214 · arsanad 2,839 ·
+ṭabaqa 9,186 · peer 1,360).
+
+**How it merges** (every merge is gated; never on a bare or common name):
 1. **Canonical anchor** — link each entry to an `arsanad_narrators.csv` `id` via exact
    name *or* fuzzy match (token-Jaccard ≥0.8, ≥4 tokens, death-gated). Same id ⇒ merge.
-   This carries word-order / kunya-first / spelling variants (e.g. al-Ifrīqī).
-2. **Name near-equality** — Jaccard ≥0.85 (≥4 tokens) within a name-core block;
-   Jaccard ≥0.62 if death years agree. **Jaccard (not containment)** so a short
-   generic name can't "hub" distinct people together.
-3. **Isnad corroboration** — within a name-core block, entries that share ≥3 (or ≥2 at
-   Jaccard ≥0.6) of the **transmitters/students** named in their text ("روى عن … وعنه …")
-   merge. The shared ism+father anchor keeps it safe.
-4. **Hard splits** — different `arsanad_id` ⇒ never merge; death years >5 apart ⇒
-   never merge.
+   Carries word-order / kunya-first / spelling variants (e.g. al-Ifrīqī).
+2. **Name near-equality** — Jaccard ≥0.85 within a name-core block.
+3. **Name + temporal fix** — Jaccard ≥0.55 when the two **era estimates agree** (the
+   death→ṭabaqa→peer hierarchy). This is the recall lever.
+4. **Isnad corroboration** — share ≥3 (or ≥2 at Jaccard ≥0.6) of the transmitters/
+   students named in the text ("روى عن … وعنه …"), within a name-core block.
+5. **Required for 2–4:** a shared **distinctive (non-common) token** — sharing only
+   ubiquitous elements (عبد/الله/محمد/أحمد…) is not identifying, so a common name
+   can't "hub" distinct people (this alone cut the largest false cluster 59→10).
+6. **Hard splits:** different `arsanad_id`; death years >5 apart; **incompatible era**.
 
-> **Rejected (honest note):** a *cross-block* isnad merge (pairing entries that share
-> rare transmitters across different name-blocks) was prototyped and **dropped** — it
+> **Rejected (honest note):** a *cross-block* isnad merge (pairing entries with
+> different names that share rare transmitters) was prototyped and **dropped** — it
 > merged distinct people who share an isnad circle, e.g. the **brothers** al-Ḥasan &
 > ʿAlī b. Ṣāliḥ b. Ḥayy. Relatives/peers share teachers, so isnad is only safe *with*
 > a matching ism+father anchor.
 
-**Results:** 70,620 entries → **68,761 clusters** (1,431 merged; 1,300 cross-book:
-~1,060 span 2 books … 1 spans 7). Evidence tally: 1,276 by canonical id, 712 by
-name, 20 by within-block isnad, 5 by name+death.
+**Results:** 70,620 entries → **68,349 clusters** (1,681 merged; 1,552 cross-book).
+Evidence: 1,276 canonical id · 600 name+era · 520 name≈ · 15 isnad · 5 name+death.
 
-**⚠️ Precision-first / recall limits.** Only ~3% collapse — most entries are
-genuinely distinct narrators, arsanad covers ~18k of the canonical rawīs, and
-death years parse for only ~3% of entries (the disambiguator is thin). Real
-duplicates with very different phrasing are **missed** rather than guessed. Each
-cluster carries `basis` + `variant_names` so you can audit every merge. The
-principled recall lift is the **isnad teacher/student graph** (arsanad's
-`narrated_from`/`narrated_to` id-lists) — match a narrator's mentioned
-teachers/students to corroborate identity. Feed clusters into `dedup_narrators.py`.
+**⚠️ Precision-first / recall limits.** Still conservative — most entries are
+genuinely distinct narrators, and death parses for only ~3% of entries (ṭabaqa+peer
+widen the temporal fix to 22%). Duplicates with very different phrasing *and* no
+shared era/isnad are **missed** rather than guessed. Every merge is auditable via
+`basis` + `variant_names`. Feed clusters into `dedup_narrators.py`.
 
 ## Regenerate
 
