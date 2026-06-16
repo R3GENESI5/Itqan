@@ -60,6 +60,8 @@ def chain0(nn):                       # the ism part, before the first بن
     return " ".join(out)
 def kunya_led(c0):                    # kunya/nasab-first forms: ism not auto-extractable
     return (not c0) or c0.split()[0] in ("ابو","ابي","ابا","ام")
+def blk2(nn):                         # blocking key for the linker: (ism, father)
+    f=father(nn); return (chain0(nn), " ".join(f) if f else "")
 def cluster_flag(ms):                 # Lever-3 audit: same-person consistency among verifiable members
     verif=[m for m in ms if not kunya_led(chain0(m["nn"]))]
     for x in range(len(verif)):
@@ -152,6 +154,7 @@ def resolve_gk(nm):                  # neighbour name -> unique GK id (id-graph 
 
 key2ids=defaultdict(set); id_death={}; id_name={}; id_tab={}; id_tabbin={}; id_teach={}; id_stud={}
 A_core=defaultdict(list)               # core_key -> [(tokset, id, death, ism)] for fuzzy linking
+ismfath2cands=defaultdict(list)        # (ism, father) -> [(tokset, id, death, father)] — the linker block
 short_era=defaultdict(list)            # short/peer name -> deaths (contemporary time-fix)
 def _add_short(k,d):
     if k and d: short_era[k].append(d)
@@ -169,6 +172,9 @@ for f in glob.glob(os.path.join(ROOT,"app/data/rijal/profiles_*.json")):
         fn=norm(p.get("full_name",""))
         if not fn: continue
         fnism=(content_toks(fn) or [""])[0]
+        _fts=set(content_toks(fn))
+        if len(_fts)>=3 and not kunya_led(chain0(fn)):
+            ismfath2cands[blk2(fn)].append((_fts,pid,d,father(fn)))
         # index full_name + only those namings that start with the person's ism
         # (drops relational/nasab-first forms like "أبيه"/father's name that conflate kin)
         forms={fn}|{norm(v) for v in p.get("namings",[]) if v and content_toks(norm(v)) and content_toks(norm(v))[0]==fnism}
@@ -183,17 +189,22 @@ for f in glob.glob(os.path.join(ROOT,"app/data/rijal/profiles_*.json")):
 def link_canon(nn, toks, dyr):
     ids=key2ids.get(nn)
     if ids and len(ids)==1: return next(iter(ids))        # exact unique (safe any length)
-    ct=content_toks(nn); nnism=ct[0] if ct else ""
-    if len(toks)>=4:                                      # fuzzy only for specific-enough names
-        best=None; bestj=0.0
-        for ts,i,vd,vism in A_core.get(core_key(nn), ()):
-            if vism!=nnism: continue                      # same ism (first name) — blocks father/son
-            if vd and dyr and abs(vd-dyr)>5: continue
+    # blocked multi-feature scorer: candidates share ism+father; score on name + era + distinctive
+    c0=chain0(nn)
+    if c0 and not kunya_led(c0) and len(toks)>=3:
+        nd=distinctive(toks); ent={"fath":father(nn),"toks":toks}; best=None; bestsc=0.0
+        for ts,pid,pd,pf in ismfath2cands.get(blk2(nn), ()):
+            if pd and dyr and abs(pd-dyr)>5: continue                 # era conflict
+            if not father_compat(ent,{"fath":pf,"toks":ts}): continue
+            sdv=len(nd & distinctive(ts))
+            if sdv<1: continue                                        # need a shared identifying token
             uni=len(toks|ts)
             if not uni: continue
-            j=len(toks&ts)/uni
-            deathm=bool(vd and dyr and abs(vd-dyr)<=2)
-            if (j>=0.80 or (j>=0.6 and deathm)) and j>bestj: best,bestj=i,j
+            jac=len(toks&ts)/uni
+            dm=bool(pd and dyr and abs(pd-dyr)<=2)
+            if jac>=0.55 or (jac>=0.40 and dm) or (jac>=0.40 and sdv>=2):
+                sc=jac+(0.3 if dm else 0)+0.05*sdv
+                if sc>bestsc: best,bestsc=pid,sc
         if best is not None: return best
     if ids and dyr is not None:                           # exact-ambiguous -> death disambiguation
         cand=[i for i in ids if id_death.get(i) and abs(id_death[i]-dyr)<=3]

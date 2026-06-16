@@ -95,29 +95,30 @@ books — *conservatively* (precision over recall; no false merges).
 |------|------------|
 | `narrator_clusters.csv` | One row per resolved narrator: `canonical_name`, `canon_id`, `basis`, **`flag`**, `death`, `tabaqa`, `n_books`, `variant_names`, `members`. |
 | `entry_to_cluster.csv` | Per-entry → `cluster_id` map (join back to the long-form). |
-| `duplicate_clusters.xlsx` | The **1,515 cross-book duplicates** — the reviewable result; `flag=review` rows highlighted. |
+| `duplicate_clusters.xlsx` | The **3,386 cross-book duplicates** — the reviewable result; `flag=review` rows highlighted. |
 
 **Canonical authority:** the project's **merged rijal DB** (`app/data/rijal/` — 115,735
 profiles integrating **GK / Jawāmiʿ al-Kalim** + classical sources, with `death`,
-`tabaqat`, `namings`, and GK `teachers`/`students` id-graph). It links **14,247** of the
-corpus entries (3.2× what `arsanad_narrators.csv` alone reached). To avoid its relational
-`namings` ("أبيه", an ancestor's name) conflating kin, the index uses each profile's
-`full_name` plus only namings that **start with the person's ism**. GK
-(`src/kaggle_rawis.csv`, 24,326 narrators) supplies a **death year and generation for
-every narrator** — used both via each profile's `gk_id` and by direct name match.
+`tabaqat`, `namings`, and GK `teachers`/`students` id-graph). The **blocked multi-feature
+linker** (below) connects **22,236** corpus entries (≈5× what `arsanad_narrators.csv`
+alone reached). To avoid the DB's relational `namings` ("أبيه", an ancestor's name)
+conflating kin, the index uses each profile's `full_name` plus only namings that **start
+with the person's ism**. GK (`src/kaggle_rawis.csv`, 24,326 narrators) supplies a **death
+year and generation for every narrator** — via each profile's `gk_id` and by direct name match.
 
 Dedup is fundamentally a **temporal-fix problem**: same name + same era ⇒ same person;
 same name + different era ⇒ different people. Each entry gets an **era estimate** from the
 sharpest signal available — **death → canonical-DB death → ṭabaqa → GK death/generation →
-contemporaries/peers**. Era fixed for **16,700** entries (death 2,214 · canon 3,222 ·
-ṭabaqa 8,576 · canon-tabaqa 568 · GK 338 · GK-gen 462 · peer 1,320). *Coverage is
-name-linking-bound, not date-bound — GK already lives in the merged DB, so it lifts the
-fix only modestly.*
+contemporaries/peers**. Era fixed for **17,911** entries (death 2,214 · canon 5,192 ·
+ṭabaqa 7,484 · canon-tabaqa 971 · GK 305 · GK-gen 458 · peer 1,287).
 
 **How it merges** (every merge is gated; never on a bare or common name):
-1. **Canonical anchor** — link each entry to a merged-DB profile `id` via exact name *or*
-   fuzzy match (token-Jaccard ≥0.8, ≥4 tokens, **same ism**, death-gated). Same id ⇒ merge.
-   Carries word-order / kunya-first / spelling variants (e.g. al-Ifrīqī).
+1. **Canonical anchor** — link each entry to a merged-DB profile `id` with a **blocked
+   multi-feature linker**: block on **(ism, father)**, then among candidates require
+   `father_compat` + a shared distinctive token, and score on name-Jaccard + era +
+   distinctive overlap (accept Jaccard ≥0.55, or ≥0.40 with agreeing death/era or ≥2
+   shared distinctive). Same id ⇒ merge. This lower, *guarded* threshold links 56% more
+   entries than the old Jaccard-0.8 rule **and** lowers the conflict rate (below).
 2. **Name near-equality** — Jaccard ≥0.85 within a name-core block.
 3. **Name + temporal fix** — Jaccard ≥0.55 when the two **era estimates agree** (the
    death→ṭabaqa→peer hierarchy). This is the recall lever.
@@ -141,15 +142,17 @@ fix only modestly.*
 > ʿAlī b. Ṣāliḥ b. Ḥayy. Relatives/peers share teachers, so isnad is only safe *with*
 > a matching ism+father anchor.
 
-**Results:** 70,620 entries → **68,569 clusters** (1,662 merged; 1,515 cross-book).
-Evidence: 1,348 canonical id · 488 name+era · 290 name≈ · 14 isnad · 5 name+death.
+**Results:** 70,620 entries → **65,579 clusters** (3,597 merged; **3,386 cross-book** —
+2.2× the previous linker). Evidence: 4,721 canonical id · 207 name≈ · 112 name+era ·
+11 isnad · 7 name+death. Largest cluster 11 (no hubs).
 
 **Audit (`flag` column).** A grandfather/kunya-aware same-person test — does every
 auto-verifiable member share an ism (chain head) and a compatible father? — flags
-**17 of 1,662 merged clusters (1.0%)** as `flag=review`; the other **1,645 are `ok`**.
-The flagged set concentrates the genuine errors (عبد الملك بن أبي بشير / … أبي جميلة;
-أبو الأسود الغفاري / أبو الأشرس) alongside a few rumūz/kunya-noise false positives — so
-**filter `flag=ok` for high-confidence dedup**, review the 17. Earlier egregious merges
+**18 of 3,597 merged clusters (0.5%)** as `flag=review`; the other **3,579 are `ok`**.
+A separate naive patronymic test puts conflicts at **0.3%** — so the new linker **more
+than doubled recall while lowering the error rate** (the guarded low-Jaccard scorer
+admits true variants the old 0.8 cutoff missed, and rejects kin via ism+father+death).
+**Filter `flag=ok` for high-confidence dedup**, review the 18. Earlier egregious merges
 (59-entry hubs; father/son pairs like الحكم بن ظهير / إبراهيم بن الحكم) were eliminated.
 
 **⚠️ Precision-first / recall limits.** Still conservative — most entries are
