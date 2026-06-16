@@ -52,6 +52,22 @@ def father_compat(a,b):
 def core_key(nn):
     t=content_toks(nn)
     return " ".join(t[:3]) if len(t)>=3 else " ".join(t)
+def chain0(nn):                       # the ism part, before the first بن
+    out=[]
+    for x in nn.split():
+        if x in ("بن","ابن"): break
+        out.append(x)
+    return " ".join(out)
+def kunya_led(c0):                    # kunya/nasab-first forms: ism not auto-extractable
+    return (not c0) or c0.split()[0] in ("ابو","ابي","ابا","ام")
+def cluster_flag(ms):                 # Lever-3 audit: same-person consistency among verifiable members
+    verif=[m for m in ms if not kunya_led(chain0(m["nn"]))]
+    for x in range(len(verif)):
+        for y in range(x+1,len(verif)):
+            a,b=verif[x],verif[y]; c0a,c0b=chain0(a["nn"]),chain0(b["nn"])
+            if not (c0a in c0b or c0b in c0a) or not father_compat(a,b):
+                return "review"       # different ism, or incompatible father
+    return "ok"
 
 # ---- Arabic death-year parser (reuse) ----
 _U={"احدي":1,"واحده":1,"واحد":1,"اثنتين":2,"اثنين":2,"ثنتين":2,"ثلاث":3,"ثلاثه":3,"اربع":4,"اربعه":4,
@@ -108,16 +124,48 @@ def neighbours(t):
 import json, glob
 def _death(s):
     m=re.search(r"\d+", s or ""); return int(m.group()) if m else None
-key2ids=defaultdict(set); id_death={}; id_name={}; id_tab={}
-A_core=defaultdict(list)               # core_key -> [(tokset, id, death)] for fuzzy linking
+
+# Lever 1+2: GK (Jawāmiʿ al-Kalim) — death-for-all + generation + teacher/student id-graph
+ORD2BIN={"الاولي":1,"الثانيه":2,"الثالثه":3,"الرابعه":3,"الخامسه":4,"السادسه":4,
+         "السابعه":5,"الثامنه":5,"التاسعه":6,"العاشره":7,"الحاديه عشره":7,"الثانيه عشره":7,
+         "صحابي":1,"صحابيه":1}
+def tab_bin(s):
+    s=norm(s)
+    for w,b in ORD2BIN.items():
+        if w in s: return b
+    return None
+GEN2BIN={1:1,2:2,3:3,4:3,5:4,6:4,7:5,8:5,9:6,10:7,11:7,12:7}
+gk_death={}; gk_gen={}; gk_name2id=defaultdict(set)
+for x in csv.DictReader(open(os.path.join(ROOT,"src/kaggle_rawis.csv"),encoding="utf-8")):
+    gid=x["scholar_indx"].strip()
+    dm=re.match(r"\s*(\d+)", x.get("death_date_hijri","") or "")
+    if dm: gk_death[gid]=int(dm.group(1))
+    gm=re.search(r"(\d+)(?:st|nd|rd|th)\s+[Gg]eneration", x.get("grade","") or "")
+    if gm: gk_gen[gid]=GEN2BIN.get(int(gm.group(1)))
+    ar=re.findall(r"[؀-ۿ][؀-ۿ\s]+", x.get("name","") or "")
+    if ar:
+        nn=norm(max(ar,key=len))
+        if len(nn.split())>=3: gk_name2id[nn].add(gid)
+def resolve_gk(nm):                  # neighbour name -> unique GK id (id-graph isnad)
+    ids=gk_name2id.get(nm)
+    return next(iter(ids)) if ids and len(ids)==1 else None
+
+key2ids=defaultdict(set); id_death={}; id_name={}; id_tab={}; id_tabbin={}; id_teach={}; id_stud={}
+A_core=defaultdict(list)               # core_key -> [(tokset, id, death, ism)] for fuzzy linking
 short_era=defaultdict(list)            # short/peer name -> deaths (contemporary time-fix)
 def _add_short(k,d):
     if k and d: short_era[k].append(d)
 for f in glob.glob(os.path.join(ROOT,"app/data/rijal/profiles_*.json")):
     for pid,p in json.load(open(f,encoding="utf-8")).items():
+        gkid=str(p.get("gk_id","")).strip()
         d=_death(p.get("death",""))
-        id_death[pid]=d; id_name[pid]=p.get("full_name","")
+        if d is None and gkid in gk_death: d=gk_death[gkid]          # GK fills missing death
+        tb=tab_bin(p.get("tabaqat",""))
+        if tb is None and gkid in gk_gen: tb=gk_gen[gkid]            # GK generation -> tabaqa bin
+        id_death[pid]=d; id_tabbin[pid]=tb; id_name[pid]=p.get("full_name","")
         id_tab[pid]=p.get("tabaqat","").strip() if p.get("tabaqat","-") not in ("-","",None) else ""
+        id_teach[pid]=set(map(str, p.get("teachers",[]) or []))      # GK teacher ids
+        id_stud[pid]=set(map(str, p.get("students",[]) or []))
         fn=norm(p.get("full_name",""))
         if not fn: continue
         fnism=(content_toks(fn) or [""])[0]
@@ -158,10 +206,16 @@ for r in csv.DictReader(open(os.path.join(OUT,"unified_narrator_index.csv"),enco
     nn=r["name_norm"]; toks=content_toks(nn)
     if len(toks)<2: continue
     tnorm=norm(r["text"]); dyr=parse_year(tnorm); tset,sset=neighbours(tnorm)
+    t_gk={g for k in tset for g in [resolve_gk(k)] if g}      # neighbours -> GK ids (id-graph)
+    s_gk={g for k in sset for g in [resolve_gk(k)] if g}
+    aid=link_canon(nn,set(toks),dyr)
+    # inherit the curated GK teacher/student id-graph from the linked profile
+    if aid is not None:
+        t_gk=t_gk|id_teach.get(aid,set()); s_gk=s_gk|id_stud.get(aid,set())
     E.append({"row":int(r["row_id"]),"slug":r["source_slug"],"book":r["source_book"],
               "page":r["page"],"name":r["narrator_name"],"nn":nn,"toks":set(toks),
               "ntok":len(toks),"dyr":dyr,"tset":tset,"sset":sset,"fath":father(nn),
-              "aid":link_canon(nn,set(toks),dyr),"core":core_key(nn)})
+              "t_gk":t_gk,"s_gk":s_gk,"aid":aid,"core":core_key(nn)})
 print("entries:",len(E),"| with death yr:",sum(1 for e in E if e["dyr"]),
       "| with isnad nbrs:",sum(1 for e in E if e["tset"] or e["sset"]),
       "| canon-linked:",sum(1 for e in E if e["aid"] is not None))
@@ -187,18 +241,20 @@ def peer_era(e):
     return statistics.median(ds) if len(ds)>=2 else None
 def era(e):
     if e["dyr"]: return (e["dyr"],4,"death")
-    if e["aid"] is not None and id_death.get(e["aid"]): return (id_death[e["aid"]],6,"canon")
+    a=e["aid"]
+    if a is not None and id_death.get(a): return (id_death[a],6,"canon")
+    if a is not None and id_tabbin.get(a): return (TAB_MID[id_tabbin[a]],20,"canontab")  # GK gen / tabaqāt
+    g=resolve_gk(e["nn"])                                  # direct GK name match (death-for-all)
+    if g and gk_death.get(g): return (gk_death[g],6,"gk")
+    if g and gk_gen.get(g) in TAB_MID: return (TAB_MID[gk_gen[g]],20,"gktab")
     t=tabmap.get(e["nn"])
     if t in TAB_MID: return (TAB_MID[t],22,"tabaqa")
     pe=peer_era(e)
     if pe is not None: return (pe,30,"peer")
     return None
 for e in E: e["era"]=era(e)
-print("  era fixed:",sum(1 for e in E if e["era"]),
-      "(death",sum(1 for e in E if e["era"] and e["era"][2]=="death"),
-      "| canon",sum(1 for e in E if e["era"] and e["era"][2]=="canon"),
-      "| tabaqa",sum(1 for e in E if e["era"] and e["era"][2]=="tabaqa"),
-      "| peer",sum(1 for e in E if e["era"] and e["era"][2]=="peer"),")")
+_ec=Counter(e["era"][2] for e in E if e["era"])
+print("  era fixed:",sum(_ec.values()),"|",dict(_ec))
 
 # ---- union-find ----
 parent=list(range(len(E)))
@@ -225,14 +281,17 @@ def compatible(a,b):
     if not uni: return (None, False)
     jac=inter/uni; mn=min(a["ntok"],b["ntok"])
     death_eq = bool(a["dyr"] and b["dyr"] and abs(a["dyr"]-b["dyr"])<=1)
-    confident_era = era_ok and (a["era"][2] in ("death","canon","tabaqa") or b["era"][2] in ("death","canon","tabaqa"))
+    confident_era = era_ok and (a["era"][2] in ("death","canon","canontab","tabaqa") or b["era"][2] in ("death","canon","canontab","tabaqa"))
     sd=len(distinctive(a["toks"]) & distinctive(b["toks"]))   # shared *identifying* tokens
     # Jaccard (not containment); require shared distinctive token(s) so common names can't hub.
     if sd>=1 and mn>=4 and jac>=0.85: return ("name≈", True)
     if sd>=2 and mn>=4 and jac>=0.62 and death_eq: return ("name+death", True)
     # name + temporal fix (death/tabaqa/peer era agree): safe lower-Jaccard merge
     if sd>=2 and mn>=4 and jac>=0.55 and confident_era: return ("name+era", True)
-    # isnad corroboration: same name-core block + share transmitters/students
+    # isnad corroboration (Lever 2): prefer curated GK teacher/student *id* overlap;
+    # fall back to text-extracted neighbour-name overlap. Within a name-core block.
+    gk_shared=len(a["t_gk"]&b["t_gk"])+len(a["s_gk"]&b["s_gk"])
+    if sd>=1 and gk_shared>=2 and jac>=0.45: return ("isnad-gk", True)
     shared=len(a["tset"]&b["tset"])+len(a["sset"]&b["sset"])
     if sd>=1 and shared>=3 and jac>=0.45: return ("isnad", True)
     if sd>=1 and shared>=2 and jac>=0.6:  return ("isnad", True)
@@ -311,6 +370,7 @@ for root,members in enumerate(groups):
         if m["name"] not in vnames: vnames.append(m["name"])
     clusters.append({"cluster_id":root,"canonical_name":canon,"canon_id":aid,
         "basis": ("canon" if aid!="" else "name"),
+        "flag": (cluster_flag(ms) if len(ms)>1 else "ok"),
         "death": (Counter(deaths).most_common(1)[0][0] if deaths else (id_death.get(aid) or "")),
         "tabaqa": id_tab.get(aid,"") if aid!="" else "",
         "n_entries":len(ms),"n_books":len(books),"books":"; ".join(books),
@@ -319,7 +379,7 @@ for root,members in enumerate(groups):
 clusters.sort(key=lambda c:(-c["n_books"],-c["n_entries"]))
 
 # ---- outputs ----
-CC=["cluster_id","canonical_name","canon_id","basis","death","tabaqa","n_entries","n_books","books","variant_names","members"]
+CC=["cluster_id","canonical_name","canon_id","basis","flag","death","tabaqa","n_entries","n_books","books","variant_names","members"]
 with open(os.path.join(OUT,"narrator_clusters.csv"),"w",encoding="utf-8-sig",newline="") as f:
     w=csv.writer(f); w.writerow(CC)
     for c in clusters: w.writerow([c[k] for k in CC])
@@ -331,13 +391,16 @@ from openpyxl.utils import get_column_letter
 wb=Workbook(); ws=wb.active; ws.title="duplicate_clusters"; ws.sheet_view.rightToLeft=True
 hf=PatternFill("solid",fgColor="1F4E78"); hfont=Font(bold=True,color="FFFFFF")
 arab=Alignment(horizontal="right",vertical="top",wrap_text=True,readingOrder=2); ctr=Alignment(horizontal="center",vertical="top")
-cols=[("الاسم المعتمد",40),("canon_id",10),("الأساس",9),("الوفاة",8),("الطبقة",14),("# كتب",7),("# مواضع",8),("الكتب",34),("الأسماء المدمجة",70)]
+cols=[("الاسم المعتمد",40),("canon_id",10),("الأساس",9),("flag",8),("الوفاة",8),("الطبقة",14),("# كتب",7),("# مواضع",8),("الكتب",34),("الأسماء المدمجة",70)]
 ws.append([c[0] for c in cols])
 for i,(t,wd) in enumerate(cols,1):
     c=ws.cell(1,i); c.fill=hf; c.font=hfont; c.alignment=Alignment(horizontal="center",wrap_text=True); ws.column_dimensions[get_column_letter(i)].width=wd
 ws.freeze_panes="A2"
-for c in [x for x in clusters if x["n_books"]>1]:
-    ws.append([c["canonical_name"],c["canon_id"],c["basis"],c["death"],c["tabaqa"],c["n_entries"],c["n_books"],c["books"],c["variant_names"][:600]])
+rev_fill=PatternFill("solid",fgColor="FCE4D6")
+for c in sorted([x for x in clusters if x["n_books"]>1], key=lambda x:(x["flag"]!="review",)):
+    ws.append([c["canonical_name"],c["canon_id"],c["basis"],c["flag"],c["death"],c["tabaqa"],c["n_entries"],c["n_books"],c["books"],c["variant_names"][:600]])
+    if c["flag"]=="review":
+        for cc in range(1,len(cols)+1): ws.cell(ws.max_row,cc).fill=rev_fill
     rr=ws.max_row
     for col in (1,5,8,9): ws.cell(rr,col).alignment=arab
     for col in (2,3,4,6,7): ws.cell(rr,col).alignment=ctr
@@ -352,6 +415,9 @@ print(f"\nclusters: {len(clusters)}  (from {len(E)} entries; -{100*(1-len(cluste
 print(f"  merged clusters (>1 entry): {len(merged)}")
 print(f"  cross-book clusters (>1 book): {len(multibook)}")
 print(f"  canon-anchored clusters  : {sum(1 for c in clusters if c['canon_id']!='')}")
+_m=[c for c in clusters if c['n_entries']>1]
+_rev=sum(1 for c in _m if c['flag']=='review')
+print(f"  smart-audit (Lever 3): {_rev}/{len(_m)} merged clusters flagged 'review' ({100*_rev/max(1,len(_m)):.1f}% true-conflict estimate)")
 print("merge evidence:", dict(ev))
 print("\nsample cross-book clusters (deduped across books):")
 for c in multibook[:10]:
