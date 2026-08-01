@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روح المعاني — Ruh al-Ma'ani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../quran/css/style.css?v=14">
+    <link rel="stylesheet" href="css/ruh.css?v=4">
+    <script>if(localStorage.getItem('qbq-dark-mode')==='true')document.documentElement.classList.add('dark-mode')</script>
+</head>
+<body>
+    <header id="header">
+        <div class="header-right">
+            <h1 class="logo">روح المعاني</h1>
+        </div>
+        <div class="header-center">
+            <button id="prev-sec" class="nav-btn" title="المقطع السابق">→</button>
+            <select id="surah-select" title="السورة"></select>
+            <select id="sec-select" title="الآيات"></select>
+            <button id="next-sec" class="nav-btn" title="المقطع التالي">←</button>
+        </div>
+        <div class="header-left">
+            <button id="gloss-toggle" class="trans-toggle-btn active" title="Toggle hover translation">En</button>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle dark mode">☽</button>
+            <button id="text-scale-btn" class="trans-toggle-btn" title="Increase text size">أ+</button>
+            <a href="../quran/index.html" class="themes-link" title="Quran bil-Quran">القرآن</a>
+            <a href="../index.html" class="nav-link" title="Itqan Home">🏠</a>
+            <span id="sec-info" class="surah-meta"></span>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="reader">
+            <div id="ruh-welcome" class="ruh-welcome">
+                <div class="rw-inner">
+                    <div class="rw-title">روح المعاني</div>
+                    <div class="rw-sub">في تفسير القرآن العظيم والسبع المثاني</div>
+                    <div class="rw-author">شهاب الدين محمود الآلوسي &middot; ت ١٢٧٠ هـ</div>
+                    <p class="rw-blurb">
+                        The complete tafsir, in Arabic, with hover translation on every word.
+                        Point at any word for its English meaning; click a word to open its
+                        three-letter root &mdash; al-Raghib's lexicon entry, its semantic family,
+                        and every verse in the Qur'an that shares it.
+                    </p>
+                    <div class="rw-stats" id="rw-stats"></div>
+                    <div class="rw-hint">اختر سورة للبدء &middot; Choose a surah above to begin</div>
+                    <div class="rw-links">
+                        <a href="#1:1">الفاتحة</a>
+                        <a href="#2:255">آية الكرسي</a>
+                        <a href="#29:2">العنكبوت ٢</a>
+                        <a href="#112:1">الإخلاص</a>
+                        <a href="#front">خطبة المفسر</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sec-header" class="sec-header" style="display:none">
+                <h2 id="sec-surah"></h2>
+                <p id="sec-range"></p>
+            </div>
+            <div id="sec-body"></div>
+            <div id="sec-nav" class="sec-nav" style="display:none">
+                <button id="nav-prev" class="show-more">← المقطع السابق</button>
+                <button id="nav-next" class="show-more">المقطع التالي →</button>
+            </div>
+        </section>
+
+        <aside id="root-panel" class="panel-hidden">
+            <div class="drawer-handle"></div>
+            <div class="panel-header">
+                <h3 id="panel-title">الجذر</h3>
+                <button id="close-panel" class="close-btn">&times;</button>
+            </div>
+            <div class="panel-body">
+                <div id="root-display" class="root-arabic"></div>
+                <div id="root-buckwalter" class="root-translit"></div>
+                <div id="root-gloss" class="root-gloss"></div>
+                <div id="root-meaning" class="root-meaning"></div>
+                <div id="root-frequency" class="root-freq"></div>
+
+                <div id="mufradat-section" class="panel-section collapsed" style="display:none">
+                    <h4 class="section-toggle">
+                        <span class="chevron">▸</span>
+                        <span class="section-title">المفردات — Mufradat al-Quran</span>
+                        <span class="section-desc">Classical root definitions by al-Raghib al-Isfahani</span>
+                    </h4>
+                    <div class="section-body">
+                        <div id="mufradat-root" class="mufradat-root"></div>
+                        <div id="mufradat-text" class="mufradat-text"></div>
+                    </div>
+                </div>
+
+                <div id="root-family-section" class="panel-section collapsed" style="display:none">
+                    <h4 class="section-toggle">
+                        <span class="chevron">▸</span>
+                        <span class="section-title">الأسرة الدلالية — Semantic Family</span>
+                        <span class="section-desc">Roots that share a thematic field</span>
+                    </h4>
+                    <div class="section-body">
+                        <div id="root-family-info"></div>
+                    </div>
+                </div>
+
+                <div class="panel-section" id="connected-section">
+                    <h4 class="section-toggle" id="connected-header">
+                        <span class="chevron">▾</span>
+                        <span class="section-title">الآيات المتصلة — Connected Verses</span>
+                        <span class="section-desc">Every verse containing this root</span>
+                    </h4>
+                    <div class="section-body">
+                        <div id="connected-verses"></div>
+                        <button id="show-more-btn" style="display:none" class="show-more">عرض المزيد</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div id="panel-backdrop" class="panel-backdrop"></div>
+    </main>
+
+    <div id="tip" class="ruh-tip" hidden>
+        <div class="tip-gloss"></div>
+        <div class="tip-root" hidden></div>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="loader">
+            <div class="loader-text">جارٍ التحميل...</div>
+        </div>
+    </div>
+
+    <script src="js/app.js?v=4"></script>
+</body>
+</html>

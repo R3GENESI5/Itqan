@@ -413,8 +413,12 @@ const App = {
             `${info.verses_count} verses · ${info.revelation_place === 'makkah' ? 'Makki' : 'Madani'}`;
 
         // Update themes link with current surah
-        const themesLink = document.querySelector('.themes-link');
+        const themesLink = document.querySelector('.themes-link:not(.ruh-link)');
         if (themesLink) themesLink.href = `themes.html?surah=${num}`;
+
+        // Ruh al-Ma'ani opens on the passage covering this surah
+        const ruhLink = document.querySelector('.ruh-link');
+        if (ruhLink) ruhLink.href = `../ruh/index.html#${num}:1`;
 
         if (!skipScroll) window.scrollTo(0, 0);
     },

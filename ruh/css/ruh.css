@@ -1,0 +1,283 @@
+/* ── Ruh al-Ma'ani reader ─────────────────────────────
+   Layers on top of ../quran/css/style.css: same variables,
+   same dark mode, same root panel. Only the reading column
+   and the hover tooltip are new.
+   ──────────────────────────────────────────────────── */
+
+#reader {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: calc(var(--header-h) + 24px) 24px 80px;
+}
+
+body.panel-open #reader { max-width: none; }
+
+/* ── Welcome ─────────────────────────────────────── */
+.ruh-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 62vh;
+    text-align: center;
+}
+
+.rw-inner { max-width: 580px; }
+
+.rw-title {
+    font-family: var(--font-ar);
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1.4;
+}
+
+.rw-sub {
+    font-family: var(--font-ar);
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.rw-author {
+    font-family: var(--font-ar);
+    font-size: .9rem;
+    color: var(--text-muted);
+    opacity: .8;
+    margin-bottom: 22px;
+}
+
+.rw-blurb {
+    font-family: var(--font-en);
+    font-size: .92rem;
+    line-height: 1.85;
+    color: var(--text-muted);
+    direction: ltr;
+    margin-bottom: 22px;
+}
+
+.rw-stats {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+    direction: ltr;
+}
+
+.rw-stats b {
+    display: block;
+    font-family: var(--font-en);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.rw-stats span {
+    font-family: var(--font-en);
+    font-size: .7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.rw-hint {
+    font-family: var(--font-en);
+    font-size: .85rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.rw-links { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+
+.rw-links a {
+    font-size: .85rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 5px 16px;
+    text-decoration: none;
+    transition: all .15s;
+}
+
+.rw-links a:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ── Section header ──────────────────────────────── */
+.sec-header {
+    text-align: center;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sec-header h2 {
+    font-family: var(--font-ar);
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--gold);
+}
+
+.sec-header p {
+    font-family: var(--font-ar);
+    font-size: .95rem;
+    color: var(--text-muted);
+}
+
+/* ── Body text ───────────────────────────────────── */
+.para {
+    font-family: var(--font-ar);
+    font-size: calc(1.28rem * var(--text-scale, 1));
+    line-height: 2.35;
+    text-align: justify;
+    margin-bottom: 1.1em;
+}
+
+/* Page break marker carried over from the printed edition */
+.pg-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 26px 0 18px;
+    font-family: var(--font-en);
+    font-size: .68rem;
+    letter-spacing: .08em;
+    color: var(--text-muted);
+    opacity: .65;
+    direction: ltr;
+}
+
+.pg-mark::before,
+.pg-mark::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* ── Words ───────────────────────────────────────── */
+.w { border-radius: 3px; transition: background .12s, color .12s; }
+
+body.gloss-on .w[data-g] { cursor: help; }
+
+body.gloss-on .w[data-g]:hover {
+    background: var(--gold-hover);
+    color: var(--gold);
+}
+
+body.gloss-on .w[data-r] { cursor: pointer; }
+
+body.gloss-on .w[data-r]:hover {
+    background: var(--gold-light);
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-underline-offset: 5px;
+}
+
+.w.w-selected {
+    background: var(--highlight);
+    color: var(--gold);
+}
+
+.w.w-related { background: var(--gold-hover); }
+
+/* Qur'anic quotation — vocalised in the source, so it is
+   detected at render time rather than tagged in the data */
+.qq {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.dark-mode .qq { color: var(--green); }
+
+/* ── Hover tooltip ───────────────────────────────── */
+.ruh-tip {
+    position: fixed;
+    z-index: 500;
+    max-width: 280px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 7px 11px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .14);
+    pointer-events: none;
+    direction: ltr;
+    text-align: left;
+}
+
+.ruh-tip[hidden] { display: none; }
+
+/* The word's exact meaning — the primary thing, so it carries the accent */
+.tip-gloss {
+    font-family: var(--font-en);
+    font-size: .84rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--gold);
+}
+
+/* Below it, the root and what the root means */
+.tip-root {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dotted var(--border);
+}
+
+.tip-root .tr-letters {
+    font-family: var(--font-ar);
+    font-size: 1rem;
+    color: var(--text);
+    direction: rtl;
+    unicode-bidi: isolate;
+    margin-inline-end: 8px;
+}
+
+.tip-root .tr-sense {
+    font-family: var(--font-en);
+    font-size: .74rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+.tip-root small {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-en);
+    font-size: .58rem;
+    color: var(--text-muted);
+    opacity: .7;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+/* ── Section nav ─────────────────────────────────── */
+.sec-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 36px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}
+
+.sec-nav .show-more { flex: 1; }
+.sec-nav .show-more:disabled { opacity: .35; cursor: default; }
+
+/* ── Header tweaks ───────────────────────────────── */
+#header select { max-width: 190px; }
+#sec-select { max-width: 150px; font-size: .82rem; }
+
+.header-left .nav-link {
+    font-size: .85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    #reader { padding: calc(var(--header-h) + 16px) 14px 60px; }
+    .para { font-size: calc(1.15rem * var(--text-scale, 1)); line-height: 2.15; }
+    .rw-title { font-size: 2.2rem; }
+    #header select { max-width: 120px; }
+    #sec-select { max-width: 108px; }
+    .ruh-tip { max-width: 220px; }
+}
