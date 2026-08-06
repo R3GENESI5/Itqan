@@ -1,0 +1,1123 @@
+﻿tabaqa_order,tabaqa,tabaqa_basis,name_norm,display_name,n_books,n_entries,source_types,books,pages
+1,١ الصحابة,text:صحابي,ابو بكر بن عبد الله بن محمد بن,أبو بكر بن عبد الله بن محمد بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+1,١ الصحابة,text:صحابي,ابو رافع مولي رسول الله صلي الله عليه وسلم,أبو رافع مولى رسول الله -صلى الله عليه وسلم,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص16 | tabaqat_ibnsad:ج4/ص67
+1,١ الصحابة,text:صحابي,ابو عنبه الخولاني,أبو عنبة الخولاني,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج3/ص433 | tabaqat_ibnsad:ج9/ص439
+1,١ الصحابة,text:صحابي,اسماعيل بن اوسط البجلي,إسماعيل بن أوسط البجلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+1,١ الصحابة,text:صحابي,اسود بن خلف الحراني,أسود بن خلف الحراني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+1,١ الصحابة,text:صحابي,الحارث بن النعمان,الحارث بن النعمان,2,3,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص443 | tabaqat_ibnsad:ج4/ص320 | duafa_uqayli:ج1/ص214
+1,١ الصحابة,arsanad:tabaqa,الحارث بن عمرو,الحارث بن عمرو,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص63
+1,١ الصحابة,text:صحابي,المختار بن ابي عبيد الثقفي الكذاب,المختار بن أبي عبيد الثقفي الكذاب,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,siyar_dhahabi:ج3/ص538
+1,١ الصحابة,arsanad:tabaqa,بلال بن رباح,بلال بن رباح,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج1/ص347 | tabaqat_ibnsad:ج3/ص213
+1,١ الصحابة,text:صحابي,جاريه بن هرم ابو شيخ الفقيمي,جارية بن هرم أبو شيخ الفقيمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص203
+1,١ الصحابة,text:صحابي,حزن بن نباته,حزن بن نباتة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+1,١ الصحابة,text:صحابي,رقيه بنت رسول الله صلي الله عليه وسلم,رقية بنت رسول الله * -صلى الله عليه وسلم,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص250 | tabaqat_ibnsad:ج10/ص36
+1,١ الصحابة,text:صحابي,سعيد بن زيد,سعيد بن زيد,2,3,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص352 | tabaqat_ibnsad:ج8/ص135
+1,١ الصحابة,text:صحابي,سلام بن قيس,• سلام بن قيس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج4/ص101
+1,١ الصحابة,text:صحابي,سليمان بن شهاب,سليمان بن شهاب,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص321
+1,١ الصحابة,text:صحابي,عبد الرحمن بن ابي ليلي,عبد الرحمن بن أبي ليلى,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص229 | duafa_uqayli:ج2/ص337
+1,١ الصحابة,text:صحابي,عبد الرحمن بن صفوان,عبد الرحمن بن صفوان,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص22
+1,١ الصحابة,text:صحابي,عبد الرحمن بن ضباب الاشعري,عبد الرحمن بن ضباب الأشعري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص334
+1,١ الصحابة,text:طبقة,عبد الرحمن بن مالك بن مغول,عبد الرحمن بن مالك بن مغول,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص345
+1,١ الصحابة,text:صحابي,عبد الله بن زيد,عبد الله بن زيد,3,7,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص92 | tabaqat_ibnsad:ج3/ص497 | tabaqat_ibnsad:ج7/ص261 | tabaqat_ibnsad:ج7/ص592 | tabaqat_ibnsad:ج8/ص90
+1,١ الصحابة,text:صحابي,عبد الله بن سهيل بن عمرو,عبد الله بن سهيل بن عمرو,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج1/ص193 | tabaqat_ibnsad:ج3/ص376
+1,١ الصحابة,text:صحابي,عبد الله بن سيدان المطرودي,عبد الله بن سيدان المطرودي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص265
+1,١ الصحابة,text:صحابي,عبد الله بن عمرو,عبد الله بن عمرو,2,9,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص151 | tabaqat_ibnsad:ج2/ص321 | tabaqat_ibnsad:ج3/ص572 | tabaqat_ibnsad:ج4/ص369 | tabaqat_ibnsad:ج6/ص104 | tabaqat_ibnsad:ج7/ص67 | tabaqat_ibnsad:ج7/ص397 | tabaqat_ibnsad:ج8/ص43
+1,١ الصحابة,text:صحابي,عبد الله بن عمرو بن الفغوا عن ابيه,عبد الله بن عمرو بن الفغواء عن أبيه,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+1,١ الصحابة,text:صحابي,عبد الله بن عمرو بن لويم,عبد الله بن عمرو بن لويم,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص5
+1,١ الصحابة,arsanad:tabaqa,عبد الله بن معاويه,عبد الله بن معاوية,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص481
+1,١ الصحابة,text:صحابي,عبيد بن عمرو,عبيد بن عمرو,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج4/ص403 | tabaqat_ibnsad:ج8/ص342
+1,١ الصحابة,arsanad:tabaqa,عطيه بن بسر,عطية بن بسر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص356
+1,١ الصحابة,text:صحابي,عقبه بن نافع,عقبة بن نافع,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج6/ص138
+1,١ الصحابة,text:صحابي,عكاشه بن محصن,عكاشة بن محصن,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص86
+1,١ الصحابة,text:صحابي,عمرو بن عثمان,عمرو بن عثمان,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص120 | tabaqat_ibnsad:ج7/ص149 | tabaqat_ibnsad:ج7/ص557
+1,١ الصحابة,text:صحابي,قيس بن زيد,قيس بن زيد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص253
+1,١ الصحابة,text:صحابي,معن بن يزيد,معن بن يزيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص159
+1,١ الصحابة,text:صحابي,معيقيب بن ابي فاطمه الدوسي,معيقيب بن أبي فاطمة الدوسي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص491 | tabaqat_ibnsad:ج4/ص109
+1,١ الصحابة,text:صحابي,يزيد بن زمعه,يزيد بن زمعة,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص113 | tabaqat_ibnsad:ج6/ص59
+1,١ الصحابة,text:صحابي,يعلي بن مره,يعلى بن مرة,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص163
+2,٢ كبار التابعين,text:وفاة,ابراهيم بن ابي الليث,إبراهيم بن أبي الليث,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص364
+2,٢ كبار التابعين,text:وفاة,ابراهيم بن عبد الله بن السفرقع,إبراهيم بن عبد الله بن السفرقع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:وفاة,ابراهيم بن محمد بن ابي يحيي الاسلمي,إبراهيم بن محمد بن أبي يحيى الأسلمي,2,2,biography; tadlīs,siyar_dhahabi; tabaqat_mudallisin_ibnhajar,siyar_dhahabi:ج8/ص450
+2,٢ كبار التابعين,text:وفاة,ابراهيم بن مهدي المصيصي,إبراهيم بن مهدي المصيصي,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص251 | siyar_dhahabi:ج10/ص556
+2,٢ كبار التابعين,text:وفاة,ابراهيم بن هشام بن يحيي بن يحيي الغساني,إبراهيم بن هشام بن يحيى بن يحيى الغساني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+2,٢ كبار التابعين,text:وفاة,ابو امامه الباهلي,أبو أمامة الباهلي,2,3,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج3/ص359 | tabaqat_ibnsad:ج6/ص211 | tabaqat_ibnsad:ج9/ص415
+2,٢ كبار التابعين,text:وفاة,ابو ثعلبه الخشني,أبو ثعلبة الخشني,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص567 | tabaqat_ibnsad:ج9/ص419
+2,٢ كبار التابعين,text:وفاة,ابو رجا العطاردي عمران بن ملحان,أبو رجاء العطاردي: عمران بن ملحان. [= 4275].,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج4/ص253
+2,٢ كبار التابعين,text:وفاة,ابو زيد الهروي سعيد بن الربيع,أبو زيد الهروي: سعيد بن الربيع. [= 1882].,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج9/ص496
+2,٢ كبار التابعين,text:وفاة,ابو عبد الرحمن السلمي عبد الله بن حبيب,أبو عبد الرحمن السلمي: عبد الله بن حبيب.,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج4/ص267
+2,٢ كبار التابعين,text:وفاة,ابو عثمان النهدي عبد الرحمن بن مل,أبو عثمان النهدي: عبد الرحمن بن مل. [=,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج4/ص175
+2,٢ كبار التابعين,text:وفاة,ابو عمران الجوني عبد الملك بن حبيب,أبو عمران الجوني: عبد الملك بن حبيب. [=,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج5/ص255
+2,٢ كبار التابعين,text:وفاة,احمد بن ابي القاسم بن سنبله البغدادي,أحمد بن أبي القاسم بن سنبلة (1) البغدادي,3,3,ikhtilāṭ; jarḥ (ḍuʿafāʾ),ightibat_sibt_ibnajami; kawakib_nayyirat; mughni_duafa_dhahabi,kawakib_nayyirat:ج1/ص98
+2,٢ كبار التابعين,text:وفاة,احمد بن ابي دواد القاضي,أحمد بن أبي دؤاد القاضي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:وفاة,احمد بن حرب النيسابوري الزاهد,أحمد بن حرب النيسابوري الزاهد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:وفاة,احمد بن عمران الاخنسي,أحمد بن عمران الأخنسي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص127
+2,٢ كبار التابعين,text:وفاة,احمد بن محمد بن الحسن بن مقسم المقري,أحمد بن محمد بن الحسن بن مقسم المقرىء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:وفاة,احمد بن محمد بن سعيد بن عقده الحافظ ابو العباس,أحمد بن محمد بن سعيد بن عقدة الحافظ أبو العباس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:تابعي,اسحاق بن بشر ابو حذيفه البخاري,إسحاق بن بشر أبو حذيفة البخاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص69
+2,٢ كبار التابعين,text:وفاة,اسماعيل بن عبد الرحمن,إسماعيل بن عبد الرحمن,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص422 | tabaqat_ibnsad:ج8/ص441
+2,٢ كبار التابعين,text:وفاة,الافريقي عبد الرحمن بن زياد بن انعم,الإفريقي: عبد الرحمن بن زياد بن أنعم,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص494 | siyar_dhahabi:ج6/ص411
+2,٢ كبار التابعين,arsanad:tabaqa,الحارث بن قيس,الحارث بن قيس,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص547 | tabaqat_ibnsad:ج3/ص575 | tabaqat_ibnsad:ج8/ص287
+2,٢ كبار التابعين,text:وفاة,العلا بن الحارث,العلاء بن الحارث,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+2,٢ كبار التابعين,text:وفاة,العلا بن الحضرمي,العلاء بن الحضرمي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج1/ص262 | tabaqat_ibnsad:ج5/ص276
+2,٢ كبار التابعين,arsanad:death,القاسم بن محمد,القاسم بن محمد,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص394 | tabaqat_ibnsad:ج7/ص186
+2,٢ كبار التابعين,arsanad:death,ام كلثوم بنت رسول الله صلي الله عليه وسلم,أم كلثوم بنت رسول الله * -صلى الله عليه وسلم,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص252 | tabaqat_ibnsad:ج10/ص38
+2,٢ كبار التابعين,text:وفاة,انس بن سيرين,أنس بن سيرين,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج4/ص622 | tabaqat_ibnsad:ج9/ص206
+2,٢ كبار التابعين,text:وفاة,جعفر بن مبشر الثقفي,جعفر بن مبشر الثقفي,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,
+2,٢ كبار التابعين,text:وفاة,خرشه بن الحر,خرشة بن الحر,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص268
+2,٢ كبار التابعين,text:وفاة,زيد بن ابي انيسه,زيد بن أبي أنيسة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص486
+2,٢ كبار التابعين,text:وفاة,زيد بن يحيي البيع,زيد بن يحيى البيع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:وفاة,زينب بنت رسول الله صلي الله عليه وسلم,زينب بنت رسول الله * -صلى الله عليه وسلم,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص246 | tabaqat_ibnsad:ج10/ص31
+2,٢ كبار التابعين,text:وفاة,سعيد بن ابي سعيد العيار الصوفي,سعيد بن أبي سعيد العيار الصوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,arsanad:death,سعيد بن نمران,سعيد بن نمران,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص205
+2,٢ كبار التابعين,text:وفاة,سليمان بن حبيب المحاربي,سليمان بن حبيب المحاربي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص459
+2,٢ كبار التابعين,text:وفاة,سنان بن ابي سنان,سنان بن أبي سنان,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص88 | tabaqat_ibnsad:ج7/ص246
+2,٢ كبار التابعين,text:وفاة,شريك بن عبد الله ابو عبد الله النخعي,شريك بن عبد الله أبو عبد الله النخعي,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج8/ص200
+2,٢ كبار التابعين,text:وفاة,شعيب بن طلحه,شعيب بن طلحة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص583
+2,٢ كبار التابعين,text:وفاة,شعيب بن عبد الله,شعيب بن عبد الله,2,3,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,tabaqat_mudallisin_ibnhajar:ج0/ص38
+2,٢ كبار التابعين,text:وفاة,صدقه بن الحسين البغدادي الحنبلي الناسخ,صدقة بن الحسين البغدادي الحنبلي الناسخ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+2,٢ كبار التابعين,text:وفاة,عاصم بن سليمان الاحول,عاصم بن سليمان الأحول,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص255 | duafa_uqayli:ج3/ص336
+2,٢ كبار التابعين,text:وفاة,عاصم بن عمر بن قتاده بن النعمان الظفري,عاصم بن عمر بن قتادة بن النعمان الظفري,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج5/ص240
+2,٢ كبار التابعين,arsanad~:death,عامر بن عبد الله بن مسعود ابو عبيده,عامر بن عبد الله بن مسعود أبو عبيدة,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,kashif_dhahabi:ج1/ص523
+2,٢ كبار التابعين,arsanad~:tabaqa,عبد الرحمن بن عبد الله بن عتبه بن,عبد الرحمن بن عبد الله بن عتبة بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+2,٢ كبار التابعين,arsanad~:tabaqa,عبد الرحمن بن عبد الله بن عطيه,عبد الرحمن بن عبد الله بن عطية,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص340
+2,٢ كبار التابعين,text:وفاة,عبد العزيز بن ابي حازم,عبد العزيز بن أبي حازم,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص602
+2,٢ كبار التابعين,text:وفاة,عبد العزيز بن مسلم القسملي,عبد العزيز بن مسلم القسملي,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج8/ص192 | duafa_uqayli:ج3/ص17
+2,٢ كبار التابعين,text:وفاة,عبد الله بن بريده بن الحصيب الاسلمي,عبد الله بن بريدة بن الحصيب الأسلمي,3,3,biography; biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج5/ص50 | tabaqat_ibnsad:ج9/ص220
+2,٢ كبار التابعين,arsanad:tabaqa,عبد الله بن سلمه,عبد الله بن سلمة,3,5,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج3/ص434 | tabaqat_ibnsad:ج8/ص236
+2,٢ كبار التابعين,arsanad~:death,عبد الله بن عمر بن حفص بن عاصم,عبد الله بن عمر بن حفص بن عاصم,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,kashif_dhahabi:ج1/ص576
+2,٢ كبار التابعين,text:وفاة,عثمان بن عبد الله,عثمان بن عبد الله,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص240 | tabaqat_ibnsad:ج7/ص568
+2,٢ كبار التابعين,text:وفاة,عطا بن ابي ميمونه,عطاء بن أبي ميمونة,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج6/ص47 | tabaqat_ibnsad:ج9/ص244
+2,٢ كبار التابعين,text:وفاة,علي بن عبد الحميد,علي بن عبد الحميد,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,
+2,٢ كبار التابعين,text:وفاة,عمر بن صهبان,عمر بن صهبان,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص567 | duafa_uqayli:ج3/ص173
+2,٢ كبار التابعين,text:وفاة,عمران بن حدير السدوسي,عمران بن حدير السدوسي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج6/ص363 | tabaqat_ibnsad:ج9/ص270
+2,٢ كبار التابعين,text:تابعي,عمران بن ميثم,عمران بن ميثم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص306
+2,٢ كبار التابعين,arsanad:tabaqa,عمرو بن الحارث,عمرو بن الحارث,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج4/ص199
+2,٢ كبار التابعين,text:وفاة,عوف بن ابي جميله الاعرابي,عوف بن أبي جميلة الأعرابي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص257
+2,٢ كبار التابعين,arsanad:death,فاطمه بنت رسول الله صلي الله عليه وسلم,فاطمة بنت رسول الله ** -صلى الله عليه وسلم,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج2/ص118 | tabaqat_ibnsad:ج10/ص20
+2,٢ كبار التابعين,text:وفاة,محمد بن احمد بن الحسن الجرجاني,محمد بن أحمد بن الحسن الجرجاني,2,2,ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat,kawakib_nayyirat:ج1/ص410
+2,٢ كبار التابعين,text:وفاة,محمد بن الحسن بن كوثر ابو بحر البربهاري,محمد بن الحسن بن كوثر أبو بحر البربهاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+2,٢ كبار التابعين,text:وفاة,محمد بن زهير ابو يعلي الابلي,محمد بن زهير أبو يعلى الأبلى,3,3,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat; lisan_mizan_ibnhajar,kawakib_nayyirat:ج1/ص418
+2,٢ كبار التابعين,text:وفاة,محمد بن علي بن عطيه ابو طالب المكي الزاهد الواعظ صاحب القوت,"محمد بن علي بن عطية أبو طالب المكي الزاهد الواعظ صاحب ""القوت""",2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,
+2,٢ كبار التابعين,text:وفاة,محمد بن عمر,محمد بن عمر,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص323 | tabaqat_ibnsad:ج7/ص473 | tabaqat_ibnsad:ج7/ص603
+2,٢ كبار التابعين,arsanad~:tabaqa,مطرف بن عبد الله بن الشخير الحرشي العامري,مطرف بن عبد الله بن الشخير الحرشي العامري,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج4/ص187
+2,٢ كبار التابعين,text:وفاة,هشام بن عبيد الله الرازي,هشام بن عبيد الله الرازي,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,siyar_dhahabi:ج10/ص446
+2,٢ كبار التابعين,arsanad:tabaqa,وايل بن مهانه,وائل بن مهانة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص443 | tabaqat_ibnsad:ج8/ص322
+2,٢ كبار التابعين,text:وفاة,يحيي بن ابي كثير,يحيى بن أبي كثير,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج8/ص301 | tabaqat_ibnsad:ج8/ص116
+2,٢ كبار التابعين,text:وفاة,يحيي بن عبد الله,يحيى بن عبد الله,2,5,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص541 | tabaqat_ibnsad:ج7/ص556 | tabaqat_ibnsad:ج8/ص49
+2,٢ كبار التابعين,text:وفاة,يزيد بن عبد الرحمن بن ابي مالك الهمداني,يزيد بن عبد الرحمن بن أبي مالك الهمداني,2,2,biography; marāsīl/connection,jami_tahsil_alai; siyar_dhahabi,siyar_dhahabi:ج5/ص437
+2,٢ كبار التابعين,text:وفاة,يوسف بن يعقوب,يوسف بن يعقوب,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص593 | tabaqat_ibnsad:ج8/ص106
+3,٣ التابعون,arsanad:death,ابراهيم بن ابي حره,إبراهيم بن أبي حرة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+3,٣ التابعون,arsanad~:tabaqa,ابو بكر بن عبد الرحمن بن الحارث بن,أبو بكر بن عبد الرحمن بن الحارث بن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,text:تابعي,ابو تميم الجيشاني عبد الله بن مالك,أبو تميم الجيشاني: عبد الله بن مالك. [=,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج4/ص73
+3,٣ التابعون,arsanad~:tabaqa,اسحاق بن عبد الله بن ابي طلحه عن,إسحاق بن عبد الله بن أبي طلحة. عن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,arsanad:death,اسد بن وداعه,أسد بن وداعة,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tabaqat_ibnsad,
+3,٣ التابعون,text:تابعي,اسماعيل بن ابي شعيب,إسماعيل بن أبي شعيب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+3,٣ التابعون,text:تابعي,اسماعيل بن جستاس,إسماعيل بن جستاس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص81
+3,٣ التابعون,arsanad~:tabaqa,اسماعيل بن عبيد الله بن سلمان المكي,إسماعيل بن عبيد الله بن سلمان المكي,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص86
+3,٣ التابعون,text:تابعي,اسماعيل بن هشام,إسماعيل بن هشام,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+3,٣ التابعون,arsanad:death,الجعد بن درهم,الجعد بن درهم,3,3,biography; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; siyar_dhahabi,
+3,٣ التابعون,text:تابعي,السايب بن مالك,السائب بن مالك,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+3,٣ التابعون,arsanad~:tabaqa,العلا بن زياد بن مطر بن شريح العدوي,العلاء بن زياد بن مطر بن شريح العدوي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج4/ص202 | tabaqat_ibnsad:ج9/ص216
+3,٣ التابعون,arsanad~:tabaqa,القاسم بن عبد الرحمن بن عبد الله بن,القاسم بن عبد الرحمن بن عبد الله بن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,arsanad:tabaqa,القاسم بن مهران,القاسم بن مهران,3,3,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص394 | duafa_uqayli:ج3/ص474
+3,٣ التابعون,arsanad:tabaqa,اياس بن خليفه,إياس بن خليفة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص37 | duafa_uqayli:ج1/ص33
+3,٣ التابعون,arsanad:tabaqa,بجير بن ابي بجير,بجير بن أبي بجير,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص265 | tabaqat_ibnsad:ج3/ص483
+3,٣ التابعون,arsanad:tabaqa,بشر بن عاصم,بشر بن عاصم,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص80
+3,٣ التابعون,text:تابعي,بكر بن قرواش,بكر بن قرواش,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص149
+3,٣ التابعون,text:تابعي,جاريه بن ابي عمران,جارية بن أبي عمران,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص551
+3,٣ التابعون,arsanad~:death,جعفر بن محمد بن عباد بن جعفر المخزومي,جعفر بن محمد بن عباد بن جعفر المخزومي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص185
+3,٣ التابعون,text:تابعي,حسان بن محرش,حسان بن محرش,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+3,٣ التابعون,arsanad:tabaqa,حميد بن عبد الرحمن,حميد بن عبد الرحمن,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص152
+3,٣ التابعون,text:تابعي,حميد بن عبد الرحمن الحميري,حميد بن عبد الرحمن الحميري,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج4/ص293 | tabaqat_ibnsad:ج9/ص147
+3,٣ التابعون,arsanad:tabaqa,خالد بن كيسان,خالد بن كيسان,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+3,٣ التابعون,arsanad~:tabaqa,خبيب بن عبد الرحمن بن اردك,• خبيب بن عبد الرحمن بن أردك,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج3/ص352
+3,٣ التابعون,arsanad:death,داود بن فراهيج,داود بن فراهيج,4,4,biography/ṭabaqāt; general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat; lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص305
+3,٣ التابعون,arsanad~:tabaqa,زفر بن وثيمه بن مالك بن اوس بن الحدثان,زفر بن وثيمة بن مالك بن أوس بن الحدثان,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص303
+3,٣ التابعون,arsanad:death,زيد بن رفيع,زيد بن رفيع,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص485
+3,٣ التابعون,arsanad:tabaqa,سعيد بن ابي هند,سعيد بن أبي هند,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج5/ص9 | tabaqat_ibnsad:ج7/ص426
+3,٣ التابعون,arsanad:tabaqa,سعيد بن عبد الرحمن,سعيد بن عبد الرحمن,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص418 | tabaqat_ibnsad:ج7/ص489 | tabaqat_ibnsad:ج7/ص584
+3,٣ التابعون,text:تابعي,سلمه بن حبيب,سلمة بن حبيب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+3,٣ التابعون,text:تابعي,سليمان بن عبد الله,سليمان بن عبد الله,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص318
+3,٣ التابعون,arsanad~:tabaqa,شعيب بن محمد بن عبد الله بن عمرو,شعيب بن محمد بن عبد الله بن عمرو,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,arsanad:tabaqa,صدقه بن يسار,صدقة بن يسار,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص46
+3,٣ التابعون,arsanad~:tabaqa,طلحه بن عبد الله بن عبد الرحمن بن,طلحة بن عبد الله بن عبد الرحمن بن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,text:تابعي,ع عمرو بن عبد الله السبيعي,[ع] عمرو بن عبد الله السبيعي,2,2,ikhtilāṭ; tadlīs,ightibat_sibt_ibnajami; tabaqat_mudallisin_ibnhajar,tabaqat_mudallisin_ibnhajar:ج0/ص42
+3,٣ التابعون,arsanad:tabaqa,عاصم بن ضمره,عاصم بن ضمرة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص331
+3,٣ التابعون,arsanad~:tabaqa,عاصم بن عبيد الله بن عاصم بن عمر,عاصم بن عبيد الله بن عاصم بن عمر,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+3,٣ التابعون,text:تابعي,عبد الرحمن السدي,عبد الرحمن السدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص3
+3,٣ التابعون,arsanad:tabaqa,عبد الرحمن بن ابي بكر,عبد الرحمن بن أبي بكر,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص352 | tabaqat_ibnsad:ج7/ص449 | tabaqat_ibnsad:ج8/ص57
+3,٣ التابعون,arsanad:tabaqa,عبد الرحمن بن ثابت,عبد الرحمن بن ثابت,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص239
+3,٣ التابعون,arsanad:tabaqa,عبد الرحمن بن سعد,عبد الرحمن بن سعد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص169
+3,٣ التابعون,text:تابعي,عبد الرحمن بن صفوان بن اميه مختلف في,عبد الرحمن بن صفوان بن أمية مختلف في,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,arsanad:tabaqa,عبد الرحمن بن فروخ,عبد الرحمن بن فروخ,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+3,٣ التابعون,arsanad:tabaqa,عبد الرحمن بن يزيد,عبد الرحمن بن يزيد,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص86 | tabaqat_ibnsad:ج8/ص242
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن ابي سفيان,عبد الله بن أبي سفيان,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص340 | tabaqat_ibnsad:ج7/ص515
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن القاسم,عبد الله بن القاسم,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+3,٣ التابعون,arsanad~:death,عبد الله بن المسور بن عون بن جعفر بن ابي طالب ابو جعفر الهاشمي المدايني,عبد الله بن المسور بن عون بن جعفر بن أبي طالب أبو جعفر الهاشمي المدائني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص306
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن بشر,عبد الله بن بشر,2,2,general; jarḥ (ḍuʿafāʾ),duafa_uqayli; tarikh_kabir_bukhari,duafa_uqayli:ج2/ص235
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن حاجب بن عامر بن المنتفق,عبد الله بن حاجب بن عامر بن المنتفق,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص337
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن رافع,عبد الله بن رافع,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص252 | tabaqat_ibnsad:ج7/ص293
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن سراقه,عبد الله بن سراقة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص132 | duafa_uqayli:ج2/ص263
+3,٣ التابعون,arsanad~:tabaqa,عبد الله بن عبيد الله بن ابي مليكه,عبد الله بن عبيد الله بن أبي مليكة,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن عثمان,عبد الله بن عثمان,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج5/ص392 | tabaqat_ibnsad:ج8/ص49 | tabaqat_ibnsad:ج8/ص56
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن قيس,عبد الله بن قيس,2,7,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص459 | tabaqat_ibnsad:ج4/ص328 | tabaqat_ibnsad:ج6/ص43 | tabaqat_ibnsad:ج7/ص236
+3,٣ التابعون,text:تابعي,عبد الله بن محمد الليثي عن تابعي صغير,عبد الله بن محمد الليثي عن تابعي صغير,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن مره,عبد الله بن مرة,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص408
+3,٣ التابعون,arsanad:tabaqa,عبد الله بن نافع بن العميا,عبد الله بن نافع بن العمياء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص347 | duafa_uqayli:ج2/ص310
+3,٣ التابعون,arsanad~:tabaqa,عبيد الله بن عبد الله ابو المنيب العتكي,عبيد الله بن عبد الله أبو المنيب العتكي,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,kashif_dhahabi:ج1/ص682
+3,٣ التابعون,arsanad:tabaqa,عبيد بن عمير,عبيد بن عمير,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص367 | tabaqat_ibnsad:ج8/ص24
+3,٣ التابعون,arsanad:death,عزره بن قيس,عزرة بن قيس,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص332
+3,٣ التابعون,arsanad:tabaqa,علي بن زيد بن جدعان,علي بن زيد بن جدعان,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+3,٣ التابعون,arsanad:tabaqa,عماره بن عمير,عمارة بن عمير,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص405
+3,٣ التابعون,arsanad:tabaqa,عمرو بن عمير,عمرو بن عمير,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص385 | tabaqat_ibnsad:ج9/ص73
+3,٣ التابعون,arsanad:tabaqa,عمير بن سعيد,عمير بن سعيد,3,4,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج5/ص294 | tabaqat_ibnsad:ج8/ص290
+3,٣ التابعون,text:تابعي,ق زياد بن ابي مريم الجزري,"ق , زياد بن أبي مريم الجزري",2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج9/ص305
+3,٣ التابعون,arsanad:tabaqa,كثير بن السايب,كثير بن السائب,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص397 | tabaqat_ibnsad:ج6/ص565
+3,٣ التابعون,text:تابعي,محمد بن اسلم,محمد بن أسلم,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+3,٣ التابعون,arsanad:tabaqa,محمد بن زياد,محمد بن زياد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+3,٣ التابعون,arsanad~:tabaqa,محمد بن مسلم بن تدرس ابو الزبير المكي,محمد بن مسلم بن تدرس أبو الزبير المكي,2,2,jarḥ (ḍuʿafāʾ); marāsīl/connection,duafa_ibnjawzi; jami_tahsil_alai,
+3,٣ التابعون,text:تابعي,محمد بن مسلمه الانصاري,محمد بن مسلمة الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص140
+3,٣ التابعون,text:تابعي,مسعده بن اليسع الباهلي,مسعدة بن اليسع الباهلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص245
+3,٣ التابعون,arsanad:tabaqa,مسلم بن عبد الله,مسلم بن عبد الله,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص152
+3,٣ التابعون,arsanad:tabaqa,مسلم بن يناق,مسلم بن يناق,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص37
+3,٣ التابعون,arsanad:tabaqa,مشرح بن هاعان,مشرح بن هاعان,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+3,٣ التابعون,text:تابعي,وحبحاب بن ابي الحبحاب,وحبحاب بن أبي الحبحاب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+3,٣ التابعون,arsanad~:tabaqa,يحيي بن عبد الرحمن بن حاطب بن ابي,يحيى بن عبد الرحمن بن حاطب بن أبي,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+3,٣ التابعون,arsanad:tabaqa,يحيي بن عبيد,يحيى بن عبيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+3,٣ التابعون,arsanad:tabaqa,يزيد بن اوس,يزيد بن أوس,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج6/ص68
+4,٤ صغار التابعين,text:تابعي,البغوي عبد الله بن محمد بن عبد العزيز,البغوي: عبد الله بن محمد بن عبد العزيز [4409],2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص198 | siyar_dhahabi:ج14/ص440
+4,٤ صغار التابعين,arsanad:tabaqa,الحسن بن عمرو,الحسن بن عمرو,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص460
+4,٤ صغار التابعين,arsanad:tabaqa,الزبير بن عثمان بن عبد الله بن سراقه,الزبير بن عثمان بن عبد الله بن سراقة,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص303
+4,٤ صغار التابعين,arsanad:tabaqa,العلا بن كثير,العلاء بن كثير,2,2,general; jarḥ (ḍuʿafāʾ),duafa_uqayli; tarikh_kabir_bukhari,duafa_uqayli:ج3/ص347
+4,٤ صغار التابعين,arsanad:tabaqa,القاسم بن محمد بن عبد الرحمن بن الحارث بن هشام,القاسم بن محمد بن عبد الرحمن بن الحارث بن هشام,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص394
+4,٤ صغار التابعين,arsanad~:tabaqa,بحر بن مرار بن عبد الرحمن بن ابي,بحر بن مرار بن عبد الرحمن بن أبي,3,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi; mughni_duafa_dhahabi,
+4,٤ صغار التابعين,arsanad:death,بشر بن مبشر,بشر بن مبشر,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+4,٤ صغار التابعين,arsanad~:tabaqa,حكيم بن حكيم بن عباد بن حنيف,حكيم بن حكيم بن عباد بن حنيف -,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص287
+4,٤ صغار التابعين,arsanad:tabaqa,حمزه بن عبد الله,حمزة بن عبد الله,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص201 | tabaqat_ibnsad:ج7/ص405
+4,٤ صغار التابعين,arsanad~:tabaqa,حمزه بن محمد بن حمزه بن عمرو الاسلمي,حمزة بن محمد بن حمزة بن عمرو الأسلمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج9/ص290
+4,٤ صغار التابعين,arsanad:death,روح بن عطا بن ابي ميمونه,روح بن عطاء بن أبي ميمونة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,زياد بن ابي زياد,زياد بن أبي زياد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج3/ص354 | tabaqat_ibnsad:ج7/ص300
+4,٤ صغار التابعين,arsanad:tabaqa,سعد بن ابراهيم بن عبد الرحمن بن عوف,سعد بن إبراهيم بن عبد الرحمن بن عوف,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,سعيد بن المرزبان,سعيد بن المرزبان,2,2,biography/ṭabaqāt; tadlīs,tabaqat_ibnsad; tabaqat_mudallisin_ibnhajar,
+4,٤ صغار التابعين,arsanad~:tabaqa,سعيد بن عبيد الله بن الوليد الوصافي,سعيد بن عبيد الله بن الوليد الوصافي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص263
+4,٤ صغار التابعين,arsanad:tabaqa,سلم بن عبد الرحمن,سلم بن عبد الرحمن,2,2,general; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tarikh_kabir_bukhari,
+4,٤ صغار التابعين,arsanad:death,سليمان بن ابي كريمه,سليمان بن أبي كريمة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,صالح بن عبيد,صالح بن عبيد,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص325
+4,٤ صغار التابعين,arsanad~:tabaqa,صالح بن محمد بن زايده ابو واقد الليثي,صالح بن محمد بن زائدة أبو واقد الليثي,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:death,صباح بن يحيي,صباح بن يحيى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص212
+4,٤ صغار التابعين,arsanad:tabaqa,طلحه بن يحيي بن طلحه بن عبيد الله,طلحة بن يحيى بن طلحة بن عبيد الله,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الحميد بن جعفر بن عبد الله الانصاري,عبد الحميد بن جعفر بن عبد الله الأنصاري,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج7/ص20
+4,٤ صغار التابعين,arsanad:death,عبد الرحمن بن خضير,عبد الرحمن بن خضير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الرحمن بن عطا,عبد الرحمن بن عطاء,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص516
+4,٤ صغار التابعين,arsanad~:death,عبد العزيز بن الحصين بن الترجمان ابو سهل,عبد العزيز بن الحصين بن الترجمان أبو سهل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الكريم بن عبد الله بن شقيق العقيلي,عبد الكريم بن عبد الله بن شقيق العقيلي,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص361
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الله بن ابي بكر بن زيد عن,عبد الله بن أبي بكر بن زيد عن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن ابي لبيد,عبد الله بن أبي لبيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص514
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الله بن المثني بن عبد الله بن,عبد الله بن المثنى بن عبد الله بن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن جابر,عبد الله بن جابر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص238
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الله بن حفص بن عمر بن سعد,عبد الله بن حفص بن عمر بن سعد,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن سعيد بن ابي هند,عبد الله بن سعيد بن أبي هند,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص529 | duafa_uqayli:ج2/ص261
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن شداد,عبد الله بن شداد,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص64 | tabaqat_ibnsad:ج8/ص246
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن عبد الرحمن,عبد الله بن عبد الرحمن,3,12,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص193 | tabaqat_ibnsad:ج7/ص237 | tabaqat_ibnsad:ج7/ص419 | tabaqat_ibnsad:ج7/ص601 | tabaqat_ibnsad:ج8/ص47 | tabaqat_ibnsad:ج8/ص81
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن علي,عبد الله بن علي,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص318 | tabaqat_ibnsad:ج7/ص503
+4,٤ صغار التابعين,arsanad:tabaqa,عبد الله بن عمران,عبد الله بن عمران,2,3,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص160
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الله بن عيسي بن عبد الرحمن بن,عبد الله بن عيسى بن عبد الرحمن بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+4,٤ صغار التابعين,arsanad~:tabaqa,عبد الملك بن ابي بكر بن عبد الرحمن,عبد الملك بن أبي بكر بن عبد الرحمن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,علي بن بذيمه,علي بن بذيمة,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص374 | tabaqat_ibnsad:ج9/ص486 | duafa_uqayli:ج3/ص227
+4,٤ صغار التابعين,arsanad~:tabaqa,عمر بن ابي سلمه بن عبد الرحمن بن عوف الزهري,عمر بن أبي سلمة بن عبد الرحمن بن عوف الزهري,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج6/ص133 | duafa_uqayli:ج3/ص164
+4,٤ صغار التابعين,arsanad~:tabaqa,عمر بن عبد الله بن يعلي بن مره,عمر بن عبد الله بن يعلى بن مرة,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,عمران بن مسلم,عمران بن مسلم,3,3,biography/ṭabaqāt; general; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad; tarikh_kabir_bukhari,duafa_uqayli:ج3/ص304
+4,٤ صغار التابعين,arsanad:tabaqa,عمرو بن سعيد,عمرو بن سعيد,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج4/ص94 | tabaqat_ibnsad:ج7/ص234
+4,٤ صغار التابعين,arsanad~:tabaqa,عمرو بن شعيب بن محمد بن عبد الله,عمرو بن شعيب بن محمد بن عبد الله,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,kashif_dhahabi:ج2/ص78
+4,٤ صغار التابعين,arsanad:tabaqa,عيسي بن عبد الرحمن,عيسى بن عبد الرحمن,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+4,٤ صغار التابعين,arsanad:tabaqa,مالك بن دينار,مالك بن دينار,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج5/ص362
+4,٤ صغار التابعين,arsanad:death,محمد بن ابي الزعيزعه,محمد بن أبي الزعيزعة,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص67
+4,٤ صغار التابعين,arsanad~:tabaqa,محمد بن اسحاق بن يسار,محمد بن إسحاق بن يسار,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص323
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن جحاده,محمد بن جحادة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص454
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن زيد,محمد بن زيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص459
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن سالم,محمد بن سالم,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن سعد,محمد بن سعد,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص165 | tabaqat_ibnsad:ج8/ص341
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن سليم,محمد بن سليم,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص359
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن صفوان,محمد بن صفوان,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+4,٤ صغار التابعين,arsanad~:tabaqa,محمد بن عبد الرحمن بن ابي ليلي,محمد بن عبد الرحمن بن أبي ليلى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص410 | duafa_uqayli:ج4/ص98
+4,٤ صغار التابعين,arsanad~:tabaqa,محمد بن عبد الرحمن بن عمرو,محمد بن عبد الرحمن بن عمرو,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+4,٤ صغار التابعين,arsanad~:tabaqa,محمد بن عبد الرحمن بن فرقد عن الزهري,محمد بن عبد الرحمن بن فرقد عن الزهري,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+4,٤ صغار التابعين,arsanad~:tabaqa,محمد بن عمرو بن علقمه بن وقاص الليثي,محمد بن عمرو بن علقمة بن وقاص الليثي,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج6/ص136
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن قيس,محمد بن قيس,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص511
+4,٤ صغار التابعين,arsanad:tabaqa,محمد بن يزيد بن ابي زياد,محمد بن يزيد بن أبي زياد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص147
+4,٤ صغار التابعين,arsanad:death,مسلمه بن جعفر,مسلمة بن جعفر,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+4,٤ صغار التابعين,arsanad:tabaqa,هلال بن خباب,هلال بن خباب,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص441
+4,٤ صغار التابعين,arsanad~:tabaqa,يحيي بن اسحاق بن عبد الله بن ابي,يحيى بن إسحاق بن عبد الله بن أبي,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,kashif_dhahabi:ج2/ص360
+4,٤ صغار التابعين,arsanad:tabaqa,يحيي بن الحارث,يحيى بن الحارث,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص467
+4,٤ صغار التابعين,arsanad:death,يحيي بن عبد الرحمن,يحيى بن عبد الرحمن,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص247
+4,٤ صغار التابعين,arsanad:tabaqa,يزيد بن ابي زياد,يزيد بن أبي زياد. </span>,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+4,٤ صغار التابعين,arsanad:tabaqa,يزيد بن ابي سعيد,يزيد بن أبي سعيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+4,٤ صغار التابعين,arsanad:death,يزيد بن بزيع,يزيد بن بزيع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص375
+4,٤ صغار التابعين,arsanad:death,يزيد بن عبد الله,يزيد بن عبد الله,3,4,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص486 | tabaqat_ibnsad:ج7/ص488
+4,٤ صغار التابعين,arsanad:tabaqa,يزيد بن عبد الله بن اسامه بن الهاد,يزيد بن عبد الله بن أسامة بن الهاد,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+4,٤ صغار التابعين,arsanad:tabaqa,يعقوب بن عطا بن ابي رباح,يعقوب بن عطاء بن أبي رباح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص455
+5,٥ أتباع التابعين,arsanad:death,ابراهيم بن ابي بكر بن المنكدر,إبراهيم بن أبي بكر بن المنكدر,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص46
+5,٥ أتباع التابعين,arsanad:death,ابراهيم بن الزبرقان,إبراهيم بن الزبرقان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,ابراهيم بن مهاجر بن مسمار المدني,إبراهيم بن مهاجر بن مسمار المدني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,ابو بكر بن عبد الله بن ابي مريم,أبو بكر بن عبد الله بن أبي مريم,3,3,biography/ṭabaqāt; general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص472
+5,٥ أتباع التابعين,arsanad:tabaqa,اسماعيل بن ابراهيم,إسماعيل بن إبراهيم,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص597 | tabaqat_ibnsad:ج8/ص506
+5,٥ أتباع التابعين,arsanad~:tabaqa,اسماعيل بن عبد الله بن خالد,إسماعيل بن عبد الله بن خالد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,البرا بن عبد الله بن يزيد الغنوي البصري,البراء بن عبد الله بن يزيد الغنوي البصري,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad:death,الحسن بن عنبسه,الحسن بن عنبسة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:death,الحسين بن الحسن بن عطيه العوفي,الحسين بن الحسن بن عطية العوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,الحكم بن عبد الرحمن بن ابي نعم البجلي,الحكم بن عبد الرحمن بن أبي نعم البجلي,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+5,٥ أتباع التابعين,arsanad~:death,الحكم بن عبد الله بن خطاف ابو سلمه,الحكم بن عبد الله بن خطاف أبو سلمة,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:death,الحكم بن عبد الله بن سعد الايلي,الحكم بن عبد الله بن سعد الأيلي,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص256
+5,٥ أتباع التابعين,arsanad~:death,الحكم بن يعلي بن عطا المحاربي,الحكم بن يعلى بن عطاء المحاربي,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص260
+5,٥ أتباع التابعين,arsanad:death,ثابت بن الوليد بن عبد الله بن جميع,ثابت بن الوليد بن عبد الله بن جميع,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+5,٥ أتباع التابعين,arsanad:tabaqa,جرير بن يزيد بن جرير بن عبد الله,جرير بن يزيد بن جرير بن عبد الله,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,kashif_dhahabi:ج1/ص291
+5,٥ أتباع التابعين,arsanad~:tabaqa,خالد بن يزيد بن عبد الرحمن بن ابي,خالد بن يزيد بن عبد الرحمن بن أبي,3,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,text:تابعي,س سلمه بن تمام الشقري,"س , سلمة بن تمام الشقري",2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,lisan_mizan_ibnhajar:ج9/ص316
+5,٥ أتباع التابعين,arsanad:tabaqa,سعيد بن عبد الله,سعيد بن عبد الله,2,3,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+5,٥ أتباع التابعين,arsanad~:death,سليمان بن عيسي بن نجيح السجزي,سليمان بن عيسى بن نجيح السجزي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad:tabaqa,سيف بن هارون,سيف بن هارون,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+5,٥ أتباع التابعين,arsanad~:tabaqa,شريك بن عبد الله بن ابي نمر المدني,شريك بن عبد الله بن أبي نمر المدني,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج6/ص159
+5,٥ أتباع التابعين,arsanad:tabaqa,صالح بن ابي الاخضر,صالح بن أبي الأخضر,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص324 | tabaqat_ibnsad:ج9/ص272
+5,٥ أتباع التابعين,arsanad~:tabaqa,عامر بن صالح بن عبد الله بن عروه,عامر بن صالح بن عبد الله بن عروة,3,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الاعلي بن ابي المساور ابو مسعود الجرار,عبد الأعلى بن أبي المساور أبو مسعود الجرار,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الرحمن بن ابي الرجال,عبد الرحمن بن أبي الرجال,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص353 | tabaqat_ibnsad:ج7/ص586
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الرحمن بن ابي الزناد,عبد الرحمن بن أبي الزناد,2,3,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص594 | tabaqat_ibnsad:ج9/ص326
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الرحمن بن ابي بكر بن عبيد الله,عبد الرحمن بن أبي بكر بن عبيد الله,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الرحمن بن الحارث بن عبد الله بن,عبد الرحمن بن الحارث بن عبد الله بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+5,٥ أتباع التابعين,arsanad:death,عبد الرحيم بن حماد,عبد الرحيم بن حماد,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص81
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد العزيز بن ابي رواد,عبد العزيز بن أبي رواد,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص55 | duafa_uqayli:ج3/ص8
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد العزيز بن عبد الله,عبد العزيز بن عبد الله,2,5,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص456 | tabaqat_ibnsad:ج7/ص593 | tabaqat_ibnsad:ج7/ص617 | tabaqat_ibnsad:ج9/ص325
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد الله بن الحسين بن عطا بن يسار,عبد الله بن الحسين بن عطاء بن يسار,3,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد الله بن ثابت,عبد الله بن ثابت,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص300
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد الله بن عامر,عبد الله بن عامر,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص9 | tabaqat_ibnsad:ج7/ص47 | tabaqat_ibnsad:ج7/ص557
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الله بن عبد العزيز,عبد الله بن عبد العزيز,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص613
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الله بن عبد العزيز بن ابي ثابت,عبد الله بن عبد العزيز بن أبي ثابت,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الله بن عبد العزيز بن ابي رواد,عبد الله بن عبد العزيز بن أبي رواد,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,duafa_uqayli:ج2/ص279
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد الله بن واقد,عبد الله بن واقد,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص457 | duafa_uqayli:ج2/ص312
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد المهيمن بن عباس بن سهل بن سعد,عبد المهيمن بن عباس بن سهل بن سعد,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,duafa_uqayli:ج3/ص114
+5,٥ أتباع التابعين,arsanad~:tabaqa,عبد الوهاب بن عبد المجيد الثقفي,عبد الوهاب بن عبد المجيد الثقفي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص291 | duafa_uqayli:ج3/ص76
+5,٥ أتباع التابعين,arsanad:tabaqa,عبد الوهاب بن مجاهد بن جبر,عبد الوهاب بن مجاهد بن جبر,2,2,jarḥ (ḍuʿafāʾ); tadlīs,duafa_uqayli; tabaqat_mudallisin_ibnhajar,duafa_uqayli:ج3/ص72 | tabaqat_mudallisin_ibnhajar:ج0/ص55
+5,٥ أتباع التابعين,arsanad:death,عبيد بن ابي قره,عبيد بن أبي قرة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+5,٥ أتباع التابعين,arsanad:tabaqa,عيسي بن سليم,عيسى بن سليم,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص382
+5,٥ أتباع التابعين,arsanad:tabaqa,عيسي بن موسي,عيسى بن موسى,3,4,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج6/ص392 | duafa_uqayli:ج3/ص384
+5,٥ أتباع التابعين,arsanad:death,غالب بن فايد,غالب بن فائد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص434
+5,٥ أتباع التابعين,arsanad~:tabaqa,قزعه بن سويد بن حجير الباهلي,قزعة بن سويد بن حجير الباهلي,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,
+5,٥ أتباع التابعين,arsanad:tabaqa,قيس بن الربيع,قيس بن الربيع,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص498
+5,٥ أتباع التابعين,arsanad~:tabaqa,كثير بن عبد الله بن عمرو بن عوف,كثير بن عبد الله بن عمرو بن عوف,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,kashif_dhahabi:ج2/ص145
+5,٥ أتباع التابعين,arsanad:death,محمد بن اسماعيل,محمد بن إسماعيل,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص615
+5,٥ أتباع التابعين,arsanad~:tabaqa,محمد بن طلحه بن عبد الله بن عبد,محمد بن طلحة بن عبد الله بن عبد,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+5,٥ أتباع التابعين,arsanad:tabaqa,محمد بن عبد الرحمن,محمد بن عبد الرحمن,3,15,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص207 | tabaqat_ibnsad:ج7/ص239 | tabaqat_ibnsad:ج7/ص278 | tabaqat_ibnsad:ج7/ص487 | tabaqat_ibnsad:ج7/ص493 | tabaqat_ibnsad:ج7/ص522 | tabaqat_ibnsad:ج7/ص595 | tabaqat_ibnsad:ج8/ص57 | tabaqat_ibnsad:ج8/ص415 | tabaqat_ibnsad:ج8/ص478
+5,٥ أتباع التابعين,arsanad:tabaqa,مخرمه بن بكير بن عبد الله بن الاشج,مخرمة بن بكير بن عبد الله بن الأشج,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,
+5,٥ أتباع التابعين,arsanad:death,نصر بن باب,نصر بن باب,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص380 | duafa_uqayli:ج4/ص302
+5,٥ أتباع التابعين,arsanad:tabaqa,يحيي بن ايوب,يحيى بن ايوب,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج8/ص259 | tabaqat_ibnsad:ج9/ص360
+5,٥ أتباع التابعين,arsanad:tabaqa,يحيي بن راشد,يحيى بن راشد,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص447
+5,٥ أتباع التابعين,arsanad~:death,يحيي بن عقبه بن ابي العيزار ابو القاسم,يحيى بن عقبة بن أبي العيزار [أبو القاسم],2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+5,٥ أتباع التابعين,arsanad~:death,يحيي بن نصر بن حاجب القرشي,يحيى بن نصر بن حاجب القرشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص433
+5,٥ أتباع التابعين,text:تابعي,يزيد بن عبد الرحمن,يزيد بن عبد الرحمن,2,2,biography/ṭabaqāt; tadlīs,tabaqat_ibnsad; tabaqat_mudallisin_ibnhajar,
+6,٦ صغار أتباع التابعين,arsanad:death,ابراهيم بن اسحاق,إبراهيم بن إسحاق,3,4,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tarikh_kabir_bukhari,
+6,٦ صغار أتباع التابعين,arsanad~:tabaqa,الحسين بن محمد بن بهرام عن ابن ابي,الحسين بن محمد بن بهرام عن ابن أبي,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+6,٦ صغار أتباع التابعين,arsanad:death,بكار بن محمد بن عبد الله بن محمد بن سيرين,بكار بن محمد بن عبد الله بن محمد بن سيرين,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص298 | duafa_uqayli:ج1/ص152
+6,٦ صغار أتباع التابعين,arsanad~:death,جعفر بن جسر بن فرقد ابو سليمان القصاب,جعفر بن جسر بن فرقد أبو سليمان القصاب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+6,٦ صغار أتباع التابعين,arsanad~:tabaqa,حرمي بن عماره بن ابي حفصه,حرمي بن عمارة بن أبي حفصة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+6,٦ صغار أتباع التابعين,arsanad:death,سلم بن قادم,سلم بن قادم,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+6,٦ صغار أتباع التابعين,arsanad:death,سلمه بن حفص,سلمة بن حفص,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص274
+6,٦ صغار أتباع التابعين,arsanad~:tabaqa,عبد الحميد بن عبد الرحمن بن زيد بن,عبد الحميد بن عبد الرحمن بن زيد بن,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+6,٦ صغار أتباع التابعين,arsanad~:tabaqa,عبد الله بن ابي جعفر الرازي عن ابيه,عبد الله بن أبي جعفر الرازي عن أبيه,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عبد الله بن عبد الله,عبد الله بن عبد الله,2,6,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص500 | tabaqat_ibnsad:ج7/ص200 | tabaqat_ibnsad:ج7/ص311 | tabaqat_ibnsad:ج7/ص494
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عبد الله بن غالب,عبد الله بن غالب,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص166 | tabaqat_ibnsad:ج9/ص223
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عبد الله بن يزيد,عبد الله بن يزيد,3,9,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص512 | tabaqat_ibnsad:ج7/ص525 | tabaqat_ibnsad:ج7/ص599 | tabaqat_ibnsad:ج8/ص80 | tabaqat_ibnsad:ج8/ص141
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عبد المجيد بن عبد العزيز بن ابي رواد,عبد المجيد بن عبد العزيز بن أبي رواد,3,3,general (six-books); jarḥ (ḍuʿafāʾ); marāsīl/connection,duafa_ibnjawzi; jami_tahsil_alai; kashif_dhahabi,jami_tahsil_alai:ج1/ص107
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عبد الملك بن محمد,عبد الملك بن محمد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص585
+6,٦ صغار أتباع التابعين,arsanad~:tabaqa,عبيد الله بن عبد المجيد ابو علي الحنفي,عبيد الله بن عبد المجيد أبو علي الحنفي,3,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli; kashif_dhahabi,kashif_dhahabi:ج1/ص683 | duafa_uqayli:ج3/ص123
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عثمان بن زايده,عثمان بن زائدة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص202
+6,٦ صغار أتباع التابعين,arsanad~:tabaqa,علي بن عاصم بن صهيب ابو الحسن الواسطي,علي بن عاصم بن صهيب أبو الحسن الواسطي,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,duafa_uqayli:ج3/ص246
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,علي بن قادم,علي بن قادم,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,عمرو بن محمد,عمرو بن محمد,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,محمد بن القاسم,محمد بن القاسم,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,محمد بن عباد,محمد بن عباد,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص36
+6,٦ صغار أتباع التابعين,arsanad:death,يحيي بن سليمان,يحيى بن سليمان,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+6,٦ صغار أتباع التابعين,arsanad:tabaqa,يحيي بن يعلي,يحيى بن يعلى,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص533
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,ابراهيم بن اسماعيل بن يحيي بن سلمه بن,إبراهيم بن إسماعيل بن يحيى بن سلمة بن,3,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,ابراهيم بن زياد,إبراهيم بن زياد,3,4,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tarikh_kabir_bukhari,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,ابراهيم بن محمد بن ابراهيم بن الحارث التيمي,إبراهيم بن محمد بن إبراهيم بن الحارث التيمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن الحارث بن مسكين المصري,أحمد بن الحارث بن مسكين المصري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن عبد الرحمن بن الجارود الرقي,أحمد بن عبد الرحمن بن الجارود الرقي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن عبد الله بن حسين الضرير,أحمد بن عبد الله بن حسين الضرير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن عبد الله بن محمد ابو الحسن البكري,أحمد بن عبد الله بن محمد أبو الحسن البكري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن علي بن احمد بن صبيح,• أحمد بن علي بن أحمد بن صبيح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج1/ص557
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن محمد بن ابراهيم الضرير,أحمد بن محمد بن إبراهيم الضرير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص53
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن محمد بن احمد بن يحيي,أحمد بن محمد بن أحمد بن يحيى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن محمد بن الفضل القيسي الابلي,أحمد بن محمد بن الفضل القيسي الأبلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن محمد بن صالح التمار,أحمد بن محمد بن صالح التمار,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,احمد بن محمد بن مسروق ابو العباس الطوسي,أحمد بن محمد بن مسروق أبو العباس الطوسي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:death,احمد بن محمد بن نافع,أحمد بن محمد بن نافع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:death,اسحاق بن ابراهيم,إسحاق بن إبراهيم,3,5,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tarikh_kabir_bukhari,
+7,٧ تبع الأتباع فمن بعدهم,text:طبقة,اسحاق بن محمد بن اسماعيل بن عبد الله,إسحاق بن محمد بن إسماعيل بن عبد الله,2,2,general (six-books); ikhtilāṭ,kashif_dhahabi; kawakib_nayyirat,kawakib_nayyirat:ج1/ص453 | kashif_dhahabi:ج1/ص238
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,اسماعيل بن موسي,إسماعيل بن موسى,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,الحسن بن علي بن شبيب المعمري الحافظ,الحسن بن علي بن شبيب المعمري الحافظ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,الحسين بن حميد بن الربيع الكوفي الخزاز,الحسين بن حميد بن الربيع الكوفي الخزاز,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,الحسين بن عبد الرحمن,الحسين بن عبد الرحمن,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج9/ص283
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,الحسين بن عبد الله بن شاكر السمرقندي,الحسين بن عبد الله بن شاكر السمرقندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,الحسين بن عبد الله بن عبيد الله بن,الحسين بن عبد الله بن عبيد الله بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,جعفر بن محمد بن الليث الزيادي,جعفر بن محمد بن الليث الزيادي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:death,ربيعه بن الحارث,ربيعة بن الحارث,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج3/ص283 | tabaqat_ibnsad:ج4/ص43
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,زيد بن الحسن بن زيد بن اميرك الحسيني,زيد بن الحسن بن زيد بن أميرك الحسيني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,سعيد بن شرحبيل,سعيد بن شرحبيل,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص535
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,سعيد بن عبد الله بن ضرار عن انس,سعيد بن عبد الله بن ضرار عن انس,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,سعيد بن عمرو,سعيد بن عمرو,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص500 | tabaqat_ibnsad:ج8/ص540
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,سليمان بن المعافي بن سليمان الرسعني,سليمان بن المعافى بن سليمان الرسعني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,شهاب بن عباد,شهاب بن عباد,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tabaqat_ibnsad,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عبد الرحمن بن علي بن عجلان القرشي,عبد الرحمن بن علي بن عجلان القرشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص341
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الرحمن بن محمد بن عبيد الله العرزمي,عبد الرحمن بن محمد بن عبيد الله العرزمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عبد الرحمن بن يحيي بن سعيد الانصاري,عبد الرحمن بن يحيى بن سعيد الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص350
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن الوليد بن عبد الله بن معقل المزني,عبد الله بن الوليد بن عبد الله بن معقل المزني,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص348 | tarikh_kabir_bukhari:ج5/ص216
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن جعفر بن عبد الرحمن بن,عبد الله بن جعفر بن عبد الرحمن بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن جعفر بن نجيح ابو جعفر,عبد الله بن جعفر بن نجيح أبو جعفر,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عبد الله بن سليمان بن جناده عن ابيه,عبد الله بن سليمان بن جنادة عن أبيه,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن عبد الرحمن المسمعي,عبد الله بن عبد الرحمن المسمعي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص273
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن عبد الرحمن بن ابي حسين,عبد الله بن عبد الرحمن بن أبي حسين,2,2,general (six-books); marāsīl/connection,jami_tahsil_alai; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن عبد الرحمن بن يزيد بن,عبد الله بن عبد الرحمن بن يزيد بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عبد الله بن علي بن يزيد بن ركانه,عبد الله بن علي بن يزيد بن ركانة,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_uqayli; kashif_dhahabi,duafa_uqayli:ج2/ص282
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عبد الله بن محمد بن عبد الله بن,عبد الله بن محمد بن عبد الله بن,2,3,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عبد الله بن محمد بن علي بن نفيل,عبد الله بن محمد بن علي بن نفيل,2,2,biography/ṭabaqāt; general (six-books),kashif_dhahabi; tabaqat_ibnsad,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عبد الله بن نافع بن ابي العميا عن,عبد الله بن نافع بن أبي العمياء عن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,عمر بن اسماعيل بن مجالد بن سعيد الهمداني,عمر بن إسماعيل بن مجالد بن سعيد الهمداني,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,duafa_uqayli:ج3/ص149
+7,٧ تبع الأتباع فمن بعدهم,arsanad:death,عمرو بن سعد,عمرو بن سعد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص167
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,عيسي بن عبد الله بن سليمان القرشي العسقلاني,عيسى بن عبد الله بن سليمان القرشي العسقلاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:death,محمد بن ابان,محمد بن أبان,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص507
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,محمد بن ابراهيم بن عبد الله بن معبد بن عباس الهاشمي,محمد بن إبراهيم بن عبد الله بن معبد بن عباس الهاشمي,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,محمد بن الفضل بن محمد بن اسحاق بن خزيمه,محمد بن الفضل بن محمد بن إسحاق بن خزيمة,2,2,general/jarḥ+taʿdīl; ikhtilāṭ,kawakib_nayyirat; lisan_mizan_ibnhajar,kawakib_nayyirat:ج1/ص411
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,محمد بن حاتم بن خزيمه الكشي,محمد بن حاتم بن خزيمة الكشي,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,siyar_dhahabi:ج15/ص380
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,محمد بن عبد الله,محمد بن عبد الله,3,16,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص265 | tabaqat_ibnsad:ج7/ص312 | tabaqat_ibnsad:ج7/ص479 | tabaqat_ibnsad:ج7/ص497 | tabaqat_ibnsad:ج7/ص535 | tabaqat_ibnsad:ج7/ص555 | tabaqat_ibnsad:ج7/ص569 | tabaqat_ibnsad:ج7/ص579 | tabaqat_ibnsad:ج7/ص582 | tabaqat_ibnsad:ج8/ص82 | tabaqat_ibnsad:ج8/ص538
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,محمد بن عبد الله بن انسان الطايفي,محمد بن عبد الله بن إنسان الطائفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص408 | duafa_uqayli:ج4/ص92
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:death,محمد بن عبد الله بن عباد,محمد بن عبد الله بن عباد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج9/ص409
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,محمد بن كثير,محمد بن كثير,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص495
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,محمد بن مهران,محمد بن مهران,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص142
+7,٧ تبع الأتباع فمن بعدهم,arsanad~:tabaqa,معمر بن محمد بن عبيد الله بن ابي,معمر بن محمد بن عبيد الله بن أبي,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+7,٧ تبع الأتباع فمن بعدهم,arsanad:tabaqa,يحيي بن عثمان,يحيى بن عثمان,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,duafa_uqayli:ج4/ص418
+8,٨ غير محدد,,ابان بن ابي عياش,أبان بن أبي عياش,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص248 | tabaqat_ibnsad:ج9/ص253 | duafa_uqayli:ج1/ص38
+8,٨ غير محدد,,ابان بن المحبر,أبان بن المحبر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,ابان بن عبد الله,أبان بن عبد الله,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص474
+8,٨ غير محدد,,ابراهيم بن ابي دليله,إبراهيم بن أبي دليلة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن اسحاق الصيني,إبراهيم بن إسحاق الصيني,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن اسماعيل المكي,إبراهيم بن إسماعيل المكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص9
+8,٨ غير محدد,,ابراهيم بن اسماعيل بن بشير,إبراهيم بن إسماعيل بن بشير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن الاشعث خادم الفضيل بن عياض,إبراهيم بن الأشعث خادم الفضيل بن عياض,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن البرا,إبراهيم بن البراء,2,4,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص10
+8,٨ غير محدد,,ابراهيم بن الحكم بن ظهير الكوفي,إبراهيم بن الحكم بن ظهير الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن الخضر الدمشقي,إبراهيم بن الخضر الدمشقي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن العلا ابو هارون الغنوي,إبراهيم بن العلاء أبو هارون الغنوي.</span>,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن بشر الازدي,إبراهيم بن بشر الأزدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن بكر الشيباني الاعور,إبراهيم بن بكر الشيباني الأعور,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن جريج الرهاوي,إبراهيم بن جريج الرهاوي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص51
+8,٨ غير محدد,,ابراهيم بن حرب العسقلاني,إبراهيم بن حرب العسقلاني,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص51
+8,٨ غير محدد,,ابراهيم بن حسان,• إبراهيم بن حسان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج1/ص263
+8,٨ غير محدد,,ابراهيم بن حفص بن جندب,إبراهيم بن حفص بن جندب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن حيان,إبراهيم بن حيان,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن خثيم بن عراك بن مالك,إبراهيم بن خثيم (1) بن عراك بن مالك,2,2,ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat,kawakib_nayyirat:ج1/ص105
+8,٨ غير محدد,,ابراهيم بن زرعه,إبراهيم بن زرعة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن زياد القرشي,إبراهيم بن زياد القرشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص53
+8,٨ غير محدد,,ابراهيم بن سلام عن حماد بن ابي سليمان,إبراهيم بن سلام. عن حماد بن أبي سليمان.,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن سليمان البلخي الزيات,إبراهيم بن سليمان البلخي الزيات,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن عبد الرحمن,إبراهيم (بن عبد الرحمن,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص59
+8,٨ غير محدد,,ابراهيم بن عبد الرحمن الخوارزمي,• إبراهيم بن عبد الرحمن الخوارزمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج1/ص310 | duafa_ibnjawzi:ج1/ص37
+8,٨ غير محدد,,ابراهيم بن عبد الله,إبراهيم بن عبد الله,5,9,biography; biography/ṭabaqāt; general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; siyar_dhahabi; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص426 | tabaqat_ibnsad:ج7/ص473 | tabaqat_ibnsad:ج7/ص538
+8,٨ غير محدد,,ابراهيم بن عقبه,إبراهيم بن عقبة,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص519
+8,٨ غير محدد,,ابراهيم بن عمر بن ابان,977 إبراهيم بن عمر بن أبان,3,3,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,ابراهيم بن مالك,إبراهيم بن مالك,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن محمد,إبراهيم بن محمد,3,6,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص398 | tabaqat_ibnsad:ج7/ص468 | tabaqat_ibnsad:ج7/ص544 | tabaqat_ibnsad:ج7/ص603 | duafa_uqayli:ج1/ص65
+8,٨ غير محدد,,ابراهيم بن محمد الهاشمي,إبراهيم بن محمد الهاشمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن محمد بن عاصم,إبراهيم بن محمد بن عاصم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص65
+8,٨ غير محدد,,ابراهيم بن محمد بن ميمون,إبراهيم بن محمد بن ميمون,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن مسعده,إبراهيم بن مسعدة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن معاويه الزيادي,إبراهيم بن معاوية الزيادي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص68
+8,٨ غير محدد,,ابراهيم بن منقوش الزبيدي,إبراهيم بن منقوش الزبيدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن موسي المروزي,إبراهيم بن موسى المروزي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن نسطاس,إبراهيم بن نسطاس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابراهيم بن يزيد بن قديد,إبراهيم بن يزيد بن قديد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص72
+8,٨ غير محدد,,ابن ابي خثعم عمر بن عبد الله,ابن أبي خثعم: عمر بن عبد الله. [=,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص489
+8,٨ غير محدد,,ابن اعبد علي,ابن أعبد: علي. [= 3880].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص488
+8,٨ غير محدد,,ابو احمد الزبيري محمد بن عبد الله,أبو أحمد الزبيري: محمد بن عبد الله. [=,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,kashif_dhahabi:ج2/ص405 | siyar_dhahabi:ج9/ص529
+8,٨ غير محدد,,ابو العجفا السلمي,أبو العجفاء السلمي,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص476
+8,٨ غير محدد,,ابو العشرا الدارمي,أبو العشراء الدارمي,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص476 | tabaqat_ibnsad:ج9/ص253
+8,٨ غير محدد,,ابو العلا القصاب ايوب بن مسكين,أبو العلاء القصاب: أيوب بن مسكين. [= 525].,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابو جعفر الترمذي محمد بن احمد بن نصر,• أبو جعفر الترمذي: محمد بن أحمد بن نصر [6401],2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص38 | siyar_dhahabi:ج13/ص545
+8,٨ غير محدد,,ابو خالد الدالاني,أبو خالد الدالاني,2,2,biography/ṭabaqāt; taʿdīl (thiqāt),marifat_thiqat_ijli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص312
+8,٨ غير محدد,,ابو خليفه الفضل بن الحباب الجمحي,• أبو خليفة: الفضل بن الحباب الجمحي [6042],2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص62 | siyar_dhahabi:ج14/ص7
+8,٨ غير محدد,,ابو سفيان المعمري محمد بن حميد,أبو سفيان المعمري: محمد بن حميد. [= 4811].,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,kashif_dhahabi:ج2/ص430 | siyar_dhahabi:ج9/ص39
+8,٨ غير محدد,,ابو شعيب الحراني عبد الله بن الحسن,أبو شعيب الحراني: عبد الله بن الحسن [4197],2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص94 | siyar_dhahabi:ج13/ص536
+8,٨ غير محدد,,ابو شهاب الحناط عبد ربه بن نافع,أبو شهاب الحناط: عبد ربه بن نافع. [=,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج8/ص226
+8,٨ غير محدد,,ابو صالح باذام,أبو صالح باذام,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج5/ص37 | tabaqat_ibnsad:ج7/ص297
+8,٨ غير محدد,,ابو عمرو الشيباني سعد بن اياس,أبو عمرو الشيباني: سعد بن إياس. [= 1824].,2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج4/ص173
+8,٨ غير محدد,,ابو مجلز لاحق,أبو مجلز: لاحق. [= 6120].,2,2,biography/ṭabaqāt; general (six-books),kashif_dhahabi; tabaqat_ibnsad,kashif_dhahabi:ج2/ص456
+8,٨ غير محدد,,ابو مرزوق التجيبي,أبو مرزوق التجيبي,2,2,general; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; tarikh_kabir_bukhari,
+8,٨ غير محدد,,ابو نعيم النخعي عبد الرحمن بن هاني,أبو نعيم النخعي: عبد الرحمن بن هانئ. [=,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ابيض بن الاغر,أبيض بن الأغر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن ابراهيم بن حميل,أحمد بن إبراهيم بن حميل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن ابي نافع ابو سلمه الموصلي,أحمد بن أبي نافع أبو سلمة الموصلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن ابي يحيي الانماطي ابو بكر البغدادي,أحمد بن أبي يحيى الأنماطي أبو بكر البغدادي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن احمد بن احمد بن البندنيجي المحدث,أحمد بن أحمد بن أحمد بن البندنيجي المحدث,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص33
+8,٨ غير محدد,,احمد بن اسد,أحمد بن أسد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+8,٨ غير محدد,,احمد بن الحسن بن علي المقري دبيس,أحمد بن الحسن بن علي المقرىء دبيس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن الخليل النوفلي القومسي,أحمد بن الخليل النوفلي القومسي,3,3,biography; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; siyar_dhahabi,
+8,٨ غير محدد,,احمد بن الوليد المخرمي,أحمد بن الوليد المخرمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن ثابت الطرقي الحافظ,أحمد بن ثابت الطرقي الحافظ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن حامد ابو سلمه السمرقندي,أحمد بن حامد أبو سلمة السمرقندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن رشد الهلالي,أحمد بن رشد الهلالي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن سعيد العسكري ابو الحارث,أحمد بن سعيد العسكري أبو الحارث,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن عبد العزيز ابو حاتم الوراق,أحمد بن عبد العزيز أبو حاتم الوراق,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن عبد الله,أحمد بن عبد الله,2,3,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص529
+8,٨ غير محدد,,احمد بن علي الخصيبي,• أحمد بن علي الخصيبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج1/ص542
+8,٨ غير محدد,,احمد بن علي النصيبي,أحمد بن علي النصيبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن علي بن الفرات الدمشقي,أحمد بن علي بن الفرات الدمشقي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن علي بن سلمان ابو بكر المروزي,أحمد بن علي بن سلمان أبو بكر المروزي,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن محمد الانصاري,أحمد بن محمد الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص59
+8,٨ غير محدد,,احمد بن محمد بن حرب الملحمي الجرجاني,أحمد بن محمد بن حرب الملحمي الجرجاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن محمد بن هارون ابو جعفر البرقي,أحمد بن محمد بن هارون أبو جعفر البرقي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص57
+8,٨ غير محدد,,احمد بن مروان الدينوري المالكي,أحمد بن مروان الدينوري المالكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن مقاتل الدهقان,أحمد بن مقاتل الدهقان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن هارون ابو جعفر البلدي,أحمد بن هارون أبو جعفر البلدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,احمد بن هارون ويقال له حميد المصيصي,أحمد بن هارون ويقال له: حميد المصيصي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ادم بن ابي اوفي,آدم بن أبي أوفى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ازهر بن سليمان الخراساني الكاتب,أزهر بن سليمان الخراساني الكاتب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ازهر بن عبد الله,أزهر بن عبد الله,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,ازور بن غالب,أزور بن غالب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص118
+8,٨ غير محدد,,اسحاق ابو الغصن,إسحاق أبو الغصن,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,اسحاق بن ابراهيم بن ابي بن نافع,إسحاق بن إبراهيم بن أبي بن نافع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص68
+8,٨ غير محدد,,اسحاق بن خالد,إسحاق بن خالد,2,4,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسحاق بن سعيد بن جبير,إسحاق بن سعيد بن جبير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسحاق بن طلحه,إسحاق بن طلحة,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج4/ص368 | tabaqat_ibnsad:ج7/ص165
+8,٨ غير محدد,,اسحاق بن عبد الله,إسحاق بن عبد الله,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص312 | tabaqat_ibnsad:ج7/ص494 | tabaqat_ibnsad:ج7/ص523
+8,٨ غير محدد,,اسحاق بن محمد الفروي قال النسايي ليس بثقه,إسحاق بن محمد الفروي قال النسائي ليس بثقة,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسحاق بن محمشاد,إسحاق بن محمشاد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسد بن ابراهيم بن كليب السلمي الحراني القاضي,أسد بن إبراهيم بن كليب السلمي الحراني القاضي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسد بن عطا,أسد بن عطاء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص23
+8,٨ غير محدد,,اسد بن عمرو البجلي,أسد بن عمرو البجلي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص333 | duafa_uqayli:ج1/ص24
+8,٨ غير محدد,,اسراييل بن روح الساحلي,إسرائيل بن روح الساحلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسما بن الحكم الفزاري,أسماء بن الحكم الفزاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص261 | duafa_uqayli:ج1/ص106
+8,٨ غير محدد,,اسماعيل بن ابراهيم القرشي,إسماعيل بن إبراهيم القرشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص74
+8,٨ غير محدد,,اسماعيل بن ابراهيم بن ميمون الصايغ,إسماعيل بن إبراهيم بن ميمون الصائغ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسماعيل بن ابي بكر عن عبده بن ابي,إسماعيل بن أبي بكر عن عبدة بن أبي,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسماعيل بن اسحاق الجرجاني,إسماعيل بن إسحاق الجرجاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص78
+8,٨ غير محدد,,اسماعيل بن الحكم,إسماعيل بن الحكم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسماعيل بن المثني,إسماعيل بن المثنى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسماعيل بن اياس بن عفيف الكندي,إسماعيل بن إياس بن عفيف الكندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص79
+8,٨ غير محدد,,اسماعيل بن بشير بن سلمان الكوفي,إسماعيل بن بشير بن سلمان الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص81
+8,٨ غير محدد,,اسماعيل بن ثابت بن مجمع,إسماعيل بن ثابت بن مجمع,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص79 | duafa_uqayli:ج1/ص79
+8,٨ غير محدد,,اسماعيل بن سليمان الرازي,إسماعيل بن سليمان الرازي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص82
+8,٨ غير محدد,,اسماعيل بن شبيب الطايفي,إسماعيل بن شبيب الطائفي,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص82 | duafa_uqayli:ج1/ص83
+8,٨ غير محدد,,اسماعيل بن شروس الصنعاني,إسماعيل بن شروس الصنعاني,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص84
+8,٨ غير محدد,,اسماعيل بن عبد الله,إسماعيل بن عبد الله,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص323
+8,٨ غير محدد,,اسماعيل بن موسي الانصاري,إسماعيل بن موسى الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسماعيل بن يوسف,إسماعيل بن يوسف,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اسود بن عمران السكري,أسود بن عمران السكري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,اصبغ ابو بكر الشيباني,أصبغ أبو بكر الشيباني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص130
+8,٨ غير محدد,,اصبغ بن سفيان الكلبي,أصبغ بن سفيان الكلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص130
+8,٨ غير محدد,,اصرم بن غياث النيسابوري,أصرم بن غياث النيسابوري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص118
+8,٨ غير محدد,,الاويسي عبد العزيز,الأويسي: عبد العزيز. [= 3393].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص494
+8,٨ غير محدد,,الجرار عبد الاعلي بن ابي المساور,الجرار: عبد الأعلى بن أبي المساور. [= 3080].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص494
+8,٨ غير محدد,,الحارث بن انعم,الحارث بن أنعم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,الحارث بن زياد,الحارث بن زياد,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص140
+8,٨ غير محدد,,الحارث بن سريج النقال,الحارث بن سريج النقال,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحارث بن سعيد,الحارث بن سعيد,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص246
+8,٨ غير محدد,,الحارث بن عيينه الحمصي,الحارث بن عيينة الحمصي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحارث بن محمد عن ابي الطفيل,الحارث بن محمد عن أبي الطفيل,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص211
+8,٨ غير محدد,,الحارث بن هاني,الحارث بن هانئ,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص239
+8,٨ غير محدد,,الحر بن هارون,الحر بن هارون,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن ابي ايوب الكوفي,الحسن بن أبي أيوب الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن الحسين الرهاوي المقري,الحسن بن الحسين الرهاوي المقرىء,2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,الحسن بن الحسين بن عاصم الهسنجاني,الحسن بن الحسين بن عاصم الهسنجاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن السكن,الحسن بن السكن,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص244
+8,٨ غير محدد,,الحسن بن الفضل بن عمرو,الحسن بن الفضل بن عمرو,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن رزين,الحسن بن رزين,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن رشيق العسكري,الحسن بن رشيق العسكري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن شبل,الحسن بن شبل,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن شبيب المكتب,الحسن بن شبيب المكتب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن علي الشروي عن عطا,الحسن بن علي الشروي عن عطاء,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص234
+8,٨ غير محدد,,الحسن بن علي الهاشمي عن الاعرج,الحسن بن علي الهاشمي عن الأعرج,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص234
+8,٨ غير محدد,,الحسن بن علي الهمداني,الحسن بن علي الهمداني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن علي بن عاصم الواسطي,الحسن بن علي بن عاصم الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن علي بن نعيم العبدي,الحسن بن علي بن نعيم العبدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن كثير,الحسن بن كثير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,الحسن بن محمد بن ناقه الرزاز,الحسن بن محمد بن ناقة الرزاز,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسن بن مكي,الحسن بن مكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسين بن ابي برده,الحسين بن أبي بردة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسين بن القاسم الاصبهاني الزاهد,الحسين بن القاسم الأصبهاني الزاهد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص174
+8,٨ غير محدد,,الحسين بن سليمان النحوي,الحسين بن سليمان النحوي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص171
+8,٨ غير محدد,,الحسين بن عبيد الله التميمي,الحسين بن عبيد الله التميمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسين بن علوان الكلبي,الحسين بن علوان الكلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسين بن علي النخعي,الحسين بن علي النخعي,4,4,general/jarḥ+taʿdīl; ikhtilāṭ; jarḥ (ḍuʿafāʾ),ightibat_sibt_ibnajami; kawakib_nayyirat; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسين بن علي بن نصر الطوسي,الحسين بن علي بن نصر الطوسي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج3/ص199
+8,٨ غير محدد,,الحسين بن محمد بن خسرو البلخي,الحسين بن محمد بن خسرو البلخي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحسين بن يحيي الحنايي,الحسين بن يحيى الحنائي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الحكم بن عمرو عن عمر بن عبد العزيز,الحكم بن عمرو عن عمر بن عبد العزيز,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الخليل بن بحر ابو رجا,الخليل بن بحر أبو رجاء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الدراوردي عبد العزيز,الدراوردي: عبد العزيز. [= 3401].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص495
+8,٨ غير محدد,,الدولابي ابو بشر محمد بن احمد بن حماد,الدولابي: أبو بشر محمد بن أحمد بن حماد [6384],2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,lisan_mizan_ibnhajar:ج9/ص202 | siyar_dhahabi:ج14/ص309
+8,٨ غير محدد,,الربيع بن النعمان,الربيع بن النعمان,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص319
+8,٨ غير محدد,,الربيع بن مالك,الربيع بن مالك,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص228
+8,٨ غير محدد,,الرياشي عباس بن الفرج,الرياشي: عباس بن الفرج. [= 2606],2,2,biography; general (six-books),kashif_dhahabi; siyar_dhahabi,siyar_dhahabi:ج12/ص372
+8,٨ غير محدد,,الزبير بن الشعشاع,الزبير بن الشعشاع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الزبير بن خربوذ,الزبير بن خربوذ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,الصبي بن الاشعث السلولي,الصبي بن الأشعث السلولي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص306
+8,٨ غير محدد,,الضحاك بن زيد الاهوازي,الضحاك بن زيد الأهوازي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص221
+8,٨ غير محدد,,الضحاك بن عباد,الضحاك بن عباد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص220
+8,٨ غير محدد,,الضحاك بن يسار بصري,الضحاك بن يسار بصري,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص218
+8,٨ غير محدد,,العرباض بن ساريه السلمي,العرباض بن سارية السلمي,2,3,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج3/ص419 | tabaqat_ibnsad:ج5/ص165
+8,٨ غير محدد,,العلا بن الحجاج,العلاء بن الحجاج 2,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,العلا بن عمرو الحنفي,العلاء بن عمرو الحنفي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,duafa_uqayli:ج3/ص348
+8,٨ غير محدد,,العلا بن ميمون,العلاء بن ميمون,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص346
+8,٨ غير محدد,,العوام بن ابي العوام,العوام بن أبي العوام,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,الفضل بن العباس البصري,الفضل بن العباس البصري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص444
+8,٨ غير محدد,,الفضل بن حرب البجلي,الفضل بن حرب البجلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص453
+8,٨ غير محدد,,الفضل بن زياد,الفضل بن زياد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص454
+8,٨ غير محدد,,الفضل بن سلام,الفضل بن سلام,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص454
+8,٨ غير محدد,,الفضل بن صالح,الفضل بن صالح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص451
+8,٨ غير محدد,,الفضل بن يسار,الفضل بن يسار,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص447
+8,٨ غير محدد,,الفطري محمد بن موسي,الفطري: محمد بن موسى. [= 5175].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص495
+8,٨ غير محدد,,القاسم بن الفضل الحداني,القاسم بن الفضل الحداني,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص282 | duafa_uqayli:ج3/ص477
+8,٨ غير محدد,,المخرمي عبد الله بن جعفر,المخرمي: عبد الله بن جعفر. [= 2666].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص495
+8,٨ غير محدد,,المسعودي عبد الرحمن بن عبد الله,المسعودي: عبد الرحمن بن عبد الله. [= 3238].,2,2,general (six-books); general/jarḥ+taʿdīl,kashif_dhahabi; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص496
+8,٨ غير محدد,,المسيب بن دارم,المسيب بن دارم,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص125
+8,٨ غير محدد,,المسيب بن شريك ابو سعيد التميمي الشقري الكوفي,المسيب بن شريك أبو سعيد التميمي الشقري الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,النضر بن معبد ابو قحذم,النضر بن معبد أبو قحذم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص291
+8,٨ غير محدد,,الهيثم بن الاشعث,الهيثم بن الأشعث,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص351
+8,٨ غير محدد,,الهيثم بن الحسين العقيلي,الهيثم بن الحسين العقيلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص357
+8,٨ غير محدد,,الهيثم بن بدر الضبي,الهيثم بن بدر الضبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص350
+8,٨ غير محدد,,الهيثم بن رزيق المالكي,الهيثم بن رزيق المالكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص354
+8,٨ غير محدد,,الهيثم بن عبد الغفار الطايي,الهيثم بن عبد الغفار الطائي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,الوليد بن ابي زينب,الوليد بن أبي زينب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,الوليد بن عيسي ابو وهب,الوليد بن عيسى أبو وهب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص315
+8,٨ غير محدد,,الوليد بن كريز,الوليد بن كريز,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص316
+8,٨ غير محدد,,الوليد بن موسي الدمشقي,الوليد بن موسى الدمشقي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص321
+8,٨ غير محدد,,اياس بن ابي اياس,إياس بن أبي إياس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص35
+8,٨ غير محدد,,اياس بن مقاتل عن عطا قال الازدي ضعيف,اياس بن مقاتل عن عطاء قال الازدي ضعيف,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ايوب بن مدرك الحنفي,أيوب بن مدرك الحنفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص115
+8,٨ غير محدد,,ايوب بن وايل,أيوب بن وائل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص117
+8,٨ غير محدد,,باذام ابو صالح مولي ام هاني,"باذام أبو صالح , مولى أم هانىء",2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص265
+8,٨ غير محدد,,بشار بن موسي الخفاف,بشار بن موسى الخفاف,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+8,٨ غير محدد,,بشر بن الحسين الاصبهاني,بشر بن الحسين الاصبهاني,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج1/ص141
+8,٨ غير محدد,,بشر بن السري,بشر بن السري,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+8,٨ غير محدد,,بشر بن الوليد الكندي الفقيه,بشر بن الوليد الكندي الفقيه,3,3,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat; lisan_mizan_ibnhajar,kawakib_nayyirat:ج1/ص110
+8,٨ غير محدد,,بشير بن زاذان,بشير بن زاذان,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ); tadlīs,duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,duafa_uqayli:ج1/ص144
+8,٨ غير محدد,,بشير مولي بني هاشم,بشير مولى بني هاشم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص146
+8,٨ غير محدد,,بكير بن عامر البجلي,بكير بن عامر البجلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص269
+8,٨ غير محدد,,بنوس بن احمد الواسطي,بنوس بن أحمد الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ت ق محمد بن يزيد بن خنيس,"ت ق , محمد بن يزيد بن خنيس",2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,lisan_mizan_ibnhajar:ج9/ص419
+8,٨ غير محدد,,ثابت بن زيد بن ثابت بن زيد بن ارقم,ثابت بن زيد [بن ثابت بن زيد بن أرقم],2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص174
+8,٨ غير محدد,,ثابت بن عبد الله,ثابت بن عبد الله,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص406
+8,٨ غير محدد,,ثمامه بن اشرس ابو معن النميري البصري,ثمامة بن أشرس أبو معن النميري البصري,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,siyar_dhahabi:ج10/ص203
+8,٨ غير محدد,,جابر بن يزيد,جابر بن يزيد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص464
+8,٨ غير محدد,,جابر بن يزيد الجعفي,جابر بن يزيد الجعفي,2,2,jarḥ (ḍuʿafāʾ); tadlīs,duafa_uqayli; tabaqat_mudallisin_ibnhajar,duafa_uqayli:ج1/ص194
+8,٨ غير محدد,,جرير بن عبد الحميد الضبي,جرير بن عبد الحميد الضبي,2,2,ikhtilāṭ; jarḥ (ḍuʿafāʾ),duafa_uqayli; kawakib_nayyirat,kawakib_nayyirat:ج1/ص121
+8,٨ غير محدد,,جرير بن عبد الله,جرير بن عبد الله,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص145
+8,٨ غير محدد,,جعفر بن ابي الحسن الخواري,جعفر بن أبي الحسن الخواري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,جعفر بن حميد الانصاري,جعفر بن حميد الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,جعفر بن عبد الواحد الهاشمي القاضي,جعفر بن عبد الواحد الهاشمي القاضي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,جعفر بن عمران الواسطي عن عمر بن كثير,جعفر بن عمران الواسطي عن عمر بن كثير,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,جعفر بن عمرو,جعفر بن عمرو,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص243
+8,٨ غير محدد,,جعفر بن محمد بن بكاره الموصلي,جعفر بن محمد بن بكارة الموصلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,جعفر بن مرزوق المدايني,جعفر بن مرزوق المدائني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص190
+8,٨ غير محدد,,جعفر بن هلال بن خباب,جعفر بن هلال بن خباب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,جميل بن زيد الطايي,جميل بن زيد الطائي.</span>,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص191
+8,٨ غير محدد,,حاتم بن انيس,حاتم بن أنيس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حازم بن بشير البصري,حازم بن بشير البصري,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حازم بن خارجه,حازم بن خارجة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حاضر بن ادم المروزي,• حاضر بن آدم المروزي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج2/ص536
+8,٨ غير محدد,,حامد بن حماد العسكري,حامد بن حماد العسكري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حبان بن زهير ويقال ابن يسار ابو روح,حبان بن زهير ويقال ابن يسار أبو روح,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حبحاب والد شعيب,حبحاب والد شعيب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حبيب بن ابي العاليه,حبيب بن أبي العالية,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,حبيب بن جحدر اخو خصيب,حبيب بن جحدر أخو خصيب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حبيب بن عمرو السلاماني,حبيب بن عمرو السلاماني,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص315
+8,٨ غير محدد,,حبيب بن مرزوق,حبيب بن مرزوق,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حبيب بن يزيد,حبيب بن يزيد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,حجاج الصواف بصري ثقه,حجاج الصواف بصرى ثقة,2,2,taʿdīl (thiqāt),marifat_thiqat_ijli; thiqat_ibnshahin,
+8,٨ غير محدد,,حجاج بن دينار الواسطي,حجاج بن دينار الواسطي,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج7/ص77 | duafa_uqayli:ج1/ص286
+8,٨ غير محدد,,حجاج بن منير القلا,حجاج بن منير القلاء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حدمر ابو القاسم,حدمر أبو القاسم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حرب ابو رجا,حرب أبو رجاء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,حريث بن ابي حريث,حريث بن أبي حريث,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,حسان بن ابي عباد,حسان بن أبي عباد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حسان بن حسان الواسطي,حسان بن حسان الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حصين بن يزيد الثعلبي,حصين بن يزيد الثعلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حفص بن سلم ابو مقاتل السمرقندي,حفص بن سلم أبو مقاتل السمرقندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حفص بن عمر العبدري المكي,حفص بن عمر العبدري المكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حفص بن عمر بن ثابت,حفص بن عمر بن ثابت,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حفص بن عمر بن جابان,حفص بن عمر بن جابان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حفص بن غياث,حفص بن غياث,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص512
+8,٨ غير محدد,,حكام بن سلم الرازي ثقه,حكام بن سلم الرازي ثقة,2,2,taʿdīl (thiqāt),marifat_thiqat_ijli; thiqat_ibnshahin,
+8,٨ غير محدد,,حكيم بن ابي حكيم,حكيم بن أبي حكيم,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,حكيم بن عجيبه الكوفي,حكيم بن عجيبة الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حماد بن بحر الرازي,حماد بن بحر الرازي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حماد بن داود الكوفي,حماد بن داود الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حماد بن سعيد البرا,حماد بن سعيد البراء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حماد بن عبد الملك الخولاني,حماد بن عبد الملك الخولاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حماد بن عمرو النصيبي,حماد بن عمرو النصيبي,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص189 | duafa_uqayli:ج1/ص308
+8,٨ غير محدد,,حماد مولي بني اميه,حماد مولى بني أمية,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حمدون بن محمد بن حمدون بن هشام الحافظ,حمدون بن محمد بن حمدون بن هشام الحافظ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حمزه بن اسماعيل,حمزة بن إسماعيل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج1/ص291
+8,٨ غير محدد,,حمزه بن سلمه ابو ايوب,حمزة بن سلمة أبو أيوب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حمله بن عبد الرحمن,حملة بن عبد الرحمن,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص279
+8,٨ غير محدد,,حميد بن حماد بن ابي الخوار ابو الجهم,حميد بن حماد بن أبي الخوار أبو الجهم,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+8,٨ غير محدد,,حميد بن علي العقيلي,حميد بن علي العقيلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حميد بن مالك اللخمي,حميد بن مالك اللخمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,حنظله التيمي القاص,حنظلة التيمي القاص,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,حوشب بن عبد الكريم,حوشب بن عبد الكريم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خازم بن خزيمه البصري,خازم بن خزيمة البصري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص26
+8,٨ غير محدد,,خالد بن اسماعيل,خالد بن إسماعيل,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خالد بن سلمه الفافا المخزومي,خالد بن سلمة الفأفاء المخزومي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص293
+8,٨ غير محدد,,خالد بن سليمان ابو معاذ البلخي,خالد بن سليمان أبو معاذ البلخي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خالد بن شريك,خالد بن شريك,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص6
+8,٨ غير محدد,,خالد بن شوذب بصري,خالد بن شوذب بصري,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خالد بن طهمان ابو العلا الخفاف,خالد بن طهمان أبو العلاء الخفاف,2,2,ikhtilāṭ; jarḥ (ḍuʿafāʾ),duafa_uqayli; kawakib_nayyirat,kawakib_nayyirat:ج1/ص149
+8,٨ غير محدد,,خالد بن قطن,خالد بن قطن,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خالد بن قيس,خالد بن قيس,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج3/ص554
+8,٨ غير محدد,,خالد بن كلاب,خالد بن كلاب,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص13
+8,٨ غير محدد,,خالد بن يزيد ابو الهيثم الواسطي,خالد بن يزيد أبو الهيثم الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,خالد بن يزيد بن مسلم الغنوي البصري,خالد بن يزيد بن مسلم الغنوي البصري,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,
+8,٨ غير محدد,,خت عباد بن منصور الناجي,"خت4 , عباد بن منصور الناجي",2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,lisan_mizan_ibnhajar:ج9/ص334
+8,٨ غير محدد,,خثيم بن مروان,خثيم بن مروان,2,3,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,خديج بن اويس,خديج بن أويس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,خطاب بن عمر,خطاب بن عمر,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,خطاب بن عمير الثوري,خطاب بن عمير الثوري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص24
+8,٨ غير محدد,,خلاد بن عطا مولي قريش,خلاد بن عطاء مولى قريش,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص18
+8,٨ غير محدد,,خلاس بن عمرو الهجري,خلاس بن عمرو الهجري,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص149
+8,٨ غير محدد,,خلف بن المبارك,خلف بن المبارك,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خلف بن عبد الحميد السرخسي,خلف بن عبد الحميد السرخسي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خلف بن عبد الله السعدي,خلف بن عبد الله السعدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,خلف بن يحيي الخراساني قاضي الري,خلف بن يحيى الخراساني قاضي الري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خمير بن عوف,خمير بن عوف,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,خيثمه بن خليفه بن خيثمه بن عبد الرحمن,خيثمة بن خليفة [بن خيثمة بن عبد الرحمن],2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,د س خطاب بن القاسم ابو عمر قاضي حران,"د س , خطاب بن القاسم , أبو عمر , قاضي حران",2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص295
+8,٨ غير محدد,,د ق اصبغ مولي عمرو بن حريث,"د ق , أصبغ , مولى عمرو بن حريث",2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص262
+8,٨ غير محدد,,داهر بن يحيي الرازي,داهر بن يحيى الرازي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص47
+8,٨ غير محدد,,داود بن ابراهيم العقيلي,داود بن إبراهيم العقيلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,داود بن الفضل الحلبي,داود بن الفضل الحلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,داود بن ايوب القسملي,داود بن أيوب القسملي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,داود بن سليمان,داود بن سليمان,2,4,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,داود بن سليمان بن جبير,داود بن سليمان بن جبير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,داود بن عباد,• داود بن عباد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج3/ص401
+8,٨ غير محدد,,داود بن عبد الجبار ليس بثقه,داود بن عبد الجبار ليس بثقة,2,2,jarḥ (majrūḥīn); jarḥ (ḍuʿafāʾ),duafa_nasai; majruhin_ibnhibban,
+8,٨ غير محدد,,داود بن عثمان الثغري,داود بن عثمان الثغري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص37
+8,٨ غير محدد,,داود بن عفان,داود بن عفان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,داود بن يزيد الثقفي,داود بن يزيد الثقفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,درمك بن عمرو عن ابي اسحاق,درمك بن عمرو عن أبي اسحاق,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص46
+8,٨ غير محدد,,دليل بن عبد الملك الفزاري الحلبي,دليل بن عبد الملك الفزاري الحلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,راشد موذن ابن الزبير,راشد مؤذن ابن الزبير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,رجا بن الحارث ابو سلام,رجاء بن الحارث أبو سلام,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص61
+8,٨ غير محدد,,رجا بن صبيح ابو يحيي صاحب السقط عن,رجاء بن صبيح أبو يحيى صاحب السقط عن,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,رفاعه بن هرير بن عبد الرحمن بن رافع بن خديج,رفاعة بن هرير بن عبد الرحمن بن رافع بن خديج,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,روبه بن رويبه,رؤبة بن رويبة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,روح بن عيينه الطايي,روح بن عيينة الطائي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,رياح بن عمرو القيسي,رياح بن عمرو القيسي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,زهدم بن الحارث الطايي,زهدم بن الحارث الطائي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص92
+8,٨ غير محدد,,زياد ابو عمار,• زياد أبو عمار,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج3/ص543
+8,٨ غير محدد,,زياد بن الحارث,زياد بن الحارث,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص508
+8,٨ غير محدد,,زياد بن عبد الله عن عاصم بن محمد,زياد بن عبد الله عن عاصم بن محمد,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,kashif_dhahabi:ج1/ص411
+8,٨ غير محدد,,زياد بن عياض,زياد بن عياض,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص272
+8,٨ غير محدد,,زيد بن تغلب,زيد بن تغلب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,زيد بن سعيد الواسطي,زيد بن سعيد الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,زيد بن صالح,زيد بن صالح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,زيد بن صبح,زيد بن صبح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,زيد بن عبد الرحمن بن زيد بن اسلم,زيد بن عبد الرحمن بن زيد بن أسلم.</span>,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص72
+8,٨ غير محدد,,زيد بن واقد ابو علي السمتي البصري,زيد بن واقد أبو علي السمتي البصري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,س ابراهيم بن ابي العباس السامري,"س , إبراهيم بن أبي العباس السامري",2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص249 | ightibat_sibt_ibnajami:ج1/ص47
+8,٨ غير محدد,,سالم ابو العلا مولي ابراهيم الطايي,سالم أبو العلاء مولى إبراهيم الطائي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سالم بن سلمه ابو سبره الهذلي,سالم بن سلمة أبو سبرة الهذلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سالم بن هلال,سالم بن هلال,3,3,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tarikh_kabir_bukhari,
+8,٨ غير محدد,,سباع بن ثابت,سباع بن ثابت,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص307 | tabaqat_ibnsad:ج8/ص25
+8,٨ غير محدد,,سعد بن الاخرم,سعد بن الأخرم,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+8,٨ غير محدد,,سعد بن حبيب عن الحسن,سعد بن حبيب عن الحسن,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعد بن سعيد الجرجاني,سعد بن سعيد الجرجاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص118
+8,٨ غير محدد,,سعدان بن سعد الليثي,سعدان بن سعد الليثي,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,سعيد التمار عن انس,سعيد التمار عن أنس,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص102
+8,٨ غير محدد,,سعيد بن ابي بكر بن ابي موسي,سعيد بن أبي بكر بن أبي موسى,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص102
+8,٨ غير محدد,,سعيد بن ابي راشد,سعيد بن أبي راشد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعيد بن الحارث,سعيد بن الحارث,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج3/ص463 | tabaqat_ibnsad:ج4/ص183
+8,٨ غير محدد,,سعيد بن حريث,سعيد بن حريث,2,4,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج5/ص46 | tabaqat_ibnsad:ج6/ص536 | tabaqat_ibnsad:ج8/ص145
+8,٨ غير محدد,,سعيد بن حريث عن الحسن,سعيد بن حريث عن الحسن,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعيد بن ذي لعوه,سعيد بن ذي لعوة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص273
+8,٨ غير محدد,,سعيد بن سفيان الاندلسي,سعيد بن سفيان الأندلسي,2,2,ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat,kawakib_nayyirat:ج1/ص249
+8,٨ غير محدد,,سعيد بن سليمان الواسطي,سعيد بن سليمان الواسطي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص342 | duafa_uqayli:ج2/ص109
+8,٨ غير محدد,,سعيد بن سويد,سعيد بن سويد,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,سعيد بن شرحبيل عن زيد بن ابي اوفي,سعيد بن شرحبيل عن زيد بن أبي أوفى,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعيد بن عبيد بن كثير,سعيد بن عبيد بن كثير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعيد بن عثمان,سعيد بن عثمان,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص152
+8,٨ غير محدد,,سعيد بن غنيم ابو شيبه الكلاعي,سعيد بن غنيم أبو شيبة الكلاعي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعيد بن نشيط,سعيد بن نشيط,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سعيد بن هند الخزاز,سعيد بن هند الخزاز,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سفيان بن زياد,سفيان بن زياد,2,4,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج4/ص90
+8,٨ غير محدد,,سلام بن رزين قاضي انطاكيه,سلام بن رزين قاضي أنطاكية,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص163
+8,٨ غير محدد,,سلام بن سليمان المدايني,سلام بن سليمان المدائني,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص161
+8,٨ غير محدد,,سلام بن مسكين,سلام بن مسكين,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tabaqat_ibnsad,
+8,٨ غير محدد,,سلام بن واقد المروزي,سلام بن واقد المروزي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص162
+8,٨ غير محدد,,سلام بن وهب الجندي,سلام بن وهب الجندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص162
+8,٨ غير محدد,,سلام وقيل ابو سلام,"سلام , وقيل أبو سلام",2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سلم بن سالم البلخي,سلم بن سالم البلخي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص378
+8,٨ غير محدد,,سلم بن عبد الله الزاهد,سلم بن عبد الله الزاهد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سلم بن محمد الوراق,سلم بن محمد الوراق,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سلم بن ميمون الخواص,سلم بن ميمون الخواص,3,3,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi; siyar_dhahabi,siyar_dhahabi:ج8/ص179 | duafa_uqayli:ج2/ص165
+8,٨ غير محدد,,سلمه بن ابي الطفيل,سلمة بن أبي الطفيل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سلمه بن احمد السمرقندي,سلمة بن أحمد السمرقندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سلمه بن حرب الكلابي,سلمة بن حرب الكلابي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليم بن عبد,سليم بن عبد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص335
+8,٨ غير محدد,,سليمان بن ابراهيم الاصبهاني الحافظ,سليمان بن إبراهيم الأصبهاني الحافظ,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن ابي سراج,سليمان بن أبي سراج,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن احمد السرقسطي,سليمان بن أحمد السرقسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن احمد الواسطي,سليمان بن أحمد الواسطي,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص122
+8,٨ غير محدد,,سليمان بن الفضل,سليمان بن الفضل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن ايوب الطلحي الكوفي,سليمان بن أيوب الطلحي الكوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن بشير,سليمان بن بشير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن داود اليمامي عن يحيي بن ابي كثير,سليمان بن داود اليمامي عن يحيى بن أبي كثير,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص126
+8,٨ غير محدد,,سليمان بن داود مولي يحيي بن يعمر,سليمان بن داود مولى يحيى بن يعمر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن رجا عن عبد العزيز بن مسلم,سليمان بن رجاء عن عبد العزيز بن مسلم,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن زياد الثقفي الواسطي,سليمان بن زياد الثقفي الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص130
+8,٨ غير محدد,,سليمان بن شعيب بن الليث بن سعد,سليمان بن شعيب بن الليث بن سعد,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص130
+8,٨ غير محدد,,سليمان بن عمرو ابو داود النخعي,سليمان بن عمرو أبو داود النخعي,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن محمد الهاشمي,سليمان بن محمد الهاشمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص139
+8,٨ غير محدد,,سليمان بن محمد بن حيان الموصلي,سليمان بن محمد بن حيان الموصلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سليمان بن مرثد,سليمان بن مرثد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص142
+8,٨ غير محدد,,سليمان بن مرقاع الجندعي,سليمان بن مرقاع الجندعي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص143
+8,٨ غير محدد,,سليمان بن مسافع الحجبي,سليمان بن مسافع الحجبي,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص141
+8,٨ غير محدد,,سليمان بن هرم,سليمان بن هرم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص144
+8,٨ غير محدد,,سمعان بن مهدي,سمعان بن مهدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سهل بن ابي سهل,سهل بن أبي سهل,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,سهل بن ادريس,سهل بن إدريس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سهل بن خاقان,سهل بن خاقان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سهل بن رجا,سهل بن رجاء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سهل بن صخر,سهل بن صخر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سهل بن عامر البجلي,سهل بن عامر البجلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص287
+8,٨ غير محدد,,سهيل بن عمير عن ابيه,سهيل بن عمير عن أبيه,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,سواده بن اسماعيل,سوادة بن إسماعيل,3,3,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi; tarikh_kabir_bukhari,
+8,٨ غير محدد,,سيف بن سليمان ويقال ابن ابي سليمان,سيف بن سليمان - ويقال: ابن أبي سليمان,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_uqayli; kashif_dhahabi,kashif_dhahabi:ج1/ص475 | duafa_uqayli:ج2/ص173
+8,٨ غير محدد,,شاهين بن حيان اخو فهد,شاهين بن حيان أخو فهد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,شجاع بن عبد الرحمن,شجاع بن عبد الرحمن,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,شعيب بن احمد البغدادي,شعيب بن أحمد البغدادي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,شعيب بن حرب وليس بالمدايني,شعيب بن حرب وليس بالمدائني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص298
+8,٨ غير محدد,,شقيق بن حمزه الاسدي,شقيق بن حمزة الأسدي,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,شمله بن منيب الكلبي,شملة بن منيب الكلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,شيخ بن ابي خالد,شيخ بن أبي خالد,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص301 | duafa_uqayli:ج2/ص197
+8,٨ غير محدد,,صاعد بن الحسن الربعي ابو العلا الاديب,صاعد بن الحسن الربعي أبو العلاء الأديب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صاعد بن مسلم وقيل ابن محمد ابو العلا,صاعد بن مسلم وقيل: ابن محمد أبو العلاء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,صالح بن ابراهيم بن محمد بن طلحه بن عبيد الله,صالح بن إبراهيم بن محمد بن طلحة بن عبيد الله,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صالح بن ابي الاسود الكوفي الحناط,صالح بن أبي الأسود الكوفي الحناط,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صالح بن بشر السدوسي,صالح بن بشر السدوسي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صالح بن راشد,صالح بن راشد,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,
+8,٨ غير محدد,,صالح بن روبه,صالح بن رؤبة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صالح بن سرج,صالح بن سرج,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص204
+8,٨ غير محدد,,صالح بن عبد الجبار,صالح بن عبد الجبار,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صالح بن عبد القدوس,صالح بن عبد القدوس,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صالح بن محمد,• صالح بن محمد,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج4/ص297 | tabaqat_ibnsad:ج7/ص521
+8,٨ غير محدد,,صالح بن واقد الليثي,صالح بن واقد الليثي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صباح بن موسي,صباح بن موسى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صدقه بن موسي بن تميم,صدقة بن موسى بن تميم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صديق بن موسي,صديق بن موسى,2,3,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص483 | tabaqat_ibnsad:ج8/ص46
+8,٨ غير محدد,,صعصعه بن صوحان,صعصعة بن صوحان,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),mughni_duafa_dhahabi; tabaqat_ibnsad,mughni_duafa_dhahabi:ج1/ص308 | tabaqat_ibnsad:ج8/ص340
+8,٨ غير محدد,,صغدي بن عبد الله,صغدي بن عبد الله,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,صهيب بن مهران,صهيب بن مهران,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ضرار بن الخطاب,ضرار بن الخطاب,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج6/ص135 | tabaqat_ibnsad:ج8/ص16 | tabaqat_ibnsad:ج9/ص411
+8,٨ غير محدد,,ضرار بن سهل,ضرار بن سهل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ضرار بن مسعود,ضرار بن مسعود,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,طالب بن السميدع,طالب بن السميدع,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,طلحه بن زيد الرقي عن هشام بن عروه,طلحة بن زيد الرقي عن هشام بن عروة,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,طلق بن حبيب العنزي,طلق بن حبيب العنزي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج4/ص601 | tabaqat_ibnsad:ج9/ص226
+8,٨ غير محدد,,عاصم بن مخلد,عاصم بن مخلد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص339
+8,٨ غير محدد,,عاصم بن مضرس,عاصم بن مضرس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص338
+8,٨ غير محدد,,عامر بن ابي الحسين الواسطي,عامر بن أبي الحسين الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص311
+8,٨ غير محدد,,عامر بن عبد الله,عامر بن عبد الله,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص407
+8,٨ غير محدد,,عامر بن هني,عامر بن هني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص307
+8,٨ غير محدد,,عايذ بن حبيب,عائذ بن حبيب,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص520
+8,٨ غير محدد,,عباد بن كثير الثقفي البصري العابد بمكه عن,عباد بن كثير الثقفي البصري العابد بمكة عن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,عباد بن كثير الرملي عن عبد الله بن,عباد بن كثير الرملي عن عبد الله بن,2,2,general (six-books); jarḥ (ḍuʿafāʾ),kashif_dhahabi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,عباده ابو يحيي كان قتاده يرميه بالكذب,عبادة أبو يحيى كان قتادة يرميه بالكذب,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,عبايه بن ربعي,عباية بن ربعي,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+8,٨ غير محدد,,عبد الاعلي بن حكيم,عبد الأعلى بن حكيم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص60
+8,٨ غير محدد,,عبد الباقي بن قانع ابو الحسين الحافظ,عبد الباقي بن قانع أبو الحسين الحافظ,2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عبد الجبار بن المغيره,عبد الجبار بن المغيرة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عبد الجبار بن نافع الضبي,عبد الجبار بن نافع الضبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص89
+8,٨ غير محدد,,عبد الجبار بن وهب,عبد الجبار بن وهب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص89
+8,٨ غير محدد,,عبد الحميد بن زيد العمي,عبد الحميد بن زيد العمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص48
+8,٨ غير محدد,,عبد الحميد بن سوار,عبد الحميد بن سوار,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عبد الحميد بن يحيي,عبد الحميد بن يحيى,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص40
+8,٨ غير محدد,,عبد الخبير عن ابيه عن جده ثابت بن,عبد الخبير عن أبيه عن جده ثابت بن,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,عبد الرحمن ابن اخي محمد بن المنكدر,عبد الرحمن ابن أخي محمد بن المنكدر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص4
+8,٨ غير محدد,,عبد الرحمن بن ابي قيس,عبد الرحمن بن أبي قيس,3,3,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tarikh_kabir_bukhari,duafa_uqayli:ج2/ص343
+8,٨ غير محدد,,عبد الرحمن بن البيلماني,عبد الرحمن بن البيلماني,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص352 | tabaqat_ibnsad:ج8/ص95
+8,٨ غير محدد,,عبد الرحمن بن ايوب السكوني,عبد الرحمن بن أيوب السكوني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص323
+8,٨ غير محدد,,عبد الرحمن بن بشر الغطفاني,عبد الرحمن بن بشر الغطفاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص324
+8,٨ غير محدد,,عبد الرحمن بن سليمان,عبد الرحمن بن سليمان,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص588
+8,٨ غير محدد,,عبد الرحمن بن محمد,عبد الرحمن بن محمد,2,6,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج5/ص126 | tabaqat_ibnsad:ج7/ص585
+8,٨ غير محدد,,عبد الرحمن بن معبد,عبد الرحمن بن معبد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+8,٨ غير محدد,,عبد الرحمن بن هاني ابو نعيم النخعي الكوفي,عبد الرحمن بن هانئ أبو نعيم النخعي الكوفي,2,2,general (six-books); jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; kashif_dhahabi,
+8,٨ غير محدد,,عبد الرحيم بن خالد الايلي,عبد الرحيم بن خالد الأيلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص80
+8,٨ غير محدد,,عبد السلام بن سهل ابو علي السكري,عبد السلام بن سهل أبو علي السكري,2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عبد الصمد بن سليمان الازرق,عبد الصمد بن سليمان الأزرق,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص82
+8,٨ غير محدد,,عبد العزيز بن حكيم الحضرمي,عبد العزيز بن حكيم الحضرمي,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,duafa_uqayli:ج3/ص14
+8,٨ غير محدد,,عبد العزيز بن عقبه بن سلمه بن الاكوع,عبد العزيز بن عقبة بن سلمة بن الأكوع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص13
+8,٨ غير محدد,,عبد العزيز بن مروان,عبد العزيز بن مروان,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص360 | tabaqat_ibnsad:ج7/ص232
+8,٨ غير محدد,,عبد الكريم بن كيسان,عبد الكريم بن كيسان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص64
+8,٨ غير محدد,,عبد الله بن ابي اميه,عبد الله بن أبي أمية,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج5/ص45 | tabaqat_ibnsad:ج5/ص106
+8,٨ غير محدد,,عبد الله بن الزبير,عبد الله بن الزبير,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص63
+8,٨ غير محدد,,عبد الله بن المبارك,عبد الله بن المبارك,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص376
+8,٨ غير محدد,,عبد الله بن المطلب العجلي,عبد الله بن المطلب العجلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص305
+8,٨ غير محدد,,عبد الله بن المنكدر بن محمد بن المنكدر,عبد الله بن المنكدر بن محمد بن المنكدر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص303
+8,٨ غير محدد,,عبد الله بن جرير,عبد الله بن جرير,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عبد الله بن حكيم,عبد الله بن حكيم,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص57 | duafa_uqayli:ج2/ص242
+8,٨ غير محدد,,عبد الله بن حلام,عبد الله بن حلام,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص323
+8,٨ غير محدد,,عبد الله بن خالد,عبد الله بن خالد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص32
+8,٨ غير محدد,,عبد الله بن سعد,عبد الله بن سعد,3,7,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص340 | tarikh_kabir_bukhari:ج5/ص28 | tabaqat_ibnsad:ج5/ص300 | tabaqat_ibnsad:ج6/ص129 | tabaqat_ibnsad:ج9/ص506
+8,٨ غير محدد,,عبد الله بن شبرمه,عبد الله بن شبرمة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص469 | duafa_uqayli:ج2/ص266
+8,٨ غير محدد,,عبد الله بن شقيق العقيلي,عبد الله بن شقيق العقيلي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص125
+8,٨ غير محدد,,عبد الله بن ظالم عن سعيد بن زيد,عبد الله بن ظالم عن سعيد بن زيد,2,2,jarḥ (ḍuʿafāʾ),duafa_uqayli; mughni_duafa_dhahabi,duafa_uqayli:ج2/ص268
+8,٨ غير محدد,,عبد الله بن عطيه بن سعد,عبد الله بن عطية بن سعد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص285
+8,٨ غير محدد,,عبد الله بن عيسي الجندي,عبد الله بن عيسى الجندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص286
+8,٨ غير محدد,,عبد الله بن قنبر,عبد الله بن قنبر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص289
+8,٨ غير محدد,,عبد الله بن قيس الرقاشي,عبد الله بن قيس الرقاشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص289
+8,٨ غير محدد,,عبد الله بن كثير,عبد الله بن كثير,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص45
+8,٨ غير محدد,,عبد الله بن محمد,عبد الله بن محمد,2,7,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص186 | tabaqat_ibnsad:ج7/ص193 | tabaqat_ibnsad:ج7/ص193 | tabaqat_ibnsad:ج7/ص321 | tabaqat_ibnsad:ج7/ص481 | tabaqat_ibnsad:ج7/ص613
+8,٨ غير محدد,,عبد الله بن محمد العدوي,عبد الله بن محمد العدوي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص297
+8,٨ غير محدد,,عبد الله بن مسعر بن كدام,عبد الله بن مسعر بن كدام,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص304
+8,٨ غير محدد,,عبد الله بن معاويه الغاضري,عبد الله بن معاوية الغاضري,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج5/ص31 | tabaqat_ibnsad:ج9/ص424
+8,٨ غير محدد,,عبد الله بن معبد الزماني,عبد الله بن معبد الزماني,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج4/ص206 | duafa_uqayli:ج2/ص305
+8,٨ غير محدد,,عبد الله بن هاني ابو الزعرا,عبد الله بن هانىء أبو الزعراء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص348 | duafa_uqayli:ج2/ص314
+8,٨ غير محدد,,عبد الله بن هلال,عبد الله بن هلال,2,3,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عبد الله بن واقد ابو قتاده الحراني,عبد الله بن واقد أبو قتادة الحراني,3,3,ikhtilāṭ; tadlīs,ightibat_sibt_ibnajami; kawakib_nayyirat; tabaqat_mudallisin_ibnhajar,kawakib_nayyirat:ج1/ص362
+8,٨ غير محدد,,عبد الله بن يسار وهو ابن ابي نجيح,عبد الله بن يسار وهو ابن أبي نجيح,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,
+8,٨ غير محدد,,عبد الله بن يعلي بن مره الثقفي,عبد الله بن يعلى بن مرة الثقفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج2/ص318
+8,٨ غير محدد,,عبد الملك بن ابي جمعه,عبد الملك بن أبي جمعة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص28
+8,٨ غير محدد,,عبد الملك بن خلج الصنعاني,عبد الملك بن خلج الصنعاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص37
+8,٨ غير محدد,,عبد الملك بن عبد الرحمن ابو العباس الشامي,عبد الملك بن عبد الرحمن أبو العباس الشامي,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,duafa_uqayli:ج3/ص27
+8,٨ غير محدد,,عبد المنان بن هارون الواسطي قال الازدي متروك,عبد المنان بن هارون الواسطي قال الأزدي متروك,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,عبد المومن بن القاسم الانصاري,عبد المؤمن بن القاسم الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص92
+8,٨ غير محدد,,عبد المومن بن سالم بن ميمون,عبد المؤمن بن سالم بن ميمون,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص93
+8,٨ غير محدد,,عبد الواحد بن ابي عمرو الاسدي,عبد الواحد بن أبي عمرو الأسدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص56
+8,٨ غير محدد,,عبد الواحد بن ثابت الباهلي,عبد الواحد بن ثابت الباهلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص50
+8,٨ غير محدد,,عبد الوهاب بن هشام بن الغاز,عبد الوهاب بن هشام بن الغاز,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص77
+8,٨ غير محدد,,عبيد الله بن تمام بن قيس ابو عاصم,عبيد الله بن تمام [بن قيس] أبو عاصم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عتبه بن ابي سليمان الطايي,عتبة بن أبي سليمان الطائي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عتبه بن ابي عتبه الفزاري,عتبة بن أبي عتبة الفزاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص330
+8,٨ غير محدد,,عثمان بن اسحاق,عثمان بن إسحاق,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص368 | tarikh_kabir_bukhari:ج6/ص212 | tabaqat_ibnsad:ج7/ص239
+8,٨ غير محدد,,عثمان بن حكيم,عثمان بن حكيم,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+8,٨ غير محدد,,عثمان بن داود,عثمان بن داود,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص201
+8,٨ غير محدد,,عثمان بن سالم,عثمان بن سالم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص203
+8,٨ غير محدد,,عثمان بن عبد الرحمن الوقاصي الزهري,عثمان بن عبد الرحمن الوقاصي الزهري,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,duafa_uqayli:ج3/ص206
+8,٨ غير محدد,,عثمان بن عبد الله العبدي,عثمان بن عبد الله العبدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص206
+8,٨ غير محدد,,عثمان بن قيس,عثمان بن قيس,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عثمان بن محمد,عثمان بن محمد,3,4,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص484
+8,٨ غير محدد,,عثمان بن موسي المزني,عثمان بن موسى المزني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص215
+8,٨ غير محدد,,عثمان موذن بني افصي,"عثمان , مؤذن بني أفصى",2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص216
+8,٨ غير محدد,,عجلان بن سهل الباهلي,عجلان بن سهل الباهلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عدي بن ثابت الانصاري,عدي بن ثابت الأنصاري,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+8,٨ غير محدد,,عروه بن علي السهمي,عروة بن علي السهمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص364
+8,٨ غير محدد,,عصمه بن المتوكل,عصمة بن المتوكل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص340
+8,٨ غير محدد,,عصمه بن محمد الانصاري,عصمة بن محمد الأنصاري,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص334 | duafa_uqayli:ج3/ص340
+8,٨ غير محدد,,عطارد بن عبد الله,عطارد بن عبد الله,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عطيه بن عارض,عطية بن عارض,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عقبه بن شداد بن اميه,عقبة بن شداد بن أمية,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص352
+8,٨ غير محدد,,عقبه بن عبد الله العنزي,عقبة بن عبد الله العنزي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص353
+8,٨ غير محدد,,عقبه بن علي,عقبة بن علي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص352
+8,٨ غير محدد,,عقبه بن وهب,عقبة بن وهب,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص372 | tabaqat_ibnsad:ج3/ص505
+8,٨ غير محدد,,عقيل بن ابي طالب,عقيل بن أبي طالب,2,2,biography/ṭabaqāt; taʿdīl (thiqāt),marifat_thiqat_ijli; tabaqat_ibnsad,tabaqat_ibnsad:ج4/ص38
+8,٨ غير محدد,,عكرمه بن اسد الحضرمي,عكرمة بن أسد الحضرمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص379
+8,٨ غير محدد,,عكرمه بن عمار,عكرمة بن عمار,2,2,biography/ṭabaqāt; ikhtilāṭ,kawakib_nayyirat; tabaqat_ibnsad,kawakib_nayyirat:ج1/ص491 | tabaqat_ibnsad:ج8/ص116
+8,٨ غير محدد,,علي بن ابي طلحه,علي بن أبي طلحة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص461
+8,٨ غير محدد,,علي بن ابي محمد,علي بن أبي محمد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص251
+8,٨ غير محدد,,علي بن القاسم الكندي,علي بن القاسم الكندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص248
+8,٨ غير محدد,,علي بن حميد السلولي,علي بن حميد السلولي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص228
+8,٨ غير محدد,,علي بن ربيعه القرشي,علي بن ربيعة القرشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص229
+8,٨ غير محدد,,علي بن ظبيان,علي بن ظبيان,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص525 | duafa_uqayli:ج3/ص234
+8,٨ غير محدد,,علي بن علي الرفاعي,علي بن علي الرفاعي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص274
+8,٨ غير محدد,,علي بن عيسي الاصمعي,علي بن عيسى الأصمعي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص244
+8,٨ غير محدد,,علي بن مالك العبدي,علي بن مالك العبدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص251
+8,٨ غير محدد,,علي بن يونس البلخي,علي بن يونس البلخي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص256
+8,٨ غير محدد,,عمار بن زربي ابو المعتمر,عمار بن زربي أبو المعتمر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص327
+8,٨ غير محدد,,عمار بن عمر بن المختار,عمار بن عمر بن المختار,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص325
+8,٨ غير محدد,,عماره بن زاذان الصيدلاني,عمارة بن زاذان الصيدلاني,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص283
+8,٨ غير محدد,,عماره بن غزيه,عمارة بن غزية,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص498
+8,٨ غير محدد,,عمر بن ابي ليلي,عمر بن أبي ليلى,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,tarikh_kabir_bukhari:ج6/ص189
+8,٨ غير محدد,,عمر بن الوليد الشني,عمر بن الوليد الشني,3,3,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عمر بن حفص,عمر بن حفص,2,4,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص459 | tabaqat_ibnsad:ج8/ص538 | tabaqat_ibnsad:ج9/ص346
+8,٨ غير محدد,,عمر بن حفص بن محبر,عمر بن حفص بن محبر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص154
+8,٨ غير محدد,,عمر بن حمزه,عمر بن حمزة,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص547 | duafa_uqayli:ج3/ص153
+8,٨ غير محدد,,عمر بن ذر,عمر بن ذر,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص482
+8,٨ غير محدد,,عمر بن سعد,عمر بن سعد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص166
+8,٨ غير محدد,,عمر بن سعيد,عمر بن سعيد,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص47
+8,٨ غير محدد,,عمر بن سعيد الدمشقي ابو حفص,عمر بن سعيد الدمشقي أبو حفص.</span>,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عمر بن شوذب,عمر بن شوذب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص172
+8,٨ غير محدد,,عمر بن صالح,• عمر بن صالح,2,4,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج6/ص117 | duafa_uqayli:ج3/ص173
+8,٨ غير محدد,,عمر بن صالح الواسطي,عمر بن صالح الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص174
+8,٨ غير محدد,,عمر بن صبيح الكندي,عمر بن صبيح الكندي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص175
+8,٨ غير محدد,,عمر بن علي المقدمي,عمر بن علي المقدمي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص292 | duafa_uqayli:ج3/ص179
+8,٨ غير محدد,,عمر بن محمد,عمر بن محمد,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص533 | duafa_uqayli:ج3/ص188
+8,٨ غير محدد,,عمر بن مصعب بن الزبير,عمر بن مصعب بن الزبير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص189
+8,٨ غير محدد,,عمر بن يعقوب,عمر بن يعقوب 3,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عمر بن يونس,عمر بن يونس,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص117
+8,٨ غير محدد,,عمران بن قيس,عمران بن قيس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,عمرو بن الزبير,عمرو بن الزبير,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج3/ص472 | tabaqat_ibnsad:ج7/ص184
+8,٨ غير محدد,,عمرو بن النضر,عمرو بن النضر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص293
+8,٨ غير محدد,,عمرو بن اوس,عمرو بن أوس,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص79
+8,٨ غير محدد,,عمرو بن بعجه,عمرو بن بعجة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص363
+8,٨ غير محدد,,عمرو بن حريث,عمرو بن حريث. </span>,3,4,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج6/ص534
+8,٨ غير محدد,,عمرو بن خالد,عمرو بن خالد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج9/ص526
+8,٨ غير محدد,,عمرو بن عبد الرحمن العسقلاني,عمرو بن عبد الرحمن العسقلاني 1,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,عمرو بن عبد الغفار الفقيمي,عمرو بن عبد الغفار الفقيمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص286
+8,٨ غير محدد,,عمرو بن عثمان الثقفي,عمرو بن عثمان الثقفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص288
+8,٨ غير محدد,,عمرو بن عطيه العوفي,عمرو بن عطية العوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص290
+8,٨ غير محدد,,عمرو بن مرزوق الباهلي,عمرو بن مرزوق الباهلي,2,2,biography; biography/ṭabaqāt,siyar_dhahabi; tabaqat_ibnsad,siyar_dhahabi:ج10/ص417 | tabaqat_ibnsad:ج9/ص306
+8,٨ غير محدد,,عمرو بن وهب الثقفي,عمرو بن وهب الثقفي,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج9/ص155
+8,٨ غير محدد,,عمير بن عمران الحنفي,عمير بن عمران الحنفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص318
+8,٨ غير محدد,,عمير بن يزيد,عمير بن يزيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص472
+8,٨ غير محدد,,عنبسه بن جبير,عنبسة بن جبير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص369
+8,٨ غير محدد,,عوسجه مولي ابن عباس,"عوسجة , مولى ابن عباس",2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص388 | duafa_uqayli:ج3/ص413
+8,٨ غير محدد,,عياض بن سعيد المازني,عياض بن سعيد المازني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص349
+8,٨ غير محدد,,عيسي بن لهيعه,عيسى بن لهيعة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص397
+8,٨ غير محدد,,عيسي بن محمد القرشي,عيسى بن محمد القرشي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص397
+8,٨ غير محدد,,غالب بن غالب,غالب بن غالب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص433
+8,٨ غير محدد,,غزوان بن عتبه بن غزوان,غزوان بن عتبة بن غزوان,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص438
+8,٨ غير محدد,,غسان بن عبيد الموصلي,غسان بن عبيد الموصلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,غياث بن عبد الحميد,غياث بن عبد الحميد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص440
+8,٨ غير محدد,,فضاله بن دينار الشحام,فضالة بن دينار [الشحام],2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص457
+8,٨ غير محدد,,فضاله بن سعيد بن زميل الماربي,فضالة بن سعيد بن زميل المأربي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص457
+8,٨ غير محدد,,فضاله بن مفضل بن فضاله المصري ابو ثوابه,فضالة بن مفضل بن فضالة المصري أبو ثوابة,2,2,general; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; tarikh_kabir_bukhari,
+8,٨ غير محدد,,فطر بن حماد بن واقد بصري,فطر بن حماد بن واقد بصري,2,2,ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat,
+8,٨ غير محدد,,ق ابو حمزه العطار اسحاق بن الربيع,• (ق) أبو حمزة العطار إسحاق بن الربيع,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,lisan_mizan_ibnhajar:ج9/ص466
+8,٨ غير محدد,,ق عبد الله بن عبد العزيز بن ابي ثابت الليثي,"ق , عبد الله بن عبد العزيز بن أبي ثابت الليثي",2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص342
+8,٨ غير محدد,,ق هاشم بن القاسم الحراني,"ق , هاشم بن القاسم الحراني",2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص439
+8,٨ غير محدد,,قابوس بن ابي ظبيان الجنبي,قابوس بن أبي ظبيان الجنبي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+8,٨ غير محدد,,قبيصه بن حريث الانصاري سمع سلمه بن المحبق,قبيصة بن حريث الأنصاري سمع سلمة بن المحبق,2,2,general; jarḥ (ḍuʿafāʾ),duafa_uqayli; tarikh_kabir_bukhari,duafa_uqayli:ج3/ص484
+8,٨ غير محدد,,قبيصه بن عقبه,قبيصة بن عقبة,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص395 | tabaqat_ibnsad:ج8/ص527
+8,٨ غير محدد,,قدامه بن عبد الله,قدامة بن عبد الله,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص194
+8,٨ غير محدد,,قره بن العلا السعدي,قرة بن العلاء السعدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص486
+8,٨ غير محدد,,قطن بن سعير بن الخمس,قطن بن سعير بن الخمس,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,قنبر مولي علي,قنبر مولى علي,2,2,general/jarḥ+taʿdīl; ikhtilāṭ,ightibat_sibt_ibnajami; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج6/ص399
+8,٨ غير محدد,,قيس بن عبد,قيس بن عبد,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+8,٨ غير محدد,,قيس بن مينا,قيس بن ميناء,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج3/ص469
+8,٨ غير محدد,,كثير بن سليم الضبي,كثير بن سليم الضبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص398 | duafa_uqayli:ج4/ص5
+8,٨ غير محدد,,كثير بن عبد الله اليشكري,كثير بن عبد الله اليشكري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص5
+8,٨ غير محدد,,كنانه بن جبله,كنانة بن جبلة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,ليث بن ابي سليم,ليث بن أبي سليم,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص468
+8,٨ غير محدد,,ليث بن عمرو بن سام قال النسايي ضعيف,ليث بن عمرو بن سام قال النسائي ضعيف,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,ليث بن محمد الموقري,ليث بن محمد الموقري,3,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,مالك بن سليمان الهروي,مالك بن سليمان الهروي,2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,
+8,٨ غير محدد,,محبر بن قحذم,محبر بن قحذم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص259
+8,٨ غير محدد,,محفوظ بن ابي توبه,محفوظ بن أبي توبة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,محمد بن ابي بكر,محمد بن أبي بكر,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص490
+8,٨ غير محدد,,محمد بن ابي سلمه المكي,محمد بن أبي سلمة المكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص79
+8,٨ غير محدد,,محمد بن ابي مريم الطايفي,محمد بن أبي مريم الطائفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,محمد بن اسحاق,محمد بن إسحاق,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص552
+8,٨ غير محدد,,محمد بن اسماعيل بن طريح الثقفي,محمد بن إسماعيل بن طريح الثقفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص21
+8,٨ غير محدد,,محمد بن الازهر الجوزجاني,محمد بن الأزهر الجوزجاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص32
+8,٨ غير محدد,,محمد بن الحارث بن وقدان العتكي,محمد بن الحارث بن وقدان العتكي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص47
+8,٨ غير محدد,,محمد بن الحجاج المصفر,محمد بن الحجاج المصفر,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,
+8,٨ غير محدد,,محمد بن الحسن,محمد بن الحسن,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص317 | tabaqat_ibnsad:ج9/ص338
+8,٨ غير محدد,,محمد بن الحسن الصدفي,محمد بن الحسن الصدفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص51
+8,٨ غير محدد,,محمد بن الحسن الهاشمي,محمد بن الحسن الهاشمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص51
+8,٨ غير محدد,,محمد بن الحسين البخاري,محمد بن الحسين البخاري,2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,
+8,٨ غير محدد,,محمد بن المنذر,محمد بن المنذر,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص446
+8,٨ غير محدد,,محمد بن النعمان,محمد بن النعمان,3,3,biography/ṭabaqāt; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص264 | duafa_uqayli:ج4/ص146
+8,٨ غير محدد,,محمد بن بشر,محمد بن بشر,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,
+8,٨ غير محدد,,محمد بن جابر,محمد بن جابر,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج8/ص117
+8,٨ غير محدد,,محمد بن جابر الحلبي,محمد بن جابر الحلبي.</span>,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص43
+8,٨ غير محدد,,محمد بن جرير بن رستم ابو جعفر الطبري,محمد بن جرير بن رستم أبو جعفر الطبري,2,2,biography; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; siyar_dhahabi,siyar_dhahabi:ج14/ص282
+8,٨ غير محدد,,محمد بن جعفر بن عبد الله بن جعفر,محمد بن جعفر بن عبد الله بن جعفر,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,محمد بن جميل الهروي,محمد بن جميل الهروي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,محمد بن سعيد بن نبهان الكاتب,محمد بن سعيد بن نبهان الكاتب,2,2,ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat,kawakib_nayyirat:ج1/ص419
+8,٨ غير محدد,,محمد بن سلمه,محمد بن سلمة,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص491
+8,٨ غير محدد,,محمد بن سلمه بن كهيل,محمد بن سلمة بن كهيل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص79
+8,٨ غير محدد,,محمد بن سليمان,محمد بن سليمان,2,4,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,محمد بن سليمان بن سليط الانصاري السالمي,محمد بن سليمان بن سليط الأنصاري السالمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص74
+8,٨ غير محدد,,محمد بن صدقه الفدكي,محمد بن صدقة الفدكي,2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,
+8,٨ غير محدد,,محمد بن صيفي,محمد بن صيفي,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص183
+8,٨ غير محدد,,محمد بن طريف عن سعيد بن المسيب,محمد بن طريف عن سعيد بن المسيب,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,محمد بن طهمان,محمد بن طهمان,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,محمد بن عبد الله الكناني,محمد بن عبد الله الكناني,2,3,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,محمد بن عبيد الله,محمد بن عبيد الله,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص619 | tabaqat_ibnsad:ج8/ص488
+8,٨ غير محدد,,محمد بن عثمان,محمد بن عثمان,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج8/ص61
+8,٨ غير محدد,,محمد بن عطيه بن سعد العوفي,محمد بن عطية بن سعد العوفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص113
+8,٨ غير محدد,,محمد بن عقبه,محمد بن عقبة,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,lisan_mizan_ibnhajar:ج9/ص412 | tabaqat_ibnsad:ج7/ص520
+8,٨ غير محدد,,محمد بن علي,محمد بن علي,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص470
+8,٨ غير محدد,,محمد بن كثير الصنعاني,محمد بن كثير الصنعاني,2,2,jarḥ (ḍuʿafāʾ); tadlīs,duafa_uqayli; tabaqat_mudallisin_ibnhajar,duafa_uqayli:ج4/ص128
+8,٨ غير محدد,,محمد بن مبارك بن مشق البغدادي,محمد بن مبارك بن مشق البغدادي,2,2,ikhtilāṭ,ightibat_sibt_ibnajami; kawakib_nayyirat,kawakib_nayyirat:ج1/ص413
+8,٨ غير محدد,,محمد بن محصن الحراني,محمد بن محصن الحراني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص142
+8,٨ غير محدد,,محمد بن مروان الواسطي,محمد بن مروان الواسطي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,محمد بن مسلم شيخ لابن اسحاق,"محمد بن مسلم , شيخ لابن إسحاق",2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,محمد بن منصور الجعفي,محمد بن منصور الجعفي,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,محمد بن يحيي الحجري,محمد بن يحيى الحجري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص148
+8,٨ غير محدد,,محمد بن يزيد بن صيفي بن صهيب,محمد بن يزيد بن صيفي بن صهيب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص146
+8,٨ غير محدد,,مخارق بن ميسره,مخارق بن ميسرة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص229
+8,٨ غير محدد,,مرجي بن وداع الراسبي,مرجى بن وداع الراسبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص266
+8,٨ غير محدد,,مروان بن سالم الجزري,مروان بن سالم الجزري,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج9/ص35 | duafa_uqayli:ج4/ص204
+8,٨ غير محدد,,مسروح ابو شهاب,مسروح أبو شهاب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص247
+8,٨ غير محدد,,مسرور بن سعيد,مسرور بن سعيد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص256
+8,٨ غير محدد,,مسلم بن الحارث,مسلم بن الحارث,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج9/ص423
+8,٨ غير محدد,,مسلم بن عمر ابو عازب,مسلم بن عمر أبو عازب,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص152
+8,٨ غير محدد,,مسلمه عن ابي قلابه,مسلمة عن أبي قلابة,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,مسمع بن عاصم,مسمع بن عاصم,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,مسمع بن محمد الاشعري,مسمع بن محمد الأشعري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص246
+8,٨ غير محدد,,مصعب بن سعيد ابو خيثمه المصيصي,مصعب بن سعيد أبو خيثمة المصيصي,2,2,general/jarḥ+taʿdīl; tadlīs,lisan_mizan_ibnhajar; tabaqat_mudallisin_ibnhajar,
+8,٨ غير محدد,,مصعب بن مصعب بن عبد الرحمن بن عوف,مصعب بن مصعب بن عبد الرحمن بن عوف,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,مصعب بن نوح,مصعب بن نوح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,مضر بن نوح السلمي,مضر بن نوح السلمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص258
+8,٨ غير محدد,,مطرف بن مازن الصنعاني,مطرف بن مازن الصنعاني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص216
+8,٨ غير محدد,,معاذ بن محمد الانصاري,معاذ بن محمد الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص202
+8,٨ غير محدد,,معاذ بن محمد الهذلي,معاذ بن محمد الهذلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص200
+8,٨ غير محدد,,معاذ بن ياسين الزيات,معاذ بن ياسين الزيات,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص201
+8,٨ غير محدد,,معاويه بن عبد الله,معاوية بن عبد الله,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص323 | tabaqat_ibnsad:ج7/ص421
+8,٨ غير محدد,,معمر بن زايده,معمر بن زائدة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص206
+8,٨ غير محدد,,معمر بن عبد الله الانصاري,معمر بن عبد الله الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص207
+8,٨ غير محدد,,مفضل بن صدقه ابو حماد الحنفي,مفضل بن صدقة أبو حماد الحنفي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,مليح بن عبد الله,مليح بن عبد الله,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص249
+8,٨ غير محدد,,مورق بن سخيت,مورق بن سخيت,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص259
+8,٨ غير محدد,,موسي بن اسيد,موسى بن أسيد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,موسي بن جعفر الانصاري,موسى بن جعفر الأنصاري,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص155
+8,٨ غير محدد,,نصر بن جميل,نصر بن جميل,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص299
+8,٨ غير محدد,,نعيم بن عمر القديدي,نعيم بن عمر القديدي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,نعيم بن مورع بن توبه العنبري,نعيم بن مورع [بن توبة العنبري],2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص294
+8,٨ غير محدد,,نوح بن طلحه بن عبد الله بن عبد الرحمن بن ابي بكر الصديق,نوح بن طلحة بن عبد الله بن عبد الرحمن بن أبي بكر الصديق,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص303
+8,٨ غير محدد,,هارون بن ابي زياد التميمي عن ابن عمر,هارون بن أبي زياد التميمي (8) عن ابن عمر,2,2,general; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; tarikh_kabir_bukhari,
+8,٨ غير محدد,,هاشم بن عبد الله,هاشم بن عبد الله,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص407
+8,٨ غير محدد,,هاشم بن محمد الربعي,هاشم بن محمد الربعي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص344
+8,٨ غير محدد,,هاني بن الحارث,هانىء بن الحارث,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج6/ص242
+8,٨ غير محدد,,هاني بن خالد,هانىء بن خالد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص364
+8,٨ غير محدد,,هبيره بن يريم,هبيرة بن يريم,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص439 | tabaqat_ibnsad:ج8/ص290
+8,٨ غير محدد,,هشام بن حسان القردوسي,هشام بن حسان القردوسي,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,tabaqat_ibnsad:ج9/ص271 | duafa_uqayli:ج4/ص336
+8,٨ غير محدد,,هشام بن نجيح,هشام بن نجيح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,وابو محمد البصري عن نعيم بن ابي هند,وأبو محمد البصري عن نعيم بن أبي هند,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; mughni_duafa_dhahabi,
+8,٨ غير محدد,,واقد بن عبد الله,واقد بن عبد الله,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج3/ص362 | tabaqat_ibnsad:ج7/ص202
+8,٨ غير محدد,,وحارثه بن ابي عمرو,وحارثة بن أبي عمرو,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,وداود بن ابراهيم,وداود بن إبراهيم,2,3,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,mughni_duafa_dhahabi:ج1/ص216
+8,٨ غير محدد,,وسعيد بن سليمان بن قهد,وسعيد بن سليمان بن قهد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,وضاح بن خيثمه,وضاح بن خيثمة,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص328
+8,٨ غير محدد,,وكيع بن عدس,وكيع بن عدس,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,lisan_mizan_ibnhajar:ج9/ص443 | tabaqat_ibnsad:ج8/ص80
+8,٨ غير محدد,,ياسين بن معاذ الزيات ابو خلف,ياسين بن معاذ الزيات [أبو خلف],2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص464
+8,٨ غير محدد,,يحيي بن جعفر السراج,يحيى بن جعفر السراج,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,يحيي بن خالد,يحيى بن خالد,2,2,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص593
+8,٨ غير محدد,,يحيي بن سعيد بن سالم القداح,يحيى بن سعيد بن سالم القداح,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص404
+8,٨ غير محدد,,يحيي بن صالح الايلي,يحيى بن صالح الأيلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص409
+8,٨ غير محدد,,يحيي بن غالب العبشمي,يحيى بن غالب العبشمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص423
+8,٨ غير محدد,,يحيي بن كثير ابو النضر,يحيى بن كثير أبو النضر,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,duafa_uqayli:ج4/ص424
+8,٨ غير محدد,,يحيي بن مالك بن انس الاصبحي,يحيى بن مالك بن أنس الأصبحي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص425
+8,٨ غير محدد,,يحيي بن يعقوب بن مدرك ابو طالب القاص,يحيى بن يعقوب بن مدرك أبو طالب القاص,2,2,jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; duafa_uqayli,
+8,٨ غير محدد,,يزيد بن ابان الرقاشي,يزيد بن أبان الرقاشي,3,3,biography/ṭabaqāt; general; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad; tarikh_kabir_bukhari,
+8,٨ غير محدد,,يزيد بن حصين بن نمير,يزيد بن حصين بن نمير,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,يزيد بن روح اللخمي,يزيد بن روح اللخمي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,يزيد بن زيد,يزيد بن زيد,3,4,general; general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,يزيد بن شداد,يزيد بن شداد,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_ibnjawzi; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,يزيد بن شراحيل,يزيد بن شراحيل,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,يزيد بن عمر,يزيد (بن عمر,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
+8,٨ غير محدد,,يزيد بن عوانه الكلبي,يزيد بن عوانة الكلبي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص388
+8,٨ غير محدد,,يزيد بن قيس,يزيد بن قيس,2,3,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج6/ص258
+8,٨ غير محدد,,يزيد بن مروان الخلال,يزيد بن مروان الخلال,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,
+8,٨ غير محدد,,يعقوب بن ابراهيم,يعقوب بن إبراهيم,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,
+8,٨ غير محدد,,يعقوب بن ابراهيم النيلي,يعقوب بن إبراهيم النيلي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,duafa_uqayli:ج4/ص444
+8,٨ غير محدد,,يعقوب بن زيد,يعقوب بن زيد,2,2,biography/ṭabaqāt; general,tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص469
+8,٨ غير محدد,,يعقوب بن عبد الله,يعقوب بن عبد الله,3,3,biography/ṭabaqāt; general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad; tarikh_kabir_bukhari,tabaqat_ibnsad:ج7/ص505
+8,٨ غير محدد,,يعقوب بن محمد,يعقوب بن محمد,2,3,biography/ṭabaqāt; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tabaqat_ibnsad,tabaqat_ibnsad:ج7/ص568 | tabaqat_ibnsad:ج7/ص619
+8,٨ غير محدد,,يعقوب بن مسعود,يعقوب بن مسعود,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,يمان بن عدي الحمصي,يمان بن عدي الحمصي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص456 | duafa_uqayli:ج4/ص464
+8,٨ غير محدد,,يمان بن معن المدني,يمان بن معن المدني,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),lisan_mizan_ibnhajar; mughni_duafa_dhahabi,
+8,٨ غير محدد,,يوسف بن اسباط,يوسف بن أسباط,2,2,biography; jarḥ (ḍuʿafāʾ),duafa_uqayli; siyar_dhahabi,siyar_dhahabi:ج9/ص169 | duafa_uqayli:ج4/ص454
+8,٨ غير محدد,,يوسف بن خالد السمتي,يوسف بن خالد السمتي,2,2,general/jarḥ+taʿdīl; jarḥ (ḍuʿafāʾ),duafa_uqayli; lisan_mizan_ibnhajar,lisan_mizan_ibnhajar:ج9/ص456 | duafa_uqayli:ج4/ص453
+8,٨ غير محدد,,يونس بن بكير,يونس بن بكير,2,2,biography/ṭabaqāt; jarḥ (ḍuʿafāʾ),duafa_uqayli; tabaqat_ibnsad,
+8,٨ غير محدد,,يونس بن مسلم,يونس بن مسلم,2,2,general; general/jarḥ+taʿdīl,lisan_mizan_ibnhajar; tarikh_kabir_bukhari,
